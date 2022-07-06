@@ -1,2 +1,2 @@
 # LosGuardianesdelaProgramacion
-Equipo de proyecto integrador de Generation
+Equipo para el proyecto integrador en Generation
