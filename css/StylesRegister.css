@@ -1,0 +1,71 @@
+.texto {
+    margin: 12px 0 0;
+    color: #9e2a2a;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  
+
+  /* Input Styles */
+
+  .form{
+    width: 50%;
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:14px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border-radius: 8px;
+  }
+
+  .form:hover{
+    border:1px solid #8BC3A3;
+  }
+
+  .form:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+  }
+
+/* Send Button Styles */
+
+  .form-btn{
+    width:180px;
+    display: block;
+    height: auto;
+    padding:15px;
+    color:#fff;
+    background:#ECB390;
+    border:none;
+    border-radius:8px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .form-btn:hover{
+    background:#111;
+    color: white;
+    border:none;
+  }
+
+  .form-btn:active{
+    opacity: 0.9;
+  }
+
+input {
+    position: relative;
+    z-index: 9999;
+}
