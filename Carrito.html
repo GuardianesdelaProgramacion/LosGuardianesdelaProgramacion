@@ -5,58 +5,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/Styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="./css/Styles.css">
+    <link rel="stylesheet" href="./css/Styles_carrito.css">
 </head>
 
 <body>
     <h1>Carrito</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Productos</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Producto</th>
-                                                <th>Precio</th>
-                                                <th>Cantidad</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="media">
-                                                        <div class="d-flex">
-                                                            <img src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg"
-                                                                alt="Producto 1" />
-                                                        </div>
-                                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <div class="div_carrito">
+        <table class="table_carrito">
+            <thead>
+                <tr>
+                    <th style="width:10%"></th>
+                    <th style="width:25%">Producto</th>
+                    <th style="width:25%">Precio</th>
+                    <th>Cantidad</th>
+                    <th style="width:15%">Total</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <td><button onclick="limpiarTabla()" style="font-size:30px" class="bi bi-x buttonx"></button></td>
+                    <td><img class="img_carrito"
+                            src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg"
+                            alt="Producto 1" /></td>
+                    <td>$<span>60.00<span></td>
+                    <td><input class="input_carrito" type="number" min="1" max="15"></td>
+                    <td>$<span>60.00<span></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
     </div>
+    <br>
+    <form action="./Pago.html">
+        <button class="button_comprar">Proceder al pago</button>
+    </form>
 
-    <body>
+
+
+    <script src="./js/Carrito.js"></script>
+</body>
 
 </html>
