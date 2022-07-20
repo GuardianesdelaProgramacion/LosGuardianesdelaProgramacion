@@ -1,6 +1,7 @@
 /*importamos el archivo de estilos de cada componente*/
 @import url('./Styles_carrito.css');
 @import url('./StylesRegister.css');
+@import url('./StylePago.css');
 /*importamos fuentes de google*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /*importamos el css de iconos*/
