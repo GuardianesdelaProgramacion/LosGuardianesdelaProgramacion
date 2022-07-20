@@ -13,35 +13,47 @@
        margin-left: auto;
        background-color: white;
        border: none;
+       transition: all 0.3s ease-in-out;
 }
 .buttonx:hover{
          opacity: 0.5;
 }
-td {
-	align: center;
-}
 .div_carrito{
     width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .table_carrito{
         top: auto;
     	border-top: 1px solid #ccc;
     	border-bottom: 1px solid #ccc;
-	width: 95%;
+	width: 100%;
  	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .input_carrito{
       width: 50px;
 }
-
+.button_comprar{
+              font-family: 'Montserrat', sans-serif;
+	      font-size: 16px;
+	      font-weight: 700;
+              margin-left: 75%;
+              width:343px;
+	      height: 46px;
+	      background-color: #ECB390;
+	      border: none;
+	      border-radius: 40px;
+	      transition: all 0.3s ease-in-out;
+	  }
+.button_comprar:hover{
+            opacity: 0.5;
 
 @media screen and (max-width: 600px) {
 	.img_carrito{
-		width: 50px;
-		height: 50px;
+		width: 125px;
+		height: 76px;
 	}
 }
 
