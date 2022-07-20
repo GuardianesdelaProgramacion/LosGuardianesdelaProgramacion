@@ -6,40 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="stylesheet" href="./css/Styles.css">
+    <link rel="stylesheet" href="./css/Styles_carrito.css">
 </head>
 
 <body>
     <h1>Carrito</h1>
-                       <div class="div_carrito">
-                                 <table class="table_carrito">
-                                        <thead>
-                                            <tr>
-                                                <th style="width:10%"></th>
-                                                <th style="width:25%">Producto</th>
-                                                <th style="width:25%">Precio</th>
-                                                <th>Cantidad</th>
-                                                <th style="width:15%">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="data">
-                                            <tr>
-						<td><button  onclick="limpiarTabla()" style="font-size:30px"class="bi bi-x buttonx"></button></td>
-						<td><div><img class="img_carrito" src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg" alt="Producto 1" /></div></td>
-						<td>$<span>60.00<span></td>
-						<td><input class="input_carrito" type="number" min="1" max="15"></td>
-						<td>$<span>60.00<span></td>
-					</tr>
-					</tbody>
-				 </table>
-	<br>
-	<form action="./Pago.html">
-	<button class="button_comprar" >Proceder al pago</button>
-        	</form>
-		       </div>
+    <div class="div_carrito">
+        <table class="table_carrito">
+            <thead>
+                <tr>
+                    <th style="width:10%"></th>
+                    <th style="width:25%">Producto</th>
+                    <th style="width:25%">Precio</th>
+                    <th>Cantidad</th>
+                    <th style="width:15%">Total</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <td><button onclick="limpiarTabla()" style="font-size:30px" class="bi bi-x buttonx"></button></td>
+                    <td><img class="img_carrito"
+                            src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg"
+                            alt="Producto 1" /></td>
+                    <td>$<span>60.00<span></td>
+                    <td><input class="input_carrito" type="number" min="1" max="15"></td>
+                    <td>$<span>60.00<span></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+    <br>
+    <form action="./Pago.html">
+        <button class="button_comprar">Proceder al pago</button>
+    </form>
 
 
 
-<script src="./js/Carrito.js"></script>
-    </body>
+    <script src="./js/Carrito.js"></script>
+</body>
 
 </html>
