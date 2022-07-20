@@ -1,3 +1,12 @@
+
+:root{
+ --verde: #94B49F;
+ --verdeClaro: #CEE5D0;
+ --crema: #FCF8E8;
+ --salmon: #ECB390;
+ --negro: black;
+}
+
 h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -29,3 +38,53 @@ p{
 	justify-content: center;
 	align-items: center;
 }
+
+.btn-ghost{
+    position:relative;
+    display: inline-block;
+    border:2px solid var(--verdeClaro);
+    padding: 10px 10px;
+    color: var(--negro);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--verdeClaro);
+    transition: color 0.5s, background 0.5s;
+    font-size: 9px;
+    margin-right: 0px;
+    margin-inline-start: 70px;
+}
+
+.btn-ghost:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--salmon);
+    background-color: transparent;
+    
+}
+
+.btn-ghost:active{
+    box-shadow: inset 0 0 20px var(--verde);
+}
+
+.buscar{
+    position: relative;
+    padding: 5px;
+}
+
+.buscar input{
+    width:240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: var(--negro);
+    outline: none;
+    border: 1px solid silver;
+    border-radius:30px;
+}
+/* .navbar{
+    background-color: var(--verdeClaro);
+    bottom: 0px;
+    margin-bottom: 0px;
+    min-height: 74px;
+} */
