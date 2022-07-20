@@ -1,0 +1,34 @@
+.modal_back_popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.registro_popup{
+     width: 100%;
+     max-width: 800px;
+     height: 500px;
+     position: relative;
+     display: flex;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+}
+
+.a_popup{
+	text-decoration: none;
+	color: black;
+}
+.a_popup:hover{
+	text-decoration: none;
+	color: black;
+}
+
+.fondo_popup{
+          width:40%;
+	  background-image: url("https://images.unsplash.com/photo-1603533627277-11d5a361ac8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+          background-size: cover;
+          background-position: center;
+      }
+
