@@ -1,4 +1,5 @@
 /*importamos el archivo de estilos de cada componente*/
+@import url('./Styles_Pop_up.css');
 @import url('./Styles_Encabezado.css');
 @import url('./Styles_carrito.css');
 @import url('./StylesRegister.css');
