@@ -42,18 +42,22 @@ input{
 	align-items: center;
 }
 aside {
-	width: 30%;
+	display: block;
+	width: 45%;
 	padding-left: 15px;
 	margin-left: 15px;
+	margin-right: 15px;
 	float: right;
 	background-color: #ECB390;
   }
 /* Formulario tarjeta */
 .formularioTarjeta{
-	background: #ffff;
-	width:100%;
-	max-width: 700px;
+	background: rgb(170, 167, 167);
+	width:45%;
+	height: 600px;
 	padding: 150px 30px 30px 30px;
+	margin: 15px;
+	margin-top: 150px;
 	border-radius: 10px;
 	position: relative;
 	top: -150px;
@@ -61,8 +65,9 @@ aside {
 }
 
 .select_Op{
+	width: ;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 30% 30%;
 }
 .formularioTarjeta-active{
 	
