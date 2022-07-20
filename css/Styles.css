@@ -1,5 +1,5 @@
 /*importamos el archivo de estilos de cada componente*/
-@import url('../Styles_Encabezado.css');
+@import url('./Styles_Encabezado.css');
 @import url('./Styles_carrito.css');
 @import url('./StylesRegister.css');
 @import url('./StylePago.css');
@@ -48,6 +48,7 @@ table,td,th{
 }
 
 /*adadadad*/
+/*
 .btn-ghost{
     position:relative;
     display: inline-block;
@@ -90,7 +91,7 @@ table,td,th{
     outline: none;
     border: 1px solid silver;
     border-radius:30px;
-}
+}*/
 /* .navbar{
     background-color: var(--verdeClaro);
     bottom: 0px;
