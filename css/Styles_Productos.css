@@ -1,15 +1,12 @@
 
-.navbar{
+.nav-prod{
     height: 10em;
     }
     /* .titulo{
         padding: 50%;
     } */
     
-    .container {
-        background-color: rgba(89, 44, 203, 0.942);
-        
-    }
+
     
     .cards-wrapper{
         display: flex;

@@ -1,9 +1,12 @@
 /*importamos el archivo de estilos de cada componente*/
-@import url('./Styles_Pop_up.css');
+@import url('./Styles_Pago.css');
+@import url('./Styles_Pop_Up.css');
+@import url('./Styles_Carrito.css');
+@import url('./Styles_Contacto.css');
+@import url('./Styles_Nosotros.css');
+@import url('./Styles_Register.css');
+@import url('./Styles_Productos.css');
 @import url('./Styles_Encabezado.css');
-@import url('./Styles_carrito.css');
-@import url('./StylesRegister.css');
-@import url('./StylePago.css');
 /*importamos fuentes de google*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /*importamos el css de iconos*/
