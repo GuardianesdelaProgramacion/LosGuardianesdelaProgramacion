@@ -1,3 +1,6 @@
+*{
+ text-align: center;
+}
 .modal_back_popup{
     width: 100%;
     height: 100%;
@@ -7,8 +10,8 @@
 
 .registro_popup{
      width: 100%;
-     max-width: 800px;
-     height: 500px;
+     max-width: 975px;
+     height: 692px;
      position: relative;
      display: flex;
      top: 50%;
@@ -18,17 +21,42 @@
 
 .a_popup{
 	text-decoration: none;
-	color: black;
+	color: #E8A191;
+        font-size: 25px;
 }
 .a_popup:hover{
 	text-decoration: none;
-	color: black;
+	color: #E8A191;
+	border-bottom: 1px solid #E8A191;
 }
 
 .fondo_popup{
-          width:40%;
+          width:418px;
 	  background-image: url("https://images.unsplash.com/photo-1603533627277-11d5a361ac8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
           background-size: cover;
           background-position: center;
       }
+.contenido_popup{
+	width: 557px;
+	padding: 50px;
+	overflow-y: auto;
+	background-color: white;
+}
+.suscribir_popup{
+      	width: 100%;
+	height: 49px;
+	background-color: #CEE5D0;
+	border:none;
+        font-size: 25px;
+	color:#FCF8E8;
+}
 
+.titulo_popup{
+        font-size: 36px;
+        font-weight: 400;
+}
+.input_popup{
+        font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+}
