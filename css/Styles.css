@@ -1,6 +1,7 @@
 /*importamos el archivo de estilos de cada componente*/
 @import url('./Styles_Pago.css');
 @import url('./Styles_Pop_Up.css');
+@import url('./Styles_Perfil.css');
 @import url('./Styles_Carrito.css');
 @import url('./Styles_Contacto.css');
 @import url('./Styles_Nosotros.css');
@@ -21,26 +22,23 @@
 }
 *{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 h1{
-    font-weight: 700;
     font-size: 36px;
     text-align: center;
 }
 h2,h3{
-    font-weight: 700;
     font-size: 16px;
     text-align: center;
     }
 p{
-    font-weight: 400;
     font-size: 14px;
     text-align: center;
 }
 
 thead, tbody {
 	    text-align: center;
-            font-weight: 400;
  	    font-size: 16px;
 		
     }
