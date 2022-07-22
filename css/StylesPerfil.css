@@ -1,13 +1,20 @@
+.texto {
+    margin: 16px 0 0;
+    color: #9e2a2a;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif; 
+   border-radius: 16%;
+  }
 
-.nav-prod{
+  
+.navbar{
     height: 10em;
     }
     /* .titulo{
         padding: 50%;
     } */
     
-
-    
+  
     .cards-wrapper{
         display: flex;
         margin:2%;
@@ -24,8 +31,9 @@
     .img-producto {
         border-radius: 20%;
         margin: 2%;
-        height:75%; 
-     
+        /* height:75%;  */
+        width:250px ;
+        max-width:100%;
     }
     
     .producto-precio{
@@ -38,7 +46,7 @@
         align-items: center;
         justify-content: center;
         background: rgb(254, 255, 255);
-        border: 1px solid rgb(209, 26, 188);
+        border: 1px solid #ECB390;
         color: rgb(6, 6, 6);
         
         font-size: 20px;
@@ -67,7 +75,7 @@
     
     .botones:hover::after {
         transform: scale(600);
-        background: rgb(183, 28, 90);
+        background: #ECB390;
     }
     
     
@@ -78,7 +86,7 @@
     }
     
     .estrellas {
-        color: rgb(255, 0, 238)
+        color: #ECB390;
     }
     
     
@@ -87,19 +95,19 @@
     
     
     .img-central{
-        background-color: rgb(24, 12, 183);
+        background-color: #94B49F
         
     }
     
     
     .der{
-        background-color: rgb(118, 212, 35);
+        background-color: #94B49F
     
     }
     
     
     .izq{
-        background-color: rgb(183, 28, 90);
+        background-color: #ECB390;
     
     }
     
@@ -109,11 +117,7 @@
       
     }
     
-    .parrafo{
-        background-color: blueviolet;
-        
-    }
-       
+  
     
     
     
