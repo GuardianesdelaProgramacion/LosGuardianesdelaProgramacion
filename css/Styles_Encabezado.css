@@ -30,16 +30,16 @@
     object-fit: contain;
 }
 
-/* .hijo_3{
-    border: 3px solid gold;
+.hijo_3{
+    /* border: 3px solid gold; */
     width: 30%;
    
-} */
+}
 
-/* .hijo_4{
-    border: 3px solid blueviolet; */
-    /* width: 20%;  */
-/* } */
+.hijo_4{
+    /* border: 3px solid blueviolet; */ 
+    width: 20%; 
+}
 
 .icono{
    font-size: 25px;
