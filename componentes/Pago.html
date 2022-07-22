@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/Styles_Pago.css">
-    <title>Pago</title>
+    <link rel="stylesheet" href="../css/Styles.css">
+    <title>Pago | Musaraña</title>
 </head>
 
 <body>
     <h1>Métodos de pago</h1>
+    <!-- Lado para la revisión del pedido y proceder el pago  -->
     <aside>
         <h2>Revisar pedido</h2>
-        <label for="inputCupon">Cupón de descuento</label><br>
-        <input type="text">
-
+        <input type="text" placeholder="Cupón de descuento">
+        <button type="submit" class="botones col mx-auto">
+            <span class="inf">Usar
+            </span> </button> <br>
+        <button type="button" class="botones col mx-auto"> <span class="inf"> Realizar pedido
+            </span> </button>
     </aside>
     <!-- Inputs de tipo radio para seleccionar la forma de pago -->
-
-    <input type="radio" name="tarjeta" value="1" class="abrirFormulario">Tarjeta crédito/débitoG
+    <input type="radio" name="tarjeta" value="1" class="abrirFormulario">
+    <label>Tarjeta de crédito/débitoG</label>
 
     <br>
 
@@ -56,14 +61,73 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button type="submit" class="btnEnviar">Enviar</button>
-        </div>
         </div>
     </form>
-    <input type="radio" name="paypal" value="2" class="opcionPaypal">PaypalG
+    <!-- Pago Paypal -->
+    <input type="radio" name="paypal" value="2" class="opcionPaypal">Paypal
+    <a href="https://www.paypal.com/signin"></a>
+    <!-- Formulario de envío -->
+    <form action="" id="dirEnvio">
+        <h2>Datos de envío</h2>
+        <div class="flexbox">
+            <div class="grupoPersonaRecibe">
+                <label>Nombre</label><br>
+                <input type="text" class="Nombre" placeholder="Nombre(s)">
+                <label>Apellidos</label><br>
+                <input type="text" class="Apellidos" placeholder="Apellidos">
+            </div>
+            <div class="grupo">
+                <select name="Estado" id="estado">
+                    <option disabled selected>Estado</option>
+                    <option value="1">Aguascalientes</option>
+                    <option value="2">Baja California</option>
+                    <option value="3">Baja California Sur</option>
+                    <option value="4">Campeche</option>
+                    <option value="5">Ciudad de México</option>
+                    <option value="6">Chiapas</option>
+                    <option value="7">Chihuahua</option>
+                    <option value="8">Coahuila</option>
+                    <option value="9">Colima</option>
+                    <option value="10">Durango</option>
+                    <option value="11">Guanajuato</option>
+                    <option value="12">Guerrero</option>
+                    <option value="13">Hidalgo</option>
+                    <option value="14">Jalisco</option>
+                    <option value="15">México</option>
+                    <option value="16">Michoacán</option>
+                    <option value="17">Morelos</option>
+                    <option value="18">Nayarit</option>
+                    <option value="19">Nuevo León</option>
+                    <option value="20">Oaxaca</option>
+                    <option value="21">Querétaro</option>
+                    <option value="22">Quintana Roo</option>
+                    <option value="23">San Luis Potosí</option>
+                    <option value="24">Sinaloa</option>
+                    <option value="25">Sonora</option>
+                    <option value="26">Tabasco</option>
+                    <option value="27">Tamaulipas</option>
+                    <option value="28">Tlaxcala</option>
+                    <option value="29">Veracruz</option>
+                    <option value="30">Yucatán</option>
+                    <option value="31">Zacatecas</option>
+                </select>
+                <br>
+                <div class="grupoDireccion">
+                    <label>Calle, Número exterior y Número interior</label><br>
+                    <input type="text">
+                    <label>Colonia</label><br>
+                    <input type="text">
+                    <label>Municipio</label><br>
+                    <input type="text">
+                    <label for="">Código Postal</label><br>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+        </div>
+    </form>
+
 </body>
-<script src="js/Pago.js"></script>
+<script src="../js/Pago.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
