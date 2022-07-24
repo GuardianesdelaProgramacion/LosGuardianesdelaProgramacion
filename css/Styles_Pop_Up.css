@@ -1,30 +1,53 @@
 *{
  text-align: center;
 }
+
+.buton{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #D90C43;
+}
+
 .modal_back_popup{
     width: 100%;
     height: 100%;
     position: fixed;
+    visibility: hidden;
+    opacity: 0;
     background-color: rgba(0,0,0,0.5);
 }
-
+.modal_back_popup:target{
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+}
 .registro_popup{
      width: 100%;
      max-width: 975px;
      height: 692px;
      position: relative;
      display: flex;
+     top: -80%;
+     left: -80%;
+     visibility: hidden;
+     transform: rotate(90deg) translate(-150%,230%);
+     transition: all 600ms;
+}
+.registro_popup:target .contenido_popup{
      top: 50%;
      left: 50%;
-     transform: translate(-50%,-50%);
+     transform: rotate(0deg) translate(-50%,-50%);
+     visibility: visible;
 }
 
-.a_popup{
+.contenido_popup a{
 	text-decoration: none;
 	color: #E8A191;
         font-size: 25px;
 }
-.a_popup:hover{
+.contenido_popup a:hover{
 	text-decoration: none;
 	color: #E8A191;
 	border-bottom: 1px solid #E8A191;
@@ -38,11 +61,13 @@
       }
 .contenido_popup{
 	width: 557px;
-	padding: 50px;
+	padding: 20px;
 	overflow-y: auto;
 	background-color: white;
 }
-.suscribir_popup{
+.contenido_popup button{
+	margin-top: 10px;
+	margin-bottom: 10px;
       	width: 100%;
 	height: 49px;
 	background-color: #CEE5D0;
@@ -51,13 +76,19 @@
 	color:#FCF8E8;
 }
 
-.titulo_popup{
+.contenido_popup h2{
         font-size: 36px;
         font-weight: 400;
 }
-.input_popup{
+.contenido_popup input{
         font-family: 'Montserrat', sans-serif;
 	font-size: 25px;
 	font-weight: 400;
-      	width: 100%;
+      	width: 297px;
+	height: 40.44px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 30px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 }

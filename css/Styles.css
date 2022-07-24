@@ -10,7 +10,7 @@
 @import url('./Styles_Encabezado.css');
 /*importamos fuentes de google*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-/*importamos el css de iconos*/
+/*importamos iconos de bootstrap*/
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
 
 :root{
@@ -40,67 +40,15 @@ p{
 thead, tbody {
 	    text-align: center;
  	    font-size: 16px;
-		
     }
 th{
 	background-color: #ECB390;
+        font-weight: 700;
     }
 table,td,th{
 	border-collapse: collapse;
 }
 
-/*adadadad*/
-/*
-.btn-ghost{
-    position:relative;
-    display: inline-block;
-    border:2px solid var(--verdeClaro);
-    padding: 10px 10px;
-    color: var(--negro);
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: var(--verdeClaro);
-    transition: color 0.5s, background 0.5s;
-    font-size: 9px;
-    margin-right: 0px;
-    margin-inline-start: 70px;
-}
-
-.btn-ghost:hover{
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    color: var(--salmon);
-    background-color: transparent;
-    
-}
-
-.btn-ghost:active{
-    box-shadow: inset 0 0 20px var(--verde);
-}
-
-.buscar{
-    position: relative;
-    padding: 5px;
-}
-
-.buscar input{
-    width:240px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: var(--negro);
-    outline: none;
-    border: 1px solid silver;
-    border-radius:30px;
-}*/
-/* .navbar{
-    background-color: var(--verdeClaro);
-    bottom: 0px;
-    margin-bottom: 0px;
-    min-height: 74px;
-} */
 td {
-	align: center;
+	text-align: center;
 }
-
