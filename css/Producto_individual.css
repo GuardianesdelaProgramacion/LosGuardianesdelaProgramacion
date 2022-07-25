@@ -1,4 +1,26 @@
 
+
+@media screen and (max-width:577px){
+
+    .img-producto-individual{
+        width: 60%;     
+    } 
+   
+    .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
+        font-size: 6px;
+        font-family: 'Montserrat', sans-serif; 
+    }  
+}
+
+@media screen and (min-width:576px){
+    .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif; 
+    }  
+  
+  
+}
+
 .cards-wrapper-tarjeta-grupo-producto{
     display: flex;
     margin:2%;
@@ -7,8 +29,8 @@
 .tarjeta-producto{
    
     border: 1px solid rgb(255, 255, 255);
-    margin: 0 0.5em;
-    width: 90%;
+    margin: 0 3em;
+    width: cal(100%/4);
     
 
 }
@@ -76,19 +98,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
 
 
-.img-producto-central{
+.img-producto-individual{
     border-radius: 0 16% ;
     border: 0.25em solid rgba(39, 141, 26, 0.625);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.img-producto-central:hover {
- opacity:0.7;
+ 
 }
 
 h1{
@@ -98,24 +114,23 @@ h1{
 .descripcion1{
     
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    text-align: justify;
+   
+}
+
+
+.incremento{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    margin-right: 20px;
+    border:1px solid #ff523b
 }
 
 
 
-.mas-vendido{  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-}
 
 
-
-
-    
-    
-    
     
     
     
