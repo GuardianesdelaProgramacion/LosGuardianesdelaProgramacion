@@ -5,10 +5,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-body,
-html{
-	background: #D90C43;
-}
 .buton{
         position: absolute;
 	top: 50%;
