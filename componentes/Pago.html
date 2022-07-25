@@ -31,20 +31,18 @@
     </aside>
     <!-- Inputs de tipo radio para seleccionar la forma de pago -->
     <input type="radio" name="tarjeta" value="1" class="abrirFormulario">
-    <label>Tarjeta de crédito/débitoG</label><br>
+    <label>Tarjeta de crédito/débito</label><br>
     <!-- Formulario de pago con tarjeta -->
     <form action="" id="formularioTarjeta" class="formularioTarjeta">
-        <div class="grupo">
-            <label for="inputNumero">Número de Tarjeta</label><br>
+        <div class="datosTarjeta">
+            <label for="inputNumero">Número de tarjeta</label>
             <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
-        </div>
-        <div class="grupo">
-            <label for="inputNombre">Nombre</label><br>
+            <label for="inputNombre">Nombre en la tarjeta</label>
             <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
         </div>
         <div class="grupo-expira">
-            <label for="selectFechaExp">Expiración</label>
-            <label for="inputCCV">CCV</label><br>
+            <label for="selectFechaExp">Fecha de expiración</label>
+            <label for="inputCCV">CCV</label>
             <div class="grupo-select">
                 <select name="mes" id="selectMes">
                     <option disabled selected>Mes</option>
@@ -52,6 +50,8 @@
                 <select name="year" id="selectYear">
                     <option disabled selected>Año</option>
                 </select>
+            </div>
+            <div>
                 <input type="text" id="inputCCV" maxlength="3">
             </div>
         </div>
@@ -66,15 +66,15 @@
     </span>
     <br>
     <!-- Formulario de envío -->
-    <form action="" id="dirEnvio">
+    <form action="" id="dirEnvio" class="dirEnvio">
         <h2 class="datos-envio">Datos de envío</h2>
         <div class="flexbox">
             <div class="grupoPersonaRecibe">
-                <label>Nombre</label><br>
+                <label>Nombre</label>
                 <input type="text" class="Nombre" placeholder="Nombre(s)">
-                <label>Apellidos</label><br>
+                <label>Apellidos</label>
                 <input type="text" class="Apellidos" placeholder="Apellidos">
-            </div><br>
+            </div>
             <div class="grupo">
                 <select name="Estado" id="estado">
                     <option disabled selected>Estado</option>
@@ -115,12 +115,12 @@
                 <div class="grupoDireccion">
                     <label>Calle, Número exterior y Número interior</label><br>
                     <input type="text">
-                    <label>Colonia</label><br>
+                    <label>Colonia</label>
                     <input type="text">
-                    <label>Municipio</label><br>
+                    <label>Municipio</label>
                     <input type="text">
-                    <label for="">Código Postal</label><br>
-                    <input type="text" name="" id="">
+                    <label for="">Código Postal</label>
+                    <input type="text" maxlength="5">
                 </div>
             </div>
         </div>

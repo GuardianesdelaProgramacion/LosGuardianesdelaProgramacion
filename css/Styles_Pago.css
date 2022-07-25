@@ -19,6 +19,7 @@ aside{
 aside .info-pedido{
 	display: grid;
 	grid-template-columns: 50% 20%;
+	grid-gap: 5px;
 	justify-content: space-between;
 	justify-items: flex-start;
 	border-radius: 48%;
@@ -28,8 +29,37 @@ aside .fr-btn{
 width: fit-content;
 }
 .formularioTarjeta{
-	background-color: gray;
+	background-color: #F5F5F5;
 	width: 45%;
 	margin-left: 36px;
 	padding: 15px;
+}
+.formularioTarjeta .datosTarjeta{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 5px;
+}
+.formularioTarjeta .grupo-expira{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 5px;
+}
+.formularioTarjeta #inputCCV{
+	max-width: 40px;
+}
+.dirEnvio{
+	background-color: #F5F5F5;
+	width: 45%;
+	margin-left: 36px;
+	padding: 15px;
+}
+.dirEnvio .grupoPersonaRecibe{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 5px;
+}
+.dirEnvio .grupoDireccion{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 5px;
 }
