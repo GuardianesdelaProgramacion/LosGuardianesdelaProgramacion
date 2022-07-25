@@ -14,7 +14,6 @@
 </head>
 
 <body class="Pago">
-    <iframe src="/componentes/Encabezado.html" frameborder="0"></iframe>
     <h1>Métodos de pago</h1>
     <!-- Lado para la revisión del pedido y proceder el pago  -->
     <aside>
@@ -29,54 +28,18 @@
         <button type="button" class="fr-btn mt-3"><span class="termina-compra">Realizar pedido
             </span> </button>
     </aside>
-    <!-- Inputs de tipo radio para seleccionar la forma de pago -->
-    <input type="radio" name="tarjeta" value="1" class="abrirFormulario">
-    <label>Tarjeta de crédito/débito</label><br>
-    <!-- Formulario de pago con tarjeta -->
-    <form action="" id="formularioTarjeta" class="formularioTarjeta">
-        <div class="datosTarjeta">
-            <label for="inputNumero">Número de tarjeta</label>
-            <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
-            <label for="inputNombre">Nombre en la tarjeta</label>
-            <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
-        </div>
-        <div class="grupo-expira">
-            <label for="selectFechaExp">Fecha de expiración</label>
-            <label for="inputCCV">CCV</label>
-            <div class="grupo-select">
-                <select name="mes" id="selectMes">
-                    <option disabled selected>Mes</option>
-                </select>
-                <select name="year" id="selectYear">
-                    <option disabled selected>Año</option>
-                </select>
-            </div>
-            <div>
-                <input type="text" id="inputCCV" maxlength="3">
-            </div>
-        </div>
-        </div>
-    </form>
-    <!-- Pago Paypal -->
-    <input type="radio" name="paypal" value="2" class="opcionPaypal"><span>Paypal</span>
-    <a href="https://www.paypal.com/signin"></a><br>
-    <!-- Efectivo vs Entrega -->
-    <input type="radio" name="vsEntrega" value="3" class="opcionEntrega"><span>Efectivo</span><span>
-        <p>*Es pago contra entrega. **Aplica únicamente en Morelia</p>
-    </span>
-    <br>
     <!-- Formulario de envío -->
     <form action="" id="dirEnvio" class="dirEnvio">
         <h2 class="datos-envio">Datos de envío</h2>
         <div class="flexbox">
             <div class="grupoPersonaRecibe">
-                <label>Nombre</label>
-                <input type="text" class="Nombre" placeholder="Nombre(s)">
+                <label>Nombre(s)</label>
+                <input type="text" class="Nombre" placeholder="Nombre(s)" style="width: 100%;">
                 <label>Apellidos</label>
-                <input type="text" class="Apellidos" placeholder="Apellidos">
+                <input type="text" class="Apellidos" placeholder="Apellidos" style="width: 100%;">            
             </div>
             <div class="grupo">
-                <select name="Estado" id="estado">
+                <select name="Estado" id="estado" style="min-width: 187px; max-width: 464px;" class= "mt-3">
                     <option disabled selected>Estado</option>
                     <option value="1">Aguascalientes</option>
                     <option value="2">Baja California</option>
@@ -111,23 +74,59 @@
                     <option value="31">Yucatán</option>
                     <option value="32">Zacatecas</option>
                 </select>
-                <br>
-                <div class="grupoDireccion">
-                    <label>Calle, Número exterior y Número interior</label><br>
-                    <input type="text">
+                <div class="grupoDireccion mt-3">
+                    <label>Calle, No. exterior y No. interior</label>
+                    <input type="text" style="width: 100%;">
                     <label>Colonia</label>
-                    <input type="text">
+                    <input type="text" style="width: 100%;">
                     <label>Municipio</label>
-                    <input type="text">
+                    <input type="text" style="width: 100%;">
                     <label for="">Código Postal</label>
-                    <input type="text" maxlength="5">
+                   <input type="text" maxlength="5" style="width: 100%;">
+                   <label>Teléfono</label>
+                   <input type="text" maxlength="10" style="width: 100%;">
                 </div>
             </div>
         </div>
     </form>
+    <!-- Inputs de tipo radio para seleccionar la forma de pago -->
+    <input type="radio" name="tarjeta" value="1" class="abrirFormulario">
+    <label>Tarjeta de crédito/débito</label><br>
+    <!-- Formulario de pago con tarjeta -->
+    <form action="" id="formularioTarjeta" class="formularioTarjeta">
+        <div class="datosTarjeta">
+            <label for="inputNumero">Número de tarjeta</label>
+            <input type="text" id="inputNumero" maxlength="19" autocomplete="off"style="width: 100%;">
+            <label for="inputNombre">Nombre en la tarjeta</label>
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off" style="width: 100%;">
+        </div>
+        <div class="grupo-expira">
+            <label for="selectFechaExp">Fecha de expiración</label>
+            <label for="inputCCV">CCV</label>
+            <div class="grupo-select">
+                <select name="mes" id="selectMes">
+                    <option disabled selected>Mes</option>
+                </select>
+                <select name="year" id="selectYear">
+                    <option disabled selected>Año</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" id="inputCCV" maxlength="3">
+            </div>
+        </div>
+    </form>
+    <!-- Pago Paypal -->
+    <input type="radio" name="paypal" value="2" class="opcionPaypal"><span>Paypal</span>
+    <a href="https://www.paypal.com/signin"></a><br>
+    <!-- Efectivo vs Entrega -->
+    <input type="radio" name="vsEntrega" value="3" class="opcionEntrega"><span>Efectivo</span><span>
+        <p>*Es pago contra entrega. **Aplica únicamente en Morelia</p>
+    </span>
+    <br>
 </body>
 <footer>
-    <iframe src="/componentes/PiedePagina.html" frameborder="0"></iframe>
+    
 </footer>
 <script src="../js/Pago.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
