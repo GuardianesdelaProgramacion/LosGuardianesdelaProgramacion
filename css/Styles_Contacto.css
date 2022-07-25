@@ -1,7 +1,163 @@
+            contactoTitulo{
+                text-align: center;
+                background-color: white;
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 50px;
+            }
+
              .contenedor{
                 background-color: var(--crema);
                 margin: 50px;
+                position: relative;
+                width: 100%;
+                margin: auto;
+                padding:200px;
+
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
                 
+            }
+
+            /*.contactoForm{
+                position: relative;
+            }*/
+
+            @media only screen and (max-width: 500px) {
+                .contactoName {
+                  flex-basis: 100%;
+                  order: 1;
+                }
+                .contactoEmail{
+                  flex-basis: 100%;
+                  order: 2;
+                }
+
+                .contactoNameT {
+                    flex-basis: 100%;
+                    order: 3;
+                  }
+                  
+                  
+                  .contactoEmailT{
+                    flex-basis: 100%;
+                    order: 4;
+                  }
+                
+              }
+
+              .contactoTexto{
+                position: absolute;
+                left: 3%;
+                top: 5%;
+                
+            }
+
+
+            .contactoName{
+                position: absolute;
+                left: 20%;
+                top: 20%;
+                flex: 1;
+            }
+
+            .contactoNameT{
+                position: absolute;
+                left: 20%;
+                top: 25%;
+                flex: 1;
+                width:180px;
+                display: block;
+                height: 15px;
+                padding:15px;
+                border-radius:15px;
+                border-color:var(--salmon);
+                border-style:solid;
+            }
+            .contactoNameT:focus,.contactoEmailT:focus,.contactoAsuntoT:focus,.contactoTelefonoT:focus,.contactoComentariosT:focus{
+                outline:white;
+                border-color: white;
+                border-style:solid;
+            }
+
+            .contactoEmail{
+                position: absolute;
+                left: 60%;
+                top: 20%;
+                flex: 1;
+            }
+            .contactoEmailT{
+                position: absolute;
+                left: 60%;
+                top: 25%;
+                flex: 1;
+                width:180px;
+                display: block;
+                height: 15px;
+                padding:15px;
+                border-radius:15px;
+                border-color:var(--salmon);
+                border-style:solid;
+            }
+
+            .contactoAsunto{
+                position: absolute;
+                left: 20%;
+                top: 40%;
+            }
+            .contactoAsuntoT{
+                position: absolute;
+                left: 20%;
+                top: 45%;
+                width:180px;
+                display: block;
+                height: 15px;
+                padding:15px;
+                border-radius:15px;
+                border-color:var(--salmon);
+                border-style:solid;
+            }
+
+            .contactoTelefono{
+                position: absolute;
+                left: 60%;
+                top: 40%;
+            }
+            .contactoTelefonoT{
+                position: absolute;
+                left: 60%;
+                top: 45%;
+                width:180px;
+                display: block;
+                height: 15px;
+                padding:15px;
+                border-radius:15px;
+                border-color:var(--salmon);
+                border-style:solid;
+            }
+
+            .contactoComentarios{
+                position: absolute;
+                left: 35%;
+                top: 60%;
+            }
+            .contactoComentariosT{
+                position: absolute;
+                left: 35%;
+                top: 65%;
+                width:300px;
+                display: block;
+                height: auto;
+                padding:15px;
+                border-radius:15px;
+                border-color:var(--salmon);
+                border-style:solid;
+            }
+
+            .contactoBoton{
+                position: absolute;
+                left: 40%;
+                top: 85%;
             }
 
             .fr-btn{
@@ -23,6 +179,8 @@
                 -moz-transition: all 0.3s;
                 transition: all 0.3s;
                 margin:auto;
+
+                border-style:solid;
                 
                 font-family: 'Montserrat', sans-serif;
             }
