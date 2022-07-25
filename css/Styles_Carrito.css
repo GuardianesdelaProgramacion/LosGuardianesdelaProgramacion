@@ -3,6 +3,10 @@
 	height: 152px;
 	border-radius: 25px;
 }
+.mytr{
+    	border-bottom: 1px solid #ccc;
+
+}
 .buttonx{
        cursor: pointer;
        width: 50px;
@@ -25,8 +29,6 @@
 }
 .table_carrito{
         top: auto;
-    	border-top: 1px solid #ccc;
-    	border-bottom: 1px solid #ccc;
 	width: 100%;
  	margin-top: 10px;
 	margin-left: auto;
@@ -71,3 +73,27 @@
 }
 
 
+table > tbody:empty {
+    position: relative;
+    display: table-caption;
+    caption-side: bottom;
+    min-height: 500px;
+    margin-bottom: 100px;
+    background-image: url(./bag-x.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+    text-align: center;
+}
+table > tbody:empty:before {
+    content: 'Agrega algo a tu carrito';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 150px;
+    position: absolute;
+    font-size: 40px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

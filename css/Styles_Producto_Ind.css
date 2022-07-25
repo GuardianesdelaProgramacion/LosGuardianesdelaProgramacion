@@ -1,56 +1,44 @@
 
 
 @media screen and (max-width:650px){
+
+    .img-producto-individual{
+        width: 60%;     
+    } 
+   
     .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
         font-size: 6px;
         font-family: 'Montserrat', sans-serif; 
-    }   
-    .img-producto{
-        width: 75%;
-    }
-
-   
-    
+    }  
 }
 
-@media screen and (min-width:651px){
+/* @media screen and (min-width:576px){
     .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
-        font-size: 12px;
+        font-size: 16px;
         font-family: 'Montserrat', sans-serif; 
     }  
- 
   
-}
+  
+} */
 
-.productos{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-/* ESTILOS DE TODAS LAS TARJETAS  */
 .cards-wrapper-tarjeta-grupo-producto{
     display: flex;
     margin:2%;
-    width: 100%;
 }
 
-/* ESTILO DE LA TAJETA INDIVIUDAL */
 .tarjeta-producto{
-    margin: 0 0.5em;
-    width: 100%;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0 3em;
+    width: cal(100%/4);
+    
 
 }
 
-/* ESTILO DE LA IMAGEN DE LA TARJETAS DE PRODUCTOS */
 .img-producto {
     border-radius: 20%;
     margin: 2%;
     height:100%; 
-    width: 100%;
  
 }
 
@@ -69,7 +57,6 @@ justify-content: center;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    width: 50px;
 }
 
 .botones::after {
@@ -89,10 +76,10 @@ justify-content: center;
 
 .botones:hover::after {
     transform: scale(600);
-    background: var(--salmon);
+    background: rgb(183, 28, 90);
 }
 
-/* ESTILO DEL TEXTO DEL BOTON  */
+
 .inf {
     position: relative;
     z-index: 2;
@@ -103,7 +90,7 @@ justify-content: center;
 
 
 .estrellas {
-    color: var(--salmon);    
+    color: rgb(255, 0, 238);    
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -111,50 +98,39 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
 
 
-.img-producto-central{
+.img-producto-individual{
     border-radius: 0 16% ;
-    border: 0.3em solid var(--verde);
-    cursor: pointer;
-    transition: 0.3s;
-    width: 75%;
-}
-
-.img-producto-central:hover {
- opacity:0.7;
+    border: 0.25em solid rgba(39, 141, 26, 0.625);
+ 
 }
 
 h1{
     font-family: 'Montserrat', sans-serif;
 }
-/* DESCRIPCION DEL PORDUCTO DEL MES */
+
 .descripcion1{
     
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    text-align: justify;
+   
+}
+
+
+.incremento{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    margin-right: 20px;
+    border:1px solid #ff523b
 }
 
 
 
-.mas-vendido{  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--crema);
-}
 
 
-
-
-
-
-
-    
-    
-    
     
     
     
