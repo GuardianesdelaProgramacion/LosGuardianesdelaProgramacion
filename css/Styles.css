@@ -8,6 +8,7 @@
 @import url('./Styles_Register.css');
 @import url('./Styles_Productos.css');
 @import url('./Styles_Encabezado.css');
+@import url('./Styles_Producto_Ind.css');
 /*importamos fuentes de google*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /*importamos iconos de bootstrap*/
