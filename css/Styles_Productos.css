@@ -5,12 +5,10 @@
         font-size: 6px;
         font-family: 'Montserrat', sans-serif; 
     }   
-    .productos{
-        width: 50%;
+    .img-producto{
+        width: 75%;
     }
-  .img-producto-central{
-        width: 75%;     
-    } 
+
    
     
 }
@@ -34,12 +32,16 @@ justify-content: center;
 .cards-wrapper-tarjeta-grupo-producto{
     display: flex;
     margin:2%;
+    width: 100%;
 }
 
 /* ESTILO DE LA TAJETA INDIVIUDAL */
 .tarjeta-producto{
     margin: 0 0.5em;
-    width: 70%;  
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -47,7 +49,8 @@ justify-content: center;
 .img-producto {
     border-radius: 20%;
     margin: 2%;
-    height:50%; 
+    height:100%; 
+    width: 100%;
  
 }
 
@@ -66,6 +69,7 @@ justify-content: center;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    width: 50px;
 }
 
 .botones::after {
@@ -116,6 +120,7 @@ justify-content: center;
     border: 0.3em solid var(--verde);
     cursor: pointer;
     transition: 0.3s;
+    width: 75%;
 }
 
 .img-producto-central:hover {
