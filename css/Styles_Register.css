@@ -70,3 +70,9 @@ input {
     position: relative;
     z-index: 9999;
 }
+
+.padre-imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
