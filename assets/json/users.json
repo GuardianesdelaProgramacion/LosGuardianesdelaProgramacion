@@ -1,0 +1,16 @@
+data {
+    nombre: string;
+    apellido: string;
+    edad: number;
+    fechaNacimiento: Date;
+    direccion: string;
+    telefono: string;
+    email: string;
+    password: string;
+    rol: string;
+    estado: string;
+    imagen: string;
+    id: string;
+
+
+}
