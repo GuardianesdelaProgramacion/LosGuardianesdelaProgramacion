@@ -76,7 +76,7 @@
 
 .botones:hover::after {
     transform: scale(600);
-    background: rgb(183, 28, 90);
+    background: var(--salmon);
 }
 
 
@@ -90,7 +90,7 @@
 
 
 .estrellas {
-    color: rgb(255, 0, 238);    
+    color: var(--salmon);    
     font-family: 'Montserrat', sans-serif;
 }
 
