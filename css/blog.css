@@ -1,0 +1,27 @@
+#blog-container .nota .nota-img{
+    overflow: hidden;
+    cursor:pointer;
+}
+
+#blog-container .nota-img{    
+    transition: 0.3s ease;
+}
+
+
+#blog-container .nota:hover img{
+transform: scale(1.1) ;
+opacity:0.8;
+}
+
+#blog-container .nota:hover h3{
+   color:blue;
+    }
+.nota p {
+    text-align: justify;
+    margin:1em;
+}
+
+.row{
+    display: flex;
+    flex:row
+}

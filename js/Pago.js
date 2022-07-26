@@ -2,19 +2,10 @@ const btnAbrirFormulario = document.querySelector('#abrirFormulario');
 const formulario = document.querySelector('#formularioTarjeta');
 const numeroTarjeta = document.querySelector('#tarjeta .numero');
 const nombreTarjeta = document.querySelector('#tarjeta .nombre');
-//const logoMarca = document.querySelector('#logoMarca');
-const firma = document.querySelector('#tarjeta .firma p');
 const mesExpiracion =document.querySelector('#tarjeta #expiracion .mes');
-const annoExpiracion =document.querySelector('#tarjeta #expiracion .anno');
+const yearExpiracion =document.querySelector('#tarjeta #expiracion .year');
 const ccv =document.querySelector('#tarjeta #expiracion .CCV');
 
-
-//Voltear la tarjeta de frente cuando el usuarannoExpiracionVoltear la tarjeta de frente cuando el usuario eannoibe
-const mostrarFrente=()=>{
-    if(tarjeta.classList.contains('active')){
-        tarjeta.classList.remove('active');
-    }
-}
 
 /* Rotación de la tarjeta */
 tarjeta.addEventListener('click', ()=>{
@@ -34,12 +25,12 @@ for (let i = 1; i<=12; i++){
 }
 
 /* Select del año generado dinámicamente */
-const annoActual = new Date().getFullYear();
-for(let i= annoActual; i <= annoActual+8; i++){
+const yearActual = new Date().getFullYear();
+for(let i= yearActual; i <= yearActual+8; i++){
     let opcion = document.createElement('option');
     opcion.value = i;
     opcion.innerText = i;
-    formulario.selectAnno.appendChild(opcion);
+    formulario.selectYear.appendChild(opcion);
 }
 
 /* Input número de tarjeta */
@@ -52,7 +43,7 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
     .replace(/\D/g,'')
     //Ponemos espacio cada cuatro números
     .replace(/([0-9]{4})/g, '$1 ')
-    //QUitamos el último espaciado
+    //Quitamos el último espaciado
     .trim();
 
     numeroTarjeta.textContent =valorInput;
@@ -81,18 +72,14 @@ formulario.inputNombre.addEventListener('keyup',(e)=>{
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
     nombreTarjeta.textContent =valorInput;
     firma.textContent =valorInput;
-
-    if(valorInput == ''){
-        nombreTarjeta.textContent = 'John Doe';
-    }
 })
 
 //Select mes
 formulario.selectMes.addEventListener('change',(e)=>{
     mesExpiracion.textContent=e.target.value;
 });
-formulario.selectAnno.addEventListener('change',(e)=>{
-    annoExpiracion.textContent=e.target.value.slice(2);
+formulario.selectYear.addEventListener('change',(e)=>{
+    yearExpiracion.textContent=e.target.value.slice(2);
 });
 //CCV
 formulario.inputCCV.addEventListener('keyup',()=>{
