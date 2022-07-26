@@ -68,7 +68,6 @@ formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput=e.target.value;
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
     nombreTarjeta.textContent =valorInput;
-    firma.textContent =valorInput;
 })
 
 //Select mes
