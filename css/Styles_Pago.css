@@ -2,7 +2,7 @@ body .Pago{
 	display: grid;
 	justify-items: flex-start;
 }
-aside{
+.revPedido{
 	padding: 15px;
 	margin: 0px 36px 0px 36px;
 	background-color: #FCF8E8;
