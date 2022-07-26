@@ -1,4 +1,4 @@
-const btnAbrirFormulario = document.querySelector('#abrirFormulario');
+const inputAbrirFormulario = document.querySelector('#abrirFormulario');
 const formulario = document.querySelector('#formularioTarjeta');
 const numeroTarjeta = document.querySelector('#tarjeta .numero');
 const nombreTarjeta = document.querySelector('#tarjeta .nombre');
@@ -7,12 +7,9 @@ const yearExpiracion =document.querySelector('#tarjeta #expiracion .year');
 const ccv =document.querySelector('#tarjeta #expiracion .CCV');
 
 
-/* Rotación de la tarjeta */
-tarjeta.addEventListener('click', ()=>{
-    tarjeta.classList.toggle('active');
-});
+
 /* Botón de abrir formulario */
-abrirFormulario.addEventListener('click', () =>{
+abrirFormulario.addEventListener('active', () =>{
     abrirFormulario.classList.toggle('active');
     formulario.classList.toggle('active');
 });
@@ -71,7 +68,6 @@ formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput=e.target.value;
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
     nombreTarjeta.textContent =valorInput;
-    firma.textContent =valorInput;
 })
 
 //Select mes
@@ -83,9 +79,6 @@ formulario.selectYear.addEventListener('change',(e)=>{
 });
 //CCV
 formulario.inputCCV.addEventListener('keyup',()=>{
-    if(!tarjeta.classList.contains('active')){
-        tarjeta.classList.toggle('active');
-    }
     formulario.inputCCV.value = formulario.inputCCV.value
     .replace(/\s/g, '')
     .replace(/\D/g, '');
