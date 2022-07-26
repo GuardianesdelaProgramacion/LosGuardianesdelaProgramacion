@@ -195,8 +195,50 @@ width: 240px;
     }
 }
 
+/* Asaid y Section */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+aside{
+    flex: 30px;
+    border: 3px solid var(--crema);
+    /* padding: 20px; */
+}
 
+section{
+    flex: 70%;
+    border: 3px solid var(--salmon);
+    /* padding: 20px; */
+}
+
+.card .estrellas input{
+    display: none;
+}
+
+.estrellas label{
+    font-size: 10px;
+    color: var(--salmon);
+    padding: 5px;
+    transition: all 0.2s ease;
+} 
+
+input:not(:checked) label:hover,
+input:not(:checked) label:hover label{
+    color:white;
+}
+
+input::checked label:hover{
+    color:white;   
+}
+input#rate-5:checked label{
+    color: var(--salmon);
+    text-shadow: 0 0 20px #952;
+}
+input:checked form{
+    display: block;
+}
 /* Pie de pagina */
 /* barras divisorias del pie de pagina */
 .rectangulo_1{
