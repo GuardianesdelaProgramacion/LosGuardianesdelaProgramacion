@@ -7,3 +7,12 @@ function limpiarTabla(){
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
+
+
+/*data{
+     	id: "",
+	nombre: "",
+	precio: "",
+	cantidad: "",
+	total: ""
+}*/
