@@ -22,65 +22,71 @@
   </head>
   <body>
     
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <!-- muestra el boton con tres rallitas del lado Izquierdo -->
-        <div class="container-fluid padre" style="background-color: #cee5d0">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Son los botenes que te llevan a sus respectivas paginas como Producto, Nosotro y blog-->
-          <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent" style="text-align: center;">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="btn-ghost nav-link" href="Productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn-ghost nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn-ghost nav-link" href="Nosotros.html">Nosotros</a>
-              </li>
-          </div>
-          <!-- Contiene el enlase de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la pagina de inicio -->
-          <div class=" hijo_2 col-xl-4 col-sm-2" >
-            <a href="Inicio.html">
-              <img
-                  src="Logo_Musaraña.png"
-                  class="img-encabezado"
-                  alt="Logo_Musaraña"
-                  title="Logo_Musaraña"
-                 />
-            </a>   
-          </div>
-          <!-- contiene la barra de busqueda -->
-          <div class="hijo_3 col-xl-2 col-sm-2">
-            <form class="d-flex" role="search">
-              <div class="buscar">
-                <input type="text" placeholder="Buscar" required />
-                <div class="buscar-icon">
-                  <i class="bi bi-search icon"></i>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- Se coloca imagen del login y carrito -->
-          <div class="hijo_4 col-xl-2 col-sm-2">
-            <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
-            <a class="icono2 bi bi-cart4" width="5px" href="Carrito.html" style="color: black;"></a>
-          </div>
-        </div>
-      </nav>
-    </header>
 
+    <div class="banner"></div>
+   
+      <header class="heder-statica">
+         <nav class="navbar navbar-expand-lg">
+          <!-- muestra el boton con tres rallitas del lado Izquierdo -->
+          <div class="container-fluid padre" style="background-color: #cee5d0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Son los botenes que te llevan a sus respectivas paginas como Producto, Nosotro y blog-->
+            <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent" style="text-align: center;">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="btn-ghost nav-link" href="Productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn-ghost nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn-ghost nav-link" href="Nosotros.html">Nosotros</a>
+                </li>
+            </div>
+            <!-- Contiene el enlase de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la pagina de inicio -->
+            <div class=" hijo_2 col-xl-4 col-sm-2" >
+              <a href="Inicio.html">
+                <img
+                    src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png"
+                    class="img-encabezado"
+                    alt="Logo_Musaraña"
+                    title="Logo_Musaraña"
+                   />
+              </a>   
+            </div>
+            <!-- contiene la barra de busqueda -->
+            <div class="hijo_3 col-xl-2 col-sm-2">
+              <form class="d-flex" role="search">
+                <div class="buscar">
+                  <input type="text" placeholder="Buscar" required />
+                  <div class="buscar-icon">
+                    <i class="bi bi-search icon"></i>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Se coloca imagen del login y carrito -->
+            <div class="hijo_4 col-xl-2 col-sm-2">
+              <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
+              <a class="icono2 bi bi-cart4" width="5px" href="Carrito.html" style="color: black;"></a>
+            </div>
+          </div>
+         </nav>
+      </header>
+    
+
+
+    <main class="main">
     <!-- contenido de la pagina web -->
     <div class="row">
       <aside>
@@ -89,259 +95,247 @@
       <section>
         <h2>Section</h2>
         <!-- carrusel de imagenes -->
-        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-  
-              <!-- activador -->
-              <div class="carousel-item active">
-                  <!-- conjuta las tarjetas -->
-                  <div class="cards-wrapper-tarjeta-grupo-producto">
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                            <input type="radio" name="rate" id="rate-5">
-                            <label for="rate-5" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-4">
-                            <label for="rate-4" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-3">
-                            <label for="rate-3" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-2">
-                            <label for="rate-2" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-1">
-                            <label for="rate-1" class="fas fa-star"></label>
-                          </div>
-                          <span class="producto-precio text-center">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
+         <!-- copiar -->
+    <!-- <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel"> -->
+      <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- activador -->
+          <div class="carousel-item active">
+              <!-- conjuta las tarjetas -->
+              <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/WDwWGzn/s-rum-1-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
                       </div>
-                      <!-- Sigiente tajeta -->
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
+                      <span class="producto-precio text-center">$ 50.00</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
                       </div>
-                       <!-- Sigiente tajeta -->
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
+                  </div>
+                  <!-- Sigiente tajeta -->
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/GTxW9sP/cal-ndula-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">JABÓN DE AVENA 100 GR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
                       </div>
-                       <!-- Sigiente tajeta -->
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
+                      <span class="producto-precio text-center">$ 50.00</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+                   <!-- Sigiente tajeta -->
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/Dp8CC6S/crecimiento-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">JABÓN	DE HIERBAS 100 GM</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center ">$ 50.00</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+                   <!-- Sigiente tajeta -->
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/RQwhxQ4/jab-n-fresa-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 50.00</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
                       </div>
                   </div>
               </div>
-  
-  
-              <div class="carousel-item">
-  
-                  <div class="cards-wrapper-tarjeta-grupo-producto">
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-  
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-                  </div>
-  
-              </div>
-  
-  
-  
-              <div class="carousel-item">
-  
-                  <div class="cards-wrapper-tarjeta-grupo-producto">
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-  
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-  
-                      <div class="card tarjeta-producto">
-                          <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf"> Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-  
-                      <div class="card tarjeta-producto ">
-                          <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                          <span class="producto-nombre text-center border-0">OLAS DEL MAR</span>
-                          <div class="estrellas mx-auto text-center">
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                              <span>&#9733</span>
-                          </div>
-                          <span class="producto-precio text-center border-0">$ 100.50</span>
-                          <div class="row botones-inf w-100 mx-auto text-center">
-                              <button type="button" class="botones col mx-auto"> <span class="inf">Añadir al carrito
-                                  </span> </button>
-                          </div>
-                      </div>
-                  </div>
-  
-              </div>
-  
-  
-  
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon border-0" aria-hidden="true"></span>
-              <span class="visually-hidden border-0">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon border-0" aria-hidden="true"></span>
-              <span class="visually-hidden border-0">Next</span>
-          </button>
+
+
+          <div class="carousel-item">
+
+              <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/R3QLJMp/refill-pasta-dental-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/BsRsvRS/pasta-carb-n-removebg-preview.png" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">TABLETAS DENTALES-CANEWLA-MENTA-CARBÓN ACTIVADO</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+
+
+          <div class="carousel-item">
+
+              <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+
+                  <div class="card tarjeta-producto border-0">
+                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+
+                  <div class="card tarjeta-producto  border-0">
+                      <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
+                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                      <div class="estrellas mx-auto text-center">
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                          <span>&#9733</span>
+                      </div>
+                      <span class="producto-precio text-center">$ 100.50</span>
+                      <div class="row botones-inf w-100 mx-auto text-center">
+                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
+                      </div>
+                  </div>
+              </div>
+
+         </div>
+
+
+
       </div>
+      <!-- flechas para que se mueva el carrucel a la izquierda -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+       <!-- flechas para que se mueva el carrucel a la derecha -->
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  <!-- hasta aqui -->
       </section>
     </div>
-
+  </main>
     <!-- Datos de contacto -->
     <footer class="text-center">
       <!-- lineas de colores -->
@@ -390,7 +384,7 @@
           <div class="contenedor_imagen col-xl-2 col-sm-4">
             <!-- Segundo logo -->
             <img
-              src="Musaraña_logo_pie.png"
+              src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png"
               width="150px"
               class="img-pie"
               alt="Logo_Musaraña_pie"
