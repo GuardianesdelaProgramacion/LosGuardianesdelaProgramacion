@@ -1,6 +1,6 @@
 
 
-@media screen and (max-width:650px){
+@media screen and (max-width:850px){
 
     .img-producto-individual{
         width: 60%;     
@@ -10,18 +10,20 @@
            
     }
     .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
-        font-size: 6px;
+        font-size: 7px;
         font-family: 'Montserrat', sans-serif; 
     }  
 }
 
-@media screen and (min-width:651px){
+@media screen and (min-width:851px){
     .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
         font-size: 16px;
         font-family: 'Montserrat', sans-serif; 
     }  
-    .tarjeta-producto{     
-        margin: 0 1.5em; 
+    
+    .tarjeta-producto{ 
+         /* Se modifica la imagen de tamaño */    
+        margin: 0 3em; 
            
     }
   
