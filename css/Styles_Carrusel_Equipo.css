@@ -1,0 +1,84 @@
+/* Carrusel */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* .titulo {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 40px;
+    color: #fff;
+} */
+
+/* .subtitulo {
+    margin: 0;
+    color: #000;
+    display: inline;
+    font-size: 16px;
+    text-transform: uppercase;
+} */
+
+/* .sabor {
+    color: #fff;
+    margin: 7px 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50;
+} */
+
+/* .linea-division {
+    width: 80%;
+    height: px;
+    background-color: #000000;
+} */
+
+
+
+/* Estilos de materialize */
+
+.carousel {
+    min-height: 250px;
+}
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 250px;
+    height: 250px;
+
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+
+}
+
+.carousel .indicators .indicator-item {
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 0px 15px;
+    background-color:var(--salmon);
+
+}
+
+p{
+    position: absolute;
+
+}

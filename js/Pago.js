@@ -1,20 +1,22 @@
-const btnAbrirFormulario = document.querySelector('#abrirFormulario');
+// const inputAbrirFormulario = document.querySelector('.abrirFormulario');
 const formulario = document.querySelector('#formularioTarjeta');
-const numeroTarjeta = document.querySelector('#tarjeta .numero');
-const nombreTarjeta = document.querySelector('#tarjeta .nombre');
-const mesExpiracion =document.querySelector('#tarjeta #expiracion .mes');
-const yearExpiracion =document.querySelector('#tarjeta #expiracion .year');
-const ccv =document.querySelector('#tarjeta #expiracion .CCV');
+const numeroTarjeta = document.querySelector('#datosTarjeta #inputNumero');
+const nombreTarjeta = document.querySelector('#datosTarjeta #inputNombre');
+const mesExpiracion =document.querySelector('#datosTarjeta .grupo-expira #selectMes');
+const yearExpiracion =document.querySelector('#datosTarjeta .grupo-expira #selectYear');
+const ccv =document.querySelector('#datosTarjeta #grupo-expira .inputCCV');
+
+const datosEnvio= document.querySelector('#dirEnvio');
+const nombreRecibe = document.querySelector('.grupoPersonaRecibe #Nombre');
+const apellidoRecibe = document.querySelector('.grupoPersonaRecibe #Apellido');
+const codigoPostal = document.querySelector('.grupoDireccion #CP');
+const telefono = document.querySelector('.grupoDireccion #Tel');
 
 
-/* Rotación de la tarjeta */
-tarjeta.addEventListener('click', ()=>{
-    tarjeta.classList.toggle('active');
-});
 /* Botón de abrir formulario */
-abrirFormulario.addEventListener('click', () =>{
-    abrirFormulario.classList.toggle('active');
-    formulario.classList.toggle('active');
+abrirFormulario.addEventListener('select', () =>{
+    abrirFormulario.classList.toggle('select');
+    formulario.classList.toggle('select');
 });
 /* Select del mes generado dinámicamente */
 for (let i = 1; i<=12; i++){
@@ -45,17 +47,9 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
     .replace(/([0-9]{4})/g, '$1 ')
     //Quitamos el último espaciado
     .trim();
-
-    numeroTarjeta.textContent =valorInput;
-
-    if(valorInput==''){
-        numeroTarjeta.textContent= '#### ##### ##### #####';
-        logoMarca.innerHTML='';
-    }
-
     if(valorInput[0]==4){
         logoMarca.innerHTML='';
-        const imagen =document.createElement('img');
+        const imagen =document.createElement('i');
         imagen.src = 'img/logos/visa.png';
         logoMarca.appendChild(imagen);
     }else if (valorInput[0]==5){
@@ -70,25 +64,34 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
 formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput=e.target.value;
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
-    nombreTarjeta.textContent =valorInput;
-    firma.textContent =valorInput;
 })
-
-//Select mes
-formulario.selectMes.addEventListener('change',(e)=>{
-    mesExpiracion.textContent=e.target.value;
-});
-formulario.selectYear.addEventListener('change',(e)=>{
-    yearExpiracion.textContent=e.target.value.slice(2);
-});
 //CCV
 formulario.inputCCV.addEventListener('keyup',()=>{
-    if(!tarjeta.classList.contains('active')){
-        tarjeta.classList.toggle('active');
-    }
     formulario.inputCCV.value = formulario.inputCCV.value
     .replace(/\s/g, '')
     .replace(/\D/g, '');
-
-    ccv.textContent = formulario.inputCCV.value;
 })
+/**Input Nombre y Apellidos de quien recibe**/
+    datosEnvio.Nombre.addEventListener('keyup',(e)=>{
+        let valorInput=e.target.value
+        datosEnvio.Nombre.value = valorInput.replace(/[0-9]/g,'');
+    });
+    datosEnvio.Apellido.addEventListener('keyup',(e)=>{
+        let valorInput=e.target.value
+        datosEnvio.Apellido.value = valorInput.replace(/[0-9]/g,'');
+    })
+    /**Input del Código Postal y de teléfono */
+    datosEnvio.CP.addEventListener('keyup',()=>{
+        datosEnvio.CP.value=datosEnvio.CP.value
+        .replace(/\s/g,'')
+        .replace(/\D/g,'');
+    })
+    datosEnvio.Tel.addEventListener('keyup',()=>{
+        datosEnvio.Tel.value=datosEnvio.Tel.value
+        .replace(/\s/g,'')
+        .replace(/\D/g,'')
+        //Ponemos espacio cada cuatro números
+        .replace(/([0-9]{2})/g, '$1 ')
+        //Quitamos el último espaciado
+        .trim();
+    })
