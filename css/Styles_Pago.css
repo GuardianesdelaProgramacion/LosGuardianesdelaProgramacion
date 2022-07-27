@@ -27,7 +27,6 @@ aside .info-pedido{
 	justify-items: flex-start;
 	border-radius: 48%;
 }
-
 aside .fr-btn{
 width: fit-content;
 }
@@ -75,4 +74,15 @@ input{
 }
 .formularioTarjeta #inputCCV{
 	max-width: 40px;
+}
+@media screen  and (max-width:777px){
+	.revPedido{
+	margin: 0px 8px 0px 8px ;
+	width: 70%;
+	}
+	.dirEnvio{
+		margin: 0px 8px 0px 8px;
+		width: 70%;
+	}
+
 }

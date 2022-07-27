@@ -42,15 +42,9 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
     .replace(/([0-9]{4})/g, '$1 ')
     //Quitamos el último espaciado
     .trim();
-
-    if(valorInput==''){
-        numeroTarjeta.textContent= '#### ##### ##### #####';
-        logoMarca.innerHTML='';
-    }
-
     if(valorInput[0]==4){
         logoMarca.innerHTML='';
-        const imagen =document.createElement('img');
+        const imagen =document.createElement('i');
         imagen.src = 'img/logos/visa.png';
         logoMarca.appendChild(imagen);
     }else if (valorInput[0]==5){
@@ -66,19 +60,9 @@ formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput=e.target.value;
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
 })
-
-//Select mes
-formulario.selectMes.addEventListener('change',(e)=>{
-    mesExpiracion.textContent=e.target.value;
-});
-formulario.selectYear.addEventListener('change',(e)=>{
-    yearExpiracion.textContent=e.target.value.slice(2);
-});
 //CCV
 formulario.inputCCV.addEventListener('keyup',()=>{
     formulario.inputCCV.value = formulario.inputCCV.value
     .replace(/\s/g, '')
     .replace(/\D/g, '');
-
-    ccv.textContent = formulario.inputCCV.value;
 })
