@@ -32,15 +32,14 @@ width: fit-content;
 }
 input{
 	border-radius: 8px;
-	border: 1
+	border-color:var(--salmon);
+	border-style:solid;
 }
-
 .dirEnvio{
 	background-color: #F5F5F5;
 	width: 45%;
 	margin-left: 36px;
 	padding: 15px;
-
 }
 .dirEnvio .grupoPersonaRecibe{
 	display: grid;
@@ -53,6 +52,20 @@ input{
 	grid-template-columns: repeat(auto-fill, minmax(100%,90%));
 	grid-gap: 5px;
 	justify-items: start;
+}
+.abrirFormulario:hover{
+	text-decoration-color: var(--crema);
+    background-color: white;
+    background:var(--salmon);
+    color: black;
+    border:var(--salmon);
+	border-radius:10px;
+    outline: var(--salmon);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    padding:15px;
 }
 .formularioTarjeta{
 	background-color: #F5F5F5;
@@ -74,6 +87,34 @@ input{
 }
 .formularioTarjeta #inputCCV{
 	max-width: 40px;
+}
+.opcionPaypal:hover{
+	text-decoration-color: var(--crema);
+	background-color: white;
+    background:var(--salmon);
+	color: black;
+    border:var(--salmon);
+	border-radius:10px;
+    outline: var(--salmon);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    padding:15px;
+}
+.opcionEntrega:hover{
+	text-decoration-color: var(--crema);
+	background-color: white;
+	background:var(--salmon);
+	color: black;
+	border:var(--salmon);
+	border-radius:10px;
+	outline: var(--salmon);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin:auto;
+	padding:15px;
 }
 @media screen  and (max-width:777px){
 	.revPedido{

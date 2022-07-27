@@ -6,6 +6,11 @@ const mesExpiracion =document.querySelector('#datosTarjeta .grupo-expira #select
 const yearExpiracion =document.querySelector('#datosTarjeta .grupo-expira #selectYear');
 const ccv =document.querySelector('#datosTarjeta #grupo-expira .inputCCV');
 
+const datosEnvio= document.querySelector('#dirEnvio');
+const nombreRecibe = document.querySelector('.grupoPersonaRecibe #Nombre');
+const apellidoRecibe = document.querySelector('.grupoPersonaRecibe #Apellido');
+const codigoPostal = document.querySelector('.grupoDireccion #CP');
+const telefono = document.querySelector('.grupoDireccion #Tel');
 
 
 /* Botón de abrir formulario */
@@ -66,3 +71,27 @@ formulario.inputCCV.addEventListener('keyup',()=>{
     .replace(/\s/g, '')
     .replace(/\D/g, '');
 })
+/**Input Nombre y Apellidos de quien recibe**/
+    datosEnvio.Nombre.addEventListener('keyup',(e)=>{
+        let valorInput=e.target.value
+        datosEnvio.Nombre.value = valorInput.replace(/[0-9]/g,'');
+    });
+    datosEnvio.Apellido.addEventListener('keyup',(e)=>{
+        let valorInput=e.target.value
+        datosEnvio.Apellido.value = valorInput.replace(/[0-9]/g,'');
+    })
+    /**Input del Código Postal y de teléfono */
+    datosEnvio.CP.addEventListener('keyup',()=>{
+        datosEnvio.CP.value=datosEnvio.CP.value
+        .replace(/\s/g,'')
+        .replace(/\D/g,'');
+    })
+    datosEnvio.Tel.addEventListener('keyup',()=>{
+        datosEnvio.Tel.value=datosEnvio.Tel.value
+        .replace(/\s/g,'')
+        .replace(/\D/g,'')
+        //Ponemos espacio cada cuatro números
+        .replace(/([0-9]{2})/g, '$1 ')
+        //Quitamos el último espaciado
+        .trim();
+    })

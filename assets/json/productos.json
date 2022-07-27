@@ -1,0 +1,68 @@
+{
+    "data": {
+        "page": 1,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [
+            {
+                "id": 1,
+                "nombre_producto": "Producto 1",
+                "precio": 15.00,
+                "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
+                "url": ""
+            },
+            {
+                "id":2,
+                "nombre_producto": "Producto 2",
+                "precio": 12.00,
+                "descripción": "No dejes que el miedo te impida ser feliz",
+                "url": ""
+            },
+            {
+                "id": 3,
+                "nombre_producto": "producto 3",
+                "precio": 7.0,
+                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "url": ""
+            }
+        ],
+        "support": {
+            "url": "https://reqres.in/#support-heading",
+            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+        }
+    },
+    "status": 200,
+    "statusText": "",
+    "headers": {
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {
+            "FormData": null
+        },
+        "headers": {
+            "Accept": "application/json, text/plain, */*"
+        },
+        "method": "get",
+        "url": "https://reqres.in/api/users?delay=3",
+        "responseType": "stream"
+    },
+    "request": {}
+}
