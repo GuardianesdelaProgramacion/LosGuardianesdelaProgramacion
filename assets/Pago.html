@@ -9,20 +9,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
-
+    
+    
+    
     <link rel="stylesheet" href="../css/Styles.css">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-
-
-
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    
+    
+    
     <title>Pago | Musaraña</title>
 </head>
-<header>
+<body class="Pago">
+<header class="heder-statica">
     <nav class="navbar navbar-expand-lg">
         <!-- muestra el botón con tres rayitas del lado Izquierdo -->
         <div class="container-fluid padre" style="background-color: #cee5d0">
@@ -69,17 +70,16 @@
         </div>
     </nav>
 </header>
-
-<body class="Pago">
+<div class="vista">
     <h1>Métodos de pago</h1>
     <!-- Lado para la revisión del pedido y proceder el pago  -->
-    <aside class="revPedido">
+    <aside class="revPedido col-md-6 col-sm-12 col-12">
         <h2>Revisar pedido</h2>
         <div class="info-pedido met-3">
             <table class="mt-3">Tablita con el pedido que depende del carrito</table>
             <label class="mt-3">Costo envío</label>
             <label class="mt-3">$</label>
-            <input type="text" placeholder="Cupón de descuento" class="mt-3" style="border-radius: 16px; width:100%;">
+            <input type="text" placeholder="Cupón de descuento" class="mt-3 posicion" style="border-radius: 16px; width:100%;">
             <button type="submit" class="fr-btn mt-3" style="width:100%;">Usar</button>
         </div>
         <button type="button" class="fr-btn mt-3"><span class="termina-compra">Realizar pedido
@@ -91,9 +91,9 @@
         <div class="flexbox">
             <div class="grupoPersonaRecibe">
                 <label>Nombre(s)</label>
-                <input type="text" class="Nombre" placeholder="Nombre(s)" style="width: 100%;">
+                <input type="text" class="Nombre posicion" placeholder="Nombre(s)" style="width: 100%;">
                 <label>Apellidos</label>
-                <input type="text" class="Apellidos" placeholder="Apellidos" style="width: 100%;">
+                <input type="text" class="Apellidos posicion" placeholder="Apellidos" style="width: 100%;">
             </div>
             <div class="grupo">
                 <select name="Estado" id="estado" style="min-width: 187px; max-width: 464px;" class="mt-3">
@@ -133,29 +133,31 @@
                 </select>
                 <div class="grupoDireccion mt-3">
                     <label>Calle, No. exterior y No. interior</label>
-                    <input type="text" style="width: 100%;">
+                    <input type="text" style="width: 100%;" class="posicion">
                     <label>Colonia</label>
-                    <input type="text" style="width: 100%;">
+                    <input type="text" style="width: 100%;" class="posicion">
                     <label>Municipio</label>
-                    <input type="text" style="width: 100%;">
+                    <input type="text" style="width: 100%;" class="posicion">
                     <label for="">Código Postal</label>
-                    <input type="text" maxlength="5" style="width: 100%;">
+                    <input type="text" maxlength="5" style="width: 100%;" class="posicion">
                     <label>Teléfono</label>
-                    <input type="text" maxlength="10" style="width: 100%;">
+                    <input type="text" maxlength="10" style="width: 100%;" class="posicion">
                 </div>
             </div>
         </div>
     </form>
     <!-- Inputs de tipo radio para seleccionar la forma de pago -->
-    <input type="radio" name="tarjeta" value="1" class="abrirFormulario">
-    <label>Tarjeta de crédito/débito</label><br>
+    <i class="fa-brands fa-cc-mastercard"></i>
+    <i class="fa-brands fa-cc-visa"></i>
+    <button type="button" name="tarjeta" id="abrirFormulario" class="abrirFormulario">
+    <label>Tarjeta de crédito/débito</label></button><br>
     <!-- Formulario de pago con tarjeta -->
     <form action="" id="formularioTarjeta" class="formularioTarjeta">
         <div class="datosTarjeta">
             <label for="inputNumero">Número de tarjeta</label>
-            <input type="text" id="inputNumero" maxlength="19" autocomplete="off" style="width: 100%;">
+            <input type="text" id="inputNumero" maxlength="19" autocomplete="off" style="width: 100%;" class="posicion">
             <label for="inputNombre">Nombre en la tarjeta</label>
-            <input type="text" id="inputNombre" maxlength="19" autocomplete="off" style="width: 100%;">
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off" style="width: 100%;" class="posicion">
         </div>
         <div class="grupo-expira">
             <label for="selectFechaExp">Fecha de expiración</label>
@@ -169,46 +171,46 @@
                 </select>
             </div>
             <div>
-                <input type="text" id="inputCCV" maxlength="3">
+                <input type="text" id="inputCCV" maxlength="3" class="posicion">
             </div>
         </div>
     </form>
     <!-- Pago Paypal -->
-    <input type="radio" name="paypal" value="2" class="opcionPaypal"><span>Paypal</span>
-    <a href="https://www.paypal.com/signin"></a><br>
+    <button type="radio" name="paypal" value="2" class="opcionPaypal"><i class="bi bi-paypal"></i><span>Paypal</span>
+    <a href="https://www.paypal.com/signin"></a></button><br>
     <!-- Efectivo vs Entrega -->
-    <input type="radio" name="vsEntrega" value="3" class="opcionEntrega"><span>Efectivo</span><span>
+    <button type="radio" name="vsEntrega" value="3" class="opcionEntrega"><span>Efectivo</span><span></span></button>
         <p>*Es pago contra entrega. **Aplica únicamente en Morelia</p>
     </span>
     <br>
-</body>
-<footer class="text-center">
-    <!-- lineas de colores -->
-    <div class="rectangulo_1"></div>
-    <div class="rectangulo_2"></div>
-    <div class="rectangulo_3"></div>
-    <div class="rectangulo_2"></div>
-
-    <!-- Conteiner principal -->
-    <div class="container text-center contenedor-padre">
-        <div class="row">
-            <!-- Container de contacto -->
-            <div class="col-xl-3 col-sm-2 contnedor-in">
-                <b>CONTACTO</b>
-                <div class="row">
+</div>
+    <footer class="text-center">
+        <!-- lineas de colores -->
+        <div class="rectangulo_1"></div>
+        <div class="rectangulo_2"></div>
+        <div class="rectangulo_3"></div>
+        <div class="rectangulo_2"></div>
+        
+        <!-- Conteiner principal -->
+        <div class="container text-center contenedor-padre">
+            <div class="row">
+                <!-- Container de contacto -->
+                <div class="col-xl-3 col-sm-2 contnedor-in">
+                    <b>CONTACTO</b>
+                    <div class="row">
                     <!-- container de icons -->
                     <div class="col contenedor-ini">
                         <i class="bi bi-whatsapp"></i>
-
+                        
                         <i class="bi bi-telephone-fill"></i>
-
+                        
                         <i class="bi bi-telegram"></i>
-
+                        
                         <i class="bi bi-envelope-fill"></i>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Container de Pago -->
             <div class="col-xl-2 col-sm-2 contnedor-in">
                 <b>FORMAS DE PAGO</b>
@@ -216,11 +218,11 @@
                     <!-- Container de icons -->
                     <div class="col contenedor-ini">
                         <i class="fa-brands fa-cc-mastercard"></i>
-
+                        
                         <i class="bi bi-paypal"></i>
 
                         <i class="fa-brands fa-cc-visa"></i>
-
+                        
                         <i class="fa-solid fa-credit-card-front"></i>
                     </div>
                 </div>
@@ -229,7 +231,7 @@
             <div class="contenedor_imagen col-xl-2 col-sm-4">
                 <!-- Segundo logo -->
                 <img src="Musaraña_logo_pie.png" width="150px" class="img-pie" alt="Logo_Musaraña_pie"
-                    title="Logo_Musaraña_pie" />
+                title="Logo_Musaraña_pie" />
             </div>
             <div class="col-xl-2 col-sm-2 contnedor-in">
                 <!-- Container de Redes Sociales -->
@@ -238,11 +240,11 @@
                     <!-- Container de icons -->
                     <div class="col contenedor-ini">
                         <i class="bi bi-facebook"></i>
-
+                        
                         <i class="bi bi-instagram"></i>
-
+                        
                         <i class="bi bi-twitter"></i>
-
+                        
                         <i class="bi bi-youtube"></i>
                     </div>
                 </div>
@@ -262,7 +264,8 @@
 <script src="../js/Pago.js"></script>
 <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
-
+    
+</body>
 </html>

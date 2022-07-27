@@ -1,6 +1,14 @@
 body .Pago{
 	display: grid;
+	text-align: left;
 	justify-items: flex-start;
+}
+.vista{
+	padding: 10rem 0rem 0rem 0rem;
+	z-index: 50;
+}
+.posicion{
+	z-index: 1;
 }
 .revPedido{
 	padding: 15px;
@@ -25,7 +33,9 @@ width: fit-content;
 }
 input{
 	border-radius: 8px;
+	border: 1
 }
+
 .dirEnvio{
 	background-color: #F5F5F5;
 	width: 45%;

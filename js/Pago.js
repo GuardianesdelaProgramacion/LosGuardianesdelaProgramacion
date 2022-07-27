@@ -1,17 +1,17 @@
-const inputAbrirFormulario = document.querySelector('#abrirFormulario');
+// const inputAbrirFormulario = document.querySelector('.abrirFormulario');
 const formulario = document.querySelector('#formularioTarjeta');
-const numeroTarjeta = document.querySelector('#tarjeta .numero');
-const nombreTarjeta = document.querySelector('#tarjeta .nombre');
-const mesExpiracion =document.querySelector('#tarjeta #expiracion .mes');
-const yearExpiracion =document.querySelector('#tarjeta #expiracion .year');
-const ccv =document.querySelector('#tarjeta #expiracion .CCV');
+const numeroTarjeta = document.querySelector('#datosTarjeta #inputNumero');
+const nombreTarjeta = document.querySelector('#datosTarjeta #inputNombre');
+const mesExpiracion =document.querySelector('#datosTarjeta .grupo-expira #selectMes');
+const yearExpiracion =document.querySelector('#datosTarjeta .grupo-expira #selectYear');
+const ccv =document.querySelector('#datosTarjeta #grupo-expira .inputCCV');
 
 
 
 /* Botón de abrir formulario */
-abrirFormulario.addEventListener('active', () =>{
-    abrirFormulario.classList.toggle('active');
-    formulario.classList.toggle('active');
+abrirFormulario.addEventListener('select', () =>{
+    abrirFormulario.classList.toggle('select');
+    formulario.classList.toggle('select');
 });
 /* Select del mes generado dinámicamente */
 for (let i = 1; i<=12; i++){
@@ -43,8 +43,6 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
     //Quitamos el último espaciado
     .trim();
 
-    numeroTarjeta.textContent =valorInput;
-
     if(valorInput==''){
         numeroTarjeta.textContent= '#### ##### ##### #####';
         logoMarca.innerHTML='';
@@ -67,7 +65,6 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
 formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput=e.target.value;
     formulario.inputNombre.value=valorInput.replace(/[0-9]/g, '');
-    nombreTarjeta.textContent =valorInput;
 })
 
 //Select mes
