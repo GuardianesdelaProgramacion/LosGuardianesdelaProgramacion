@@ -8,23 +8,50 @@
             {
                 "id": 1,
                 "nombre_producto": "Producto 1",
-                "precio": 15.00,
+                "precio": "$50.00",
                 "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
-                "url": ""
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
             },
             {
                 "id":2,
                 "nombre_producto": "Producto 2",
-                "precio": 12.00,
+                "precio": "$70.00",
                 "descripción": "No dejes que el miedo te impida ser feliz",
-                "url": ""
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
             },
             {
                 "id": 3,
                 "nombre_producto": "producto 3",
-                "precio": 7.0,
+                "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": ""
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
+            },
+            {
+                "id": 4,
+                "nombre_producto": "producto 4",
+                "precio": "70.00",
+                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
+            },
+            {
+                "id": 5,
+                "nombre_producto": "producto 5",
+                "precio": "70.00",
+                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
+            },
+            {
+                "id": 8,
+                "nombre_producto": "producto 5",
+                "precio": "70.00",
+                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo"
             }
         ],
         "support": {

@@ -56,42 +56,88 @@ async function solicitudBtn() {
   // datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
   // console.log("Solicitud Fetch:" + JSON.stringify(datos));
   datos = await adquirirDatos("Json", "../assets/json/productos.json");
-  console.log("Solicitud Json:" + JSON.stringify(datos));
+  console.log("Solicitud Json Productos:" + JSON.stringify(datos));
+  masVendido = await adquirirDatos("Json", "../assets/json/masVendido.json");
+  console.log("Solicitud Json Mas Vendido:" + JSON.stringify(datos));
+
 
   for (let user of datos) {
     let llave = JSON.stringify(user.id)
-    console.log(llave)
     localStorage.setItem(llave, JSON.stringify(user));
   }
 
+  for (let user of masVendido) {
+    let llave = JSON.stringify(user.id)
+    localStorage.setItem(llave, JSON.stringify(user));
+  }
 
+  catalogosProductos("Tarjetas-js");
+  vendido("masVendido");
 
 }
 
-function recuperar() {
+
+function catalogosProductos(id) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
-    console.log(lista.nombre_producto)
-    datos = datos + `<div class="col">
-      <div class="card h-100">        
-        <div class="card-body">
-          <h5 class="card-title">${lista.nombre_producto}</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">${lista.nombre_producto}</li>
-            <li class="list-group-item">${lista.nombre_producto}</li>
-            <li class="list-group-item">ID  ${lista.id}</li>
-          </ul>
+    if (lista.seccion == "catalogo") {
+      datos = datos +
+        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
+    <div class="card tarjeta-producto border-0">
+        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
+        <img src=${lista.url} class="img-producto" alt="..." >
+        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+        <div class="estrellas mx-auto text-center">
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
         </div>
-      </div>
-      </div>`;
+        <span class="producto-precio text-center">${lista.precio}</span>
+        <div class="row botones-inf w-100 mx-auto text-center">
+            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
+                    carrito
+                </span> </button>
+        </div>
+    </div>
+    </div>`;
+    }
   }
-  // console.log(datos)
-  document.getElementById("PruebaProducto").innerHTML = datos;
+  document.getElementById(id).innerHTML = datos;
 }
 
 
-recuperar() 
+function vendido(id) {
+  let datos = "";
+  for (let i = 1; i < localStorage.length + 1; i++) {
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.seccion == "masVendido") {
+      datos = datos +
+        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
+    <div class="card tarjeta-producto border-0">
+        <img src=${lista.url} class="img-producto" alt="...">
+        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+        <div class="estrellas mx-auto text-center">
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+        </div>
+        <span class="producto-precio text-center">${lista.precio}</span>
+        <div class="row botones-inf w-100 mx-auto text-center">
+            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
+                    carrito
+                </span> </button>
+        </div>
+    </div>
+    </div>`;
+    }
+  }
+  document.getElementById(id).innerHTML = datos;
+}
 
 
 
@@ -99,28 +145,6 @@ recuperar()
 
 
 
-//  function existentes() {
-//   let datos = "";
-//   for (let i = 1; i < localStorage.length; i++) {
-//       lista = JSON.parse(localStorage.getItem(i));
-//       datos = datos + `<div class="col">
-//       <div class="card h-100">
-//         <img src="${lista.nombre_producto}" class="avatar">
-//         <div class="card-body">
-//           <h5 class="card-title">${lista.descripcion}</h5>
-//           <ul class="list-group list-group-flush">
-//             <li class="list-group-item">${lista.precio}</li>
-//             <li class="list-group-item">${lista.precio}</li>
-//             <li class="list-group-item">ID  ${lista.id}</li>
-//           </ul>
-//         </div>
-//       </div>
-//       </div>`;
-//   }
-//   document.getElementById("data").innerHTML = datos;
-// }
 
-
-// existentes();
 
 
