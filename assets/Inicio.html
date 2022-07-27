@@ -22,7 +22,10 @@
   </head>
   <body>
     
-
+    <div class="background-container" >
+      <div class="card-container glass-effect">
+      </div>
+    </div>
     <div class="banner"></div>
    
       <header class="heder-statica">
@@ -85,7 +88,7 @@
       </header>
     
 
-
+      
     <main class="main">
     <!-- contenido de la pagina web -->
     <div class="row">
@@ -100,238 +103,254 @@
       <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
         <div class="carousel-inner">
 
-          <!-- activador -->
-          <div class="carousel-item active">
-              <!-- conjuta las tarjetas -->
-              <div class="cards-wrapper-tarjeta-grupo-producto">
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/WDwWGzn/s-rum-1-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 50.00</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-                  <!-- Sigiente tajeta -->
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/GTxW9sP/cal-ndula-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">JABÓN DE AVENA 100 GR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 50.00</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-                   <!-- Sigiente tajeta -->
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/Dp8CC6S/crecimiento-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">JABÓN	DE HIERBAS 100 GM</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center ">$ 50.00</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-                   <!-- Sigiente tajeta -->
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/RQwhxQ4/jab-n-fresa-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 50.00</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
 
+            <div class="carousel-item active">
 
-          <div class="carousel-item">
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/WDwWGzn/s-rum-1-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
+                        <div class="estrellas mx-auto text-center">
+                            <input type="radio" name="rating" id="star-1">
+                            <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star-2">
+                            <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star-3">
+                            <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star-4">
+                            <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star-5">
+                            <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                        </div>
+                        <span class="producto-precio text-center">$ 50.00</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
-              <div class="cards-wrapper-tarjeta-grupo-producto">
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/R3QLJMp/refill-pasta-dental-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/GTxW9sP/cal-ndula-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">JABÓN DE AVENA <br> 100 GR</br></span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 50.00</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/Dp8CC6S/crecimiento-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">JABÓN	DE HIERBAS <br>100 GM </br></span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center border-0">$ 50.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/BsRsvRS/pasta-carb-n-removebg-preview.png" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">TABLETAS DENTALES-CANEWLA-MENTA-CARBÓN ACTIVADO</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-              </div>
-
-          </div>
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/RQwhxQ4/jab-n-fresa-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 50.00</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-          <div class="carousel-item">
+            <div class="carousel-item">
 
-              <div class="cards-wrapper-tarjeta-grupo-producto">
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/sqjvssw/cal-ndula-1.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-
-
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/R3QLJMp/refill-pasta-dental-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center border-0">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
 
-                  <div class="card tarjeta-producto border-0">
-                      <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/BsRsvRS/pasta-carb-n-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">TABLETAS DENTALES-CANEWLA-MENTA-CARBÓN ACTIVADO</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
-                  <div class="card tarjeta-producto  border-0">
-                      <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                      <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                      <div class="estrellas mx-auto text-center">
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                          <span>&#9733</span>
-                      </div>
-                      <span class="producto-precio text-center">$ 100.50</span>
-                      <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="fr-btn p-2">Añadir al carrito</button>
-                      </div>
-                  </div>
-              </div>
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/cDrxt9P/7-crema-cacao-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
 
-         </div>
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/RpCdN20/8-frutos-rojos-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
 
-      </div>
-      <!-- flechas para que se mueva el carrucel a la izquierda -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-       <!-- flechas para que se mueva el carrucel a la derecha -->
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
-  </div>
+            <div class="carousel-item">
+
+                <div class="cards-wrapper-tarjeta-grupo-producto ">
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/0Vs1gmS/9-rosas-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones  py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+
+
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/WFBLNJp/10-s-rum-removebg-preview-1.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+
+
+                    <div class="card tarjeta-producto border-0">
+                        <img src="https://i.ibb.co/yXh2kMf/IMG-0358-removebg-preview.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+
+                    <div class="card tarjeta-producto border-0 ">
+                        <img src="https://i.ibb.co/0CWQpXf/Jamaica-removebg-preview-1.png" class="img-producto" alt="...">
+                        <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                        <div class="estrellas mx-auto text-center">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <span class="producto-precio text-center">$ 100.50</span>
+                        <div class="row botones-inf w-100 mx-auto text-center">
+                            <button type="button" class="botones py-2 col mx-auto"> <span class="inf">Añadir al carrito
+                                </span> </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
   <!-- hasta aqui -->
       </section>
     </div>
@@ -430,3 +449,4 @@
     ></script>
   </body>
 </html>
+
