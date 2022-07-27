@@ -116,7 +116,8 @@
 .icono{
    font-size: 25px;
    padding: 10px;
-   margin: 0px 40px; 
+   /* margin: 0px 40px;  */
+   margin: 0px 20px; 
    /*margin-top: 8px;
    margin-bottom: 5px;  */
 
@@ -126,6 +127,7 @@
 .icono2{
     font-size:25px;
     /* margin: 0px 25px;  */
+    /* margin: 0px -15px;  */
 }
  
 /* Estilos y pocicionamiento de los botonos Productos Blog y Nosotros */
