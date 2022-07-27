@@ -1,17 +1,26 @@
-            contactoTitulo{
+            .contactoTitulo{
                 text-align: center;
                 background-color: white;
                 font-family: 'Montserrat', sans-serif;
                 margin-bottom: 50px;
             }
 
+            .contactoBanner{
+                /*display:flex;
+                flex-wrap: wrap;*/
+                max-width: 50%;
+                height: auto;
+                margin:50px;
+                border-radius:15px;
+            }
+
              .contenedor{
                 background-color: var(--crema);
                 margin: 50px;
-                position: relative;
+                /*position: relative;*/
                 width: 100%;
-                margin: auto;
-                padding:200px;
+                /*margin: auto;*/
+                padding:50px;
 
                 display: flex;
                 flex-wrap: wrap;
@@ -23,7 +32,7 @@
                 position: relative;
             }*/
 
-            @media only screen and (max-width: 500px) {
+            /*@media only screen and (max-width: 500px) {
                 .contactoName {
                   flex-basis: 100%;
                   order: 1;
@@ -44,9 +53,9 @@
                     order: 4;
                   }
                 
-              }
+              }*/
 
-              .contactoTexto{
+              /*.contactoTexto{
                 position: absolute;
                 left: 3%;
                 top: 5%;
@@ -59,15 +68,15 @@
                 left: 20%;
                 top: 20%;
                 flex: 1;
-            }
+            }*/
 
             .contactoNameT{
-                position: absolute;
+                /*position: absolute;
                 left: 20%;
                 top: 25%;
-                flex: 1;
+                flex: 1;*/
                 width:180px;
-                display: block;
+                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -80,19 +89,19 @@
                 border-style:solid;
             }
 
-            .contactoEmail{
+            /*.contactoEmail{
                 position: absolute;
                 left: 60%;
                 top: 20%;
                 flex: 1;
-            }
+            }*/
             .contactoEmailT{
-                position: absolute;
+                /*position: absolute;
                 left: 60%;
                 top: 25%;
-                flex: 1;
+                flex: 1;*/
                 width:180px;
-                display: block;
+                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -100,17 +109,17 @@
                 border-style:solid;
             }
 
-            .contactoAsunto{
+            /*.contactoAsunto{
                 position: absolute;
                 left: 20%;
                 top: 40%;
-            }
+            }*/
             .contactoAsuntoT{
-                position: absolute;
+                /*position: absolute;
                 left: 20%;
-                top: 45%;
+                top: 45%;*/
                 width:180px;
-                display: block;
+                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -118,17 +127,17 @@
                 border-style:solid;
             }
 
-            .contactoTelefono{
+            /*.contactoTelefono{
                 position: absolute;
                 left: 60%;
                 top: 40%;
-            }
+            }*/
             .contactoTelefonoT{
-                position: absolute;
+               /* position: absolute;
                 left: 60%;
-                top: 45%;
+                top: 45%;*/
                 width:180px;
-                display: block;
+                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -136,29 +145,30 @@
                 border-style:solid;
             }
 
-            .contactoComentarios{
+            /*.contactoComentarios{
                 position: absolute;
                 left: 35%;
                 top: 60%;
-            }
+            }*/
             .contactoComentariosT{
-                position: absolute;
+                /*position: absolute;
                 left: 35%;
-                top: 65%;
+                top: 65%;*/
                 width:300px;
-                display: block;
+                /*display: block;*/
                 height: auto;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
+                margin: 20px;
             }
 
-            .contactoBoton{
+            /*.contactoBoton{
                 position: absolute;
                 left: 40%;
                 top: 85%;
-            }
+            }*/
 
             .fr-btn{
                 background-color: white;
@@ -196,7 +206,7 @@
                 height: auto;
                 padding:15px;
 
-                border-radius:10px;
+                border-radius:15px;
                 outline: var(--salmon);
                 -webkit-transition: all 0.3s;
                 -moz-transition: all 0.3s;
