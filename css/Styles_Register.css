@@ -6,8 +6,13 @@
    border-radius: 16%;
   }
   
-
-  /* Input Styles */
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
 
   .form{
     width: 50%;
