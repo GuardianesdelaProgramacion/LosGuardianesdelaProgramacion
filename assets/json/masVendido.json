@@ -7,18 +7,18 @@
         "data": [
             {
                 "id":6,
-                "nombre_producto": "Producto 1 Mas vendido",
+                "nombre_producto": "SHAMPOO DE ROSAS",
                 "precio": "$60.00",
-                "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
                 "seccion":"masVendido"
             },
             {
                 "id":7,
-                "nombre_producto": "Producto 2 mas Vendido",
+                "nombre_producto": "SHAMPOO DE CALENDULA",
                 "precio": "$55.00",
                 "descripción": "No dejes que el miedo te impida ser feliz",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
                 "seccion":"masVendido"
             }
             
