@@ -83,8 +83,6 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
 
 solicitudBtn();
 async function solicitudBtn() {
-  // datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
-  // console.log("Solicitud Axios:" + JSON.stringify(datos));
   // datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
   // console.log("Solicitud Fetch:" + JSON.stringify(datos));
   datos = await adquirirDatos("Json", "../assets/json/productos.json");
@@ -119,7 +117,7 @@ function catalogosProductos(id) {
 	</tr>`;
     }
   }
-  document.getElementById(data).innerHTML = data;
+  document.getElementById(data).innerHTML = datos;
 }
 
 
@@ -150,5 +148,5 @@ function vendido(id) {
     </div>`;
     }
   }
-  document.getElementById(id).innerHTML = datos;
+  document.getElementById(data).innerHTML = datos;
 }
