@@ -69,11 +69,11 @@ async function solicitudBtn() {
 
 
 
-  let descripcionIndividual = document.getElementById("Producto 1");
+  let descripcionIndividual = document.getElementById("SHAMPOO DE CALENDULA");
   descripcionIndividual.addEventListener('click', descripcionProducto, true);
   
   function descripcionProducto() {
-    return descripcion("rescribir","Producto 1");
+    return descripcion("rescribir","SHAMPOO DE CALENDULA");
   }
 
 
