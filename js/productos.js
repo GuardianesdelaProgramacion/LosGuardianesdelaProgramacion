@@ -63,9 +63,20 @@ async function solicitudBtn() {
   guardar(datos);
   guardar(masVendido)
 //Función para mostrar todo el catalogo de los productos de forma dinamica
-//Productos("el id de la etiqueta en donde se insertara,que seccion,seccion, columnas para acomodar los productos")
-  productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
- productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
+//Productos("el id de la etiqueta en donde se insertara,que seccion")
+  Productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
+  Productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
+
+
+
+  let descripcionIndividual = document.getElementById("Producto 1");
+  descripcionIndividual.addEventListener('click', descripcionProducto, true);
+  
+  function descripcionProducto() {
+    return descripcion("rescribir","shampoo");
+  }
+
+
 
 }
 
@@ -79,8 +90,8 @@ function guardar(usuario) {
 
 
 //Función para mostrar los productos de forma dinamica 
-function productos (id,seccion,columna) { 
-  let datos = "";
+function Productos(id,seccion,columna) { 
+  let datos = ""; 
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i)); 
     if ( lista.seccion == seccion) { 
@@ -88,9 +99,10 @@ function productos (id,seccion,columna) {
         `${columna}
     <div class="card tarjeta-producto border-0">
         <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
+        <img src=${lista.url} class="img-producto" id="${lista.nombre_producto}" alt="..." >
         <span class="producto-nombre text-center">${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
+            <span >&#9733</span>
             <span>&#9733</span>
             <span>&#9733</span>
             <span>&#9733</span>
@@ -98,7 +110,7 @@ function productos (id,seccion,columna) {
         </div>
         <span class="producto-precio text-center">${lista.precio}</span>
         <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
+            <button type="button" class="botones col mx-auto p-2" > <span class="inf"> Añadir al
                     carrito
                 </span> </button>
         </div>
@@ -107,11 +119,10 @@ function productos (id,seccion,columna) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
+  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";  
 }
 
 
-//Filtros
 let filtroJabon = document.getElementById("filtroJabon");
 filtroJabon.addEventListener('click', filtrojabon, true);
 
@@ -130,7 +141,7 @@ let filtroTodo = document.getElementById("filtroTodo");
 filtroTodo.addEventListener('click', filtrotodo, true);
 
 function filtrotodo() {
-  return Productos("Tarjetas-js","catalogo");
+  return Productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
 }
 
 
@@ -169,41 +180,50 @@ function filtro(id,categoria) {
 }
 
 
-let prueba = document.getElementById("prueba");
-prueba.addEventListener('click', prueba2, true);
 
-function prueba2() {
-  return prueba3("prueba2","shampoo");
-}
 
 
 
 
 //Funcion de pruebas
-function prueba3(id,categoria) {
+function descripcion(id,categoria) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.categoria == categoria) {
             datos+=
-        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
-    <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" alt="...">
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
+        `    <div class="container my-5">
+        <div class="row justify-content-center producto-central ">
+            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
+                <div class="mt-5 mb-3">
+                    <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-fluid img-producto-individual ">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="producto-mes  w-75 mx-auto">
+                    <div>
+                        <h2>Jabon de hierbas</h2>
+                        <span class="producto-precio">$ 100.50</span>
+                        <p class="descripcion1">Un sérum o suero facial es un producto con el doble de concentración de
+                            activos que una crema
+                            hidratante. Su textura en gel muy ligera penetra con mayor facilidad y rapidez en las capas
+                            más profundas de la piel, multiplicando los resultados.</p>
+                        <div class="estrellas mx-auto ">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <input  class="incremento  py-2 text-center" type="number" value="1">
+                        <button type="button" class="botones w-50 mt-3 me-2 p-2"> <span class="inf"> Añadir al
+                            carrito
+                        </span> </button>
+                        <button type="button " class="botones w-25 my-2 p-2"> <span class="inf">Comprar </span> </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="producto-precio text-center">${lista.categoria}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
     </div>`;
     }
   }
