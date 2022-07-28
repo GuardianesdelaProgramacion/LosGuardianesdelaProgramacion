@@ -1,6 +1,6 @@
 console.log("Sesión tenebrosa de JS09 muajajajajaja");
 
-// GET request for remote image in node.js
+// GET request for remote image in node.js codigo de sergio
 async function adquirirDatos(proveedor = "Axios", direccionhttp) {
   if (proveedor == "Axios") {
     return new Promise((resolve, reject) => {
@@ -76,7 +76,7 @@ async function solicitudBtn() {
 
 }
 
-
+//Función para mostrar los productos de forma dinamica 
 function catalogosProductos(id) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
@@ -114,7 +114,7 @@ function vendido(id) {
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.seccion == "masVendido") {
-      datos = datos +
+      datos+=
         `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
     <div class="card tarjeta-producto border-0">
         <img src=${lista.url} class="img-producto" alt="...">
