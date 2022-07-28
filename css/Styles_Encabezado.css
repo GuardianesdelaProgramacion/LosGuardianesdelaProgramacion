@@ -276,13 +276,13 @@ width: 240px;
 
 aside{
     flex: 30px;
-    border: 3px solid var(--crema);
+    /* border: 3px solid var(--crema); */
     /* padding: 20px; */
 }
 
 section{
     flex: 70%;
-    border: 3px solid var(--salmon);
+    /* border: 3px solid var(--salmon); */
     /* padding: 20px; */
 }
 
