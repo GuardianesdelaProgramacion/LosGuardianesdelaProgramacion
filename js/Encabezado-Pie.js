@@ -15,13 +15,13 @@ class encabezadoJs extends HTMLElement{
 </div>
 <header class="heder-statica">
 <nav class="navbar navbar-expand-xl">
-  <!-- muestra el boton con tres rallitas del lado Izquierdo -->
+  <!-- muestra el botón con tres rayitas del lado izquierdo -->
   <div class="container-fluid padre" style="background-color: #cee5d0">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Son los botenes que te llevan a sus respectivas paginas como Producto, Nosotro y blog-->
+    <!-- Son los botones que te llevan a sus respectivas páginas como Producto, Nosotros y Blog-->
     <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent" style="text-align: center;">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- <ul class="navbar-nav me-auto col-xl-1 mb-lg-0"> -->
@@ -35,9 +35,9 @@ class encabezadoJs extends HTMLElement{
           <a class="btn-ghost nav-link" href="Nosotros.html">Nosotros</a>
         </li>
     </div>
-    <!-- Contiene el enlase de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la pagina de inicio -->
+    <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
 
-    <!-- col-12 es modo responviso y col-sm-12 es para pantallas mas grandes -->
+    <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
     <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
     <div class=" hijo_2  col-sm-4 col-5">
       <a href="Inicio.html">
@@ -45,7 +45,7 @@ class encabezadoJs extends HTMLElement{
           title="Logo_Musaraña" />
       </a>
     </div>
-    <!-- contiene la barra de busqueda -->
+    <!-- contiene la barra de búsqueda -->
     <div class="hijo_3 col-xl-2 col-sm-2">
       <form class="d-flex" role="search">
         <div class="buscar">
@@ -89,7 +89,7 @@ class piedepaginaJs extends HTMLElement{
   <div class="rectangulo_3"></div>
   <div class="rectangulo_2"></div>
 
-  <!-- Conteiner principal -->
+  <!-- Container principal -->
   <div class="container text-center contenedor-padre">
     <div class="row">
       <!-- Container de contacto -->
