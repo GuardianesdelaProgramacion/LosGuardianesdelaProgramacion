@@ -7,7 +7,7 @@ function limpiarTabla(){
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
-apiUrl();
+//apiUrl();
 /*function apiUrl() {    
 //let url = document.getElementById('api').value;
 let url = "https://jsonplaceholder.typicode.com/users";
@@ -31,6 +31,11 @@ function apiAnt(){
      apianterior = localStorage.getItem('data1');
 	 console.log(apianterior)
 }
+
+
+
+
+
 console.log("Sesión tenebrosa de JS09 muajajajajaja");
 
 // GET request for remote image in node.js codigo de sergio
@@ -84,6 +89,8 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
 
 solicitudBtn();
 async function solicitudBtn() {
+  // datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
+  // console.log("Solicitud Axios:" + JSON.stringify(datos));
   // datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
   // console.log("Solicitud Fetch:" + JSON.stringify(datos));
   datos = await adquirirDatos("Json", "../assets/json/productos.json");
@@ -102,7 +109,7 @@ async function solicitudBtn() {
     localStorage.setItem(llave, JSON.stringify(user));
   }
 
-  catalogosProductos("Tarjetas-js");
+  catalogosProductos("data");
   vendido("masVendido");
 
 }
@@ -113,12 +120,25 @@ function catalogosProductos(data) {
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.seccion == "catalogo") {
-      datos += 
-        `<tr class="mytr" id="fila${lista.id}"><td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
-	</tr>`;
+      datos+= 
+        `<tr class="mytr" id="fila${lista.id}">
+        <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
+<td><img class="img_carrito" src="${lista.url}"alt="Producto 1" /></td>
+<td><p>${lista.descripción}<p></td>
+        <td><span>${lista.precio}<span></td>
+        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+        <td>$<span>60.00<span></td>
+    </tr>
+      `;
     }
   }
   document.getElementById(data).innerHTML = datos;
 }
+
+
+
+
+
+
 
 
