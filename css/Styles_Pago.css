@@ -88,6 +88,11 @@ input{
 .formularioTarjeta #inputCCV{
 	max-width: 40px;
 }
+a .Paypal{
+	color:black;
+	text-decoration: none;
+	align-items: flex-start;
+}
 .opcionPaypal:hover{
 	text-decoration-color: var(--crema);
 	background-color: white;
