@@ -1,43 +1,4 @@
-/*const name = document.getElementById("name").value;
-const mail = document.getElementById("mail").value;
-const pass1 = document.getElementById("pass1").value;
-const pass2 = document.getElementById("pass2").value;
-console.log(name);
-console.log(mail);
-console.log(pass1);
-console.log(pass2);
-// function for form varification
-function formValidation() {
-  
-    // checking name length
-    if (name.value.length < 2 || name.value.length > 20) {
-      alert("tu nombre debe tener de dos a 21 letras");
-      name.focus();
-      return false;
-    }
-    // checking email
-    if (mail.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-      alert("Introduce un mail válido");
-      mail.focus();
-      return false;
-    }
-    // checking password
-    if (!pass1.value.match(/^.{5,15}$/)) {
-      alert("La contraseña debe tener de 5-15 caracteres!");
-      pass1.focus();
-      return false;
-    }
-    if(pass1 != pass2)
-    {
-        alert ('Password not Matched');
-        pass2.focus();
-        return false;
-    }
-   
-    return true;
-  }
 
-*/
 function verificarPasswords() {
  
     // Ontenemos los valores de los campos de contraseñas 
