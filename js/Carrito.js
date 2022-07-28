@@ -3,12 +3,14 @@ console.log("Carrito.js");
 function limpiarTabla(){
 	document.getElementById('data').innerHTML = '';
 }
-
+function limpiarTabla2(){
+	document.getElementById('data2').innerHTML = '';
+}
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
-apiUrl();
-function apiUrl() {    
+//apiUrl();
+/*function apiUrl() {    
 //let url = document.getElementById('api').value;
 let url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
@@ -23,13 +25,19 @@ for (let i = 0; i < data.length; i++) {
   body += `<tr><td>${data[i].name}</td><td>${data[i].username}</td><td>${data[i].email}</td><td>${data[i].id}</td><td><img src=\'${data[i].avatar}\'</td></tr>`
   localStorage.setItem('data1', JSON.stringify(data));
 }
-document.getElementById('data').innerHTML = body;
+document.getElementById('dat').innerHTML = body;
  }
 }
+*/
 function apiAnt(){
      apianterior = localStorage.getItem('data1');
 	 console.log(apianterior)
 }
+
+
+
+
+
 console.log("Sesión tenebrosa de JS09 muajajajajaja");
 
 // GET request for remote image in node.js codigo de sergio
@@ -94,6 +102,7 @@ async function solicitudBtn() {
 
 
   for (let user of datos) {
+
     let llave = JSON.stringify(user.id)
     localStorage.setItem(llave, JSON.stringify(user));
   }
@@ -103,70 +112,54 @@ async function solicitudBtn() {
     localStorage.setItem(llave, JSON.stringify(user));
   }
 
-  catalogosProductos("Tarjetas-js");
-  vendido("masVendido");
+  catalogosProductos("data");
+  vendido("data2");
 
 }
 
+
+
+
+
 //Función para mostrar los productos de forma dinamica 
-function catalogosProductos(id) {
+ function catalogosProductos(data) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.seccion == "catalogo") {
-      datos = datos +
-        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
-    <div class="card tarjeta-producto border-0">
-        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
+      datos+= 
+        `<tr class="mytr" id="fila${lista.id}">
+        <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
+<td><img class="img_carrito" src="${lista.url}"alt="Producto 1" /></td>
+<td><p>${lista.descripción}<p></td>
+        <td><span>${lista.precio}<span></td>
+        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+        <td>$<span>60.00<span></td>
+    </tr>
+      `;
     }
   }
-  document.getElementById(id).innerHTML = datos;
+  document.getElementById(data).innerHTML = datos;
 }
 
-
-function vendido(id) {
+ function vendido(data2) {
   let datos = "";
+  let o=1;
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
-    if (lista.seccion == "masVendido") {
-      datos+=
-        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
-    <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" alt="...">
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
+    if (lista.seccion == "catalogo") {
+      datos+= 
+        `<tr class="mytr" id="fila${lista.id}">
+        <td><button value="Eliminar" style="font-size:30px;background-color:#ECB390;" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
+<td><img class="img_carrito2" src="${lista.url}"alt="Producto 1" /></td>
+        <td><span>${lista.precio}<span></td>
+        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+    </tr>
+      `;
     }
   }
-  document.getElementById(id).innerHTML = datos;
+  document.getElementById(data2).innerHTML = datos;
 }
+
+
+
