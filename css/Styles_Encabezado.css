@@ -15,6 +15,7 @@
     animation-iteration-count: infinite; */
     /*las tres lineas anteriores hacen lo mismo que animation:baner 10s infinite;*/
     animation: banner 10s infinite;
+    z-index: 3;
 }
 
 /* tiempo para cambiar imagenes */
@@ -38,6 +39,9 @@
 .background-container{
     width: 100%;
     height: 54.9px;
+    left: 0;
+    top: 0;
+    right: 0;
     position: fixed;
     z-index: 28;
 }
