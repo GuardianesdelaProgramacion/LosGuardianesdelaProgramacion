@@ -82,7 +82,7 @@ function catalogosProductos(id) {
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.seccion == "catalogo") {
-      datos = datos +
+      datos+= 
         `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
     <div class="card tarjeta-producto border-0">
         <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
