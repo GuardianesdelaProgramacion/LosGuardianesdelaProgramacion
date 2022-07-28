@@ -63,9 +63,9 @@ async function solicitudBtn() {
   guardar(datos);
   guardar(masVendido)
 //Función para mostrar todo el catalogo de los productos de forma dinamica
-//Productos("el id de la etiqueta en donde se insertara,que seccion")
-  Productos("Tarjetas-js","catalogo");
-  Vendido("masVendido","masVendido");
+//Productos("el id de la etiqueta en donde se insertara,que seccion,seccion, columnas para acomodar los productos")
+  productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
+ productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
 
 }
 
@@ -79,48 +79,15 @@ function guardar(usuario) {
 
 
 //Función para mostrar los productos de forma dinamica 
-function Productos(id,seccion) { 
-  let datos = ""; 
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.seccion == seccion) { 
-     datos+= 
-        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
-    <div class="card tarjeta-producto border-0">
-        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
-    }
-  }
-  document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";  
-}
-//Función para mostrar los productos mas vendido en forma dinamica 
-function Vendido(id,seccion) { 
+function productos (id,seccion,columna) { 
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i)); 
     if ( lista.seccion == seccion) { 
      datos+= 
-        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
+        `${columna}
     <div class="card tarjeta-producto border-0">
         <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
         <span class="producto-nombre text-center">${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
             <span>&#9733</span>
@@ -143,6 +110,8 @@ function Vendido(id,seccion) {
   document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
 }
 
+
+//Filtros
 let filtroJabon = document.getElementById("filtroJabon");
 filtroJabon.addEventListener('click', filtrojabon, true);
 
@@ -200,6 +169,44 @@ function filtro(id,categoria) {
 }
 
 
+let prueba = document.getElementById("prueba");
+prueba.addEventListener('click', prueba2, true);
+
+function prueba2() {
+  return prueba3("prueba2","shampoo");
+}
 
 
 
+
+//Funcion de pruebas
+function prueba3(id,categoria) {
+  let datos = "";
+  for (let i = 1; i < localStorage.length + 1; i++) {
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.categoria == categoria) {
+            datos+=
+        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
+    <div class="card tarjeta-producto border-0">
+        <img src=${lista.url} class="img-producto" alt="...">
+        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+        <div class="estrellas mx-auto text-center">
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+            <span>&#9733</span>
+        </div>
+        <span class="producto-precio text-center">${lista.categoria}</span>
+        <div class="row botones-inf w-100 mx-auto text-center">
+            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
+                    carrito
+                </span> </button>
+        </div>
+    </div>
+    </div>`;
+    }
+  }
+  document.getElementById(id).innerHTML = datos;
+  
+}

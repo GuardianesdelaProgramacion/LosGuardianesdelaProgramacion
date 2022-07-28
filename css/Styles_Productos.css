@@ -47,10 +47,14 @@ justify-content: center;
     /* margin: 2%; */
     height:100%; 
     width: 100%;
+    cursor: pointer;/*copiar*/
  
 }
-
-
+/*copiar*/
+.img-producto:hover {
+    opacity:0.7;
+   }
+   
 
 .botones {
     display: inline-flex;
