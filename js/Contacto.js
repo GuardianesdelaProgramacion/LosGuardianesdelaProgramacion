@@ -7,11 +7,27 @@ let obj = {
     length: 0,
 
     addElem: function addElem(d1,d2,d3,d4,d5) {//d1,d2,d3,d4,d5 //elem
-        // obj.length is automatically incremented
-        // every time an element is added.
         [].push.call(this, {nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5});//nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5  //elem
     }
 };
+
+/*formulario.cn4.addEventListener('keyup', (e)=>{
+    let valorInput= e.target.value;
+    formulario.cn4.value =valorInput
+    //eliminamos espacios en blanco
+    .replace(/\s/g, '')
+    //Eliminar las letras
+    .replace(/\D/g,'')
+});*/
+
+$(function() {
+    $(".contactoTelefonoT").on("keyup", function(event) {
+      let value = $(this).val();
+      if (value.indexOf('#') != -1) {
+        $(this).val(value.replace(/\#/g, ""));
+      }
+    })
+  });
 
 function contactoEnviar(){
     nom = document.getElementById("cn1").value;

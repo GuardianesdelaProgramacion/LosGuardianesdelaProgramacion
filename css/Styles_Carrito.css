@@ -2,10 +2,19 @@
     	width: 250px;
 	height: 152px;
 	border-radius: 25px;
+	position: left;
+}
+.img_carrito2{
+    width: 50px;
+height: 50px;
+border-radius: 10px;
+position: left;
 }
 .mytr{
     	border-bottom: 1px solid #ccc;
-
+}
+.pcarrito{
+    text-align: left;
 }
 .buttonx{
        cursor: pointer;
@@ -37,7 +46,8 @@
 .input_carrito{
       width: 50px;
       border: 1px solid #ccc;
-}
+      z-index: 1;
+  }
 .button_comprar{
               font-family: 'Montserrat', sans-serif;
 	      font-size: 16px;
@@ -97,4 +107,24 @@ table > tbody:empty:before {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    color: black;
+    top: 100%;
+    z-index: 1;
+    background-color: #ECB390;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
 }

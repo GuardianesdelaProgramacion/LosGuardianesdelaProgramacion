@@ -276,13 +276,33 @@ width: 240px;
 
 aside{
     flex: 30px;
-    border: 3px solid var(--crema);
+    /* border: 3px solid var(--crema); */
     /* padding: 20px; */
+}
+
+.p-contennedor{
+    border: 3px solid rebeccapurple;
+    display: flex;
+    flex-direction: column;
+}
+.h-1{
+    border: 3px solid red;
+    height: 130px;
+}
+
+.h-2{
+    border: 3px solid royalblue;
+    height: 130px;
+}
+
+.h-3{
+    border: 3px solid blue;
+    height: 130px;
 }
 
 section{
     flex: 70%;
-    border: 3px solid var(--salmon);
+    /* border: 3px solid var(--salmon); */
     /* padding: 20px; */
 }
 
