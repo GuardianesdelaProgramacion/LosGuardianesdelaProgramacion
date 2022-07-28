@@ -37,7 +37,8 @@
 .input_carrito{
       width: 50px;
       border: 1px solid #ccc;
-}
+      z-index: 1;
+  }
 .button_comprar{
               font-family: 'Montserrat', sans-serif;
 	      font-size: 16px;

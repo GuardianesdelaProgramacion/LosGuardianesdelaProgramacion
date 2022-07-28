@@ -28,6 +28,10 @@
                 
             }
 
+            .contactoNameT .contactoEmailT .contactoAsuntoT .contactoTelefonoT .contactoComentariosT{
+                z-index: 1;
+            }
+
             /*.contactoForm{
                 position: relative;
             }*/
