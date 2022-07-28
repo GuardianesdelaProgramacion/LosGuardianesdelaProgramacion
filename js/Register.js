@@ -1,43 +1,4 @@
-/*const name = document.getElementById("name").value;
-const mail = document.getElementById("mail").value;
-const pass1 = document.getElementById("pass1").value;
-const pass2 = document.getElementById("pass2").value;
-console.log(name);
-console.log(mail);
-console.log(pass1);
-console.log(pass2);
-// function for form varification
-function formValidation() {
-  
-    // checking name length
-    if (name.value.length < 2 || name.value.length > 20) {
-      alert("tu nombre debe tener de dos a 21 letras");
-      name.focus();
-      return false;
-    }
-    // checking email
-    if (mail.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-      alert("Introduce un mail válido");
-      mail.focus();
-      return false;
-    }
-    // checking password
-    if (!pass1.value.match(/^.{5,15}$/)) {
-      alert("La contraseña debe tener de 5-15 caracteres!");
-      pass1.focus();
-      return false;
-    }
-    if(pass1 != pass2)
-    {
-        alert ('Password not Matched');
-        pass2.focus();
-        return false;
-    }
-   
-    return true;
-  }
-
-*/
+let newUserData=[];
 function verificarPasswords() {
  
     // Ontenemos los valores de los campos de contraseñas 
@@ -47,16 +8,7 @@ function verificarPasswords() {
     const mail = document.getElementById("mail").value;
     const fechanac = document.getElementById("fecha").value;
     //const newsletter = document.getElementById("exampleCheck1").value; 
-    console.log(name);
-    console.log(mail);
-    console.log(pass1);
-    console.log(pass2);
-    console.log(fechanac);
-    
-    elemento = document.getElementById("exampleCheck1");
-    if( elemento.checked ) {
-      console.log(elemento);
-    }
+   
     // Verificamos si las constraseñas no coinciden 
     if (pass1 != pass2) {
  
@@ -65,7 +17,13 @@ function verificarPasswords() {
  
         return false;
     } else {
- 
+      let obj= {nombre:name,correo:mail,fechanac:fechanac,password1:pass1,confirmPass1:pass2};
+
+      newUserData.push(obj);
+      localStorage.setItem("usuarionuevo", JSON.stringify(obj));
+
+      console.log(newUserData);
+      
         // Si las contraseñas coinciden ocultamos el mensaje de error
         document.getElementById("error").classList.remove("mostrar");
  
@@ -76,14 +34,14 @@ function verificarPasswords() {
        document.getElementById("reg").disabled = true;
 
         // Refrescamos la página (Simulación de envío del formulario) 
-        setTimeout(function() {
+     /*   setTimeout(function() {
           
             location.reload();
-        }, 3000);
+        }, 3000);*/
     
         return true;
     }
- 
+
 }
 
 
