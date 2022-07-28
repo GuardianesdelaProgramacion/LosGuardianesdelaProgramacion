@@ -1,7 +1,7 @@
 let newUserData=[];
 function verificarPasswords() {
  
-    // Ontenemos los valores de los campos de contraseñas 
+    // Obtenemos los valores de los campos de contraseñas 
     const pass1 = document.getElementById('pass1').value;
     const pass2 = document.getElementById('pass2').value;
     const name = document.getElementById("name").value;
@@ -30,7 +30,7 @@ function verificarPasswords() {
         // Mostramos un mensaje mencionando que las Contraseñas coinciden 
         document.getElementById("ok").classList.remove("ocultar");
  
-    // Desabilitamos el botón de login 
+    // Deshabilitamos el botón de login 
        document.getElementById("reg").disabled = true;
 
         // Refrescamos la página (Simulación de envío del formulario) 
