@@ -53,3 +53,6 @@ table,td,th{
 td {
 	text-align: center;
 }
+input{
+        border: 1px solid #ccc;
+}
