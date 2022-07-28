@@ -115,7 +115,7 @@ async function solicitudBtn() {
 }
 
 //Función para mostrar los productos de forma dinamica 
-function catalogosProductos(data) {
+ function catalogosProductos(data) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
