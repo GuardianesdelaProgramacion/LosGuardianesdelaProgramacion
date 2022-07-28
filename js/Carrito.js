@@ -29,7 +29,7 @@ document.getElementById('dat').innerHTML = body;
  }
 }
 */
-export function apiAnt(){
+function apiAnt(){
      apianterior = localStorage.getItem('data1');
 	 console.log(apianterior)
 }
