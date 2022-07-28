@@ -1,4 +1,4 @@
-
+let newUserData=[];
 function verificarPasswords() {
  
     // Ontenemos los valores de los campos de contraseñas 
@@ -8,16 +8,7 @@ function verificarPasswords() {
     const mail = document.getElementById("mail").value;
     const fechanac = document.getElementById("fecha").value;
     //const newsletter = document.getElementById("exampleCheck1").value; 
-    console.log(name);
-    console.log(mail);
-    console.log(pass1);
-    console.log(pass2);
-    console.log(fechanac);
-    
-    elemento = document.getElementById("exampleCheck1");
-    if( elemento.checked ) {
-      console.log(elemento);
-    }
+   
     // Verificamos si las constraseñas no coinciden 
     if (pass1 != pass2) {
  
@@ -26,7 +17,13 @@ function verificarPasswords() {
  
         return false;
     } else {
- 
+      let obj= {nombre:name,correo:mail,fechanac:fechanac,password1:pass1,confirmPass1:pass2};
+
+      newUserData.push(obj);
+      localStorage.setItem("usuarionuevo", JSON.stringify(obj));
+
+      console.log(newUserData);
+      
         // Si las contraseñas coinciden ocultamos el mensaje de error
         document.getElementById("error").classList.remove("mostrar");
  
@@ -37,14 +34,14 @@ function verificarPasswords() {
        document.getElementById("reg").disabled = true;
 
         // Refrescamos la página (Simulación de envío del formulario) 
-        setTimeout(function() {
+     /*   setTimeout(function() {
           
             location.reload();
-        }, 3000);
+        }, 3000);*/
     
         return true;
     }
- 
+
 }
 
 

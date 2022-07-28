@@ -1,8 +1,17 @@
+
+let text = localStorage.getItem("usuarionuevo");
+ 
+let objec = JSON.parse(text);
+
+
+const pass2 = objec.password1;
+const mail2=  objec.correo;
+console.log(mail2 );
+console.log(pass2 );
 function verificarPasswords() {
  
     // Ontenemos los valores de los campos de contraseñas 
-    const pass2 = "Musarana";
-    const mail2=  "musarana@musarana.com"
+
     const pass1 = document.getElementById('pass1').value;
     const name = document.getElementById("name").value;
     const mail = document.getElementById("mail").value;
@@ -41,9 +50,9 @@ function verificarPasswords() {
        document.getElementById("log").disabled = true;
 
         // Refrescamos la página (Simulación de envío del formulario) 
-        setTimeout(function() {
+       /* setTimeout(function() {
             location.reload();
-        }, 3000);
+        }, 3000);*/
  
         return true;
     }
