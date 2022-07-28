@@ -2,10 +2,13 @@
     	width: 250px;
 	height: 152px;
 	border-radius: 25px;
+	position: left;
 }
 .mytr{
     	border-bottom: 1px solid #ccc;
-
+.pcarrito{
+        text-align: left;
+}
 }
 .buttonx{
        cursor: pointer;
