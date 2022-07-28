@@ -73,7 +73,7 @@ async function solicitudBtn() {
   descripcionIndividual.addEventListener('click', descripcionProducto, true);
   
   function descripcionProducto() {
-    return descripcion("rescribir","shampoo");
+    return descripcion("rescribir","Producto 1");
   }
 
 
@@ -186,28 +186,25 @@ function filtro(id,categoria) {
 
 
 //Funcion de pruebas
-function descripcion(id,categoria) {
+function descripcion(id,nombre_producto) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
-    if (lista.categoria == categoria) {
+    if (lista.nombre_producto == nombre_producto) {
             datos+=
         `    <div class="container my-5">
         <div class="row justify-content-center producto-central ">
             <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
                 <div class="mt-5 mb-3">
-                    <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-fluid img-producto-individual ">
+                    <img src=${lista.url}  class="img-fluid img-producto-individual ">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="producto-mes  w-75 mx-auto">
                     <div>
-                        <h2>Jabon de hierbas</h2>
-                        <span class="producto-precio">$ 100.50</span>
-                        <p class="descripcion1">Un sérum o suero facial es un producto con el doble de concentración de
-                            activos que una crema
-                            hidratante. Su textura en gel muy ligera penetra con mayor facilidad y rapidez en las capas
-                            más profundas de la piel, multiplicando los resultados.</p>
+                        <h2>${lista.nombre_producto}</h2>
+                        <span class="producto-precio">${lista.precio}</span>
+                        <p class="descripcion1">${lista.descripción}</p>
                         <div class="estrellas mx-auto ">
                             <span>&#9733</span>
                             <span>&#9733</span>
