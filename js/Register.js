@@ -46,14 +46,17 @@ function verificarPasswords() {
     const name = document.getElementById("name").value;
     const mail = document.getElementById("mail").value;
     const fechanac = document.getElementById("fecha").value;
-    const newsletter = document.getElementById("exampleCheck1").value; 
+    //const newsletter = document.getElementById("exampleCheck1").value; 
     console.log(name);
     console.log(mail);
     console.log(pass1);
     console.log(pass2);
     console.log(fechanac);
-    console.log(newsletter);
-
+    
+    elemento = document.getElementById("exampleCheck1");
+    if( elemento.checked ) {
+      console.log(elemento);
+    }
     // Verificamos si las constraseñas no coinciden 
     if (pass1 != pass2) {
  
