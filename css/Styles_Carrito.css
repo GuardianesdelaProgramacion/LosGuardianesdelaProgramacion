@@ -110,6 +110,8 @@ table > tbody:empty:before {
 }
 .submenu {
     position: relative;
+    border: 1px solid #ccc;
+    width: 30px;
 }
 
 .submenu #carrito {
@@ -123,8 +125,8 @@ table > tbody:empty:before {
     color: black;
     top: 100%;
     z-index: 1;
-    background-color: #ECB390;
+    background-color: white;
     padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+    min-height: 350px;
+    min-width: 400px;
 }
