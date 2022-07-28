@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<header>
+<header class="heder-statica">
       <nav class="navbar navbar-expand-lg">
         <!-- muestra el boton con tres rallitas del lado Izquierdo -->
         <div class="container-fluid padre" style="background-color: #cee5d0">
@@ -73,7 +73,7 @@
       </nav>
     </header>
 
-
+    <main class="main">
 
     <h1 style="margin-top:50px">Carrito</h1>
     <div class="div_carrito">
@@ -87,7 +87,7 @@
                     <th style="width:15%">Total</th>
 		</tr>
             </thead>
-            <tbody id="data">
+            <tbody id="daa">
                 <tr class="mytr" id="fila1">
                     <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(1)"></button></td>
                     <td><img class="img_carrito"
@@ -133,6 +133,7 @@
     <form action="./Pago.html">
         <button id="pago" class="button_comprar">Proceder al pago</button>
     </form>
+        <button onclick="limpiarTabla()" class="button_comprar">Proceder al pago</button>
     </div>
     
 
@@ -146,10 +147,10 @@
 			<th>Total</th>
 		</tr>
 	</thead>
-	<tbody><tbody>
+	<tbody id="data"><tbody>
     </table>
     </div>
-
+    </main>
 
 
 <!-- Datos de contacto -->
