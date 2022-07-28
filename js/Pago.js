@@ -1,4 +1,5 @@
-// const inputAbrirFormulario = document.querySelector('.abrirFormulario');
+
+const inputAbrirFormulario = document.querySelector('.abrirFormulario');
 const formulario = document.querySelector('#formularioTarjeta');
 const numeroTarjeta = document.querySelector('#datosTarjeta #inputNumero');
 const nombreTarjeta = document.querySelector('#datosTarjeta #inputNombre');
