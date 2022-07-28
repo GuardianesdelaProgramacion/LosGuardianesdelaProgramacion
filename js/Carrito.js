@@ -8,7 +8,7 @@ function eliminarFila(index) {
   $("#fila" + index).remove();
 }
 apiUrl();
-function apiUrl() {    
+/*function apiUrl() {    
 //let url = document.getElementById('api').value;
 let url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
@@ -26,6 +26,7 @@ for (let i = 0; i < data.length; i++) {
 document.getElementById('dat').innerHTML = body;
  }
 }
+*/
 function apiAnt(){
      apianterior = localStorage.getItem('data1');
 	 console.log(apianterior)
@@ -107,7 +108,7 @@ async function solicitudBtn() {
 }
 
 //Función para mostrar los productos de forma dinamica 
-function catalogosProductos(id) {
+function catalogosProductos(data) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
@@ -121,32 +122,3 @@ function catalogosProductos(id) {
 }
 
 
-function vendido(id) {
-  let datos = "";
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i));
-    if (lista.seccion == "masVendido") {
-      datos+=
-        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
-    <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" alt="...">
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
-    }
-  }
-  document.getElementById(data).innerHTML = datos;
-}
