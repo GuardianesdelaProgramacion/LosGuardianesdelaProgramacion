@@ -3,7 +3,9 @@ console.log("Carrito.js");
 function limpiarTabla(){
 	document.getElementById('data').innerHTML = '';
 }
-
+function limpiarTabla2(){
+	document.getElementById('data2').innerHTML = '';
+}
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
@@ -100,6 +102,7 @@ async function solicitudBtn() {
 
 
   for (let user of datos) {
+
     let llave = JSON.stringify(user.id)
     localStorage.setItem(llave, JSON.stringify(user));
   }
@@ -110,9 +113,13 @@ async function solicitudBtn() {
   }
 
   catalogosProductos("data");
-  vendido("masVendido");
+  vendido("data2");
 
 }
+
+
+
+
 
 //Función para mostrar los productos de forma dinamica 
  function catalogosProductos(data) {
@@ -135,10 +142,24 @@ async function solicitudBtn() {
   document.getElementById(data).innerHTML = datos;
 }
 
-
-
-
-
+ function vendido(data2) {
+  let datos = "";
+  let o=1;
+  for (let i = 1; i < localStorage.length + 1; i++) {
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.seccion == "catalogo") {
+      datos+= 
+        `<tr class="mytr" id="fila${lista.id}">
+        <td><button value="Eliminar" style="font-size:30px;background-color:#ECB390;" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
+<td><img class="img_carrito2" src="${lista.url}"alt="Producto 1" /></td>
+        <td><span>${lista.precio}<span></td>
+        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+    </tr>
+      `;
+    }
+  }
+  document.getElementById(data2).innerHTML = datos;
+}
 
 
 

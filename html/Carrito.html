@@ -63,9 +63,33 @@
           </form>
         </div>
         <!-- Se coloca imagen del login y carrito -->
+
+
         <div class="hijo_4 col-xl-2 col-sm-2">
           <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
-          <a class="icono2 bi bi-cart4" width="5px" href="Carrito.html" style="color: black;"></a>
+
+          <ul>
+            <li class="submenu">
+              <i class="icono2 bi bi-cart4" id="img-carrito" width="5px" style="color: black;"></i>
+              <div id="carrito">
+                <table class="table_carrito">
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody id="data2">
+                  <tbody>
+                </table>
+                <a href="#" onclick="limpiarTabla2()" id="vaciar">vaciar carrito</a>
+
+
+              </div>
+            </li>
+          </ul>
+          <span id="data3">0</span>
         </div>
       </div>
     </nav>

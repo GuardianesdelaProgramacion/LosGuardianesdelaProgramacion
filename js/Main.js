@@ -207,7 +207,6 @@ class piedepaginaJs extends HTMLElement{
         </div>
     </div>
 </footer>
->
 `;
 }
 }
