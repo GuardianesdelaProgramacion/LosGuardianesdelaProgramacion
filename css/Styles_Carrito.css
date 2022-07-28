@@ -112,6 +112,7 @@ table > tbody:empty:before {
     position: relative;
     border: 1px solid #ccc;
     width: 30px;
+    left: 150px;
 }
 
 .submenu #carrito {
