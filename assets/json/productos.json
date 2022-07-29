@@ -7,21 +7,21 @@
         "data": [
             {
                 "id": 1,
-                "nombre_producto": "SHAMPOO DE CALENDULA",
+                "nombre_producto": "SHAMPOO DE CALÉNDULA",
                 "precio": "$50.00",
-                "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
+                "descripción": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
                 "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "sección":"catalogo",
-                "categoría": "jabon"
+                "sección":"catálogo",
+                "categoría": "jabón"
             },
             {
                 "id":2,
                 "nombre_producto": "SHAMPOO DE JAMAICA",
                 "precio": "$70.00",
-                "descripción": "No dejes que el miedo te impida ser feliz",
+                "descripción": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
                 "url": "https://i.ibb.co/Trymmtc/cinthia.png",
-                "sección":"catalogo",
-                "categoría": "jabon"
+                "sección":"catálogo",
+                "categoría": "jabón"
             },
             {
                 "id": 3,
@@ -29,7 +29,7 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
-                "sección":"catalogo",
+                "sección":"catálogo",
                 "categoría": "shampoo"
             },
             {
@@ -38,7 +38,7 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
-                "sección":"catalogo",
+                "sección":"catálogo",
                 "categoría": "desodorante"
             },
             {
@@ -47,7 +47,7 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
-                "sección":"catalogo",
+                "sección":"catálogo",
                 "categoría": "crema"
             },
             {
@@ -56,8 +56,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
-                "sección":"catalogo",
-                "categoría": "jabon"
+                "sección":"catálogo",
+                "categoría": "jabón"
             },
             {
                 "id": 9,
@@ -65,8 +65,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "sección":"catalogo",
-                "categoría": "jabon"
+                "sección":"catálogo",
+                "categoría": "jabón"
             }
         ],
         "support": {
