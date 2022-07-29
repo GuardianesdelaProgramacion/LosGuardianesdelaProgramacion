@@ -66,16 +66,10 @@ async function solicitudBtn() {
 
 //Manda a llamr a la funcion productos para mostrar productos de forma dinamica
 //Productos("el id de la etiqueta en donde se insertara,que sección")
-  Productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
+  Productos("Tarjetas-js","catálogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
   Productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
 
 
-//Manda a llamar la funcion de descripcion al dar clic en la foto del producto 
-  let descripcionIndividual = document.getElementById("1");
-  descripcionIndividual.addEventListener('click', descripcionProducto, true);  
-  function descripcionProducto() {
-    return descripcion("rescribir","1");
-  }
 
 
 
@@ -121,6 +115,13 @@ function Productos(id,sección,columna) {
   }
   document.getElementById(id).innerHTML = datos;
   document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";  
+  //Manda a llamar la funcion de descripcion al dar clic en la foto del producto 
+  let descripcionIndividual = document.getElementById("1");
+  descripcionIndividual.addEventListener('click', descripcionProducto, true);  
+  function descripcionProducto() {
+    return descripcion("rescribir","1");
+  }
+
 }
 
 
@@ -128,7 +129,7 @@ let filtroJabon = document.getElementById("filtroJabon");
 filtroJabon.addEventListener('click', filtrojabon, true);
 
 function filtrojabon() {
-    return filtro("Tarjetas-js","jabon");
+    return filtro("Tarjetas-js","jabón");
 }
 
 let filtroShampoo = document.getElementById("filtroShampoo");
@@ -142,7 +143,7 @@ let filtroTodo = document.getElementById("filtroTodo");
 filtroTodo.addEventListener('click', filtrotodo, true);
 
 function filtrotodo() {
-  return Productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
+  return Productos("Tarjetas-js","catálogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
 }
 
 
