@@ -1,15 +1,20 @@
+
+/* Acomodo de todo el body, con clase pago para no editar el de todos */
 body .Pago{
 	display: grid;
 	text-align: left;
 	justify-items: flex-start;
 }
+/*Padding para que no afecte la barra a la página */
 .vista{
 	padding: 10rem 0rem 0rem 0rem;
 	z-index: 50;
 }
+/* Inputs con un index bajo para que no queden encima de la barra*/
 .posicion{
 	z-index: 1;
 }
+/*Estilos del aside*/
 .revPedido{
 	padding: 15px;
 	margin: 0px 36px 0px 36px;
@@ -35,7 +40,7 @@ aside .fr-btn{
 	align-items: center;
 	justify-content: center;
 }
-
+/*Imagen para cuando no hay nada en el carrito*/
 .tablaPago > tbody:empty {
 	width: 518px;
 	position: relative;
@@ -61,6 +66,7 @@ aside .fr-btn{
 	top: 50%;
 	transform: translateY(-50%);
 }
+/*Tamaños de los encabezados para la tabla con productos*/
 #prod-pago{
 	width: 30px;
 }
@@ -73,17 +79,20 @@ aside .fr-btn{
 #cant-pago{
 	width: 30px;
 }
+/* Estilos para que los inputs sean rosas */
 input{
 	border-radius: 8px;
 	border-color:var(--salmon);
 	border-style:solid;
 }
+/* Formulario de envío */
 .dirEnvio{
 	background-color: #F5F5F5;
 	width: 45%;
 	margin-left: 36px;
 	padding: 15px;
 }
+/*Acomodo de mis inputs y labels*/
 .dirEnvio .grupoPersonaRecibe{
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(100%,90%));
@@ -96,7 +105,8 @@ input{
 	grid-gap: 5px;
 	justify-items: start;
 }
-.abrirFormulario:hover{
+/*Estilo del botón*/
+.tarjeta:hover{
 	text-decoration-color: var(--crema);
     background-color: white;
     background:var(--salmon);
@@ -110,12 +120,15 @@ input{
     margin:auto;
     padding:15px;
 }
+/* Acomodo formulario */
 .formularioTarjeta{
 	background-color: #F5F5F5;
 	width: 45%;
 	margin-left: 36px;
 	padding: 15px;
+	height:200px;
 }
+/* Acomodo labels e inputs */
 .formularioTarjeta .datosTarjeta{
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(100%, 90%));
@@ -131,11 +144,12 @@ input{
 .formularioTarjeta #inputCCV{
 	max-width: 40px;
 }
-a .Paypal{
+.Paypal{
 	color:black;
 	text-decoration: none;
 	align-items: flex-start;
 }
+/* Botón Paypal */
 .opcionPaypal:hover{
 	text-decoration-color: var(--crema);
 	background-color: white;
@@ -150,6 +164,7 @@ a .Paypal{
     margin:auto;
     padding:15px;
 }
+/* Botón efectivo */
 .opcionEntrega:hover{
 	text-decoration-color: var(--crema);
 	background-color: white;
@@ -164,13 +179,23 @@ a .Paypal{
 	margin:auto;
 	padding:15px;
 }
-@media screen  and (max-width:777px){
+/* Responsivo */
+@media screen  and (max-width:740px){
 	.revPedido{
 	margin: 0px 8px 0px 8px ;
-	width: 70%;
+	width: 740px;
 	}
 	.dirEnvio{
 		margin: 0px 8px 0px 8px;
-		width: 70%;
+		width: 740px;;
+	}
+	.encabezado-pago{
+		margin: 0px 8px 0px 8px;
+		width: 740px;
+	}
+	.formularioTarjeta{
+		margin: 0px 8px 0px 8px;
+		width: 740px;
+		align-items: center;
 	}
 }	

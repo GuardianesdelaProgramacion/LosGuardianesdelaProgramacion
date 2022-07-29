@@ -1,5 +1,5 @@
 
-const inputAbrirFormulario = document.querySelector('.abrirFormulario');
+// Hago constantes el acceso con query selector al HTML #es el ID y . para la clase
 const formulario = document.querySelector('#formularioTarjeta');
 const numeroTarjeta = document.querySelector('#datosTarjeta #inputNumero');
 const nombreTarjeta = document.querySelector('#datosTarjeta #inputNombre');
@@ -14,11 +14,6 @@ const codigoPostal = document.querySelector('.grupoDireccion #CP');
 const telefono = document.querySelector('.grupoDireccion #Tel');
 
 
-/* Botón de abrir formulario */
-abrirFormulario.addEventListener('select', () =>{
-    abrirFormulario.classList.toggle('select');
-    formulario.classList.toggle('select');
-});
 /* Select del mes generado dinámicamente */
 for (let i = 1; i<=12; i++){
     let opcion = document.createElement('option');
@@ -37,6 +32,8 @@ for(let i= yearActual; i <= yearActual+8; i++){
 }
 
 /* Input número de tarjeta */
+/* formulario es la constante, inputNumero el Id de mi Html, agrego un listener*/
+
 formulario.inputNumero.addEventListener('keyup', (e)=>{
     let valorInput= e.target.value;
     formulario.inputNumero.value =valorInput
@@ -48,17 +45,6 @@ formulario.inputNumero.addEventListener('keyup', (e)=>{
     .replace(/([0-9]{4})/g, '$1 ')
     //Quitamos el último espaciado
     .trim();
-    if(valorInput[0]==4){
-        logoMarca.innerHTML='';
-        const imagen =document.createElement('i');
-        imagen.src = 'img/logos/visa.png';
-        logoMarca.appendChild(imagen);
-    }else if (valorInput[0]==5){
-        logoMarca.innerHTML='';
-        const imagen =document.createElement('img');
-        imagen.src = 'img/logos/mastercard.png';
-        logoMarca.appendChild(imagen);
-    }
 });
 
 /*Input nombre de tarjeta*/
