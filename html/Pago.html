@@ -20,7 +20,7 @@
 
   <encabezado-js>
   </encabezado-js>
-
+<!-- div con los estilos de todo mi trabajo -->
   <div class="vista">
     <h1>Métodos de pago</h1>
     <!-- Lado para la revisión del pedido y proceder el pago  -->
@@ -41,11 +41,11 @@
         <div class="info-pedido met-3">
           <label class="mt-3">Costo envío</label>
           <label class="mt-3">$</label>
-          <input type="text" placeholder="Cupón de descuento" class="mt-3 posicion"
+          <input type="text" placeholder="Cupón de descuento" id="pay1" class="mt-3 posicion"
             style="border-radius: 16px; width:100%;">
           <button type="submit" class="fr-btn mt-3" style="width:100%;">Usar</button>
         </div>
-        <button type="button" class="fr-btn mt-3"><span class="termina-compra">Realizar pedido
+        <button type="button" class="fr-btn mt-3" onclick="terminarPedido()"><span class="termina-compra">Realizar pedido
           </span> </button>
       </aside>
     </div>
@@ -98,11 +98,11 @@
           </select>
           <div class="grupoDireccion mt-3">
             <label>Calle, No. exterior y No. interior</label>
-            <input type="text" style="width: 100%;" class="posicion">
+            <input type="text" style="width: 100%;" class="posicion" id="pay4">
             <label>Colonia</label>
-            <input type="text" style="width: 100%;" class="posicion">
+            <input type="text" style="width: 100%;" class="posicion" id="pay5">
             <label>Municipio</label>
-            <input type="text" style="width: 100%;" class="posicion">
+            <input type="text" style="width: 100%;" class="posicion" id="pay6">
             <label>Código Postal</label>
             <input type="text" maxlength="5" style="width: 100%;" class="posicion" id="CP">
             <label>Teléfono</label>
@@ -114,7 +114,7 @@
     <!-- Inputs de tipo radio para seleccionar la forma de pago -->
     <i class="fa-brands fa-cc-mastercard"></i>
     <i class="fa-brands fa-cc-visa"></i>
-    <button type="button" name="tarjeta" id="abrirFormulario" class="abrirFormulario mt-3" style="border: none;">
+    <button type="button" name="tarjeta" id="abrirFormulario" class="tarjeta mt-3" style="border: none;">
       <i class="fa-solid fa-credit-card-front"></i>Tarjeta de crédito/débito</button><br>
     <!-- Formulario de pago con tarjeta -->
     <form action="" id="formularioTarjeta" class="formularioTarjeta">
@@ -147,12 +147,21 @@
       style="border: none;">
       <i class="bi bi-paypal"></i><span>Paypal</span>
     </button><br>
-    <!-- <a href="https://www.paypal.com/signin"></a>
-        Efectivo vs Entrega -->
+    <!--Efectivo vs Entrega -->
     <button type="radio" name="vsEntrega" value="3" class="opcionEntrega mt-3"
       style="border:none ;"><span>Efectivo*</span></button>
     <p>*Es pago contra entrega. **Aplica únicamente en Morelia</p>
     <br>
+    <div id="popup2" class="overlay-pago">
+      <div class="popup-pago">
+          <!--<h2 class="justify-content-center">Logo</h2>-->
+          <!--<a class="cmlogo justify-content-center" src="/assets/img/Logo_Musaraña.png" alt="logo">-->
+          <a class="close" href="#" onclick="closePago()">&times;</a>
+          <div class="content text-center justify-content-center">
+              Tu pedido ha sido procesado.
+          </div>
+      </div>
+  </div>
   </div>
 
 

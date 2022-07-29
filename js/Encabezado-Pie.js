@@ -1,5 +1,6 @@
 
 /*Encabezado*/
+// Es el elemento superiror el HTMLElement
 class encabezadoJs extends HTMLElement{
     constructor(){
         super();
@@ -26,13 +27,13 @@ class encabezadoJs extends HTMLElement{
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- <ul class="navbar-nav me-auto col-xl-1 mb-lg-0"> -->
         <li class="nav-item">
-          <a class="btn-ghost nav-link" href="Productos.html">Productos</a>
+          <a class="btn-ghost nav-link" href="../html/Productos.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="btn-ghost nav-link" href="blog.html">Blog</a>
+          <a class="btn-ghost nav-link" href="../html/blog.html">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="btn-ghost nav-link" href="Nosotros.html">Nosotros</a>
+          <a class="btn-ghost nav-link" href="../html/Nosotros.html">Nosotros</a>
         </li>
     </div>
     <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
@@ -40,7 +41,7 @@ class encabezadoJs extends HTMLElement{
     <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
     <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
     <div class=" hijo_2  col-sm-4 col-5">
-      <a href="Inicio.html">
+      <a href="../Index_1.html">
         <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
           title="Logo_Musaraña" />
       </a>
@@ -58,8 +59,8 @@ class encabezadoJs extends HTMLElement{
     </div>
     <!-- Se coloca imagen del login y carrito -->
     <div class="hijo_4 col-xl-2 col-sm-2">
-      <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
-      <a class="icono2 bi bi-cart4" width="5px" href="Carrito.html" style="color: black;"></a>
+      <a class="icono fa-solid fa-user-large" width="5px" href="../html/Login.html" style="color: black;"></a>
+      <a class="icono2 bi bi-cart4" width="5px" href="../html/Carrito.html" style="color: black;"></a>
     </div>
   </div>
 </nav>
@@ -67,7 +68,7 @@ class encabezadoJs extends HTMLElement{
 `;
 }
 }
-
+// Imprime en el HTML definimos el elemento con window.customElements
 window.customElements.define("encabezado-js", encabezadoJs);
 
 
@@ -104,7 +105,7 @@ class piedepaginaJs extends HTMLElement{
 
             <i class="bi bi-telegram"></i>
 
-            <i class="bi bi-envelope-fill"></i>
+            <a class="bi bi-envelope-fill" href="musaranamx@gmail.com"></a>
           </div>
         </div>
       </div>
@@ -121,15 +122,16 @@ class piedepaginaJs extends HTMLElement{
 
             <i class="fa-brands fa-cc-visa"></i>
 
-            <i class="fa-solid fa-credit-card-front"></i>
+            <a class="fa-solid fa-credit-card-front href="musaranamx@gmail.com"></a>
           </div>
         </div>
       </div>
       <!-- Container de segundo logo -->
       <div class="contenedor_imagen col-xl-2 col-sm-4">
         <!-- Segundo logo -->
+        <a href="../Index_1.html">
         <img src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png" width="150px" class="img-pie"
-          alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" />
+          alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" /></a>
       </div>
       <div class="col-xl-2 col-sm-2 contnedor-in">
         <!-- Container de Redes Sociales -->
@@ -137,9 +139,9 @@ class piedepaginaJs extends HTMLElement{
         <div class="row">
           <!-- Container de icons -->
           <div class="col contenedor-ini">
-            <i class="bi bi-facebook"></i>
+            <a class="bi bi-facebook" href="https://www.facebook.com/musaranamx"></a>
 
-            <i class="bi bi-instagram"></i>
+            <a class="bi bi-instagram" href="https://www.instagram.com/musaranamx/"></a>
 
             <i class="bi bi-twitter"></i>
 

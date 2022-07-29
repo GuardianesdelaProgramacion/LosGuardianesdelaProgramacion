@@ -1,4 +1,4 @@
-// del htmle trabajamos con los que tengan la clase .list__button--click
+// del html trabajamos con los que tengan la clase .list__button--click
 let listElements = document.querySelectorAll('.list__button--click');
 
 //
