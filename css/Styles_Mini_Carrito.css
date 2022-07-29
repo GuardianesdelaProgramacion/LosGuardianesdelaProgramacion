@@ -1,17 +1,17 @@
-.tablemini > tbody:empty {
-    width:400px;
+.tableminitable > tbody:empty {
+    width: 400px;
     position: relative;
     display: table-caption;
     caption-side: bottom;
     min-height: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     background-image: url(./bag-x.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 400px;
     text-align: center;
 }
-.tablemini > tbody:empty:before {
+.tableminitable > tbody:empty:before {
     content: 'Agrega algo a tu carrito';
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -23,9 +23,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
-#thproductomini {
+#thproductomini{
     width: 80px;
 }
-#thpreciomini {
+#thpreciomini{
     width: 10px;
 }

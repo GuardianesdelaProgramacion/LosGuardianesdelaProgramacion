@@ -88,12 +88,12 @@ table > tbody:empty {
     position: relative;
     display: table-caption;
     caption-side: bottom;
-    min-height: 500px;
+    min-height: 200px;
     margin-bottom: 100px;
     background-image: url(./bag-x.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200px;
+    background-size: 45%;
     text-align: center;
 }
 table > tbody:empty:before {
@@ -110,10 +110,15 @@ table > tbody:empty:before {
 }
 .submenu {
     position: relative;
-    border: 1px solid #ccc;
-    width: 30px;
-    left: 110px;
-    top: -35px;
+    width: 30px; 
+    height: 30px; 
+    top:6px;
+    right:30px;
+}
+.contadormini {
+    position: relative;
+    width: 30px;  
+    right:28px;
 }
 
 .submenu #carrito {
@@ -124,11 +129,12 @@ table > tbody:empty:before {
     display: block;
     position: absolute;
     right: 0;
-    color: black;
     top: 100%;
-    z-index: 1;
+    color: black;
+    z-index: 100;
     background-color: white;
-    padding: 20px;
-    min-height: 350px;
+    padding:20px;
+    min-height: 200px;
     min-width: 400px;
+
 }
