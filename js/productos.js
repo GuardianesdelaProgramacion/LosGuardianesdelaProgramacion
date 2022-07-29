@@ -1,4 +1,4 @@
-console.log("Sesión tenebrosa de JS09 muajajajajaja");
+console.log("productos");
 
 // GET request for remote image in node.js. Autor del codigo SERGIO TORRES
 async function adquirirDatos(proveedor = "Axios", direccionhttp) {
@@ -143,6 +143,14 @@ filtroShampoo.addEventListener('click', filtroshampoo, true);
 
 function filtroshampoo() {
   return filtro("Tarjetas-js", "shampoo");
+}
+
+
+let filtroDesodorante = document.getElementById("filtroDesodorante");
+filtroDesodorante.addEventListener('click', filtrodesodorante, true);
+
+function filtrodesodorante() {
+  return filtro("Tarjetas-js", "desodorante");
 }
 
 let filtroTodo = document.getElementById("filtroTodo");
