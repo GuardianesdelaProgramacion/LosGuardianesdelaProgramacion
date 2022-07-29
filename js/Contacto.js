@@ -1,4 +1,5 @@
 
+//Filtrado de números para el input de teléfono.
 const telf= document.querySelector('#cnformtel');
 const telefono = document.querySelector('.telcn #cn4');
 
@@ -12,8 +13,10 @@ telf.cn4.addEventListener('keyup',()=>{
   .trim();
 })
 
+//Arreglo donde se van a guardar los datos
 let contactoData=[];
 
+//Función del botón
 function contactoEnviar(){
     nom = document.getElementById("cn1").value;
     corr = document.getElementById("cn2").value;
@@ -44,7 +47,7 @@ function contactoEnviar(){
 
 }
 
-/*Clode del popup*/
+/*Close del popup*/
 function cnClose(){
     popup1.style.visibility = "hidden";
     popup1.style.opacity= 0;

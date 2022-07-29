@@ -1,3 +1,4 @@
+            /*Lupa desfasada*/
             .buscar-icon{
                 position: absolute;
                 top: 0;
@@ -12,26 +13,27 @@
                 border-radius: 50%;
                 cursor: pointer;
                 z-index: 100;
-            }
-                        
-            
-            .contactoTitulo{
-                text-align: center;
-                background-color: white;
-                font-family: 'Montserrat', sans-serif;
-                margin-bottom: 50px;
-            }
+            }                                  
 
+            /*Imagen banner*/
             .contactoBanner{
                 max-width: 50%;
                 height: auto;
-                margin:50px;
+                margin:10px;
                 border-radius:15px;
+            }
+
+            /*Propiedades del formulario*/
+            .contactoTitulo{
+              text-align: center;
+              background-color: white;
+              font-family: 'Montserrat', sans-serif;
+              margin-bottom: 30px;
             }
 
              .contenedor{
                 background-color: var(--crema);
-                margin: 50px;
+                margin: 30px;
                 width: 100%;
                 padding:50px;
 
@@ -45,6 +47,7 @@
                 z-index: 2;
             }
 
+            /*Propiedades de inputs, labels y boton*/
             .contactoNameT{
                 width:180px;
                 height: 15px;
@@ -145,7 +148,7 @@
             /*Popup*/
 
             .overlay {
-                position: absolute;
+                position: fixed;
                 top: 0;
                 bottom: 0;
                 left: 0;
@@ -170,19 +173,28 @@
                 border-radius: 5px;
                 width: 30%;
                 position: relative;
-                top:550px;
+                top:370px;
                 transition: all 5s ease-in-out;
+                background-color: var(--crema);
               }
               
-              .popup h2 {
+              /*.popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: 'Montserrat', sans-serif;
+              }*/
+              /*.popup .cmlogo {
+                max-width: 30%;
+                height: auto;
+                margin:50px;
                 margin-top: 0;
                 color: #333;
                 font-family: Tahoma, Arial, sans-serif;
-              }
+              }*/
               .popup .close {
                 position: absolute;
-                top: 20px;
-                right: 30px;
+                top: 2px;
+                right: 5px;
                 transition: all 200ms;
                 font-size: 30px;
                 font-weight: bold;
@@ -195,6 +207,7 @@
               .popup .content {
                 max-height: 30%;
                 overflow: auto;
+                font-family: 'Montserrat', sans-serif;
               }
               
               @media screen and (max-width: 700px){
