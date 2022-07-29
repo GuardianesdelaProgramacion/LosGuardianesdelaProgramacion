@@ -65,7 +65,7 @@ async function solicitudBtn() {
   guardar(masVendido)
 
 //Manda a llamr a la funcion productos para mostrar productos de forma dinamica
-//Productos("el id de la etiqueta en donde se insertara,que seccion")
+//Productos("el id de la etiqueta en donde se insertara,que sección")
   Productos("Tarjetas-js","catalogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
   Productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
 
@@ -91,11 +91,11 @@ function guardar(usuario) {
 
 
 //Función para mostrar los productos de forma dinamica 
-function Productos(id,seccion,columna) { 
+function Productos(id,sección,columna) { 
   let datos = ""; 
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.seccion == seccion) { 
+    if ( lista.sección == sección) { 
      datos+= 
         `${columna}
     <div class="card tarjeta-producto border-0">
@@ -149,11 +149,11 @@ function filtrotodo() {
 
 
 //Funcion del filtros
-function filtro(id,categoria) {
+function filtro(id,categoría) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
-    if (lista.categoria == categoria) {
+    if (lista.categoría == categoría) {
             datos+=
         `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
     <div class="card tarjeta-producto border-0">
@@ -166,7 +166,7 @@ function filtro(id,categoria) {
             <span>&#9733</span>
             <span>&#9733</span>
         </div>
-        <span class="producto-precio text-center">${lista.categoria}</span>
+        <span class="producto-precio text-center">${lista.categoría}</span>
         <div class="row botones-inf w-100 mx-auto text-center">
             <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
                     carrito
@@ -177,7 +177,7 @@ function filtro(id,categoria) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase() ;
+  document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase() ;
   
 
 }

@@ -11,8 +11,8 @@
                 "precio": "$50.00",
                 "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
                 "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "seccion":"catalogo",
-                "categoria": "jabon"
+                "sección":"catalogo",
+                "categoría": "jabon"
             },
             {
                 "id":2,
@@ -20,8 +20,8 @@
                 "precio": "$70.00",
                 "descripción": "No dejes que el miedo te impida ser feliz",
                 "url": "https://i.ibb.co/Trymmtc/cinthia.png",
-                "seccion":"catalogo",
-                "categoria": "jabon"
+                "sección":"catalogo",
+                "categoría": "jabon"
             },
             {
                 "id": 3,
@@ -29,8 +29,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
-                "seccion":"catalogo",
-                "categoria": "shampoo"
+                "sección":"catalogo",
+                "categoría": "shampoo"
             },
             {
                 "id": 4,
@@ -38,8 +38,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
-                "seccion":"catalogo",
-                "categoria": "desodorante"
+                "sección":"catalogo",
+                "categoría": "desodorante"
             },
             {
                 "id": 5,
@@ -47,8 +47,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
-                "seccion":"catalogo",
-                "categoria": "crema"
+                "sección":"catalogo",
+                "categoría": "crema"
             },
             {
                 "id": 8,
@@ -56,8 +56,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
-                "seccion":"catalogo",
-                "categoria": "jabon"
+                "sección":"catalogo",
+                "categoría": "jabon"
             },
             {
                 "id": 9,
@@ -65,8 +65,8 @@
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "seccion":"catalogo",
-                "categoria": "jabon"
+                "sección":"catalogo",
+                "categoría": "jabon"
             }
         ],
         "support": {

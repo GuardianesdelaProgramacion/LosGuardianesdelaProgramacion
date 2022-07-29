@@ -11,7 +11,7 @@
                 "precio": "$60.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "seccion":"masVendido"
+                "sección":"masVendido"
             },
             {
                 "id":7,
@@ -19,7 +19,7 @@
                 "precio": "$55.00",
                 "descripción": "No dejes que el miedo te impida ser feliz",
                 "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "seccion":"masVendido"
+                "sección":"masVendido"
             }
             
         ],
