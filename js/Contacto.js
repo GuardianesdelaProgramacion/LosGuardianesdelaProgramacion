@@ -1,4 +1,5 @@
 
+//Filtrado de números para el input de teléfono.
 const telf= document.querySelector('#cnformtel');
 const telefono = document.querySelector('.telcn #cn4');
 
@@ -12,8 +13,10 @@ telf.cn4.addEventListener('keyup',()=>{
   .trim();
 })
 
+//Arreglo donde se van a guardar los datos
 let contactoData=[];
 
+//Función del botón
 function contactoEnviar(){
     nom = document.getElementById("cn1").value;
     corr = document.getElementById("cn2").value;
@@ -31,14 +34,32 @@ function contactoEnviar(){
 
     contactoData.push(objL);
     console.log(contactoData);
+
+    /*popup onclick*/
     popup1.style.visibility = "visible";
     popup1.style.opacity= 1;
+    cn1.style.visibility = "hidden";
+    cn2.style.visibility = "hidden";
+    cn3.style.visibility = "hidden";
+    cn4.style.visibility = "hidden";
+    cn5.style.visibility = "hidden";
 
 
 }
 
+/*Close del popup*/
 function cnClose(){
     popup1.style.visibility = "hidden";
     popup1.style.opacity= 0;
+    cn1.style.visibility = "visible";
+    cn2.style.visibility = "visible";
+    cn3.style.visibility = "visible";
+    cn4.style.visibility = "visible";
+    cn5.style.visibility = "visible";
+    document.getElementById("cn1").value = "";
+    document.getElementById("cn2").value = "";
+    document.getElementById("cn3").value = "";
+    document.getElementById("cn4").value = "";
+    document.getElementById("cn5").value = "";
 
 }
