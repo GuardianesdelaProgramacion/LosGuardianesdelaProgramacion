@@ -48,7 +48,7 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
     });
   }
 }
-
+//Solicita los datos, gurda en la local e imprime el html
 solicitudBtn();
 async function solicitudBtn() {
   // datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
@@ -64,10 +64,10 @@ async function solicitudBtn() {
   guardar(datos);
   guardar(masVendido)
 
-//Manda a llamr a la funcion productos para mostrar productos de forma dinamica
-//Productos("el id de la etiqueta en donde se insertara,que sección")
-  Productos("Tarjetas-js","catálogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
-  Productos("masVendido","masVendido",'<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
+  //Manda a llamr a la funcion productos para mostrar productos de forma dinamica
+  //Productos("el id de la etiqueta en donde se insertara,que sección")
+  Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
+  Productos("masVendido", "masVendido", '<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
 
 
 
@@ -78,23 +78,23 @@ async function solicitudBtn() {
 //Guardar los datos en la local Storage
 function guardar(usuario) {
   for (let user of usuario) {
-      let llave = JSON.stringify(user.id)
-      localStorage.setItem(llave, JSON.stringify(user));
+    let llave = JSON.stringify(user.id)
+    localStorage.setItem(llave, JSON.stringify(user));
   }
 }
 
 
 //Función para mostrar los productos de forma dinamica 
-function Productos(id,sección,columna) { 
-  let datos = ""; 
+function Productos(id, sección, columna) {
+  let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.sección == sección) { 
-     datos+= 
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.sección == sección) {
+      datos +=
         `${columna}
     <div class="card tarjeta-producto border-0">
         <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" id="${lista.id}" alt="..." >
+        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
         <span class="producto-nombre text-center">${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
             <span >&#9733</span>
@@ -114,52 +114,58 @@ function Productos(id,sección,columna) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";  
+  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
   //Manda a llamar la funcion de descripcion al dar clic en la foto del producto 
-  let descripcionIndividual = document.getElementById("1");
-  descripcionIndividual.addEventListener('click', descripcionProducto, true);  
-  function descripcionProducto() {
-    return descripcion("rescribir","1");
-  }
+  document.querySelectorAll(".click").forEach(el => {
+    el.addEventListener("click", e => {
+      const id = e.target.getAttribute("id");
+      const process = id;
+      console.log(process);
+      descripcionProducto(process)
+      function descripcionProducto(process) {
+        return descripcion("rescribir", process);
+      }
+    });
+  });
 
 }
 
-
+//filtro
 let filtroJabon = document.getElementById("filtroJabon");
 filtroJabon.addEventListener('click', filtrojabon, true);
 
 function filtrojabon() {
-    return filtro("Tarjetas-js","jabón");
+  return filtro("Tarjetas-js", "jabón");
 }
 
 let filtroShampoo = document.getElementById("filtroShampoo");
 filtroShampoo.addEventListener('click', filtroshampoo, true);
 
 function filtroshampoo() {
-  return filtro("Tarjetas-js","shampoo");
+  return filtro("Tarjetas-js", "shampoo");
 }
 
 let filtroTodo = document.getElementById("filtroTodo");
 filtroTodo.addEventListener('click', filtrotodo, true);
 
 function filtrotodo() {
-  return Productos("Tarjetas-js","catálogo",'<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
+  return Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
 }
 
 
 
 
-//Funcion del filtros
-function filtro(id,categoría) {
+//Funcion del filtros y crea la pagina individual al seleccionar la imagen 
+function filtro(id, categoría) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.categoría == categoría) {
-            datos+=
+      datos +=
         `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
     <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" id="${lista.id}" alt="...">
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
+        <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
             <span>&#9733</span>
             <span>&#9733</span>
@@ -178,12 +184,19 @@ function filtro(id,categoría) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase() ;
-  let descripcionIndividual = document.getElementById("1");
-  descripcionIndividual.addEventListener('click', descripcionProducto, true);  
-  function descripcionProducto() {
-    return descripcion("rescribir","1");
-  }
+  document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase();
+
+  document.querySelectorAll(".click").forEach(el => {
+    el.addEventListener("click", e => {
+      const id = e.target.getAttribute("id");
+      const process = id;
+      console.log(process);
+      descripcionProducto(process)
+      function descripcionProducto(process) {
+        return descripcion("rescribir", process);
+      }
+    });
+  });
 
 }
 
@@ -191,14 +204,14 @@ function filtro(id,categoría) {
 
 
 
-
 //Funcion de pruebas
-function descripcion(id,id_producto) {
+function descripcion(id, id_producto) {
+  console.log(id_producto)
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
     if (lista.id == id_producto) {
-            datos+=
+      datos +=
         `    <div class="container my-5">
         <div class="row justify-content-center producto-central ">
             <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
@@ -232,6 +245,6 @@ function descripcion(id,id_producto) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  
+
 }
 
