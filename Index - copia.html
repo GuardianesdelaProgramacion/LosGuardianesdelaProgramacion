@@ -1,0 +1,869 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Musaraña</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/jpg" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="./css/Styles.css">
+  <link rel="stylesheet" href="./css/Styles_Pop_Up.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+</head>
+
+<body>
+
+
+  <div class="background-container">
+    <div class="card-container glass-effect">
+    </div>
+  </div>
+  <header class="heder-statica">
+    <nav class="navbar navbar-expand-xl">
+      <!-- muestra el botón con tres rayitas del lado izquierdo -->
+      <div class="container-fluid padre" style="background-color: #cee5d0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Son los botones que te llevan a sus respectivas páginas como Producto, Nosotros y Blog-->
+        <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent" style="text-align: center;">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <ul class="navbar-nav me-auto col-xl-1 mb-lg-0"> -->
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./html/Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./html/blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./html/Nosotros.html">Nosotros</a>
+            </li>
+        </div>
+        <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
+
+        <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
+        <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
+        <div class=" hijo_2  col-sm-4 col-5">
+          <a href="./Index - copia.html">
+            <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
+              title="Logo_Musaraña" />
+          </a>
+        </div>
+        <!-- contiene la barra de búsqueda -->
+        <div class="hijo_3 col-xl-2 col-sm-2">
+          <form class="d-flex" role="search">
+            <div class="buscar">
+              <input type="text" placeholder="Buscar" required />
+              <div class="buscar-icon">
+                <i class="bi bi-search icon"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Se coloca imagen del login y carrito -->
+        <div class="hijo_4 col-xl-2 col-sm-2">
+          <a class="icono fa-solid fa-user-large" width="5px" href="./html/Login.html" style="color: black;"></a>
+          <a class="icono2 bi bi-cart4" width="5px" href="./html/Carrito.html" style="color: black;"></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--Imagen de banner-->
+
+
+  <main class="main">
+    <!-- contenido de la pagina web -->
+    <div class="row">
+      <aside>
+        <h2>Aside</h2>
+        <div class="p-contennedor">
+          <div class="h-1">
+
+            <nav class="nav">
+              <ul class="list">
+
+
+                <li class="list__item list__item--click">
+                  <div class="list__button list__button--click">
+                    <i class="bi bi-clipboard2-check-fill list__img"></i>
+                    <a href="#" class="nav__link">INGREDIENTES</a>
+                    <img src="./assets/icons2/arrow.svg" class="list__arrow">
+                  </div>
+
+                  <ul class="list__show">
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+                  </ul>
+
+                </li>
+
+
+
+                <li class="list__item list__item--click">
+                  <div class="list__button list__button--click">
+                    <i class="fa-solid fa-heart-pulse list__img"></i>
+                    <a href="#" class="nav__link">BENEFICIOS</a>
+                    <img src="./assets/icons2/arrow.svg" class="list__arrow">
+                  </div>
+
+                  <ul class="list__show">
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+                  </ul>
+
+                </li>
+
+
+                <li class="list__item list__item--click">
+                  <div class="list__button list__button--click">
+                    <i class="bi bi-bookmark-check-fill list__img"></i>
+                    <a href="#" class="nav__link">CATEGORIAS</a>
+                    <img src="./assets/icons2/arrow.svg" class="list__arrow">
+                  </div>
+
+                  <ul class="list__show">
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                      <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+                  </ul>
+
+                </li>
+
+
+                <li class="list__item">
+                  <div class="list__button">
+                    <i class="bi bi-envelope-fill list__img"></i>
+                    <a href="./html/Contacto.html" class="nav__link">CONTACTO</a>
+                  </div>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+
+      </aside>
+      <section class="">
+        <h2>Section</h2>
+        <!-- carrusel de imagenes -->
+        <!-- copiar -->
+        <!-- <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel"> -->
+        <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+
+            <div class="carousel-item active">
+
+              <div class="cards-wrapper-tarjeta-grupo-producto">
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
+                  <div class="estrellas mx-auto text-center">
+                    <input type="radio" name="rating" id="star-1">
+                    <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-2">
+                    <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-3">
+                    <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-4">
+                    <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" name="rating" id="star-5">
+                    <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                  </div>
+                  <span class="producto-precio text-center">$ 50.00</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">JABÓN DE AVENA <br> 100 GR</br></span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center">$ 50.00</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">JABÓN DE HIERBAS <br>100 GM </br></span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center border-0">$ 50.50</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center">$ 50.00</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="carousel-item">
+
+              <div class="cards-wrapper-tarjeta-grupo-producto">
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center border-0">$ 100.50</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">TABLETAS DENTALES</span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center">$ 100.50</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center">$ 100.50</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+
+                <div class="card tarjeta-producto border-0">
+                  <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" class="img-producto" alt=".">
+                  <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                  <div class="estrellas mx-auto text-center">
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                    <span>&#9733</span>
+                  </div>
+                  <span class="producto-precio text-center">$ 100.50</span>
+                  <div class="row botones-inf w-100 mx-auto text-center">
+                    <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                      </span> </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- hasta aqui -->
+
+        <div class="row">
+          <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+
+              <div class="carousel-item active">
+
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <input type="radio" name="rating" id="star-1">
+                      <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-2">
+                      <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-3">
+                      <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-4">
+                      <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-5">
+                      <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN DE AVENA <br> 100 GR</br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN DE HIERBAS <br>100 GM </br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center border-0">$ 50.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="carousel-item">
+
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center border-0">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">TABLETAS DENTALES</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+
+              <div class="carousel-item active">
+
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">SÉRUM-UNISEX <br>100 ML<br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <input type="radio" name="rating" id="star-1">
+                      <label for="star-1"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-2">
+                      <label for="star-2"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-3">
+                      <label for="star-3"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-4">
+                      <label for="star-4"><i class="fa-solid fa-star"></i></label>
+                      <input type="radio" name="rating" id="star-5">
+                      <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN DE AVENA <br> 100 GR</br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN DE HIERBAS <br>100 GM </br></span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center border-0">$ 50.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">JABÓN FRUTOS ROJOS 100 GM</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 50.00</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="carousel-item">
+
+                <div class="cards-wrapper-tarjeta-grupo-producto">
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">PASTA DENTAL SÓLIDA 100 GR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center border-0">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">TABLETAS DENTALES</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+
+                  <div class="card tarjeta-producto border-0">
+                    <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" class="img-producto" alt=".">
+                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
+                    <div class="estrellas mx-auto text-center">
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                      <span>&#9733</span>
+                    </div>
+                    <span class="producto-precio text-center">$ 100.50</span>
+                    <div class="row botones-inf w-100 mx-auto text-center">
+                      <button type="button" class="botones py-2 col mx-auto"> <span class="inf"> Añadir al carrito
+                        </span> </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+
+
+
+
+  <div id=" cnbd">
+
+    <div class="">
+      <div class="">
+      </div>
+    </div>
+    <div class="">
+      <div class="">
+
+        <div class="">
+          <form>
+            <input type="text" class="inbisible" id="cn1">
+          </form>
+        </div>
+        <div class="">
+          <form>
+            <input type="email" class="inbisible" id="cn2">
+          </form>
+        </div>
+
+
+        <div class="">
+          <form>
+
+            <input type="text" class="inbisible" id="cn3">
+          </form>
+        </div>
+        <div class="">
+          <form id="cnformtel">
+            <div class="telcn">
+
+              <input type="text" class="inbisible" id="cn4">
+
+              <input type="text" class="inbisible" id="cn5">
+          </form>
+        </div>
+        <form class="cton">
+          <button type="button" class="fr-btn" style="margin-bottom:100px;" onclick="contactoEnviar()">ABRIR POP
+            UP</button>
+        </form>
+
+
+
+
+        <!-- Datos de contacto -->
+        <footer class="text-center">
+          <!-- lineas de colores -->
+          <div class="rectangulo_1"></div>
+          <div class="rectangulo_2"></div>
+          <div class="rectangulo_3"></div>
+          <div class="rectangulo_2"></div>
+
+          <!-- Container principal -->
+          <div class="container text-center contenedor-padre">
+            <div class="row">
+              <!-- Container de contacto -->
+              <div class="col-xl-3 col-sm-2 contnedor-in">
+                <a href="./html/Contacto.html"><b>CONTACTO</b></a>
+                <div class="row">
+                  <!-- container de icons -->
+                  <div class="col contenedor-ini">
+                    <i class="bi bi-whatsapp"></i>
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    <i class="bi bi-telegram"></i>
+
+                    <a class="bi bi-envelope-fill" href="musaranamx@gmail.com"></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Container de Pago -->
+              <div class="col-xl-2 col-sm-2 contnedor-in">
+                <b>FORMAS DE PAGO</b>
+                <div class="row">
+                  <!-- Container de icons -->
+                  <div class="col contenedor-ini">
+                    <i class="fa-brands fa-cc-mastercard"></i>
+
+                    <i class="bi bi-paypal"></i>
+
+                    <i class="fa-brands fa-cc-visa"></i>
+
+                    <a class="fa-solid fa-credit-card-front href=" musaranamx@gmail.com"></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Container de segundo logo -->
+              <div class="contenedor_imagen col-xl-2 col-sm-4">
+                <!-- Segundo logo -->
+                <a href="./Index - copia.html">
+                  <img src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png" width="150px" class="img-pie"
+                    alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" /></a>
+              </div>
+              <div class="col-xl-2 col-sm-2 contnedor-in">
+                <!-- Container de Redes Sociales -->
+                <b>REDES SOCIALES</b>
+                <div class="row">
+                  <!-- Container de icons -->
+                  <div class="col contenedor-ini">
+                    <a class="bi bi-facebook" href="https://www.facebook.com/musaranamx"></a>
+
+                    <a class="bi bi-instagram" href="https://www.instagram.com/musaranamx/"></a>
+
+                    <i class="bi bi-twitter"></i>
+
+                    <i class="bi bi-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-2 contnedor-in">
+                <div class="row">
+                  <!-- Container de Preguntas Frecuentes -->
+                  <b>PREGUNTAS FRECUENTES</b>
+                  <div class="col contenedor-ini">
+                    <i class="bi bi-question-circle-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+        <div id="popup1" class="overlay">
+          <div class="registro_popup">
+            <div class="contenido_popup">
+              <h2>Suscríbete a <br>nuestro blog</h2>
+              <input type="text" placeholder="E-mail"></input>
+              <br>
+              <button>Suscribir</button>
+              <br>
+              <a href="#" onclick="cnClose()">No Gracias</a>
+            </div>
+            <div class="fondo_popup">
+              <div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="../js/Index_1.js"></script>
+            <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+              crossorigin="anonymous"></script>
+            <script src="./js/Contacto.js"></script>
+            <script src="./js/Encabezado-Pie.js"></script>
+</body>
+
+</html>
