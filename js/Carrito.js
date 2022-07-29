@@ -152,7 +152,6 @@ async function solicitudBtn() {
         `<tr class="mytr" id="fila${lista.id}">
         <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
         <td><img class="img_carrito2" src="${lista.url}"alt="Producto 1" /></td>
-        <td></td>
         <td><p style="font-size:10px">${lista.descripción}</p></td>
         <td><input class="input_carrito" type="number" min="1" max="${lista.id}" value=${lista.id}></td>
     </tr>
