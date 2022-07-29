@@ -157,7 +157,7 @@ function filtro(id,categoría) {
             datos+=
         `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
     <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" alt="...">
+        <img src=${lista.url} class="img-producto" id="${lista.id}" alt="...">
         <span class="producto-nombre text-center">${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
             <span>&#9733</span>
@@ -178,7 +178,11 @@ function filtro(id,categoría) {
   }
   document.getElementById(id).innerHTML = datos;
   document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase() ;
-  
+  let descripcionIndividual = document.getElementById("1");
+  descripcionIndividual.addEventListener('click', descripcionProducto, true);  
+  function descripcionProducto() {
+    return descripcion("rescribir","1");
+  }
 
 }
 
