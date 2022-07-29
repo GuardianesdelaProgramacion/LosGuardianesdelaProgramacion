@@ -95,9 +95,9 @@ async function solicitudBtn() {
   // console.log("Solicitud Axios:" + JSON.stringify(datos));
   // datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
   // console.log("Solicitud Fetch:" + JSON.stringify(datos));
-  datos = await adquirirDatos("Json", "../assets/json/productos.json");
+  datos = await adquirirDatos("Json", "../assets/json2/productos.json");
   console.log("Solicitud Json Productos:" + JSON.stringify(datos));
-  masVendido = await adquirirDatos("Json", "../assets/json/masVendido.json");
+  masVendido = await adquirirDatos("Json", "../assets/json2/masVendido.json");
   console.log("Solicitud Json Mas Vendido:" + JSON.stringify(datos));
 
 
