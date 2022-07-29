@@ -41,7 +41,7 @@ class encabezadoJs extends HTMLElement{
     <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
     <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
     <div class=" hijo_2  col-sm-4 col-5">
-      <a href="Index_1.html">
+      <a href="../Index.html">
         <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
           title="Logo_Musaraña" />
       </a>
@@ -129,7 +129,7 @@ class piedepaginaJs extends HTMLElement{
       <!-- Container de segundo logo -->
       <div class="contenedor_imagen col-xl-2 col-sm-4">
         <!-- Segundo logo -->
-        <a href="Inicio.html">
+        <a href="../Index.html">
         <img src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png" width="150px" class="img-pie"
           alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" /></a>
       </div>
