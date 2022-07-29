@@ -105,7 +105,7 @@ class piedepaginaJs extends HTMLElement{
 
             <i class="bi bi-telegram"></i>
 
-            <i class="bi bi-envelope-fill"></i>
+            <a class="bi bi-envelope-fill" href="musaranamx@gmail.com"></a>
           </div>
         </div>
       </div>
