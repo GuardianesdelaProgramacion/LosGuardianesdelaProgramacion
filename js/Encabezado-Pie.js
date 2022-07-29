@@ -95,7 +95,7 @@ class piedepaginaJs extends HTMLElement{
     <div class="row">
       <!-- Container de contacto -->
       <div class="col-xl-3 col-sm-2 contnedor-in">
-        <b>CONTACTO</b>
+        <a href="../html/Contacto.html"><b>CONTACTO</b></a>
         <div class="row">
           <!-- container de icons -->
           <div class="col contenedor-ini">
@@ -129,7 +129,7 @@ class piedepaginaJs extends HTMLElement{
       <!-- Container de segundo logo -->
       <div class="contenedor_imagen col-xl-2 col-sm-4">
         <!-- Segundo logo -->
-        <a href="Index_1.html">
+        <a href="Inicio.html">
         <img src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png" width="150px" class="img-pie"
           alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" /></a>
       </div>

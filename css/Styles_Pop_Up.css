@@ -33,17 +33,19 @@
     visibility: visible;
     opacity: 1;
     background-color: rgba(0,0,0,0.5);
+    /* z-index: 2000; */
 }
 .registro_popup{
      width: 100%;
-     max-width: 975px;
-     height: 692px;
+     max-width: 775px;
+     height: 492px;
      position: relative;
      display: flex;
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
      /*transform: rotate(90deg) translate(-150%, 230%);*/
+     /* z-index: 2000; */
  }  
     /* visibility: hidden;
      transform: rotate(90deg) translate(-150%,230%);
@@ -52,6 +54,7 @@
 .registro_popup:target{
 	visibility: visible;
 	/*transform: translate(-50%,-50%);*/
+        /* z-index: 2000; */
 }/*
 .registro_popup:target .contenido_popup{
      top: 50%;
@@ -63,11 +66,13 @@
 	text-decoration: none;
 	color: #E8A191;
         font-size: 25px;
+        /* z-index: 2000; */
 }
 .contenido_popup a:hover{
 	text-decoration: none;
 	color: #E8A191;
 	border-bottom: 1px solid #E8A191;
+        /* z-index: 2000; */
 }
 
 .fondo_popup{
@@ -75,15 +80,17 @@
 	  background-image: url("https://images.unsplash.com/photo-1603533627277-11d5a361ac8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
           background-size: cover;
           background-position: center;
+          /* z-index: 2000; */
       }
 .contenido_popup{
-	width: 557px;
+	width: 357px;
 	padding-bottom: 20px;
 	padding-right: 20px;
 	padding-left: 20px;
 	padding-top: 150px;
 	overflow-y: auto;
 	background-color: white;
+        /* z-index: 2000; */
 }
 .contenido_popup button{
 	margin-top: 10px;
@@ -94,11 +101,13 @@
 	border:none;
         font-size: 25px;
 	color:#FCF8E8;
+        /* z-index: 2000; */
 }
 
 .contenido_popup h2{
         font-size: 36px;
         font-weight: 400;
+        /* z-index: 2000; */
 }
 .contenido_popup input{
         font-family: 'Montserrat', sans-serif;
@@ -111,4 +120,10 @@
 	border-top: none;
 	border-left: none;
 	border-right: none;
+        /* z-index: 2000; */
+}
+
+.inbisible{
+        border: none;
+
 }
