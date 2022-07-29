@@ -7,64 +7,64 @@
         "data": [
             {
                 "id": 1,
-                "nombre_producto": "Producto 1",
+                "nombre_producto": "SHAMPOO DE CALENDULA",
                 "precio": "$50.00",
                 "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
                 "seccion":"catalogo",
                 "categoria": "jabon"
             },
             {
                 "id":2,
-                "nombre_producto": "Producto 2",
+                "nombre_producto": "SHAMPOO DE JAMAICA",
                 "precio": "$70.00",
                 "descripción": "No dejes que el miedo te impida ser feliz",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/Trymmtc/cinthia.png",
                 "seccion":"catalogo",
                 "categoria": "jabon"
             },
             {
                 "id": 3,
-                "nombre_producto": "producto 3",
+                "nombre_producto": "SHAMPOO DE ROMERO",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
                 "seccion":"catalogo",
                 "categoria": "shampoo"
             },
             {
                 "id": 4,
-                "nombre_producto": "producto 4",
+                "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
                 "seccion":"catalogo",
                 "categoria": "desodorante"
             },
             {
                 "id": 5,
-                "nombre_producto": "producto 5",
+                "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
                 "seccion":"catalogo",
                 "categoria": "crema"
             },
             {
                 "id": 8,
-                "nombre_producto": "producto 5",
+                "nombre_producto": "SHAMPOO DE LAVANDA",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
                 "seccion":"catalogo",
                 "categoria": "jabon"
             },
             {
                 "id": 9,
-                "nombre_producto": "producto 6",
+                "nombre_producto": "SHAMPOO DE ROSAS",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
                 "seccion":"catalogo",
                 "categoria": "jabon"
             }

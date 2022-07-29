@@ -133,7 +133,7 @@ async function solicitudBtn() {
 <td><img class="img_carrito" src="${lista.url}"alt="Producto 1" /></td>
 <td><p>${lista.descripción}<p></td>
         <td><span>${lista.precio}<span></td>
-        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+        <td><input class="input_carrito" type="number" min="1" max="${lista.id}" value=${lista.id}></td>
         <td>$<span>60.00<span></td>
     </tr>
       `;
@@ -150,10 +150,11 @@ async function solicitudBtn() {
     if (lista.seccion == "catalogo") {
       datos+= 
         `<tr class="mytr" id="fila${lista.id}">
-        <td><button value="Eliminar" style="font-size:30px;background-color:#ECB390;" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
-<td><img class="img_carrito2" src="${lista.url}"alt="Producto 1" /></td>
-        <td><span>${lista.precio}<span></td>
-        <td><input class="input_carrito" type="number" min="1" max="15"></td>
+        <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
+        <td><img class="img_carrito2" src="${lista.url}"alt="Producto 1" /></td>
+        <td></td>
+        <td><p style="font-size:10px">${lista.descripción}</p></td>
+        <td><input class="input_carrito" type="number" min="1" max="${lista.id}" value=${lista.id}></td>
     </tr>
       `;
     }

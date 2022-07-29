@@ -65,18 +65,21 @@
         <!-- Se coloca imagen del login y carrito -->
 
 
-        <div class="hijo_4 col-xl-2 col-sm-2">
+        <div class="hijo_4 col-xl-2 col-sm-2 ">
           <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
+          <i class="icono2 bi bi-cart4 pruebai" id="img-carrito" width="5px" style="color: black;"></i>
+
 
           <ul>
             <li class="submenu">
-              <i class="icono2 bi bi-cart4" id="img-carrito" width="5px" style="color: black;"></i>
               <div id="carrito">
-                <table class="table_carrito">
+                <table class="tablemini">
                   <thead>
                     <tr>
-                      <th>Producto</th>
-                      <th>Precio</th>
+                      <th id="thpreciomini"></th>
+                      <th id="thproductomini">Producto</th>
+                      <th id="thpreciomini"></th>
+                      <th id="thpreciomini"></th>
                       <th>Cantidad</th>
                     </tr>
                   </thead>
@@ -91,6 +94,8 @@
           </ul>
           <span id="data3">0</span>
         </div>
+
+        
       </div>
     </nav>
   </header>
@@ -111,15 +116,7 @@
           </tr>
         </thead>
         <tbody id="data"></tbody>
-        <!--tr class="mytr" id="fila1">
-                    <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(1)"></button></td>
-		    <td><img class="img_carrito" src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg"alt="Producto 1" /></td>
-		    <td><p>asdasdasdasd<p></td>
-                    <td>$<span>60.00<span></td>
-                    <td><input class="input_carrito" type="number" min="1" max="15"></td>
-                    <td>$<span>60.00<span></td>
-                </tr>-->
-        <!--/tbody>-->
+
       </table>
       </form>
     </div>
