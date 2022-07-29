@@ -273,7 +273,7 @@ width: 240px;
     z-index: 2;
 }
 
-/* Asaid y Section */
+/* Section */
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -286,23 +286,9 @@ aside{
 }
 
 .p-contennedor{
-    border: 3px solid rebeccapurple;
+    /* border: 3px solid rebeccapurple; */
     display: flex;
     flex-direction: column;
-}
-.h-1{
-    border: 3px solid red;
-    height: 130px;
-}
-
-.h-2{
-    border: 3px solid royalblue;
-    height: 130px;
-}
-
-.h-3{
-    border: 3px solid blue;
-    height: 130px;
 }
 
 section{
@@ -386,3 +372,90 @@ img-pie{
 .contnedor-in{
     padding: 25px;
 } 
+
+
+/* Section */
+.h-1{
+    /* border: 3px solid red; */
+    height: auto;
+}
+
+.nav{
+    width: 300px;
+}
+
+/* Estilos de de los enlaces */
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+/* le doy color a las letras cada que se hacerca el cursor */
+.nav__link:hover{
+    color: var(--salmon);  
+}
+
+.nav__link--inside{
+    border-radius: 6px ;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.nav__link--inside:hover{
+    background: var(--crema);
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* con overflow ocultamos el submenu */
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Esta linea hace que se ponga la manita */
+.list__item--click{
+    cursor: pointer;
+}
+
+/* Sentra el contenido del cuadro que se oculta */
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* cuando se tenga la clase .list__arrow la flecha sufra un giro de noventa grados  */
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+/* se pasa el icono hacia la derecha */
+/* el giro durar.3s */
+.list__arrow{
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+/* Lstilos de los menos que se encuentran dentro */
+/* con el transition y height se contrae el submenu */
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid var(--salmon);
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}

@@ -28,7 +28,50 @@ aside .info-pedido{
 	border-radius: 48%;
 }
 aside .fr-btn{
-width: fit-content;
+	width: fit-content;
+}
+.lado-hijo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tablaPago > tbody:empty {
+	width: 518px;
+	position: relative;
+	display: table-caption;
+	caption-side: bottom;
+	min-height: 300px;
+	margin-bottom: 100px;
+	background-image: url(./bag-x.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px;
+	text-align: center;
+}
+.tablaPago > tbody:empty:before {
+	content: 'Agrega algo a tu carrito';
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	margin-top: 180px;
+	position: absolute;
+	font-size: 30px;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#prod-pago{
+	width: 30px;
+}
+#desc-pago{
+	width: 150px;
+}
+#prec-pago{
+	width: 30px;
+}
+#cant-pago{
+	width: 30px;
 }
 input{
 	border-radius: 8px;
@@ -130,48 +173,4 @@ a .Paypal{
 		margin: 0px 8px 0px 8px;
 		width: 70%;
 	}
-
-}
-.lado-hijo{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.tablaPago > tbody:empty {
-	width: 518px;
-    position: relative;
-    display: table-caption;
-    caption-side: bottom;
-    min-height: 300px;
-    margin-bottom: 100px;
-    background-image: url(./bag-x.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px;
-    text-align: center;
-}
-.tablaPago > tbody:empty:before {
-    content: 'Agrega algo a tu carrito';
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-top: 180px;
-    position: absolute;
-    font-size: 30px;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-#prod-pago{
-	width: 30px;
-}
-#desc-pago{
-	width: 150px;
-}
-#prec-pago{
-	width: 30px;
-}
-#cant-pago{
-	width: 30px;
-}
+}	
