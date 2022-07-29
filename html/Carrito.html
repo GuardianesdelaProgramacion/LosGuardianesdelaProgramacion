@@ -47,8 +47,8 @@
         <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
         <div class=" hijo_2  col-sm-4 col-5">
           <a href="Inicio.html">
-            <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
-              title="Logo_Musaraña" />
+            <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_MusaraÃ±a"
+              title="Logo_MusaraÃ±a" />
           </a>
         </div>
         <!-- contiene la barra de busqueda -->
@@ -65,30 +65,36 @@
         <!-- Se coloca imagen del login y carrito -->
 
 
-        <div class="hijo_4 col-xl-2 col-sm-2">
+        <div class="">
           <a class="icono fa-solid fa-user-large" width="5px" href="Login.html" style="color: black;"></a>
 
-          <ul>
+
+
+
+        </div>
+        <div class="Carrito-mini">
+          <ul style="list-style: none;">
             <li class="submenu">
-              <i class="icono2 bi bi-cart4" id="img-carrito" width="5px" style="color: black;"></i>
+              <a class="icono2 bi bi-cart4" href="Carrito.html" width="5px" style="color: black;"></a>
               <div id="carrito">
-                <table class="table_carrito">
+                <table class="tablemini">
                   <thead>
                     <tr>
-                      <th>Producto</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
+                      <th style="width:40px"></th>
+                      <th style="width:40px">Producto</th>
+                      <th style="width:200px"></th>
+                      <th style="width:100px">Cantidad</th>
                     </tr>
                   </thead>
-                  <tbody id="data2">
+                  <tbody style="width:400px" id="data2">
                   <tbody>
                 </table>
-                <a href="#" onclick="limpiarTabla2()" id="vaciar">vaciar carrito</a>
-
-
+                <a href="#" onclick="limpiarTabla2()" id="vaciar" style="color: black;">vaciar carrito</a>
               </div>
             </li>
           </ul>
+        </div>
+        <div class="contadormini">
           <span id="data3">0</span>
         </div>
       </div>
@@ -98,6 +104,7 @@
   <main class="main">
 
     <h1 style="margin-top:50px">Carrito</h1>
+    <button onclick="limpiarTabla()" class="button_comprar">Limpiar tabla</button>
     <div class="div_carrito">
       <table class="table_carrito">
         <thead>
@@ -110,16 +117,9 @@
             <th style="width:15%">Total</th>
           </tr>
         </thead>
-        <tbody id="data"></tbody>
-        <!--tr class="mytr" id="fila1">
-                    <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(1)"></button></td>
-		    <td><img class="img_carrito" src="https://t2.uc.ltmcdn.com/es/posts/6/3/5/propiedades_del_jabon_de_rosa_mosqueta_44536_orig.jpg"alt="Producto 1" /></td>
-		    <td><p>asdasdasdasd<p></td>
-                    <td>$<span>60.00<span></td>
-                    <td><input class="input_carrito" type="number" min="1" max="15"></td>
-                    <td>$<span>60.00<span></td>
-                </tr>-->
-        <!--/tbody>-->
+        <tbody id="data" class="tablemini"></tbody>
+
+
       </table>
       </form>
     </div>
@@ -128,111 +128,18 @@
       <form action="./Pago.html">
         <button id="pago" class="button_comprar">Proceder al pago</button>
       </form>
-      <button onclick="limpiarTabla()" class="button_comprar">Proceder al pago</button>
-    </div>
-    <!-- Catalogo de productos se hace de manera dinamica con javacrip-->
-    <div class="container ">
-      <div class="row justify-content-center" id="Tarjetas-js">
-
-      </div>
     </div>
 
-    <!--div class="div_carrito">
-    <table class="table_carrito">
-	<thead>
-		<tr>
-			<th>Producto</th>
-			<th>Precio</th>
-			<th>Cantidad</th>
-			<th>Total</th>
-		</tr>
-	</thead>
-	<tbody id="data"><tbody>
-    </table>
-    </div>
-    </main-->
 
 
-    <!-- Datos de contacto -->
-    <footer class="text-center">
-      <!-- lineas de colores -->
-      <div class="rectangulo_1"></div>
-      <div class="rectangulo_2"></div>
-      <div class="rectangulo_3"></div>
-      <div class="rectangulo_2"></div>
 
-      <!-- Conteiner principal -->
-      <div class="container text-center contenedor-padre">
-        <div class="row">
-          <!-- Container de contacto -->
-          <div class="col-xl-3 col-sm-2 contnedor-in">
-            <b>CONTACTO</b>
-            <div class="row">
-              <!-- container de icons -->
-              <div class="col contenedor-ini">
-                <i class="bi bi-whatsapp"></i>
 
-                <i class="bi bi-telephone-fill"></i>
 
-                <i class="bi bi-telegram"></i>
-
-                <i class="bi bi-envelope-fill"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Container de Pago -->
-          <div class="col-xl-2 col-sm-2 contnedor-in">
-            <b>FORMAS DE PAGO</b>
-            <div class="row">
-              <!-- Container de icons -->
-              <div class="col contenedor-ini">
-                <i class="fa-brands fa-cc-mastercard"></i>
-
-                <i class="bi bi-paypal"></i>
-
-                <i class="fa-brands fa-cc-visa"></i>
-
-                <i class="fa-solid fa-credit-card-front"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Container de segundo logo -->
-          <div class="contenedor_imagen col-xl-2 col-sm-4">
-            <!-- Segundo logo -->
-            <img src="https://i.ibb.co/h76whK5/Musara-a-logo-pie.png" width="150px" class="img-pie"
-              alt="Logo_Musaraña_pie" title="Logo_Musaraña_pie" />
-          </div>
-          <div class="col-xl-2 col-sm-2 contnedor-in">
-            <!-- Container de Redes Sociales -->
-            <b>REDES SOCIALES</b>
-            <div class="row">
-              <!-- Container de icons -->
-              <div class="col contenedor-ini">
-                <i class="bi bi-facebook"></i>
-
-                <i class="bi bi-instagram"></i>
-
-                <i class="bi bi-twitter"></i>
-
-                <i class="bi bi-youtube"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-2 contnedor-in">
-            <div class="row">
-              <!-- Container de Preguntas Frecuentes -->
-              <b>PREGUNTAS FRECUENTES</b>
-              <div class="col contenedor-ini">
-                <i class="bi bi-question-circle-fill"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <piedepagina-js>
+    </piedepagina-js>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/Carrito.js"></script>
+    <script src="../js/Encabezado-Pie.js"></script>
     <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
 </body>
 

@@ -7,66 +7,66 @@
         "data": [
             {
                 "id": 1,
-                "nombre_producto": "SHAMPOO DE CALÉNDULA",
+                "nombre_producto": "Producto 1",
                 "precio": "$50.00",
-                "descripción": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
-                "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "jabon"
             },
             {
                 "id":2,
-                "nombre_producto": "SHAMPOO DE JAMAICA",
+                "nombre_producto": "Producto 2",
                 "precio": "$70.00",
-                "descripción": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
-                "url": "https://i.ibb.co/Trymmtc/cinthia.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "descripción": "No dejes que el miedo te impida ser feliz",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "jabon"
             },
             {
                 "id": 3,
-                "nombre_producto": "SHAMPOO DE ROMERO",
+                "nombre_producto": "producto 3",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
-                "sección":"catálogo",
-                "categoría": "shampoo"
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "shampoo"
             },
             {
                 "id": 4,
-                "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
+                "nombre_producto": "producto 4",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
-                "sección":"catálogo",
-                "categoría": "desodorante"
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "desodorante"
             },
             {
                 "id": 5,
-                "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
+                "nombre_producto": "producto 5",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
-                "sección":"catálogo",
-                "categoría": "crema"
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "crema"
             },
             {
                 "id": 8,
-                "nombre_producto": "SHAMPOO DE LAVANDA",
+                "nombre_producto": "producto 5",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "jabon"
             },
             {
                 "id": 9,
-                "nombre_producto": "SHAMPOO DE ROSAS",
+                "nombre_producto": "producto 6",
                 "precio": "70.00",
                 "descripción": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"catalogo",
+                "categoria": "jabon"
             }
         ],
         "support": {

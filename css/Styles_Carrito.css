@@ -1,130 +1,166 @@
 .img_carrito{
-    	width: 250px;
-	height: 152px;
-	border-radius: 25px;
-	position: left;
+    width: 250px;
+height: 152px;
+border-radius: 25px;
+position: left;
 }
 .img_carrito2{
-    width: 50px;
+width: 50px;
 height: 50px;
 border-radius: 10px;
 position: left;
 }
 .mytr{
-    	border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 .pcarrito{
-    text-align: left;
+text-align: left;
 }
 .buttonx{
-       cursor: pointer;
-       width: 50px;
-       height: 50px;
-       margin-top: auto;
-       margin-bottom: auto;
-       margin-right: auto;
-       margin-left: auto;
-       background-color: white;
-       border: none;
-       transition: all 0.3s ease-in-out;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-right: auto;
+   margin-left: auto;
+   background-color: white;
+   border: none;
+   transition: all 0.3s ease-in-out;
 }
 .buttonx:hover{
-         opacity: 0.5;
+     opacity: 0.5;
 }
 .div_carrito{
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+width: 95%;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 50px;
 }
 .table_carrito{
-        top: auto;
-	width: 100%;
- 	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
+    top: auto;
+width: 100%;
+ margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
 }
 .input_carrito{
-      width: 50px;
-      border: 1px solid #ccc;
-      z-index: 1;
-  }
+  width: 50px;
+  border: 1px solid var(--salmon);
+  z-index: 1;
+}
 .button_comprar{
-              font-family: 'Montserrat', sans-serif;
-	      font-size: 16px;
-	      font-weight: 700;
-              margin-left: 65%;
-	      margin-right: 10%;
-              align: center;
-	      width:343px;
-	      height: 46px;
-	      background-color: #ECB390;
-	      border: none;
-	      border-radius: 40px;
-	      transition: all 0.3s ease-in-out;
-              cursor: pointer;
-	  }
+          font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+          margin-left: 65%;
+      margin-right: 10%;
+          align: center;
+      width:343px;
+      height: 46px;
+      background-color: #ECB390;
+      border: none;
+      border-radius: 40px;
+      transition: all 0.3s ease-in-out;
+          cursor: pointer;
+  }
 .button_comprar:hover{
-            opacity: 0.5;
+        opacity: 0.5;
 }
 
 @media screen and (max-width: 1100px) {
-    h1{
-	font-size: 20px;
+h1{
+font-size: 20px;
 
-    }
-    .button_comprar{
-	width: 180px;
-	height: 30px;
-	align-items: center;
-    }
-    .img_carrito{
-        width: 125px;
-	height: 76px;
-	}
+}
+.button_comprar{
+width: 180px;
+height: 30px;
+align-items: center;
+}
+.img_carrito{
+    width: 125px;
+height: 76px;
+}
 }
 
 
 table > tbody:empty {
-    position: relative;
-    display: table-caption;
-    caption-side: bottom;
-    min-height: 500px;
-    margin-bottom: 100px;
-    background-image: url(./bag-x.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px;
-    text-align: center;
+position: relative;
+display: table-caption;
+caption-side: bottom;
+min-height: 600px;
+margin-bottom: 100px;
+background-image: url(./bag-x.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 35%;
+text-align: center;
+
 }
-table > tbody:empty:before {
-    content: 'Agrega algo a tu carrito';
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-top: 150px;
-    position: absolute;
-    font-size: 40px;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+table> tbody:empty:before {
+content: 'Agrega algo a tu carrito';
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+margin-top: 300px;
+position: absolute;
+font-size: 40px;
+left: 0;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+}
+.tablemini > tbody:empty {
+position: relative;
+display: table-caption;
+caption-side: bottom;
+min-height: 200px;
+margin-bottom: 100px;
+background-image: url(./bag-x.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 35%;
+text-align: center;
+}
+.tablemini > tbody:empty:before {
+content: 'Agrega algo a tu carrito';
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+margin-top: 150px;
+position: absolute;
+font-size: 40px;
+left: 0;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
 }
 .submenu {
-    position: relative;
+position: relative;
+width: 30px; 
+height: 30px; 
+top:6px;
+right:30px;
+}
+.contadormini {
+position: relative;
+width: 30px;  
+right:28px;
 }
 
 .submenu #carrito {
-    display: none;
+display: none;
 }
 
 .submenu:hover #carrito {
-    display: block;
-    position: absolute;
-    right: 0;
-    color: black;
-    top: 100%;
-    z-index: 1;
-    background-color: #ECB390;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
+display: block;
+position: absolute;
+right: 0;
+top: 100%;
+color: black;
+z-index: 100;
+background-color: white;
+padding:20px;
+min-height: 200px;
+min-width: 400px;
+
 }

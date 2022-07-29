@@ -1,6 +1,6 @@
-console.log("Sesión tenebrosa de JS09 muajajajajaja");
+console.log("productos");
 
-// GET request for remote image in node.js codigo de sergio
+// GET request for remote image in node.js. Autor del codigo SERGIO TORRES
 async function adquirirDatos(proveedor = "Axios", direccionhttp) {
   if (proveedor == "Axios") {
     return new Promise((resolve, reject) => {
@@ -48,7 +48,7 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
     });
   }
 }
-
+//Solicita los datos, gurda en la local e imprime el html
 solicitudBtn();
 async function solicitudBtn() {
   // datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
@@ -60,70 +60,44 @@ async function solicitudBtn() {
   masVendido = await adquirirDatos("Json", "../assets/json/masVendido.json");
   // console.log("Solicitud Json Mas Vendido:" + JSON.stringify(datos));
 
+  //Se guardan los json en la localStorage
   guardar(datos);
   guardar(masVendido)
-//Función para mostrar todo el catalogo de los productos de forma dinamica
-//Productos("el id de la etiqueta en donde se insertara,que seccion")
-  Productos("Tarjetas-js","catalogo");
-  Vendido("masVendido","masVendido");
+
+  //Manda a llamr a la funcion productos para mostrar productos de forma dinamica
+  //Productos("el id de la etiqueta en donde se insertara,que sección")
+  Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
+  Productos("masVendido", "masVendido", '<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
+
+
+
+
 
 }
 
 //Guardar los datos en la local Storage
 function guardar(usuario) {
   for (let user of usuario) {
-      let llave = JSON.stringify(user.id)
-      localStorage.setItem(llave, JSON.stringify(user));
+    let llave = JSON.stringify(user.id)
+    localStorage.setItem(llave, JSON.stringify(user));
   }
 }
 
 
 //Función para mostrar los productos de forma dinamica 
-function Productos(id,seccion) { 
-  let datos = ""; 
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.seccion == seccion) { 
-     datos+= 
-        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
-    <div class="card tarjeta-producto border-0">
-        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
-    }
-  }
-  document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";  
-}
-//Función para mostrar los productos mas vendido en forma dinamica 
-function Vendido(id,seccion) { 
+function Productos(id, sección, columna) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.seccion == seccion) { 
-     datos+= 
-        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.sección == sección) {
+      datos +=
+        `${columna}
     <div class="card tarjeta-producto border-0">
         <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
+        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
         <span class="producto-nombre text-center">${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
+            <span >&#9733</span>
             <span>&#9733</span>
             <span>&#9733</span>
             <span>&#9733</span>
@@ -131,7 +105,7 @@ function Vendido(id,seccion) {
         </div>
         <span class="producto-precio text-center">${lista.precio}</span>
         <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
+            <button type="button" class="botones col mx-auto p-2" > <span class="inf"> Añadir al
                     carrito
                 </span> </button>
         </div>
@@ -141,43 +115,65 @@ function Vendido(id,seccion) {
   }
   document.getElementById(id).innerHTML = datos;
   document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
+  //Manda a llamar la funcion de descripcion al dar clic en la foto del producto 
+  document.querySelectorAll(".click").forEach(el => {
+    el.addEventListener("click", e => {
+      const id = e.target.getAttribute("id");
+      const process = id;
+      console.log(process);
+      descripcionProducto(process)
+      function descripcionProducto(process) {
+        return descripcion("rescribir", process);
+      }
+    });
+  });
+
 }
 
+//filtro
 let filtroJabon = document.getElementById("filtroJabon");
 filtroJabon.addEventListener('click', filtrojabon, true);
 
 function filtrojabon() {
-    return filtro("Tarjetas-js","jabon");
+  return filtro("Tarjetas-js", "jabón");
 }
 
 let filtroShampoo = document.getElementById("filtroShampoo");
 filtroShampoo.addEventListener('click', filtroshampoo, true);
 
 function filtroshampoo() {
-  return filtro("Tarjetas-js","shampoo");
+  return filtro("Tarjetas-js", "shampoo");
+}
+
+
+let filtroDesodorante = document.getElementById("filtroDesodorante");
+filtroDesodorante.addEventListener('click', filtrodesodorante, true);
+
+function filtrodesodorante() {
+  return filtro("Tarjetas-js", "desodorante");
 }
 
 let filtroTodo = document.getElementById("filtroTodo");
 filtroTodo.addEventListener('click', filtrotodo, true);
 
 function filtrotodo() {
-  return Productos("Tarjetas-js","catalogo");
+  return Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
 }
 
 
 
 
-//Funcion del filtros
-function filtro(id,categoria) {
+//Funcion del filtros y crea la pagina individual al seleccionar la imagen 
+function filtro(id, categoría) {
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
     lista = JSON.parse(localStorage.getItem(i));
-    if (lista.categoria == categoria) {
-            datos+=
+    if (lista.categoría == categoría) {
+      datos +=
         `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
     <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto" alt="...">
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
+        <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
         <div class="estrellas mx-auto text-center">
             <span>&#9733</span>
             <span>&#9733</span>
@@ -185,7 +181,7 @@ function filtro(id,categoria) {
             <span>&#9733</span>
             <span>&#9733</span>
         </div>
-        <span class="producto-precio text-center">${lista.categoria}</span>
+        <span class="producto-precio text-center">${lista.categoría}</span>
         <div class="row botones-inf w-100 mx-auto text-center">
             <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
                     carrito
@@ -196,48 +192,67 @@ function filtro(id,categoria) {
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase() ;
+  document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase();
+
+  document.querySelectorAll(".click").forEach(el => {
+    el.addEventListener("click", e => {
+      const id = e.target.getAttribute("id");
+      const process = id;
+      console.log(process);
+      descripcionProducto(process)
+      function descripcionProducto(process) {
+        return descripcion("rescribir", process);
+      }
+    });
+  });
+
 }
 
 
-let descripcion = document.getElementById("productos-main");
-descripcion.addEventListener('click', descripcionIndividual, true);
 
-function descripcionIndividual() {
-  return descripcionInd("id");
-}
 
-function  descripcionInd(id,nombre) { 
+
+//Funcion de pruebas
+function descripcion(id, id_producto) {
+  console.log(id_producto)
   let datos = "";
   for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i)); 
-    if ( lista.nombre_producto==nombre) { 
-     datos+= 
-        `<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
-    <div class="card tarjeta-producto border-0">
-        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto" alt="..." >
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
+    lista = JSON.parse(localStorage.getItem(i));
+    if (lista.id == id_producto) {
+      datos +=
+        `    <div class="container my-5">
+        <div class="row justify-content-center producto-central ">
+            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
+                <div class="mt-5 mb-3">
+                    <img src=${lista.url}  class="img-fluid img-producto-individual ">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="producto-mes  w-75 mx-auto">
+                    <div>
+                        <h2>${lista.nombre_producto}</h2>
+                        <span class="producto-precio">${lista.precio}</span>
+                        <p class="descripcion1">${lista.descripción}</p>
+                        <div class="estrellas mx-auto ">
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                            <span>&#9733</span>
+                        </div>
+                        <input  class="incremento  py-2 text-center" type="number" value="1">
+                        <button type="button" class="botones w-50 mt-3 me-2 p-2"> <span class="inf"> Añadir al
+                            carrito
+                        </span> </button>
+                        <button type="button " class="botones w-25 my-2 p-2"> <span class="inf">Comprar </span> </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
     </div>`;
     }
   }
   document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
+
 }
-
-
 

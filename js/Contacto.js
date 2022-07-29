@@ -1,4 +1,5 @@
 
+//Filtrado de números para el input de teléfono.
 const telf= document.querySelector('#cnformtel');
 const telefono = document.querySelector('.telcn #cn4');
 
@@ -12,33 +13,10 @@ telf.cn4.addEventListener('keyup',()=>{
   .trim();
 })
 
-
-
-/*$(function() {
-    $(".contactoTelefonoT").on("keyup", function(event) {
-      let value = $(this).val();
-      if (value.indexOf('#') != -1) {
-        $(this).val(value.replace(/\#/g, ""));
-      }
-    })
-  });*/
-
-//Función para agregar objetos a un arreglo
-
-/*let datosContacto = {data:[]};
-let cnCount=0;
-let dataArreglo;*/
-
-/*let obj = {
-    length: 0,
-
-    addElem: function addElem(d1,d2,d3,d4,d5) {//d1,d2,d3,d4,d5 //elem
-        [].push.call(this, {nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5});//nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5  //elem
-    }
-};*/
-
+//Arreglo donde se van a guardar los datos
 let contactoData=[];
 
+//Función del botón
 function contactoEnviar(){
     nom = document.getElementById("cn1").value;
     corr = document.getElementById("cn2").value;
@@ -47,9 +25,6 @@ function contactoEnviar(){
     com = document.getElementById("cn5").value;
 
     
-    /*dataArreglo = [nom,corr,asun,tel,com];
-    datosContacto['data'].push(dataArreglo);
-    cnCount++;*/
     let objL= {nombre:nom,correo:corr,asunto:asun,telefono:tel,comentario:com};
     console.log(objL.nombre);
     console.log(objL.correo);
@@ -60,12 +35,31 @@ function contactoEnviar(){
     contactoData.push(objL);
     console.log(contactoData);
 
-    /*obj.addElem(nom,corr,asun,tel,com);//{nom,corr,asun,tel,com}
-    console.log(obj.length);*/
+    /*popup onclick*/
+    popup1.style.visibility = "visible";
+    popup1.style.opacity= 1;
+    cn1.style.visibility = "hidden";
+    cn2.style.visibility = "hidden";
+    cn3.style.visibility = "hidden";
+    cn4.style.visibility = "hidden";
+    cn5.style.visibility = "hidden";
 
 
 }
 
+/*Close del popup*/
+function cnClose(){
+    popup1.style.visibility = "hidden";
+    popup1.style.opacity= 0;
+    cn1.style.visibility = "visible";
+    cn2.style.visibility = "visible";
+    cn3.style.visibility = "visible";
+    cn4.style.visibility = "visible";
+    cn5.style.visibility = "visible";
+    document.getElementById("cn1").value = "";
+    document.getElementById("cn2").value = "";
+    document.getElementById("cn3").value = "";
+    document.getElementById("cn4").value = "";
+    document.getElementById("cn5").value = "";
 
-
-//console.log(obj.addElem);
+}

@@ -7,19 +7,19 @@
         "data": [
             {
                 "id":6,
-                "nombre_producto": "SHAMPOO DE ROSAS",
+                "nombre_producto": "Producto 1 Mas vendido",
                 "precio": "$60.00",
-                "descripción": "Ideal para dar brillo a tu cabello.",
-                "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "sección":"masVendido"
+                "descripción": "Que un día nublado no arruine tu 'mood'. ¡Conviértete en tu propio sol!",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"masVendido"
             },
             {
                 "id":7,
-                "nombre_producto": "SHAMPOO DE CALÉNDULA",
+                "nombre_producto": "Producto 2 mas Vendido",
                 "precio": "$55.00",
-                "descripción": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
-                "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "sección":"masVendido"
+                "descripción": "No dejes que el miedo te impida ser feliz",
+                "url": "https://i.ibb.co/sqjvssw/cal-ndula-1.jpg",
+                "seccion":"masVendido"
             }
             
         ],
