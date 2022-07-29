@@ -23,8 +23,6 @@
             }
 
             .contactoBanner{
-                /*display:flex;
-                flex-wrap: wrap;*/
                 max-width: 50%;
                 height: auto;
                 margin:50px;
@@ -34,9 +32,7 @@
              .contenedor{
                 background-color: var(--crema);
                 margin: 50px;
-                /*position: relative;*/
                 width: 100%;
-                /*margin: auto;*/
                 padding:50px;
 
                 display: flex;
@@ -49,55 +45,8 @@
                 z-index: 1;
             }
 
-            /*.contactoForm{
-                position: relative;
-            }*/
-
-            /*@media only screen and (max-width: 500px) {
-                .contactoName {
-                  flex-basis: 100%;
-                  order: 1;
-                }
-                .contactoEmail{
-                  flex-basis: 100%;
-                  order: 2;
-                }
-
-                .contactoNameT {
-                    flex-basis: 100%;
-                    order: 3;
-                  }
-                  
-                  
-                  .contactoEmailT{
-                    flex-basis: 100%;
-                    order: 4;
-                  }
-                
-              }*/
-
-              /*.contactoTexto{
-                position: absolute;
-                left: 3%;
-                top: 5%;
-                
-            }
-
-
-            .contactoName{
-                position: absolute;
-                left: 20%;
-                top: 20%;
-                flex: 1;
-            }*/
-
             .contactoNameT{
-                /*position: absolute;
-                left: 20%;
-                top: 25%;
-                flex: 1;*/
                 width:180px;
-                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -110,19 +59,8 @@
                 border-style:solid;
             }
 
-            /*.contactoEmail{
-                position: absolute;
-                left: 60%;
-                top: 20%;
-                flex: 1;
-            }*/
             .contactoEmailT{
-                /*position: absolute;
-                left: 60%;
-                top: 25%;
-                flex: 1;*/
                 width:180px;
-                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -130,17 +68,8 @@
                 border-style:solid;
             }
 
-            /*.contactoAsunto{
-                position: absolute;
-                left: 20%;
-                top: 40%;
-            }*/
             .contactoAsuntoT{
-                /*position: absolute;
-                left: 20%;
-                top: 45%;*/
                 width:180px;
-                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -148,17 +77,8 @@
                 border-style:solid;
             }
 
-            /*.contactoTelefono{
-                position: absolute;
-                left: 60%;
-                top: 40%;
-            }*/
             .contactoTelefonoT{
-               /* position: absolute;
-                left: 60%;
-                top: 45%;*/
                 width:180px;
-                /*display: block;*/
                 height: 15px;
                 padding:15px;
                 border-radius:15px;
@@ -166,17 +86,8 @@
                 border-style:solid;
             }
 
-            /*.contactoComentarios{
-                position: absolute;
-                left: 35%;
-                top: 60%;
-            }*/
             .contactoComentariosT{
-                /*position: absolute;
-                left: 35%;
-                top: 65%;*/
                 width:300px;
-                /*display: block;*/
                 height: auto;
                 padding:15px;
                 border-radius:15px;
@@ -184,12 +95,6 @@
                 border-style:solid;
                 margin: 20px;
             }
-
-            /*.contactoBoton{
-                position: absolute;
-                left: 40%;
-                top: 85%;
-            }*/
 
             .fr-btn{
                 background-color: white;
@@ -236,4 +141,64 @@
                 
                 font-family: 'Montserrat', sans-serif;
             }
+
+            /*Popup*/
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.7);
+                /*transition: opacity 500ms;*/
+                visibility: hidden;
+                opacity: 0;
+              }
+              /*.overlay:target {
+                visibility: visible;
+                opacity: 1;
+              }*/
+              
+              .popup {
+                margin: 70px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                width: 30%;
+                position: relative;
+                transition: all 5s ease-in-out;
+              }
+              
+              .popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: Tahoma, Arial, sans-serif;
+              }
+              .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+              }
+              .popup .close:hover {
+                color: var(--salmon);
+              }
+              .popup .content {
+                max-height: 30%;
+                overflow: auto;
+              }
+              
+              @media screen and (max-width: 700px){
+                .box{
+                  width: 70%;
+                }
+                .popup{
+                  width: 70%;
+                }
+              }
             

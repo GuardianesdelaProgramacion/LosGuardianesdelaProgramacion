@@ -12,31 +12,6 @@ telf.cn4.addEventListener('keyup',()=>{
   .trim();
 })
 
-
-
-/*$(function() {
-    $(".contactoTelefonoT").on("keyup", function(event) {
-      let value = $(this).val();
-      if (value.indexOf('#') != -1) {
-        $(this).val(value.replace(/\#/g, ""));
-      }
-    })
-  });*/
-
-//Función para agregar objetos a un arreglo
-
-/*let datosContacto = {data:[]};
-let cnCount=0;
-let dataArreglo;*/
-
-/*let obj = {
-    length: 0,
-
-    addElem: function addElem(d1,d2,d3,d4,d5) {//d1,d2,d3,d4,d5 //elem
-        [].push.call(this, {nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5});//nombre:d1,correo:d2,asunto:d3,telefono:d4,comentario:d5  //elem
-    }
-};*/
-
 let contactoData=[];
 
 function contactoEnviar(){
@@ -47,9 +22,6 @@ function contactoEnviar(){
     com = document.getElementById("cn5").value;
 
     
-    /*dataArreglo = [nom,corr,asun,tel,com];
-    datosContacto['data'].push(dataArreglo);
-    cnCount++;*/
     let objL= {nombre:nom,correo:corr,asunto:asun,telefono:tel,comentario:com};
     console.log(objL.nombre);
     console.log(objL.correo);
@@ -59,13 +31,14 @@ function contactoEnviar(){
 
     contactoData.push(objL);
     console.log(contactoData);
-
-    /*obj.addElem(nom,corr,asun,tel,com);//{nom,corr,asun,tel,com}
-    console.log(obj.length);*/
+    popup1.style.visibility = "visible";
+    popup1.style.opacity= 1;
 
 
 }
 
+function cnClose(){
+    popup1.style.visibility = "hidden";
+    popup1.style.opacity= 0;
 
-
-//console.log(obj.addElem);
+}
