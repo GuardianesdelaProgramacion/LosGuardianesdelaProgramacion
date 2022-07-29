@@ -17,6 +17,7 @@ function verificarPasswords() {
  
         return false;
     } else {
+        //obj para guardar usuarios
       let obj= {nombre:name,correo:mail,fechanac:fechanac,password1:pass1,confirmPass1:pass2};
 
       newUserData.push(obj);

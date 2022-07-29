@@ -1,14 +1,14 @@
-
+//Objeto para usuario nuevo en local storage
 let text = localStorage.getItem("usuarionuevo");
  
 let objec = JSON.parse(text);
-
+//Valores REGISTRADOS X EL USUARIO
 
 const pass2 = objec.password1;
 const mail2=  objec.correo;
 console.log(mail2 );
 console.log(pass2 );
-function verificarPasswords() {
+function verificarPasswords() {  
  
     // Ontenemos los valores de los campos de contraseñas 
 
