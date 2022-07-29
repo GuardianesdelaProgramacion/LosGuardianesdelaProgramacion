@@ -82,3 +82,38 @@ formulario.inputCCV.addEventListener('keyup',()=>{
         //Quitamos el último espaciado
         .trim();
     })
+    function terminarPedido(){
+        /*popup onclick*/
+        popup2.style.visibility = "visible";
+        popup2.style.opacity= 1;
+       pay1.style.visibility = "hidden";
+       Nombre.style.visibility = "hidden";
+       Apellido.style.visibility = "hidden";
+       pay4.style.visibility = "hidden";
+       pay5.style.visibility = "hidden";
+       pay6.style.visibility = "hidden";
+       CP.style.visibility = "hidden";
+       Tel.style.visibility = "hidden";
+       inputNumero.style.visibility = "hidden";
+       inputNombre.style.visibility = "hidden";
+       inputCCV.style.visibility = "hidden";
+    }
+    /*Close del popup*/
+    function closePago(){
+        popup2.style.visibility = "hidden";
+        popup2.style.opacity= 0;
+        pay1.style.visibility = "visible";
+        Nombre.style.visibility = "visible";
+        Apellido.style.visibility = "visible";
+        pay4.style.visibility = "visible";
+        pay5.style.visibility = "visible";
+        pay6.style.visibility = "visible";
+        CP.style.visibility = "visible";
+        Tel.style.visibility = "visible";
+        inputNombre.style.visibility = "visible";
+        inputNumero.style.visibility = "visible";
+        inputCCV.style.visibility = "visible";
+        document.getElementById("posicion").value = "";
+
+    
+    }
