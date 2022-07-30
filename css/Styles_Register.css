@@ -47,9 +47,10 @@
     display: block;
     height: auto;
     padding:15px;
-    color:#fff;
-    background:#ECB390;
-    border:none;
+    color: var(--salmon);
+    border: 1px solid var(--salmon);
+    background:white;
+    /* border:none; */
     border-radius:8px;
     outline: none;
     /* -webkit-transition: all 0.3s;
@@ -63,7 +64,7 @@
   }
 
   .form-btn:hover{
-    background:#111;
+    background: var(--salmon);
     color: white;
     border:none;
   }
