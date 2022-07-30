@@ -36,9 +36,8 @@
         <div class="row">
           <div class="col">
           
-            <div id="msg"></div>
+          <div id="msg"></div>
  
-<!-- Mensajes de Verificación -->
 <div id="error" class="alert alert-danger ocultar" role="alert">
     Las contraseñas no coinciden, vuelve a intentar.
 </div>
@@ -47,7 +46,7 @@
 </div>
             <form  id="register" onsubmit="verificarPasswords(); return false">
                 <div class="mb-3">
-                    <p class="texto"><b>Regístrate</b></p>
+                    <h1>Regístrate</h1>
                  </div>
                 <div class="mb-3">
                     <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre" />
@@ -65,20 +64,30 @@
                     <label>Tu cumpleaños</label>     <br />
                     <input type="date" name="fecha" id="fecha" required="required" class="form" placeholder="Fecha de Nacimiento"/>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3"> 
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Regístrate a nuestro Newsletter</label>
-                </div>
+           </div>
                 
                 <button type="submit" id="reg" name="submit" class="form-btn semibold" >Crear cuenta</button> 
-              </form>
+                <br />
+                <div class="mb-3">
+                   
+                    <p class="message">
+                      ¿ya tienes cuenta? <a href="Login.html">Inicia sesión</a>
+                    </p>
+                  </div>
+            
+            </form>
           </div>
-          <div class="col">
+          <div class="col" style="background-color: #FCF8E8;">
             <br />
             <br />
       
              <div class="mb-3" >
-                <p class="texto" style="background-color: #FCF8E8;"> <b>Al crear tu cuenta podrás:</b> <br> <br>
+              
+                <p class="texto" > 
+                    <h3>Al crear tu cuenta podrás:</h3> <br> <br>
                     Comprar más rápido y seguro <br>
                     Guardar tus distintas direcciones<br>
                     Asegurar tus datos e información de pago<br>
@@ -90,7 +99,8 @@
              <br />
              <br />
              <div class="mb-3">
-                <p class="texto" style="background-color: #FCF8E8;"> <b>Nuestro Newsletter:</b> <br> <br>
+                <p class="texto"> 
+                    <h4>Nuestro Newsletter:</h4><br> <br>
                     Entérate de eventos <br>
                     Tips y recomendaciones Zero Waste<br>
                     Recibe nuestro blog en tu correo<br>
@@ -102,6 +112,19 @@
         </div>
         </div>
       </div>
+
+        <!--Popup-->
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <!--<h2 class="justify-content-center">Logo</h2>-->
+            <!--<a class="cmlogo justify-content-center" src="/assets/img/Logo_Musaraña.png" alt="logo">-->
+            <a class="close" href="#" onclick="cnClose()">&times;</a>
+            <div class="content text-center justify-content-center">
+            Usuario nuevo registrado
+            </div>
+        </div>
+    </div>
+
     </main>
   <piedepagina-js>
   </piedepagina-js>

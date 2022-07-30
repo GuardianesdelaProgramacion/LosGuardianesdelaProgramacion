@@ -34,26 +34,26 @@
     <div class="container text-center">
       <div class="row">
         <div class="col">
-          <div id="msg"></div>
+          <div id="msg"></div> 
  
           <!-- Mensajes de Verificación -->
           <div id="error" class="alert alert-danger ocultar" role="alert">
               Contraseña o correo incorrectos, vuelve a intentar.
           </div>
-          <div id="ok" class="alert alert-success ocultar" role="alert">
-              Bienvenido (Procesando formulario ... )
-          </div>
-          <br />
+          <!-- <div id="ok" class="alert alert-success ocultar" role="alert"> -->
+              <!-- Bienvenido (Procesando formulario ... ) -->
+          <!-- </div> -->
+           <br />
           <br />
           <form id="login" onsubmit="verificarPasswords(); return false">
             <div class="mb-3">
-              <p class="texto"><b>¡Bienvenido, ingresa!</b></p>
+              <h1>¡Bienvenido, ingresa!</h1>
             </div>
             <div class="mb-3">
               <input
                 type="text"
                 name="name"
-                id="name"
+                id="namee"
                 required="required"
                 class="form"
                 placeholder="Nombre"
@@ -63,7 +63,7 @@
               <input
                 type="email"
                 name="mail"
-                id="mail"
+                id="maill"
                 required="required"
                 class="form"
                 placeholder="Email"
@@ -73,7 +73,7 @@
               <input
                 type="password"
                 name="password"
-                id="pass1"
+                id="passs"
                 required="required"
                 class="form"
                 placeholder="Contraseña"
@@ -91,9 +91,10 @@
               <br />
             </div>
             <div class="mb-3">
-              <p class="message"><a href="#">¿Olvidaste tu contraseña?</a></p>
+              <button type="button" class="fr-btn" style="margin-bottom:100px;" onclick="contactoEnviar()">¿Olvidaste tu contraseña?</button>
+              <p class="message"><a href="#" >¿Olvidaste tu contraseña?</a></p>
               <p class="message">
-                ¿No estás registrado? <a href="Register.html">Crea una cuenta</a>
+                ¿No estás registrado? <a href="Register.html"  >Crea una cuenta</a>
               </p>
             </div>
           </form>
@@ -109,6 +110,58 @@
         </div>
       </div>
     </div>
+
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+          <!--<h2 class="justify-content-center">Logo</h2>-->
+          <!--<a class="cmlogo justify-content-center" src="/assets/img/Logo_Musaraña.png" alt="logo">-->
+          <a class="close" href="#" onclick="cnClose()">&times;</a>
+          <div class="content text-center justify-content-center">
+              BIENVENIDO
+          </div>
+      </div>
+  </div>
+  <div id="popup" class="overlay">
+    
+    <div class="registro_popup">
+      <div class="contenido_popup">
+            <!-- <a class="close" href="#" onclick="cnClose2()">&times;</a> -->
+        
+        <h2>Escribe tu <br>correo</h2>
+        <!-- <form id="login" onsubmit="verificarOlvidar(); return false"></form> -->
+        <div class="mb-3">
+          <input
+                type="email"
+                name="mail"
+                id="mailll"
+                required="required"
+                class="form"
+                placeholder="Email"
+              />
+        </div>
+    
+        <button type="button" class="form-btn semibold" style="margin-bottom:20px;"
+        onclick="verificarOlvidar()"
+              >
+                RESET
+              </button>
+              <button type="button" class="form-btn semibold" style="margin-bottom:20px;"
+              onclick=   "cnClose2()">No Gracias    </button>
+        </form>
+
+        </div>
+        <div id="msg"></div> 
+ 
+    <!-- Mensajes de Verificación -->
+    <div id="errorr" class="alert alert-danger ocultar" role="alert">
+        No tenemos guardado este correo
+    </div>
+    <div id="okk" class="alert alert-success ocultar" role="alert">
+        Te mandamos tu contraseña a tu correo
+    </div>
+      </div>
+ 
   </main>
     
   <piedepagina-js>
