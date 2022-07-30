@@ -35,10 +35,10 @@ function verificarPasswords() {
        document.getElementById("reg").disabled = true;
 
         // Refrescamos la página (Simulación de envío del formulario) 
-     /*   setTimeout(function() {
+     setTimeout(function() {
           
             location.reload();
-        }, 3000);*/
+        }, 3000);
     
         return true;
     }
