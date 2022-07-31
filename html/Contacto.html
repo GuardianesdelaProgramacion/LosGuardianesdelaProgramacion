@@ -4,13 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contacto | Musaraña</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-    <link rel="stylesheet" href="../css/Styles.css" />
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="../css/Styles.css" />
+  <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico"/>  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+
 </head>
 <body>
 
@@ -18,86 +21,7 @@
     <encabezado-js>
     </encabezado-js>
     
-    <!--Imagen de banner-->
-    <main class="main">
-        <a>
-            <img src="../assets/img/bnr.jpg" class="contactoBanner justify-content-center" alt="contacto_Banner" title="contacto_Banner" />
-        </a>
-    
-        
-    <div>
-        <h1 class="contactoTitulo">Contacto</h1>
-    </div>
 
-
-    <div class="container contenedor justify-content-center" id="cnbd">
-        
-        <div class="row col-12 justify-content-center">
-            <div class="contactoTexto">
-                <p>De parte de musaraña nos encanta leerte. No dudes en pedir información, preguntar cualquier duda que tengas o dar una sugerencia.</p>
-            </div>
-        </div>    
-        <div class="row  contactoForm">
-            <div class="row justify-content-center">
-                
-                <div class="col-12 col-sm-6 text-center table-responsive justify-content-center">
-                    <form>
-                        <label  class="contactoName col-12 col-sm-12">Nombre</label>
-                        <input type="text"  class="contactoNameT justify-content-center table-responsive cng" id="cn1">                         
-                    </form>      
-                </div>
-                <div class="col-12 col-sm-6 text-center table-responsive justify-content-center">
-                    <form>
-                        <label class="contactoEmail col-12 col-sm-12">Correo</label>
-                        <input type="email" class="contactoEmailT justify-content-center cng"  id="cn2">
-                    </form>  
-                </div>
-
-
-                <div class="col-12 col-sm-6 text-center table-responsive justify-content-center">
-                    <form>
-                        <label  class="contactoAsunto col-12 col-sm-12">Asunto</label>
-                        <input type="text"  class="contactoAsuntoT justify-content-center cng"  id="cn3">
-                    </form>     
-                </div>
-                <div class="col-12 col-sm-6 text-center table-responsive justify-content-center">
-                    <form id="cnformtel">
-                        <div class="telcn">
-                        <label  class="contactoTelefono col-12 col-sm-12">Teléfono</label>
-                        <input type="text"  class="contactoTelefonoT cng" id="cn4">
-                        </div>
-                    </form>     
-                </div>
-                <div class="col-12 col-sm-6 text-center table-responsive justify-content-center">
-                    <form>
-                        <label  class="contactoComentarios col-6 col-sm-12">Comentarios</label>
-                            <input type="text"  class="contactoComentariosT justify-content-center col-10 cng"   id="cn5">
-                    </form>     
-                </div>
-                <div class="col-12 col-sm-12 text-center table-responsive justify-content-center">
-                    <form class="contactoBoton">
-                        <button type="button" class="fr-btn" onclick="contactoEnviar()">Enviar</button>
-                    </form>     
-                </div>    
-                       
-            </div>
-        </div>
-        
-    </div>
-
-    <!--Popup-->
-    <div id="popup1" class="overlay">
-        <div class="popup">
-            <!--<h2 class="justify-content-center">Logo</h2>-->
-            <!--<a class="cmlogo justify-content-center" src="/assets/img/Logo_Musaraña.png" alt="logo">-->
-            <a class="close" href="#" onclick="cnClose()">&times;</a>
-            <div class="content text-center justify-content-center">
-                ¡Muchas gracias! Tu comentario ha sido enviado.
-            </div>
-        </div>
-    </div>
-
-</main>
 
 
     <!--Footer-->
@@ -107,16 +31,10 @@
   
 
     <script src="../js/Encabezado-Pie.js"></script>
-    <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <script src=""></script>
-
-    <script src="../js/Contacto.js"></script> 
-
-
-
+  <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="../js/Contacto.js"></script>
 </body>
 </html>

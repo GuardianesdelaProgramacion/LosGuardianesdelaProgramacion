@@ -1,222 +1,212 @@
-            /*Lupa desfasada*/
-            .buscar-icon{
-                position: absolute;
-                top: 0;
-                right: 0;
-                background-color: var(--salmon);
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-                color: var(--crema); 
-                font-size: 20px;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 100;
-            }                                  
+   /*Imagen banner*/
+   .contactoBanner {
+    max-width: 50%;
+    height: auto;
+    margin: 10px;
+    border-radius: 15px;
+}
 
-            /*Imagen banner*/
-            .contactoBanner{
-                max-width: 50%;
-                height: auto;
-                margin:10px;
-                border-radius:15px;
-            }
+/*Propiedades del formulario*/
+.contactoTitulo {
+    text-align: center;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+}
 
-            /*Propiedades del formulario*/
-            .contactoTitulo{
-              text-align: center;
-              background-color: white;
-              font-family: 'Montserrat', sans-serif;
-              margin-bottom: 30px;
-            }
+.contenedor {
+    background-color: var(--crema);
+    margin: 30px;
+    width: 100%;
+    padding: 50px;
 
-             .contenedor{
-                background-color: var(--crema);
-                margin: 30px;
-                width: 100%;
-                padding:50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                
-            }
+.cng {
+    z-index: 2;
+}
 
-            .cng{
-                z-index: 2;
-            }
+/*Propiedades de inputs, labels y boton*/
+.contactoNameT {
+    width: 180px;
+    height: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: var(--salmon);
+    border-style: solid;
+}
 
-            /*Propiedades de inputs, labels y boton*/
-            .contactoNameT{
-                width:180px;
-                height: 15px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-            }
-            .contactoNameT:focus,.contactoEmailT:focus,.contactoAsuntoT:focus,.contactoTelefonoT:focus,.contactoComentariosT:focus{
-                outline:white;
-                border-color: white;
-                border-style:solid;
-            }
+.contactoNameT:focus,
+.contactoEmailT:focus,
+.contactoAsuntoT:focus,
+.contactoTelefonoT:focus,
+.contactoComentariosT:focus {
+    outline: white;
+    border-color: white;
+    border-style: solid;
+}
 
-            .contactoEmailT{
-                width:180px;
-                height: 15px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-            }
+.contactoEmailT {
+    width: 180px;
+    height: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: var(--salmon);
+    border-style: solid;
+}
 
-            .contactoAsuntoT{
-                width:180px;
-                height: 15px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-            }
+.contactoAsuntoT {
+    width: 180px;
+    height: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: var(--salmon);
+    border-style: solid;
+}
 
-            .contactoTelefonoT{
-                width:180px;
-                height: 15px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-            }
+.contactoTelefonoT {
+    width: 180px;
+    height: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: var(--salmon);
+    border-style: solid;
+}
 
-            .contactoComentariosT{
-                width:300px;
-                height: auto;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                margin: 20px;
-            }
+.contactoComentariosT {
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: var(--salmon);
+    border-style: solid;
+    margin: 20px;
+}
 
-            .fr-btn{
-                background-color: white;
-                text-decoration-color: var(--crema);
+.fr-btn {
+    background-color: white;
+    text-decoration-color: var(--crema);
 
-                width:180px;
-                display: block;
-                height: auto;
-                padding:15px;
-                color:rgb(182, 112, 112);
-                background:white;
-                border:true;
-                border-color:var(--salmon);
-                
-                border-radius:15px;
-                outline: var(--salmon);
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                transition: all 0.3s;
-                margin:auto;
+    width: 180px;
+    display: block;
+    height: auto;
+    padding: 15px;
+    color: rgb(182, 112, 112);
+    background: white;
+    border: true;
+    border-color: var(--salmon);
 
-                border-style:solid;
-                
-                font-family: 'Montserrat', sans-serif;
-            }
-            .fr-btn:hover{
-                text-decoration-color: var(--crema);
-                background-color: white;
-                background:var(--salmon);
-                color: black;
-                border:var(--salmon);
+    border-radius: 15px;
+    outline: var(--salmon);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: auto;
 
-                width:180px;
-                display: block;
-                height: auto;
-                padding:15px;
+    border-style: solid;
 
-                border-radius:15px;
-                outline: var(--salmon);
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                transition: all 0.3s;
-                margin:auto;
-                
-                font-family: 'Montserrat', sans-serif;
-            }
+    font-family: 'Montserrat', sans-serif;
+}
 
-            /*Popup*/
+.fr-btn:hover {
+    text-decoration-color: var(--crema);
+    background-color: white;
+    background: var(--salmon);
+    color: black;
+    border: var(--salmon);
 
-            .overlay {
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                /*width: 100%;
-                height: 100%;*/
-                background: rgba(0, 0, 0, 0.7);
-                /*transition: opacity 500ms;*/
-                visibility: hidden;
-                opacity: 0;
-                z-index: 3;
-                
-              }
-              /*.overlay:target {
-                visibility: visible;
-                opacity: 1;
-              }*/
-              
-              .popup {
-                margin: 70px auto;
-                padding: 20px;
-                background: #fff;
-                border-radius: 5px;
-                width: 30%;
-                position: relative;
-                top:350px;
-                transition: all 5s ease-in-out;
-                background-color: var(--crema);
-              }
-              
-              /*.popup h2 {
-                margin-top: 0;
-                color: #333;
-                font-family: 'Montserrat', sans-serif;
-              }*/
-              /*.popup .cmlogo {
-                max-width: 30%;
-                height: auto;
-                margin:50px;
-                margin-top: 0;
-                color: #333;
-                font-family: Tahoma, Arial, sans-serif;
-              }*/
-              .popup .close {
-                position: absolute;
-                top: 2px;
-                right: 5px;
-                transition: all 200ms;
-                font-size: 30px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #333;
-              }
-              .popup .close:hover {
-                color: var(--salmon);
-              }
-              .popup .content {
-                max-height: 30%;
-                overflow: auto;
-                font-family: 'Montserrat', sans-serif;
-              }
-              
-              @media screen and (max-width: 700px){
-                .box{
-                  width: 70%;
-                }
-                .popup{
-                  width: 70%;
-                }
-              }
-            
+    width: 180px;
+    display: block;
+    height: auto;
+    padding: 15px;
+
+    border-radius: 15px;
+    outline: var(--salmon);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: auto;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Popup*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*width: 100%;
+height: 100%;*/
+    background: rgba(0, 0, 0, 0.7);
+    /*transition: opacity 500ms;*/
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+}
+
+/*.overlay:target {
+visibility: visible;
+opacity: 1;
+           }*/
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    top: 350px;
+    transition: all 5s ease-in-out;
+    background-color: var(--crema);
+}
+
+/*.popup h2 {
+margin-top: 0;
+color: #333;
+font-family: 'Montserrat', sans-serif;
+}*/
+/*.popup .cmlogo {
+max-width: 30%;
+height: auto;
+margin:50px;
+margin-top: 0;
+color: #333;
+font-family: Tahoma, Arial, sans-serif;
+           }*/
+.popup .close {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: var(--salmon);
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+
+    .popup {
+        width: 70%;
+    }
+}
