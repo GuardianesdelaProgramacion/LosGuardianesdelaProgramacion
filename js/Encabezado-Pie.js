@@ -123,7 +123,7 @@ class piedepaginaJs extends HTMLElement{
   <div class="row">
     <!-- Container de contacto -->
     <div class="col-xl-3 col-sm-2 contnedor-in">
-      <a  class="ico" href="./Contacto.html"><b>CONTACTO</b></a>
+      <a  class="ico" href="./ContactoP.html"><b>CONTACTO</b></a>
       <div class="row" >
         <!-- container de icons -->
         <div class="col contenedor-ini">
