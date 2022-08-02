@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.rating-container{
+    transform: rotateY(180deg);
+}
+
+/*Para desaparecer a los puntos*/
+.rating-container input{
+    display: none;
+}
+
+.rating-container label{
+    display: inline-block; /**/
+    color: #4444;
+    font-size: 15px; /*Poner en una media cuery*/
+    cursor: pointer;
+    transform: all 0.3s;
+}
+
+.rating-container label:not(:last-child){
+    margin-right: 5px;
+}
+
+.rating-container input:checked~ label,
+.rating-container input:hover~label{
+    color:#ff7a00;
+}
+
+.rating-container input:hover~ label{
+    transform: scale(1.2)rotate(-30deg);
+}
