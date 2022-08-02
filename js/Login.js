@@ -99,8 +99,13 @@ function verificarOlvidar() {
         // Si las constraseñas no coinciden mostramos un mensaje 
         document.getElementById("errorr").classList.add("mostrar");
  
-      
-        
+        setTimeout(function() {
+           // document.getElementById("errorr").classList.add("ocultar");
+            document.getElementById('formul').reset();
+            document.getElementById("errorr").classList.remove("mostrar");
+               //location.reload();
+           }, 2000);
+         
     } 
     else  if (mailolvidado == mail2 ) {
 
@@ -111,15 +116,13 @@ function verificarOlvidar() {
          document.getElementById("okk").classList.remove("ocultar");
  
     // Desabilitamos el botón de login 
-       //document.getElementById("resett").disabled = true;
 
-       document.getElementById("resett").disabled = true;
 
        // Refrescamos la página (Simulación de envío del formulario) 
     setTimeout(function() {
-         
+        document.getElementById("okk").classList.add("ocultar");
            location.reload();
-       }, 3000);
+       }, 2000);
  
      
     }
@@ -132,10 +135,9 @@ function cnClose2(){
     passs.style.visibility = "visible";
     namee.style.visibility = "visible";
     maill.style.visibility = "visible";
-
+    document.getElementById('formul').reset();
     document.getElementById("passs").value = "";
     document.getElementById("namee").value = "";
     document.getElementById("maill").value = "";
-
-
+  
 }
