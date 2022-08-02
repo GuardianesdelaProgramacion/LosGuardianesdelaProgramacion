@@ -1,40 +1,69 @@
 
-/* Acomodo de todo el body, con clase pago para no editar el de todos */
-body .Pago{
-	/* display: grid; */
-	text-align: left;
-	justify-items: flex-start;
-}
-/*Padding para que no afecte la barra a la página */
-.vista{
-	padding: 10rem 0rem 0rem 0rem;
-	z-index: 50;
-	justify-content: center;
-}
 /* Inputs con un index bajo para que no queden encima de la barra*/
 .posicion{
 	z-index: 1;
-}
-/*Estilos del aside*/
-.revPedido{
 	padding: 15px;
-	margin: 0px 36px 0px 36px;
-	background-color: #FCF8E8;
-	float:right;
-	width:45%;
+	background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:14px;
+    font-family: 'Montserrat', sans-serif;
+    /* -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s; */
+    transition: all 0.4s;
+    border-radius: 8px;
+}
+
+.posicion:hover{
+border:1px solid #8BC3A3;
+}
+
+.posicion:focus{
+color: white;
+outline: none;
+border:1px solid #8BC3A3;
+}
+
+/* Send Button Styles */
+
+.form-btn{
+width:180px;
+display: block;
+height: auto;
+padding:15px;
+color: var(--salmon);
+border: 1px solid var(--salmon);
+background:white;
+/* border:none; */
+border-radius:8px;
+outline: none;
+/* -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s; */
+transition: all 0.3s;
+margin:auto;
+box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+/* -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+-webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10); */
+font-family: 'Montserrat', sans-serif;
+}
+
+.posicion-btn:hover{
+background: var(--salmon);
+color: white;
+border:none;
+}
+
+.form-btn:active{
+opacity: 0.9;
+}
+/*Estilos del lado revisión de pedido*/
+.revision-pedido{
+	width: 100%;
 	height: 100%;
-	position: static;
-}
-aside .info-pedido{
-	/* display: grid; */
-	/* grid-template-columns: 70% 30%; */
-	/* grid-gap: 5px; */
-	justify-content: space-between;
+	background-color: var(--crema);
 	justify-items: flex-start;
-	border-radius: 48%;
-}
-aside .fr-btn{
-	width: fit-content;
+	
 }
 .lado-hijo{
 	display: flex;
@@ -69,23 +98,18 @@ aside .fr-btn{
 }
 /*Tamaños de los encabezados para la tabla con productos*/
 #prod-pago{
-	width: 30px;
+	width: 25%;
 }
 #desc-pago{
-	width: 150px;
+	width: 25%;
 }
 #prec-pago{
-	width: 30px;
+	width: 25%;
 }
 #cant-pago{
-	width: 30px;
+	width: 25%;
 }
-/* Estilos para que los inputs sean rosas */
-input{
-	border-radius: 8px;
-	border-color:var(--salmon);
-	border-style:solid;
-}
+
 /* Formulario de envío */
 .dirEnvio{
 	background-color: #F5F5F5;
@@ -107,7 +131,7 @@ input{
 	justify-items: start;
 }
 /*Estilo del botón*/
-.tarjeta:hover{
+/* .tarjeta:hover{
 	text-decoration-color: var(--verdeClaro);
     background-color: white;
     background:var(--salmon);
@@ -120,14 +144,14 @@ input{
     transition: all 0.3s;
     margin:auto;
     padding:15px;
-}
+} */
 /* Acomodo formulario */
 .formularioTarjeta{
 	background-color: #F5F5F5;
-	width: 45%;
+	width: 100%;
 	margin-left: 36px;
 	padding: 15px;
-	height:200px;
+	height:100%;
 }
 /* Acomodo labels e inputs */
 .formularioTarjeta .datosTarjeta{
@@ -223,7 +247,7 @@ input{
 	overflow: auto;
 	font-family: 'Montserrat', sans-serif;
   }
-/* Responsivo */
+/* Responsivo
 @media screen  and (max-width:740px){
 	.revPedido{
 	margin: 0px 8px 0px 8px ;
@@ -241,8 +265,8 @@ input{
 		margin: 0px 8px 0px 8px;
 		width: 740px;
 		align-items: center;
-	}
+	} */
 	.popup-pago{
 		width: 70%;
 	  }
-}	
+	
