@@ -13,6 +13,8 @@ const apellidoRecibe = document.querySelector('.grupoPersonaRecibe #Apellido');
 const codigoPostal = document.querySelector('.grupoDireccion #CP');
 const telefono = document.querySelector('.grupoDireccion #Tel');
 
+closePago();
+
 
 /* Select del mes generado dinámicamente */
 for (let i = 1; i<=12; i++){
@@ -113,7 +115,5 @@ formulario.inputCCV.addEventListener('keyup',()=>{
         inputNombre.style.visibility = "visible";
         inputNumero.style.visibility = "visible";
         inputCCV.style.visibility = "visible";
-        document.getElementById("posicion").value = "";
-
-    
+        document.getElementById("posicion").value = "";   
     }
