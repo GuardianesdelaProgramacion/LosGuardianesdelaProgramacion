@@ -479,3 +479,8 @@ img-pie{
     height: 600px;
 
 }
+@media screen and (max-width: 1200px){
+	.main{
+	padding: 13rem 0rem 0rem;
+	}
+  }
