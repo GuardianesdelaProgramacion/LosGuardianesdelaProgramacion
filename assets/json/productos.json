@@ -9,64 +9,64 @@
                 "id": 1,
                 "nombre_producto": "SHAMPOO DE CALÉNDULA",
                 "precio": "$50.00",
-                "descripción": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
+                "descripcion": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
                 "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "seccion":"catálogo",
+                "categoria": "jabón"
             },
             {
                 "id":2,
                 "nombre_producto": "SHAMPOO DE JAMAICA",
                 "precio": "$70.00",
-                "descripción": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
+                "descripcion": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
                 "url": "https://i.ibb.co/Trymmtc/cinthia.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "seccion":"catálogo",
+                "categoria": "jabón"
             },
             {
                 "id": 3,
                 "nombre_producto": "SHAMPOO DE ROMERO",
                 "precio": "70.00",
-                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
-                "sección":"catálogo",
-                "categoría": "shampoo"
+                "seccion":"catálogo",
+                "categoria": "shampoo"
             },
             {
                 "id": 4,
                 "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
                 "precio": "70.00",
-                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
-                "sección":"catálogo",
-                "categoría": "desodorante"
+                "seccion":"catálogo",
+                "categoria": "desodorante"
             },
             {
                 "id": 5,
                 "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
                 "precio": "70.00",
-                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
-                "sección":"catálogo",
-                "categoría": "crema"
+                "seccion":"catálogo",
+                "categoria": "crema"
             },
             {
-                "id": 8,
+                "id": 6,
                 "nombre_producto": "SHAMPOO DE LAVANDA",
                 "precio": "70.00",
-                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "seccion":"catálogo",
+                "categoria": "jabón"
             },
             {
-                "id": 9,
+                "id": 7,
                 "nombre_producto": "SHAMPOO DE ROSAS",
                 "precio": "70.00",
-                "descripción": "La sonrisa es la mejor respuesta para una mirada",
+                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "sección":"catálogo",
-                "categoría": "jabón"
+                "seccion":"catálogo",
+                "categoria": "jabón"
             }
         ],
         "support": {
