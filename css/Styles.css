@@ -1,5 +1,5 @@
 /*importamos el archivo de estilos de cada componente*/
-/* @import url('./Styles_Pago.css'); */
+@import url('./Styles_Pago.css');
 @import url('./Styles_Index.css');
 @import url('./Styles_Pop_Up.css');
 @import url('./Styles_Perfil.css');

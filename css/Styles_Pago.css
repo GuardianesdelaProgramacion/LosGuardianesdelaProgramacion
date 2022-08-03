@@ -113,8 +113,7 @@ opacity: 0.9;
 /* Formulario de envío */
 .dirEnvio{
 	background-color: #F5F5F5;
-	width: 45%;
-	margin-left: 36px;
+	margin: 0px 36px 0px 36px;
 	padding: 15px;
 }
 /*Acomodo de mis inputs y labels*/
@@ -247,6 +246,7 @@ opacity: 0.9;
 	overflow: auto;
 	font-family: 'Montserrat', sans-serif;
   }
+ 
 /* Responsivo
 @media screen  and (max-width:740px){
 	.revPedido{
