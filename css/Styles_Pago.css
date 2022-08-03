@@ -98,16 +98,16 @@ opacity: 0.9;
 }
 /*Tamaños de los encabezados para la tabla con productos*/
 #prod-pago{
-	width: 25%;
+	width: 25px;
 }
 #desc-pago{
-	width: 25%;
+	width: 250px;
 }
 #prec-pago{
-	width: 25%;
+	width: 500px;
 }
 #cant-pago{
-	width: 25%;
+	width: 1000px;
 }
 
 /* Formulario de envío */
@@ -131,7 +131,7 @@ opacity: 0.9;
 	justify-items: start;
 }
 /*Estilo del botón*/
-/* .tarjeta:hover{
+.tarjeta:hover{
 	text-decoration-color: var(--verdeClaro);
     background-color: white;
     background:var(--salmon);
@@ -144,7 +144,7 @@ opacity: 0.9;
     transition: all 0.3s;
     margin:auto;
     padding:15px;
-} */
+} 
 /* Acomodo formulario */
 .formularioTarjeta{
 	background-color: #F5F5F5;
