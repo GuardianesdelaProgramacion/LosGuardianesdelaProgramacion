@@ -1,87 +1,74 @@
 
 .wrapper {
- display: grid;
+  width: 98%;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  border: 1px solid black;
+  grid-auto-rows: minmax(150px, auto);
 }
 .one {
   grid-column: 1 / 3;
   grid-row: 2/4;
-  border: 1px solid black;
 }
 .two {
   grid-column:  2/ 4;
   grid-row: 1 /5  ;
-  border: 1px solid black;
 } 
 .h1blog{
+    margin-top: 22%;
     font-size: 55px;
+    margin-right:auto;
+    margin-left:auto;
 }
 .h2blog{
+    margin-top: 8%;
     margin-right: 50%;
+}
+.botonblog{
+    margin-right: 70% !important;
+    height: 50px !important;
+    width: 100px !important;
 }
 .pblog{
 	margin-right: 50%;
 }
-
-.content-box {
-    position: relative;
-    text-align: center;
-    height: 105px;
-    width: 100%;
+.flip-box {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.content-box-icon {
-    font-size: 30px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    display: block;
-    margin: 5px auto 15px auto;
-    color: #fff;
-    float: none; 
-    background:#25acfd                     
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.content-box-front
-{
-    z-index: 2;
-
-    /* For Firefox 31 */
-    transform: rotateY(0deg);
-
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 105px;
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
 }
 
-.content-box-back {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 105px;
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-/* Entire container, keeps perspective */
-
-/* Flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
+.flip-box-front {
+  background-color: transparent;
+  color: black;
 }
 
-/* Flip speed goes here */
-.flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
+.flip-box-back {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
 }
