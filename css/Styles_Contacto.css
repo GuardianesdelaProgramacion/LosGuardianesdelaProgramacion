@@ -47,14 +47,16 @@
                 z-index: 2;
             }
 
+
             /*Propiedades de inputs, labels y boton*/
             .contactoNameT{
-                width:180px;
-                height: 15px;
+                width:270px;
+                height: 60px;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
+                text-align: left;
             }
             .contactoNameT:focus,.contactoEmailT:focus,.contactoAsuntoT:focus,.contactoTelefonoT:focus,.contactoComentariosT:focus{
                 outline:white;
@@ -63,40 +65,45 @@
             }
 
             .contactoEmailT{
-                width:180px;
-                height: 15px;
+                width:270px;
+                height: 60px;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
+                text-align: left;
             }
 
             .contactoAsuntoT{
-                width:180px;
-                height: 15px;
+                width:270px;
+                height: 60px;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
+                text-align: left;
             }
 
             .contactoTelefonoT{
-                width:180px;
-                height: 15px;
+                width:270px;
+                height: 60px;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
+                text-align: left;
             }
 
             .contactoComentariosT{
-                width:300px;
-                height: auto;
+                width:550px;
+                height: 150px;
                 padding:15px;
                 border-radius:15px;
                 border-color:var(--salmon);
                 border-style:solid;
                 margin: 20px;
+                text-align: left;
+                
             }
 
             .fr-btn{
@@ -143,6 +150,14 @@
                 margin:auto;
                 
                 font-family: 'Montserrat', sans-serif;
+            }
+
+            .cnmapt{
+              margin:50px;
+            }
+
+            .cnmap{
+              margin:50px;
             }
 
             /*Popup*/
