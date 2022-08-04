@@ -29,123 +29,66 @@
     z-index: 2;
 }
 
+
+
+
 /*Propiedades de inputs, labels y boton*/
-.contactoNameT {
-    width: 180px;
-    height: 15px;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: var(--salmon);
-    border-style: solid;
+.contactoNameT{
+    width:270px;
+    height: 60px;
+    padding:15px;
+    border-radius:15px;
+    border-color:var(--salmon);
+    border-style:solid;
+    text-align: left;
 }
-
-<<<<<<< HEAD
-
-            /*Propiedades de inputs, labels y boton*/
-            .contactoNameT{
-                width:270px;
-                height: 60px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                text-align: left;
-            }
-            .contactoNameT:focus,.contactoEmailT:focus,.contactoAsuntoT:focus,.contactoTelefonoT:focus,.contactoComentariosT:focus{
-                outline:white;
-                border-color: white;
-                border-style:solid;
-            }
-
-            .contactoEmailT{
-                width:270px;
-                height: 60px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                text-align: left;
-            }
-
-            .contactoAsuntoT{
-                width:270px;
-                height: 60px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                text-align: left;
-            }
-
-            .contactoTelefonoT{
-                width:270px;
-                height: 60px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                text-align: left;
-            }
-
-            .contactoComentariosT{
-                width:550px;
-                height: 150px;
-                padding:15px;
-                border-radius:15px;
-                border-color:var(--salmon);
-                border-style:solid;
-                margin: 20px;
-                text-align: left;
-                
-            }
-=======
-.contactoNameT:focus,
-.contactoEmailT:focus,
-.contactoAsuntoT:focus,
-.contactoTelefonoT:focus,
-.contactoComentariosT:focus {
-    outline: white;
+.contactoNameT:focus,.contactoEmailT:focus,.contactoAsuntoT:focus,.contactoTelefonoT:focus,.contactoComentariosT:focus{
+    outline:white;
     border-color: white;
-    border-style: solid;
+    border-style:solid;
 }
 
-.contactoEmailT {
-    width: 180px;
-    height: 15px;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: var(--salmon);
-    border-style: solid;
+.contactoEmailT{
+    width:270px;
+    height: 60px;
+    padding:15px;
+    border-radius:15px;
+    border-color:var(--salmon);
+    border-style:solid;
+    text-align: left;
 }
 
-.contactoAsuntoT {
-    width: 180px;
-    height: 15px;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: var(--salmon);
-    border-style: solid;
+.contactoAsuntoT{
+    width:270px;
+    height: 60px;
+    padding:15px;
+    border-radius:15px;
+    border-color:var(--salmon);
+    border-style:solid;
+    text-align: left;
 }
 
-.contactoTelefonoT {
-    width: 180px;
-    height: 15px;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: var(--salmon);
-    border-style: solid;
+.contactoTelefonoT{
+    width:270px;
+    height: 60px;
+    padding:15px;
+    border-radius:15px;
+    border-color:var(--salmon);
+    border-style:solid;
+    text-align: left;
 }
 
-.contactoComentariosT {
-    width: 300px;
-    height: auto;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: var(--salmon);
-    border-style: solid;
+.contactoComentariosT{
+    width:550px;
+    height: 150px;
+    padding:15px;
+    border-radius:15px;
+    border-color:var(--salmon);
+    border-style:solid;
     margin: 20px;
+    text-align: left;
+    
 }
->>>>>>> be105f6ec523f86c2332abd9a55588c9a40efe47
 
 .fr-btn {
     background-color: white;
@@ -172,7 +115,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-<<<<<<< HEAD
             .cnmapt{
               margin:50px;
             }
@@ -182,14 +124,12 @@
             }
 
             /*Popup*/
-=======
 .fr-btn:hover {
     text-decoration-color: var(--crema);
     background-color: white;
     background: var(--salmon);
     color: black;
     border: var(--salmon);
->>>>>>> be105f6ec523f86c2332abd9a55588c9a40efe47
 
     width: 180px;
     display: block;
