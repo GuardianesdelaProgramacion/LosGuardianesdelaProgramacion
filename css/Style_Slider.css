@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.contenido {
+    /* border: 3px solid rgb(236,179,144,0.5); */
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.contenido .imagen {
+    height: 100%;
+    width: 100%;
+}
+
+.imagen img {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.btm-sliders {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.btm-sliders span {
+    height: 15px;
+    width: 15px;
+    /* border: 2px solid rgb(148,180,159,0.2); */
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* .btm-sliders span:hover{
+    background: rgb(236,179,144,0.6);
+} */
+
+.contenido .slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    /* background: rgb(236,179,144,0.1); */
+    cursor: pointer;
+}
+
+/* .contenido .slide:hover{
+    background: rgb(236,179,144,0.6);
+} */
+
+.slide span {
+    font-size: 35px;
+    color: rgb(236, 179, 144, 0.6);
+    line-height: 41px;
+}
+
+.contenido .right {
+    right: 0;
+    transform: translateX(-40px);
+    display: block;
+    transition: all .3 ease-in-out;
+}
+
+.contenido .left {
+    transform: translateX(40px);
+    /* display: block;
+    transition: all .3 ease-in-out; */
+}
+
+/* .contenido .right:hover{
+    transform-origin: center center;
+    transform: scale(1.2);
+}
+
+.contenido .left:hover{
+    transform-origin: centercenter;
+    transform: scale(1.2);
+} */
+
+@media screen and (max-width:1000px) {
+    .contenido {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .contenido {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contenido {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .contenido {
+        height: 200px;
+    }
+}

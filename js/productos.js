@@ -1,258 +1,159 @@
-console.log("productos");
-
-// GET request for remote image in node.js. Autor del codigo SERGIO TORRES
-async function adquirirDatos(proveedor = "Axios", direccionhttp) {
-  if (proveedor == "Axios") {
-    return new Promise((resolve, reject) => {
-      axios({
-        method: "get",
-        url: direccionhttp,
-        responseType: "stream",
-      })
-        .then((usuarios) => {
-          //console.log("Axios: "+JSON.stringify(usuarios));
-          resolve(usuarios.data.data);
+console.log("Archivo js de productos");
+api("../assets/json/productos.json");
+//Funcion para obtner los datos de json
+function api(url) {
+    fetch(url)
+        .then((responseJSON) => {
+            return responseJSON.json();
         })
-        .catch((error) => {
-          console.log(error);
-          reject(error);
-        });
-    });
-  } else if (proveedor == "Fetch") {
-    return new Promise((resolve, reject) => {
-      fetch(direccionhttp)
-        .then((responseJSON) => responseJSON.json())
-        .then((usuarios) => {
-          //console.log("Fetch: "+JSON.stringify(usuarios));
-          resolve(usuarios.data)
-        })
-        .catch((error) => {
-          console.log(error);
-          reject(error);
-        });
-    });
-  }
-  else {
-    return new Promise((resolve, reject) => {
-      fetch(direccionhttp)
-        .then((responseJSON) => responseJSON.json())
-        .then((usuarios) => {
-          //console.log("Json: "+JSON.stringify(usuarios));
-          resolve(usuarios.data.data)
+        .then(usuario => {
+            guardar(usuario.data.data)
         }
         )
-        .catch((error) => {
-          console.log(error);
-          reject(error);
+}
+
+//Funcion para guardar los datos en la localStorage
+function guardar(usuario) {
+    let llave;
+    for (let user of usuario) {
+        llave = JSON.stringify(user.id)
+        localStorage.setItem(llave, JSON.stringify(user));
+    }   
+    console.log("valor de la llave " + llave)
+    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
+    filtro(".categoria", llave)
+
+    let filtroTodo = document.getElementById("filtroTodo");
+    filtroTodo.addEventListener('click', filtrotodo, true);
+    
+    function filtrotodo() {
+        return   Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
+    }  
+}
+
+/**
+ * Funcion para imprimir en el html de forma dinamica los productos
+ * @param {*} id_Html El id de la etiqueta del HTML en donde se va a inserta las nuevas etiquetas
+ * @param {*} parametro EL clave que queremos obtener en este caso queremos queremos que se muestren todas las categorias
+ * @param {*} columna El primer div en donde aparece la clases bootstrap para hacerlo responsivo
+ * @param {int} nproductos
+ */
+function Productos(id_Html, parametro, columna, nproductos) {
+    let datos = "";
+    for (let i = 1; i <= nproductos; i++) {
+        let lista = JSON.parse(localStorage.getItem(i));
+        // if (lista != undefined || null); {    
+        if (lista.seccion == parametro) {
+            datos +=
+                `${columna}
+      <div class="card tarjeta-producto border-0">
+          <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
+          <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
+          <span class="producto-nombre text-center">${lista.nombre_producto}</span>
+          <div class="estrellas mx-auto text-center">
+              <span >&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+          </div>
+          <span class="producto-precio text-center">${lista.precio}</span>
+          <div class="row botones-inf w-100 mx-auto text-center">
+              <button type="button" class="botones col-11 mx-auto p-1" > <span class="inf"> Añadir al
+                      carrito
+                  </span> </button>
+
+                  <button type="button" class="botones col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
+              </span> </button>
+          </div>
+      </div>
+      </div>`;
+        }
+        // }
+    }
+    document.getElementById(id_Html).innerHTML = datos;
+    document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
+    descripcion(".click")
+}
+
+
+
+/**
+ * Funcion para busacar los id de los html de cada categoria y manda a una funcion para filtrar los productos
+ * @param {*} clase_categoria La clase de los botones de las categorias de los productos para buscar su id en el html
+ * @param {*} llave 
+ */
+
+function filtro(clase_categoria, llave) {
+    let id;
+    document.querySelectorAll(clase_categoria).forEach(el => {
+        el.addEventListener("click", e => {
+            id_categoria = e.target.getAttribute("id");
+            filtro2("Tarjetas-js", id_categoria, llave)
+            return id;
         });
     });
-  }
-}
-//Solicita los datos, gurda en la local e imprime el html
-solicitudBtn();
-async function solicitudBtn() {
-  // datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
-  // console.log("Solicitud Axios:" + JSON.stringify(datos));
-  // datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
-  // console.log("Solicitud Fetch:" + JSON.stringify(datos));
-  datos = await adquirirDatos("Json", "../assets/json/productos.json");
-  // console.log("Solicitud Json Productos:" + JSON.stringify(datos));
-  masVendido = await adquirirDatos("Json", "../assets/json/masVendido.json");
-  // console.log("Solicitud Json Mas Vendido:" + JSON.stringify(datos));
-
-  //Se guardan los json en la localStorage
-  guardar(datos);
-  guardar(masVendido)
-
-  //Manda a llamr a la funcion productos para mostrar productos de forma dinamica
-  //Productos("el id de la etiqueta en donde se insertara,que sección")
-  Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');
-  Productos("masVendido", "masVendido", '<div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">');
-
-
-
-
-
 }
 
-//Guardar los datos en la local Storage
-function guardar(usuario) {
-  for (let user of usuario) {
-    let llave = JSON.stringify(user.id)
-    localStorage.setItem(llave, JSON.stringify(user));
-  }
-}
-
-
-//Función para mostrar los productos de forma dinamica 
-function Productos(id, sección, columna) {
-  let datos = "";
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i));
-    if (lista.sección == sección) {
-      datos +=
-        `${columna}
-    <div class="card tarjeta-producto border-0">
-        <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
-        <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span >&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.precio}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-2" > <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
+/**
+ * 
+ * @param {*} id_Html_filtro El id de la etiqueta del HTML en donde se va a inserta las nuevas etiquetas de los nuevos productos segun la categoria
+ * @param {*} categoria La categoria que se va filtrar
+ * @param {*} llave 
+ */
+function filtro2(id_Html_filtro, categoria, llave) {
+    let datos = "";
+    for (let i = 1; i <= llave; i++) {
+        lista = JSON.parse(localStorage.getItem(i));
+        if (lista.categoria == categoria) {
+            datos +=
+                `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
+      <div class="card tarjeta-producto border-0">
+          <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
+          <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
+          <div class="estrellas mx-auto text-center">
+              <span>&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+              <span>&#9733</span>
+          </div>
+          <span class="producto-precio text-center">${lista.categoria}</span>
+          <div class="row botones-inf w-100 mx-auto text-center">
+              <button type="button" class="botones col-11 mx-auto p-1"> <span class="inf"> Añadir al
+                      carrito
+                  </span> </button>
+                  <button type="button" class="botones col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
+                  </span> </button>
+          </div>
+      </div>
+      </div>`;
+        }
     }
-  }
-  document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
-  //Manda a llamar la funcion de descripcion al dar clic en la foto del producto 
-  document.querySelectorAll(".click").forEach(el => {
-    el.addEventListener("click", e => {
-      const id = e.target.getAttribute("id");
-      const process = id;
-      console.log(process);
-      descripcionProducto(process)
-      function descripcionProducto(process) {
-        return descripcion("rescribir", process);
-      }
+    document.getElementById(id_Html_filtro).innerHTML = datos;
+    document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase();
+    descripcion(".click")
+}
+
+/**
+ * Funcion para buscar el id del la imagene seleccionada y mandarlo a la pagina de producto de los detalles
+ * @param {*} clase La clase de las imagnes de los productos para buscar su id en el html
+ */
+
+function descripcion(clase) {
+    document.querySelectorAll(clase).forEach(el => {
+        el.addEventListener("click", e => {
+            const id = e.target.getAttribute("id");
+            console.log("El id del producto " + id)
+            let id_descripcion = { "id_descrip": id };
+            localStorage.setItem("id_descrip", JSON.stringify(id_descripcion));
+            // envio();
+            // function envio() {
+                location.href = "Producto_detalles.html?"+id;
+            // }
+            return id;
+        });
     });
-  });
-
 }
 
-//filtro
-let filtroJabon = document.getElementById("filtroJabon");
-filtroJabon.addEventListener('click', filtrojabon, true);
-
-function filtrojabon() {
-  return filtro("Tarjetas-js", "jabón");
-}
-
-let filtroShampoo = document.getElementById("filtroShampoo");
-filtroShampoo.addEventListener('click', filtroshampoo, true);
-
-function filtroshampoo() {
-  return filtro("Tarjetas-js", "shampoo");
-}
-
-
-let filtroDesodorante = document.getElementById("filtroDesodorante");
-filtroDesodorante.addEventListener('click', filtrodesodorante, true);
-
-function filtrodesodorante() {
-  return filtro("Tarjetas-js", "desodorante");
-}
-
-let filtroTodo = document.getElementById("filtroTodo");
-filtroTodo.addEventListener('click', filtrotodo, true);
-
-function filtrotodo() {
-  return Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">');;
-}
-
-
-
-
-//Funcion del filtros y crea la pagina individual al seleccionar la imagen 
-function filtro(id, categoría) {
-  let datos = "";
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i));
-    if (lista.categoría == categoría) {
-      datos +=
-        `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
-    <div class="card tarjeta-producto border-0">
-        <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
-        <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
-        <div class="estrellas mx-auto text-center">
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-            <span>&#9733</span>
-        </div>
-        <span class="producto-precio text-center">${lista.categoría}</span>
-        <div class="row botones-inf w-100 mx-auto text-center">
-            <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                    carrito
-                </span> </button>
-        </div>
-    </div>
-    </div>`;
-    }
-  }
-  document.getElementById(id).innerHTML = datos;
-  document.getElementById("tituloProducto").innerHTML = categoría.toUpperCase();
-
-  document.querySelectorAll(".click").forEach(el => {
-    el.addEventListener("click", e => {
-      const id = e.target.getAttribute("id");
-      const process = id;
-      console.log(process);
-      descripcionProducto(process)
-      function descripcionProducto(process) {
-        return descripcion("rescribir", process);
-      }
-    });
-  });
-
-}
-
-
-
-
-
-//Funcion de pruebas
-function descripcion(id, id_producto) {
-  console.log(id_producto)
-  let datos = "";
-  for (let i = 1; i < localStorage.length + 1; i++) {
-    lista = JSON.parse(localStorage.getItem(i));
-    if (lista.id == id_producto) {
-      datos +=
-        `    <div class="container my-5">
-        <div class="row justify-content-center producto-central ">
-            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
-                <div class="mt-5 mb-3">
-                    <img src=${lista.url}  class="img-fluid img-producto-individual ">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="producto-mes  w-75 mx-auto">
-                    <div>
-                        <h2>${lista.nombre_producto}</h2>
-                        <span class="producto-precio">${lista.precio}</span>
-                        <p class="descripcion1">${lista.descripción}</p>
-                        <div class="estrellas mx-auto ">
-                            <span>&#9733</span>
-                            <span>&#9733</span>
-                            <span>&#9733</span>
-                            <span>&#9733</span>
-                            <span>&#9733</span>
-                        </div>
-                        <input  class="incremento  py-2 text-center" type="number" value="1">
-                        <button type="button" class="botones w-50 mt-3 me-2 p-2"> <span class="inf"> Añadir al
-                            carrito
-                        </span> </button>
-                        <button type="button " class="botones w-25 my-2 p-2"> <span class="inf">Comprar </span> </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>`;
-    }
-  }
-  document.getElementById(id).innerHTML = datos;
-
-}
 

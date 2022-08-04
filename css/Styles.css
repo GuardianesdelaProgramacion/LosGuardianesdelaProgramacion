@@ -1,5 +1,7 @@
 /*importamos el archivo de estilos de cada componente*/
 @import url('./Styles_Pago.css');
+@import url('./Styles_Index.css');
+@import url('./blog.css');
 @import url('./Styles_Pop_Up.css');
 @import url('./Styles_Perfil.css');
 @import url('./Styles_Carrito.css');
@@ -7,7 +9,7 @@
 @import url('./Styles_Nosotros.css');
 @import url('./Styles_Register.css');
 @import url('./Styles_Productos.css');
-@import url('./Styles_Encabezado.css');
+@import url('./Styles_Encabezado_Pie.css');
 @import url('./Styles_Producto_Ind.css');
 /*importamos fuentes de google*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -18,7 +20,7 @@
  --verde: #94B49F;
  --verdeClaro: #CEE5D0;
  --crema: #FCF8E8;
- --salmon: #ECB390;
+ --salmon: #E8A191;
  --negro: black;
 }
 *{
@@ -43,7 +45,7 @@ thead, tbody {
  	    font-size: 16px;
     }
 th{
-	background-color: #ECB390;
+	background-color: var(--salmon);
         font-weight: 700;
     }
 table,td,th{

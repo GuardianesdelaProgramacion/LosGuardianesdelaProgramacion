@@ -16,64 +16,38 @@
 </head>
 
 <body>
-
     <encabezado-js>
     </encabezado-js>
    
 
     <main class="main" id="rescribir" >
 
-        <!-- <h1 Class="text-center" id="prueba" >PRODUCTOS</h1> -->
-        <h1 Class="text-center" id="tituloProducto">PRODUCTOS</h1>
-
-        <!-- Filtro de productos -->
-        <div class="container ">
-            <div class="row justify-content-center producto-central ">
-                <!-- <div class="col-lg-3 col-md-12 col-sm-12 mx-auto text-center">
-                </div> -->
-                <div class="col-lg-12 col-md-12 col-sm-12 ">
-                    <div class="producto-mes text-center w-75 mx-auto">
-                        <div class="container-fluid ">
-                            <nav class="navbar navbar-expand-md navbar-light  border-3 border-primary"
-                                style="background-color: hsl(0, 0%, 100%)">
-                                <div class="container mx-auto">
-                                    <a href="#" class="navbar-brand">Filtro</a>
-                                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
-                                        data-bs-target="#MenuP">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                </div>
-                                <div id="MenuP" class="collapse navbar-collapse">
-                                    <ul class="navbar-nav ">                                       
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="filtroJabon"  class="clickP" href="#">Jabones</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="filtroShampoo" class="clickP" href="#">Shampo</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="filtroDesodorante" class="clickP" href="#">Desodorante</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="filtroCrema" class="clickP" href="#">Cremas</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="filtroTableta" class="clickP" href="#">Tabletas</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="filtroSuero" class="clickP" href="#">Suero</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="filtroTodo" class="clickP" href="#">Todo</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
+       
+        <!-- <h1 Class="text-center" id="tituloProducto">PRODUCTOS</h1> -->
+        <!-- menu de categorias de productos -->
+        <section >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12  mb-2">
+                        <!-- <div class="text-center"> -->
+                            <h2 id="tituloProducto">PRODUCTOS</h2>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div>
+                <div class="text-center menu-categoria">
+                    <button class="btn " id=filtroTodo >TODOS</button>
+                    <button class="btn  categoria" id="jabón"  class="clickP" >JABONES</button>
+                    <button class="btn  categoria" id="shampoo" class="clickP">SHAMPOOO</button>                   
+                    <button class="btn  categoria" id="crema" class="clickP">CREMAS</button>
+                    <button class="btn  categoria" id="desodorante" class="clickP">DESORORANTE</button>
+                    <button class="btn  categoria" id="tableta" class="clickP" >TABLETA</button>
+                    <button class="btn  categoria" id="suero" class="clickP">SUERO</button>
+                </div>
+            </div>         
+        </section>     
 
      
         <!-- Catalogo de productos se hace de manera dinamica con javacrip-->
@@ -81,57 +55,14 @@
             <div class="row justify-content-center" id="Tarjetas-js">
             </div>
         </div>
-
-
-        <!-- Producto de mes se describre se divide en dos en una parte la descripción otra la imagen -->
-        <div class="container ">
-            <div class="row justify-content-center producto-central ">
-                <div class="col-lg-6 col-md-12 col-sm-12  mx-auto text-center">
-                    <div class="mt-5 ">
-                        <img src="https://i.ibb.co/Yc7fcDm/IMG-20220510-121552.jpg" class="img-fluid img-producto-central" >
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="producto-mes text-center w-75 mx-auto">
-                        <div>
-                            <h2>SERUM</h2>
-                            <p class="descripcion1">Un sérum o suero facial es un producto con el doble de concentración
-                                de
-                                activos que una crema
-                                hidratante. Su textura en gel muy ligera penetra con mayor facilidad y rapidez en las
-                                capas
-                                más profundas de la piel, multiplicando los resultados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- Los mas vendido tambien la parte de productos se hace dinamicamente -->
-        <div clase="container  ">
-            <div class="row justify-content-center mt-3 mb-3">
-                <div class="col-lg-6 col-md-12 col-sm-12 mas-vendido text-center">
-                    <div>
-                        <p>MÁS VENDIDO</p>
-                        <p>Natural</p>
-                        <p>Ecológica</p>
-                        <p>Artesanal</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 p-3">
-                    <!-- Inserta dinamicamente -->
-                    <div class="row justify-content-center " id="masVendido">
-                    </div>
-                </div>
-            </div>
-        </div>    
+         
     </main>
 
 
     <piedepagina-js>
     </piedepagina-js>
+
+    
   
     <script src="../js/Encabezado-Pie.js"></script>
     <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
@@ -141,322 +72,6 @@
     <script src="../js/node_modules/axios/dist/axios.min.js"></script>
     <script src="../js/productos.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-<!-- <main class="main">
-
-    <h1 Class="text-center">PRODUCTOS</h1>
-
-
-
-
-   
-    <div class="container ">
-        <div class="row justify-content-center producto-central ">
-            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto text-center">
-
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="producto-mes text-center w-75 mx-auto">
-                    <div class="container-fluid">
-                        <nav class="navbar navbar-expand-md navbar-light  border-3 border-primary"
-                            style="background-color: #ffffff">
-                            <div class="container mx-auto">
-                                <a href="#" class="navbar-brand">Filtro</a>
-                                <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
-                                    data-bs-target="#MenuP">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                            <div id="MenuP" class="collapse navbar-collapse">
-                                <ul class="navbar-nav ">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown">
-                                            Jabones
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Color</a></li>
-                                            <li><a class="dropdown-item" href="#">Tamaño</a></li>
-                                            <li><a class="dropdown-item" href="#">Precio</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#">Serum</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Pasta</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Todo</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-
-  
-
-    <div class="container ">
-        <div class="row justify-content-center " >            
-         
-          
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3">
-                <div class="card tarjeta-producto border-0">
-                   
-                    <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3">
-                <div class="card tarjeta-producto border-0">
-                   
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3">
-                
-                <div class="card tarjeta-producto border-0">
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3">
-                <div class="card tarjeta-producto border-0">
-                   
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 ">
-                <div class="card tarjeta-producto border-0">
-                    
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center ">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 ">
-                <div class="card tarjeta-producto border-0">
-                  
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class=" col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 ">
-                <div class="card tarjeta-producto border-0">
-                   
-                    <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                    <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                    <div class="estrellas mx-auto text-center">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <span class="producto-precio text-center">$ 100.50</span>
-                    <div class="row botones-inf w-100 mx-auto text-center">
-                        <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                carrito
-                            </span> </button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-    
-
-    <div class="container ">
-        <div class="row justify-content-center producto-central ">
-            <div class="col-lg-6 col-md-12 col-sm-12  mx-auto text-center">
-                <div class="mt-5 ">
-                    <img src="https://i.ibb.co/gPMZ0rM/crecimiento.jpg" class="img-fluid img-producto-central ">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="producto-mes text-center w-75 mx-auto">
-                    <div>
-                        <h2>SERUM</h2>
-                        <p class="descripcion1">Un sérum o suero facial es un producto con el doble de concentración de
-                            activos que una crema
-                            hidratante. Su textura en gel muy ligera penetra con mayor facilidad y rapidez en las capas
-                            más profundas de la piel, multiplicando los resultados.</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-   
-    
-
-    <div clase="container  ">
-        <div class="row justify-content-center mt-3 mb-3">
-            <div class="col-lg-6 col-md-12 col-sm-12 mas-vendido text-center">
-                <div>
-                    <p> MAS VENDIDO</p>
-                    <p>Natural</p>
-                    <p>Ecologica</p>
-                    <p>Artesanal</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 p-3 ">
-                <div class="row justify-content-center ">
-                 
-                    
-                    <div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
-                        <div class="card tarjeta-producto border-0">
-                            <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                            <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                            <div class="estrellas mx-auto text-center">
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                            </div>
-                            <span class="producto-precio text-center">$ 100.50</span>
-                            <div class="row botones-inf w-100 mx-auto text-center">
-                                <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                        carrito
-                                    </span> </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-5 col-sm-5 col-6 productos">
-                        <div class="card tarjeta-producto border-0">
-                            <img src="https://i.ibb.co/72KkyJ6/rosas.jpg" class="img-producto" alt="...">
-                            <span class="producto-nombre text-center">OLAS DEL MAR</span>
-                            <div class="estrellas mx-auto text-center">
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                                <span>&#9733</span>
-                            </div>
-                            <span class="producto-precio text-center">$ 100.50</span>
-                            <div class="row botones-inf w-100 mx-auto text-center">
-                                <button type="button" class="botones col mx-auto p-1"> <span class="inf"> Añadir al
-                                        carrito
-                                    </span> </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </main> -->
 
 
