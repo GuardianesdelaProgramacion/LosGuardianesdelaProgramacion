@@ -3,12 +3,25 @@ console.log("Carrito.js");
 function limpiarTabla(){
 	document.getElementById('data').innerHTML = '';
 }
+function limpiarproducto(){
+	document.getElementById(`fila${id}`).innerHTML = '';
+}
 function limpiarTabla2(){
 	document.getElementById('data2').innerHTML = '';
 }
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
+
+const agregarProducto = () => {
+  console.log(id);
+  let cantidad = document.getElementById(`cantidad${id}`).value;
+  let precio = document.getElementById(`precio${id}`).value;
+  let nombre = document.getElementById(`nombre${id}`).value;
+  let imagen = document.getElementById(`imagen${id}`).value;
+  let subtotal = cantidad * precio;
+}
+
 //apiUrl();
 /*function apiUrl() {    
 //let url = document.getElementById('api').value;
@@ -131,7 +144,7 @@ async function solicitudBtn() {
         `<tr class="mytr" id="fila${lista.id}">
         <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(${lista.id})"></button></td>
 <td><img class="img_carrito" src="${lista.url}"alt="Producto 1" /></td>
-<td><p>${lista.descripción}<p></td>
+<td>${lista.descripción}</td>
         <td><span>${lista.precio}<span></td>
         <td><input class="input_carrito" type="number" min="1" max="${lista.id}" value=${lista.id}></td>
         <td>$<span>60.00<span></td>
