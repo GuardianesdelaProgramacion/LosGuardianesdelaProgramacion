@@ -1,5 +1,15 @@
 
 
+.menu-categoria > .btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9f9f9f;
+    background-color: transparent;
+    padding: 0 15px;
+    text-transform: uppercase;
+    border: none
+}
+
 @media screen and (max-width:650px){
     .producto-precio,.producto-nombre, .inf, .estrellas, .descripcion1{
         font-size: 50px;
