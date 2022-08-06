@@ -1,4 +1,5 @@
 let timeout;
+console.log("hi");
 //let expiresdate = new Date(2068, 1, 02, 11, 20);
 //let cookievalue = "Hola Mundo!";
 //document.cookie = "testcookie=" + encodeURIComponent( cookievalue ) + "; expires=" + expiresdate.toUTCString();
