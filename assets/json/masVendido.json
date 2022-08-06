@@ -6,18 +6,18 @@
         "total_pages": 2,
         "data": [
             {
-                "id":6,
+                "id":1,
                 "nombre_producto": "SHAMPOO DE ROSAS",
                 "precio": "$60.00",
-                "descripción": "Ideal para dar brillo a tu cabello.",
+                "descripcion": "Ideal para dar brillo a tu cabello.",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
                 "sección":"masVendido"
             },
             {
-                "id":7,
+                "id":2,
                 "nombre_producto": "SHAMPOO DE CALÉNDULA",
                 "precio": "$55.00",
-                "descripción": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
+                "descripcion": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
                 "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
                 "sección":"masVendido"
             }
