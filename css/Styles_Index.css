@@ -4,32 +4,101 @@
     box-sizing: border-box;
 }
 
-.rating-container{
-    transform: rotateY(180deg);
+/* le da tamaño a la página del iframe introducido
+/Slider */
+.ifPrueba{
+    /* width: 100% !important; */
+    background-color: none;
+    width: 100%;
+    height: 600px;
+    transform: translateY(-100px);
+
 }
 
-/*Para desaparecer a los puntos*/
-.rating-container input{
-    display: none;
+.ifPrueba_2{
+    /* width: 100% !important; */
+    background-color: none;
+    width: 100%;
+    height: 600px;
+    transform: translateY(-100px);
+
 }
 
-.rating-container label{
-    display: inline-block; /**/
-    color: #4444;
-    font-size: 15px; /*Poner en una media cuery*/
-    cursor: pointer;
-    transform: all 0.3s;
+.ifCarusel{
+    max-width: 1700px;
+    height: 625px;
+    width: 100%;
+    transform: translateY(-120px);
 }
 
-.rating-container label:not(:last-child){
-    margin-right: 5px;
+.ifCarusel_2{
+    max-width: 1700px;
+    height: 625px;
+    width: 100%;
+    transform: translateY(-120px);
 }
 
-.rating-container input:checked~ label,
-.rating-container input:hover~label{
-    color:#ff7a00;
+.Categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--crema);
+    transform: translateY(-130px);
 }
 
-.rating-container input:hover~ label{
-    transform: scale(1.2)rotate(-30deg);
+.Categorias div{
+    margin: 20px;
 }
+
+@media screen and (max-width:1210px) {
+    .Categorias{
+        transform: translateY(-160px);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .ifPrueba{
+        height: 500px;
+    }
+    
+    .ifPrueba_2{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .ifPrueba{
+        height: 400px;
+    }
+
+    .ifPrueba_2{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .ifPrueba{
+        height: 300px;
+    }
+
+    .ifPrueba_2{
+       height: 300px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .Categorias div{
+        margin: 10px;
+    }
+
+    .ifPrueba{
+        height: 200px;
+    }
+
+    .ifPrueba_2{
+        height: 200px;
+    }
+
+} 
+

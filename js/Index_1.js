@@ -38,3 +38,7 @@ function showImg(e){
     img[indexValue-1].style.display="block";
     sliders[indexValue-1].style.background="rgb(236,179,144)";
 }
+
+
+
+// calificación de estrellas
