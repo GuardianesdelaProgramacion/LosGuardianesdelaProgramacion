@@ -2,7 +2,7 @@
 /* Inputs con un index bajo para que no queden encima de la barra*/
 .posicion{
 	z-index: 1;
-	padding: 15px;
+	/* padding: 15px;
 	background:#f8f8f8;
     border:1px solid rgba(0, 0, 0, 0.075);
     margin-bottom:25px;
@@ -10,12 +10,12 @@
     font-size:14px;
     font-family: 'Montserrat', sans-serif;
     /* -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s; */
+    -moz-transition: all 0.4s;
     transition: all 0.4s;
-    border-radius: 8px;
+    border-radius: 8px; */
 }
 
-.posicion:hover{
+/* .posicion:hover{
 border:1px solid #8BC3A3;
 }
 
@@ -23,7 +23,7 @@ border:1px solid #8BC3A3;
 color: white;
 outline: none;
 border:1px solid #8BC3A3;
-}
+} */
 
 /* Send Button Styles */
 .form-btn{
