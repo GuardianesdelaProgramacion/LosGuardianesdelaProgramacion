@@ -7,17 +7,11 @@ const mesExpiracion = document.querySelector('#selectMes');
 const yearExpiracion = document.querySelector('#selectYear');
 const ccv = document.querySelector('#inputCCV');
 
-
 const envio = document.querySelector('#envio');
-console.log(envio);
-const nombreEnvio = document.querySelector('#envio #nombreEnvio');
-const apellidoEnvio = document.querySelector('#envio #apellidoEnvio');
-const codigoPostal = document.querySelector('#envio .grupoDireccion #codigoPostal');
-const telefono = document.querySelector('#envio .grupoDireccion #telefono');
-
-
-// //closePago();
-
+const nombreEnv = document.querySelector('#envio #nombreEnvio');
+const apellidoEnv = document.querySelector('#envio #apellidoEnvio');
+const codPostal = document.querySelector('#envio #grupoDireccion #codigoPostal');
+const tel = document.querySelector('#envio #grupoDireccion #telefono');
 
 /* Select del mes generado dinámicamente */
 for (let i = 1; i <= 12; i++) {
@@ -64,59 +58,66 @@ formulario.inputCCV.addEventListener('keyup', (e) => {
         .replace(/\D/g, '');
 });
 /**Input Nombre y Apellidos de quien recibe**/
-datosEnvio.nombreEnvio.addEventListener('keyup', (e) => {
-    let valorInput = e.target.value
-    datosEnvio.nombreEnvio.value = valorInput.replace(/[0-9]/g, '');
+envio.nombreEnvio.addEventListener('keyup', (e) => {
+    let valorInput = e.target.value;
+    envio.nombreEnvio.value = valorInput.replace(/[0-9]/g, '');
 });
-datosEnvio.apellidoEnvio.addEventListener('keyup', (e) => {
+envio.apellidoEnvio.addEventListener('keyup', (e) => {
     let valorInput = e.target.value
-    datosEnvio.apellidoEnvio.value = valorInput.replace(/[0-9]/g, '');
+    envio.apellidoEnvio.value = valorInput.replace(/[0-9]/g, '');
 });
 /**Input del Código Postal y de teléfono */
-datosEnvio.codigoPostal.addEventListener('keyup', () => {
-    datosEnvio.codigoPostal.value = datosEnvio.codigoPostal.value
+envio.codigoPostal.addEventListener('keyup', () => {
+    envio.codigoPostal.value = envio.codigoPostal.value
         .replace(/\s/g, '')
         .replace(/\D/g, '');
 });
-datosEnvio.telefono.addEventListener('keyup', () => {
-    datosEnvio.telefono.value = datosEnvio.telefono.value
+envio.telefono.addEventListener('keyup', () => {
+    envio.telefono.value = envio.telefono.value
         .replace(/\s/g, '')
         .replace(/\D/g, '')
-        //Ponemos espacio cada cuatro números
+        //Ponemos espacio cada dos números
         .replace(/([0-9]{2})/g, '$1 ')
         //Quitamos el último espaciado
         .trim();
-})
-// function terminarPedido() {
-//     /*popup onclick*/
-//     popup2.style.visibility = "visible";
-//     popup2.style.opacity = 1;
-//     pay1.style.visibility = "hidden";
-//     Nombre.style.visibility = "hidden";
-//     Apellido.style.visibility = "hidden";
-//     pay4.style.visibility = "hidden";
-//     pay5.style.visibility = "hidden";
-//     pay6.style.visibility = "hidden";
-//     CP.style.visibility = "hidden";
-//     Tel.style.visibility = "hidden";
-//     inputNumero.style.visibility = "hidden";
-//     inputNombre.style.visibility = "hidden";
-//     inputCCV.style.visibility = "hidden";
-// }
-// /*Close del popup*/
-// function closePago() {
-//     popup2.style.visibility = "hidden";
-//     popup2.style.opacity = 0;
-//     pay1.style.visibility = "visible";
-//     Nombre.style.visibility = "visible";
-//     Apellido.style.visibility = "visible";
-//     pay4.style.visibility = "visible";
-//     pay5.style.visibility = "visible";
-//     pay6.style.visibility = "visible";
-//     CP.style.visibility = "visible";
-//     Tel.style.visibility = "visible";
-//     inputNombre.style.visibility = "visible";
-//     inputNumero.style.visibility = "visible";
-//     inputCCV.style.visibility = "visible";
-//     document.getElementById("posicion").value = "";
-// }
+});
+function terminarPedido() {
+    /*popup onclick*/
+    document.getElementById("popup2").style.visibility = "visible";
+    document.getElementById("popup2").style.opacity = 1;
+    document.getElementById("pay1").style.visibility = "hidden";
+    document.getElementById("nombreEnvio").style.visibility = "hidden";
+    document.getElementById("apellidoEnvio").style.visibility = "hidden";
+    document.getElementById("pay4").style.visibility = "hidden";
+    document.getElementById("pay5").style.visibility = "hidden";
+    document.getElementById("pay6").style.visibility = "hidden";
+    document.getElementById("codigoPostal").style.visibility = "hidden";
+    document.getElementById("telefono").style.visibility = "hidden";
+    document.getElementById("gridRadios1").style.visibility="hidden";
+    document.getElementById("inputNumero").style.visibility = "hidden";
+    document.getElementById("inputNombre").style.visibility = "hidden";
+    document.getElementById("inputCCV").style.visibility = "hidden";
+    document.getElementById("pay7").style.visibility = "hidden";
+    document.getElementById("gridRadios2").style.visibility="hidden";
+    document.getElementById("gridRadios3").style.visibility="hidden";
+}
+/*Close del popup*/
+function closePago() {
+    document.getElementById("popup2").style.visibility = "hidden";
+    document.getElementById("popup2").style.opacity = 0;
+    document.getElementById("pay1").style.visibility = "visible";
+    document.getElementById("nombreEnvio").style.visibility = "visible";
+    document.getElementById("apellidoEnvio").style.visibility = "visible";
+    document.getElementById("pay4").style.visibility = "visible";
+    document.getElementById("pay5").style.visibility = "visible";
+    document.getElementById("pay6").style.visibility = "visible";
+    document.getElementById("codigoPostal").style.visibility = "visible";
+    document.getElementById("telefono").style.visibility = "visible";
+    document.getElementById("gridRadios1").style.visibility="visible";
+    document.getElementById("inputNumero").style.visibility = "visible";
+    document.getElementById("inputNombre").style.visibility = "visible";
+    document.getElementById("inputCCV").style.visibility = "visible";
+    document.getElementById("pay7").style.visibility = "visible";
+    document.getElementById("gridRadios2").style.visibility="visible";
+    document.getElementById("gridRadios3").style.visibility="visible";
+}
