@@ -30,18 +30,23 @@ descripcion2("prueba",prueba.id_descrip);
                     <h2>${lista.nombre_producto}</h2>
                     <span class="producto-precio">${lista.precio}</span>
                     <p class="descripcion1 mt-2 mb-2">${lista.descripcion}</p>
-                    <div class="estrellas mx-auto mx-2 my-2">
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                        <span>&#9733</span>
-                    </div>
-                    <input  class="incremento  py-2 text-center" type="number" value="1">
-                    <button type="button" class="botones w-50 mt-3 me-2 p-2"> <span class="inf"> Añadir al
-                        carrito
-                    </span> </button>
-                    <button type="button " class="botones w-25 my-2 p-2"> <span class="inf">Comprar </span> </button>
+                    <div class="rating-container">
+                    <input type="radio" name="rating" id="5${lista.nombre_producto}">
+                    <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+                    <input type="radio" name="rating" id="4${lista.nombre_producto}">
+                    <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+                    <input type="radio" name="rating" id="3${lista.nombre_producto}">
+                    <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+                    <input type="radio" name="rating" id="2${lista.nombre_producto}">
+                    <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+                    <input type="radio" name="rating" id="1${lista.nombre_producto}">
+                    <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+                    </div>                    
+                    <input  class="incremento col-2 py-2 text-center" type="number" value="1" >                    
+                    <button type="button" class="ver-button productos-botones  mx-auto p-2 col-8" style="margin: 0 100px 0 100px;">Añadir al carrito</button>                  
+                                     
+                    <button type="button" class="ver-button w-25 mx-auto p-2 m-2 col-12">Comprar</button> 
+                                                  
                 </div>
             </div>
         </div> 
