@@ -59,28 +59,27 @@ opacity: 0.9;
 
 /*Imagen para cuando no hay nada en el carrito*/
 .tablaPago > tbody:empty {
-	width: 518px;
+	width: auto;
 	position: relative;
 	display: table-caption;
 	caption-side: bottom;
-	min-height: 300px;
-	margin-bottom: 100px;
+	min-height: 250px;
+	margin-bottom: 40px;
 	background-image: url(./bag-x.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100px;
+	background-size: 150px;
 	text-align: center;
 }
 .tablaPago > tbody:empty:before {
 	content: 'Agrega algo a tu carrito';
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
-	margin-top: 180px;
 	position: absolute;
-	font-size: 30px;
+	font-size: 19px;
 	left: 0;
 	right: 0;
-	top: 50%;
+	top: 90%;
 	transform: translateY(-50%);
 }
 /*Estilo del botón*/
