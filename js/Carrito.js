@@ -118,7 +118,52 @@ else {
 
 
 
+const listaProducto=document.getElementById('lista-productos')
+let carrito={}
+if(localStorage.getItem('carrito')){
+    carrito=JSON.parse(localStorage.getItem('carrito'))
+}
 
+
+
+
+
+listaProducto.addEventListener('click',e=>{
+    addCarrito(e);
+})
+
+const addCarrito= e =>{
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if(e.target.classList.contains('agregar-carrito-producto')){    
+        // console.log( e.target.parentElement)
+        setCarrito(e.target.parentElement)
+    }
+ 
+}
+
+let setCarrito= objecto =>{
+    // console.log(objecto)    
+    const productoCarrito={
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
+        precio: objecto.querySelector('.producto-precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),   
+        cantidad:1     
+    }
+    // console.log(productoCarrito);
+    
+    if(carrito.hasOwnProperty(productoCarrito.id)){
+        console.log("hola")
+        productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+1
+
+    }
+    //Coleccion de datos, ... es una copia de productos spre operatio 
+   
+    carrito[productoCarrito.id]={...productoCarrito}
+    console.log(carrito)
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+}
 
 //apiUrl();
 /*function apiUrl() {    
