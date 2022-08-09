@@ -1,0 +1,207 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+} */
+.swiper-slide{
+    border: none;
+}
+
+.slide-container{
+    max-width: 1600px;
+    height: 600px;
+    width: 100%;
+    /* background-color: grey; */
+    padding: 40px 0;
+}
+
+.slide-content{
+    padding: 45px 20px;
+    margin: 0 40px;
+    /* background-color: red;     */
+}
+
+.card{
+    border-radius: 25px;
+    background-color: #FFF;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.image-content, .card-content{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content{
+    position: relative;
+    row-gap:5px;
+    padding: 25px 0;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: #4070F4; */
+   border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after{
+    /* border: 2px solid blue; */
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 155px;
+    height: 40px;
+    width: 70px;
+    background-color: g;
+    z-index: 5;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    /* background-color: red; */
+}
+
+.card-image{
+    position: relative;
+    height: 250px; 
+    width: 200px; 
+    /* border-radius: 50%; */
+    background: #FFF; 
+    padding:3px; 
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    /* border: 4px solid #4070F4; */
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    z-index: 100;
+}
+
+.description{
+   font-size: 14px;
+   color: #707070;
+   text-align: center; 
+}
+
+.costo{
+    font-size: 14px;
+    color: #707070;
+    text-align: center; 
+}
+
+.ver-button{
+    border: none;
+    background-color: white;
+    font-size: 16px;  
+    color: #E8A191;
+    padding: 8px 16px;
+    border:1px solid #E8A191;
+    border-radius: 6px;  
+    margin: 14px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.ver-button:hover{
+    color: white;
+    background:#E8A191;
+}
+
+.swipwer-navBtn{
+    /* color: gray; */
+    transition: color 0.3 ease;
+}
+
+.swipwer-navBtn:hover{
+    color: blanchedalmond;
+}
+
+.swipwer-navBtn::before,s
+.swipwer-navBtn::after{
+    font-size: 40px;
+}
+
+.swiper-button-next{
+    right: 0;
+}
+
+.swiper-button-prev{
+    left: 0;
+}
+
+.swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px){
+    .slide-content{
+        margin: 0 10px;
+    }
+    .swipwer-navBtn{
+        display: none;
+    }
+}
+
+/* Estrellas */
+.rating-container{
+    transform: rotateY(180deg);
+}
+
+/*Para desaparecer a los puntos*/
+.rating-container input{
+    display: none;
+}
+
+.rating-container label{
+    display: inline-block; /**/
+    color: #4444;
+    font-size: 15px; /*Poner en una media cuery*/
+    cursor: pointer;
+    transform: all 0.3s;
+}
+
+.rating-container label:not(:last-child){
+    margin-right: 5px;
+}
+
+.rating-container input:checked~ label,
+.rating-container input:hover~label{
+    color:#ff7a00;
+}
+
+.rating-container input:hover~ label{
+    transform: scale(1.2)rotate(-30deg);
+}
+

@@ -113,10 +113,7 @@ justify-content: center;
 }
 
 
-.estrellas {
-    color: var(--salmon);    
-    font-family: 'Montserrat', sans-serif;
-}
+
 
 .producto-central{    
     display: flex;

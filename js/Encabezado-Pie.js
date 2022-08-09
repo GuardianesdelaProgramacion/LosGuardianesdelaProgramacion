@@ -181,7 +181,7 @@ class piedepaginaJs extends HTMLElement{
         <!-- Container de Preguntas Frecuentes -->
         <b>PREGUNTAS FRECUENTES</b>
         <div class="col contenedor-ini">
-          <i class="bi bi-question-circle-fill ico"></i>
+        <a href="../html/Preguntas_frecuentes.html" class="bi bi-question-circle-fill ico"></a>
         </div>
       </div>
     </div>

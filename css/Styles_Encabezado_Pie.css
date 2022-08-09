@@ -471,14 +471,6 @@ img-pie{
 }
 
 
-/* le da tamaño a la página del iframe introducido
-/Slider */
-.ifPrueba{
-    /* width: 100% !important; */
-    width: 100%;
-    height: 600px;
-
-}
 @media screen and (max-width: 1200px){
 	.main{
 	padding: 13rem 0rem 0rem;

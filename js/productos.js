@@ -18,17 +18,17 @@ function guardar(usuario) {
     for (let user of usuario) {
         llave = JSON.stringify(user.id)
         localStorage.setItem(llave, JSON.stringify(user));
-    }   
+    }
     console.log("valor de la llave " + llave)
     Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
     filtro(".categoria", llave)
 
     let filtroTodo = document.getElementById("filtroTodo");
     filtroTodo.addEventListener('click', filtrotodo, true);
-    
+
     function filtrotodo() {
-        return   Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
-    }  
+        return Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
+    }
 }
 
 /**
@@ -50,20 +50,24 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
           <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-          <div class="estrellas mx-auto text-center">
-              <span >&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
+          <div class="rating-container">
+          <input type="radio" name="rating" id="5${lista.nombre_producto}">
+          <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="4${lista.nombre_producto}">
+          <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="3${lista.nombre_producto}">
+          <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="2${lista.nombre_producto}">
+          <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="1${lista.nombre_producto}">
+          <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           </div>
           <span class="producto-precio text-center">${lista.precio}</span>
-          <div class="row botones-inf w-100 mx-auto text-center">
-              <button type="button" class="botones col-11 mx-auto p-1" > <span class="inf"> Añadir al
-                      carrito
-                  </span> </button>
+           
+          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
+       
 
-                  <button type="button" class="botones col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
+                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
               </span> </button>
           </div>
       </div>
@@ -111,19 +115,23 @@ function filtro2(id_Html_filtro, categoria, llave) {
       <div class="card tarjeta-producto border-0">
           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
           <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
-          <div class="estrellas mx-auto text-center">
-              <span>&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
-              <span>&#9733</span>
+          <div class="rating-container">
+          <input type="radio" name="rating" id="5${lista.nombre_producto}">
+          <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="4${lista.nombre_producto}">
+          <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="3${lista.nombre_producto}">
+          <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="2${lista.nombre_producto}">
+          <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
+          <input type="radio" name="rating" id="1${lista.nombre_producto}">
+          <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           </div>
           <span class="producto-precio text-center">${lista.categoria}</span>
-          <div class="row botones-inf w-100 mx-auto text-center">
-              <button type="button" class="botones col-11 mx-auto p-1"> <span class="inf"> Añadir al
-                      carrito
-                  </span> </button>
-                  <button type="button" class="botones col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
+         
+          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
+      
+                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
                   </span> </button>
           </div>
       </div>
@@ -133,6 +141,15 @@ function filtro2(id_Html_filtro, categoria, llave) {
     document.getElementById(id_Html_filtro).innerHTML = datos;
     document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase();
     descripcion(".click")
+
+
+    
+    
+
+
+
+
+
 }
 
 /**
@@ -149,11 +166,62 @@ function descripcion(clase) {
             localStorage.setItem("id_descrip", JSON.stringify(id_descripcion));
             // envio();
             // function envio() {
-                location.href = "Producto_detalles.html?"+id;
+            location.href = "Producto_detalles.html?" + id;
             // }
             return id;
         });
     });
 }
+
+
+
+
+const listaProducto=document.getElementById('lista-productos')
+let carrito={}
+if(localStorage.getItem('carrito')){
+    carrito=JSON.parse(localStorage.getItem('carrito'))
+}
+
+
+
+
+
+listaProducto.addEventListener('click',e=>{
+    addCarrito(e);
+})
+
+const addCarrito= e =>{
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if(e.target.classList.contains('agregar-carrito-producto')){    
+        // console.log( e.target.parentElement)
+        setCarrito(e.target.parentElement)
+    }
+ 
+}
+
+let setCarrito= objecto =>{
+    // console.log(objecto)    
+    const productoCarrito={
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
+        precio: objecto.querySelector('.producto-precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),   
+        cantidad:1     
+    }
+    // console.log(productoCarrito);
+    
+    if(carrito.hasOwnProperty(productoCarrito.id)){
+        console.log("hola")
+        productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+1
+
+    }
+    //Coleccion de datos, ... es una copia de productos spre operatio 
+   
+    carrito[productoCarrito.id]={...productoCarrito}
+    console.log(carrito)
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+}
+
 
 
