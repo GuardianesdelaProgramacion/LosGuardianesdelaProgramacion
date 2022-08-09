@@ -174,8 +174,17 @@ function descripcion(clase) {
 }
 
 
+
+
 const listaProducto=document.getElementById('lista-productos')
 let carrito={}
+if(localStorage.getItem('carrito')){
+    carrito=JSON.parse(localStorage.getItem('carrito'))
+}
+
+
+
+
 
 listaProducto.addEventListener('click',e=>{
     addCarrito(e);
