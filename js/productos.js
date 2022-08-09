@@ -63,9 +63,9 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           </div>
           <span class="producto-precio text-center">${lista.precio}</span>
-          <div class="row botones-inf w-100 mx-auto text-center">         
-          <button type="button" class="ver-button col-11 mx-auto p-1 m-2">Añadir al carrito</button>
-        </div>
+           
+          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
+       
 
                   <button type="button" class="ver-button col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
               </span> </button>
@@ -128,10 +128,9 @@ function filtro2(id_Html_filtro, categoria, llave) {
           <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           </div>
           <span class="producto-precio text-center">${lista.categoria}</span>
-          <div class="row botones-inf w-100 mx-auto text-center">
-          <div class="row botones-inf w-100 mx-auto text-center">
-          <button type="button" class="ver-button col-11 mx-auto p-1 m-2">Añadir al carrito</button>
-      </div>
+         
+          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
+      
                   <button type="button" class="ver-button col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
                   </span> </button>
           </div>
@@ -142,6 +141,15 @@ function filtro2(id_Html_filtro, categoria, llave) {
     document.getElementById(id_Html_filtro).innerHTML = datos;
     document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase();
     descripcion(".click")
+
+
+    
+    
+
+
+
+
+
 }
 
 /**
@@ -164,5 +172,47 @@ function descripcion(clase) {
         });
     });
 }
+
+
+const listaProducto=document.getElementById('lista-productos')
+let carrito={}
+
+listaProducto.addEventListener('click',e=>{
+    addCarrito(e);
+})
+
+const addCarrito= e =>{
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if(e.target.classList.contains('agregar-carrito-producto')){    
+        // console.log( e.target.parentElement)
+        setCarrito(e.target.parentElement)
+    }
+ 
+}
+
+let setCarrito= objecto =>{
+    // console.log(objecto)    
+    const productoCarrito={
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
+        precio: objecto.querySelector('.producto-precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),   
+        cantidad:1     
+    }
+    // console.log(productoCarrito);
+    
+    if(carrito.hasOwnProperty(productoCarrito.id)){
+        console.log("hola")
+        productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+1
+
+    }
+    //Coleccion de datos, ... es una copia de productos spre operatio 
+   
+    carrito[productoCarrito.id]={...productoCarrito}
+    console.log(carrito)
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+}
+
 
 
