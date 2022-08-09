@@ -124,55 +124,115 @@
                         </div>
                     </form>
 
-                    <!-- Formas de pago con radios de bootstrap -->
-                    <input class="form-check-input posicion" type="radio" name="gridRadios" id="gridRadios1"
-                        value="option1" checked>
-                    <label class="form-check-label" for="gridRadios1">
-                        Tarjeta de crédito/débito
-                    </label>
+                    <!-- Formas de pago con acordeon de bootstrap -->
+
                     <!-- formulario de tarjeta de pago -->
-                    <form action="" id="formularioTarjeta" class="formularioTarjeta">
-                        <div id="datosTarjeta"><br>
-                            <label for="inputNumero">Número de tarjeta</label><br>
-                            <input type="text" id="inputNumero" maxlength="19" autocomplete="off"
-                                style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 50%; height: 53px; background-color: #f8f8f8;"
-                                class="posicion form"><br>
-                            <label for="inputNombre">Nombre en la tarjeta</label><br>
-                            <input type="text" id="inputNombre" maxlength="19" autocomplete="off"
-                                style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 50%; height: 53px; background-color: #f8f8f8;"
-                                class="posicion form">
-                        </div>
-                        <div class="grupo-expira">
-                            <label for="selectFechaExp">Fecha de expiración</label>
-                            <div class="grupo-select"><br>
-                                <select name="mes" id="selectMes"
-                                    style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;">
-                                    <option disabled selected>Mes</option>
-                                </select>
-                                <select name="year" id="selectYear"
-                                    style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;">
-                                    <option disabled selected>Año</option>
-                                </select>
+
+                    <div class="container-fluid justify-content-center col-auto">
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne"
+                                        style="border-radius: 8px; background-color: #f8f8f8; border:none;">
+                                        Tarjeta de crédito/débito
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <form action="" id="formularioTarjeta" class="formularioTarjeta">
+                                            <div id="datosTarjeta"><br>
+                                                <label for="inputNumero">Número de tarjeta</label><br>
+                                                <input type="text" id="inputNumero" maxlength="19" autocomplete="off"
+                                                    style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 50%; height: 53px; background-color: #f8f8f8;"
+                                                    class="posicion form"><br>
+                                                <label for="inputNombre">Nombre en la tarjeta</label><br>
+                                                <input type="text" id="inputNombre" maxlength="19" autocomplete="off"
+                                                    style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 50%; height: 53px; background-color: #f8f8f8;"
+                                                    class="posicion form">
+                                            </div>
+                                            <div class="grupo-expira">
+                                                <label for="selectFechaExp">Fecha de expiración</label>
+                                                <div class="grupo-select"><br>
+                                                    <select name="mes" id="selectMes"
+                                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;">
+                                                        <option disabled selected>Mes</option>
+                                                    </select>
+                                                    <select name="year" id="selectYear"
+                                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;">
+                                                        <option disabled selected>Año</option>
+                                                    </select>
+                                                </div>
+                                                <div><br>
+                                                    <input type="text" id="inputCCV" maxlength="3" class="posicion form"
+                                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;"
+                                                        placeholder="CVV">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                            <div><br>
-                                <input type="text" id="inputCCV" maxlength="3" class="posicion form"
-                                    style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;"
-                                    placeholder="CVV">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo"
+                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); background-color: #f8f8f8;">
+                                        Mercado Pago
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Aqui va el metodo de mercado pago
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree"
+                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); background-color: #f8f8f8;">
+                                        PayPal
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Aqui va el metodo de PayPal
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour"
+                                        style="border-radius: 8px; border: 1px solid var(--verdeClaro); background-color: #f8f8f8;">
+                                        Pago contra entrega
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Ponte en contacto al numero +52 4451236547
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </form>
+
+
+
+                    </div>
+
+
+
                     <br>
-                    <!-- opción paypal y efectivo con los input radio de bootstrap -->
-                    <input class="form-check-input posicion" type="radio" name="gridRadios" id="gridRadios2"
-                        value="option2" checked>
-                    <label class="form-check-label" for="gridRadios2">
-                        Paypal
-                    </label><br>
-                    <input class="form-check-input posicion" type="radio" name="gridRadios" id="gridRadios3"
-                        value="option3" checked>
-                    <label class="form-check-label" for="gridRadios3">
-                        Efectivo*
-                    </label><br><br>
                     <span>*Pago contra entrega. <br> Aplica únicamente en Morelia.</span>
                 </div>
                 <div class=" col-12 d-md-none">
@@ -181,6 +241,18 @@
                             pedido
                         </span> </button>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Revisión de pedido que sólo se ve en PC -->
                 <div class="col-12 col-sm-12 col-md-6 d-none d-sm-none d-md-block">
                     <h2>Revisión de pedido</h2>
