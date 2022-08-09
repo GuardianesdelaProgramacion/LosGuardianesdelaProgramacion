@@ -10,7 +10,7 @@ console.log("hi");
 tiempo();
 function hazUnaVez() {
   if (document.cookie.replace(/(?:(?:^|.*;\s*)testcookie\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-    alertFunc();
+    contactoEnviar();
     document.cookie = 'testcookie=true; expires='+now.toUTCString()+'; path=/';
   }
 }
@@ -24,14 +24,6 @@ function tiempo(){
   timeout = setTimeout(hazUnaVez, 5000);
 }
 
-function alertFunc() {
-//  if(getCookie("alert") == ""){
-  //  clearTimeout(timeout);
- // }
- //   else{
-  contactoEnviar();
-//    }
-}
 function contactoEnviar(){
 
     
