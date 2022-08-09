@@ -12,15 +12,35 @@ function limpiarTabla2(){
 function eliminarFila(index) {
   $("#fila" + index).remove();
 }
+const Clickbutton2 = document.querySelectorAll('button');
+console.log(Clickbutton2);
 
-const agregarProducto = () => {
-  console.log(id);
-  let cantidad = document.getElementById(`cantidad${id}`).value;
-  let precio = document.getElementById(`precio${id}`).value;
-  let nombre = document.getElementById(`nombre${id}`).value;
-  let imagen = document.getElementById(`imagen${id}`).value;
-  let subtotal = cantidad * precio;
+
+
+
+
+
+Obtenerdatoss();
+function Obtenerdatoss() {
+    if ( localStorage.getItem("1") !== null   ) {
+      alert("Sidebar si existe en localStorage!!");
+    let nombre=localStorage.getItem("10");
+    console.log(nombre);
+    nombre=JSON.parse(nombre);
+  }
+else {
+  alert("No hay localStorage!!");
+    limpiarTabla();
+    limpiarTabla2();
 }
+
+}
+
+
+
+
+
+
 
 //apiUrl();
 /*function apiUrl() {    
@@ -51,7 +71,6 @@ function apiAnt(){
 
 
 
-console.log("Sesión tenebrosa de JS09 muajajajajaja");
 
 // GET request for remote image in node.js codigo de sergio
 async function adquirirDatos(proveedor = "Axios", direccionhttp) {
@@ -173,6 +192,17 @@ async function solicitudBtn() {
   }
   document.getElementById(data2).innerHTML = datos;
 }
+
+
+
+
+
+
+
+//Función para agregar un producto al carrito
+
+
+
 const Clickbutton = document.querySelectorAll('.button')
 const tbody = document.querySelector('.tbody')
 let carrito = []
@@ -184,11 +214,11 @@ Clickbutton.forEach(btn => {
 
 function addToCarritoItem(e){
   const button = e.target
-  const item = button.closest('.card')
-  const itemTitle = item.querySelector('.card-title').textContent;
-  const itemPrice = item.querySelector('.precio').textContent;
-  const itemImg = item.querySelector('.card-img-top').src;
-  
+  const item = button.closest('.mytr')
+  const itemTitle = item.querySelector('.producto-nombre').textContent;
+  const itemPrice = item.querySelector('.producto-precio').textContent;
+  const itemImg = item.querySelector('.img-producto').src;
+  console.log("asda");  
   const newItem = {
     title: itemTitle,
     precio: itemPrice,
