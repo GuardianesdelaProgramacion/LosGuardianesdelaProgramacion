@@ -1,4 +1,3 @@
-
 /*Encabezado*/
 // Es el elemento superiror el HTMLElement
 class encabezadoJs extends HTMLElement{
@@ -10,7 +9,7 @@ class encabezadoJs extends HTMLElement{
 
     connectedCallback(){
         this.innerHTML =
-`<header class="heder-statica">
+`    <header class="heder-statica">
 <div class="background-container">
   <div class="card-container glass-effect"></div>
 </div>
@@ -45,9 +44,9 @@ class encabezadoJs extends HTMLElement{
     <div class="hijo_3 col-xl-2 col-sm-2">
       <form class="d-flex" role="search">
         <div class="buscar">
-          <input type="text" placeholder="Buscar" required />
+          <input type="text" id="inputSearch" placeholder="Buscar">
           <div class="buscar-icon">
-            <i class="bi bi-search icon"></i>
+            <i class="bi bi-search icon" id="icon-search"></i>
           </div>
         </div>
       </form>
@@ -92,7 +91,22 @@ class encabezadoJs extends HTMLElement{
     </a>
   </div>
 </div>
-</header>`;
+</header>
+
+<ul id="box-search">
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Shampoo</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Jabón</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Serum</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Crema</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Protector Solar</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Piel</a></li>
+  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Dientes</a></li>
+  <li><a href="./html/Register.html"><i class="bi bi-search icon"></i>Registro</a></li>
+  <li><a href="./html/ContactoP.html"><i class="bi bi-search icon"></i>Contacto</a></li>
+  <li><a href="./html/Blog.html"><i class="bi bi-search icon"></i>Blog</a></li>
+</ul>
+
+<div id="cover-ctn-search"></div>`;
 }
 }
 // Imprime en el HTML definimos el elemento con window.customElements
@@ -191,3 +205,61 @@ class piedepaginaJs extends HTMLElement{
 
 window.customElements.define("piedepagina-js", piedepaginaJs);
 
+//Ejecutando funcion
+document.getElementById("icon-search").addEventListener("click",mostrar_busquedor);
+document.getElementById("cover-ctn-search").addEventListener("click",ocultar_buscador);
+
+//Buscador de contenido
+//Declarando variables
+// Esta es la linea para controlar el div que contiene al input de la barra de busqueda
+// bars_search=document.getElementById("ctn-bars-search");
+cover_ctn_buscar=document.getElementById("cover-ctn-search");
+inputSearch=document.getElementById("inputSearch");
+box_search=document.getElementById("box-search");
+
+//Funcion para mostrar lo buscado
+function mostrar_busquedor(){
+    cover_ctn_buscar.style.display="block";
+    inputSearch.focus();
+
+    if (inputSearch.value === ""){
+        box_search.style.display = "none";
+    }
+}
+
+//funcion para ocultar el buscador
+function ocultar_buscador(){
+    cover_ctn_buscar.style.display="none";
+    inputSearch.value="";
+    box_search.style.display = "none";
+    
+}
+
+// Creando filtrado de busqueda
+document.getElementById("inputSearch").addEventListener("keyup",buscador_interno);
+
+function buscador_interno(){
+
+    filter=inputSearch.value.toUpperCase();
+    li=box_search.getElementsByTagName("li");
+
+    //recorriendo elementos a filtrar mediante los "li"
+    for(let i=0;i<li.length;i++){
+        a = li[i].getElementsByTagName("a")[0];
+        textValue = a.textContent || a.innerText;
+        
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+
+            li[i].style.display = "";
+            box_search.style.display = "block";
+
+            if (inputSearch.value === ""){
+                box_search.style.display = "none";
+            }
+
+            
+        }else{
+            li[i].style.display = "none";
+        }
+    }
+}

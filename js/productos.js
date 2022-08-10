@@ -20,7 +20,7 @@ function guardar(usuario) {
         localStorage.setItem(llave, JSON.stringify(user));
     }
     console.log("valor de la llave " + llave)
-    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
+    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
     filtro(".categoria", llave)
 
     let filtroTodo = document.getElementById("filtroTodo");
