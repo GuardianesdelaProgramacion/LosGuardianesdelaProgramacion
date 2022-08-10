@@ -81,6 +81,8 @@ envio.telefono.addEventListener('keyup', () => {
         //Quitamos el último espaciado
         .trim();
 });
+
+
 let datosDireccion=[];
 
 function guardarDireccion(){
@@ -96,17 +98,17 @@ function guardarDireccion(){
                     edo:estado, calle:calle, col:colonia, mun:municipio,
                     codigoPostal:codigoPostal,telefono:telefono};
     console.log(objEnvio);
-    datosDireccion.push(objEnvio);
-    console.log(datosDireccion);
+   datosDireccion.push(objEnvio);
+   console.log(datosDireccion);
 };
 let datosTarjeta=[];
 function guardarTarjeta(){
-    let numTarjeta= document.getElementById("inpuNumero").value;
-    let nombreCompleto= document.getElementsById("inputNombre").value;
+    let numTarjeta= document.getElementById("inputNumero").value;
+    let nombreCompleto= document.getElementById("inputNombre").value;
     let mesExp= document.getElementById("selectMes").value;
-    let yearExp = documento.getElementById("selectYear").value;
+    let yearExp = document.getElementById("selectYear").value;
     let numSeguridad= document.getElementById("inputCCV").value;
-    let objTarjeta ={numeroTarjeta: numTarjeta, nombreCompleto:nombreCompleto, mesExp:mesExp, yearExp:yearExp, numSeguridad:numSeguridad};
+    let objTarjeta ={numeroTarjeta: numTarjeta, nomCompleto:nombreCompleto, mesExpira:mesExp, yearExpira:yearExp, numSeg:numSeguridad};
 console.log(objTarjeta);
 datosTarjeta.push(objTarjeta);
 console.log(datosTarjeta);
