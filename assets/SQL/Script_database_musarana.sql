@@ -45,16 +45,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `musarana_db`.`descripcion`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musarana_db`.`descripcion` (
-  `id_descripcion` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `descripcion` VARCHAR(500) NOT NULL,
-  PRIMARY KEY (`id_descripcion`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `musarana_db`.`productos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `musarana_db`.`productos` (
@@ -67,12 +57,11 @@ CREATE TABLE IF NOT EXISTS `musarana_db`.`productos` (
   `inventario` INT UNSIGNED NOT NULL,
   `ingredientes` VARCHAR(500) NOT NULL,
   `id_presentacion` INT UNSIGNED NOT NULL,
-  `id_descripcion` INT UNSIGNED NOT NULL,
+  `descripcion` VARCHAR(1000) NOT NULL,
   PRIMARY KEY (`idproductos`),
   INDEX `fk_productos_descripcion_idx` (`id_modo_de_uso` ASC) VISIBLE,
   INDEX `fk_productos_categoria_idx` (`id_categoria` ASC) VISIBLE,
   INDEX `fk_productos_size_idx` (`id_presentacion` ASC) VISIBLE,
-  INDEX `fk_productos_descripcion_idx1` (`id_descripcion` ASC) VISIBLE,
   CONSTRAINT `fk_productos_modo_de_uso`
     FOREIGN KEY (`id_modo_de_uso`)
     REFERENCES `musarana_db`.`modo_de_uso` (`idmodo_de_uso`)
@@ -87,12 +76,7 @@ CREATE TABLE IF NOT EXISTS `musarana_db`.`productos` (
     FOREIGN KEY (`id_presentacion`)
     REFERENCES `musarana_db`.`presentacion` (`idpresentacion`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT,
-  CONSTRAINT `fk_productos_descripcion`
-    FOREIGN KEY (`id_descripcion`)
-    REFERENCES `musarana_db`.`descripcion` (`id_descripcion`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE RESTRICT)
 ENGINE = InnoDB;
 
 
