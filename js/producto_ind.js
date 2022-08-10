@@ -42,15 +42,13 @@ function descripcion2(id, id_producto) {
                     <input type="radio" name="rating" id="1${lista.nombre_producto}">
                     <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     </div>  
-                    <button type="button" class="ver-button  w-25 mx-auto p-2 m-2 col-12" id="menosProductos">-</button>                                   
-                    <input  class="incremento col-2 py-2 text-center" id="contadorProductos" type="number" value="1" >   
-                     
-                    <!--  <button type="button" class="ver-button  w-25 mx-auto p-2 m-2 col-12" id="contadorProductos"> 0 </button> -->      
-                    <button type="button" class="ver-button  w-25 mx-auto p-2 m-2 col-12" id="masProductos">+</button>                  
-                    <button type="button" class="ver-button productos-botones  agregar-carrito-producto mx-auto p-2 col-8" style="margin: 0 100px 0 100px;">Añadir al carrito</button>                  
-                                     
-                    <button type="button" class="ver-button w-25 mx-auto p-2 m-2 col-12">Comprar</button> 
-                                                  
+                    <div class="row" id="padreContadorProductos">
+                    <button type="button" class="form-btn mx-auto col-1 " id="menosProductos">-</button>                                   
+                    <input  class="form-btn text-center mx-auto col-2" id="contadorProductos" type="number" value="1" min="1" style="width:15% ;">                
+                    <button type="button" class="form-btn mx-auto  " id="masProductos">+</button>                  
+                    <br>
+                    <button type="button" class="form-btn mx-auto  productos-botones  agregar-carrito-producto  ">Añadir al carrito</button> 
+                    </div>                                         
                 </div>
             </div>
         </div> 
@@ -64,122 +62,114 @@ function descripcion2(id, id_producto) {
 
 
 
-// let menos = document.getElementById('menosProductos')
-// menos.addEventListener('click',e=>{  
-//   let contadorProductos=parseInt(document.getElementById("contadorProductos").textContent)
-//   console.log(contadorProductos) 
-//   contadorProductos=contadorProductos-1
-//   document.getElementById("contadorProductos").innerHTML=contadorProductos
-//    console.log(contadorProductos)
-// })
-
-
-// let mas = document.getElementById('masProductos')
-// mas.addEventListener('click',e=>{  
-//   let contadorProductos=parseInt(document.getElementById("contadorProductos").textContent)
-//   console.log(contadorProductos) 
-//   contadorProductos=contadorProductos+1
-//   document.getElementById("contadorProductos").innerHTML=contadorProductos
-//    console.log(contadorProductos)
-// })
-
-
-
 
 let menos = document.getElementById('menosProductos')
-menos.addEventListener('click',e=>{  
-  let contadorProductos=parseInt(document.getElementById("contadorProductos").value)
-  console.log(contadorProductos) 
-  contadorProductos=contadorProductos-1
-  document.getElementById("contadorProductos").value=contadorProductos
-   console.log(contadorProductos)
+menos.addEventListener('click', e => {
+  let contadorProductos = parseInt(document.getElementById("contadorProductos").value)
+  console.log(contadorProductos)
+  if (contadorProductos > 1) {
+    contadorProductos = contadorProductos - 1
+    document.getElementById("contadorProductos").value = contadorProductos
+    console.log(contadorProductos)
+  }
+
 })
 
 
 let mas = document.getElementById('masProductos')
-mas.addEventListener('click',e=>{  
-  let contadorProductos=parseInt(document.getElementById("contadorProductos").value)
-  console.log(contadorProductos) 
-  contadorProductos=contadorProductos+1
-  document.getElementById("contadorProductos").value=contadorProductos
-   console.log(contadorProductos)
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const listaProducto=document.getElementById('lista-productos')
-let carrito={}
-if(localStorage.getItem('carrito')){
-    carrito=JSON.parse(localStorage.getItem('carrito'))
-}
-
-
-
-
-
-listaProducto.addEventListener('click',e=>{
-    addCarrito(e);
-})
-
-const addCarrito= e =>{
-    // console.log(e.target);
-    // console.log(e.target.parentElement);
-    // console.log(e.target.classList.contains('agregar-carrito-producto'))
-    if(e.target.classList.contains('agregar-carrito-producto')){    
-      console.log("hola")  
-       setCarrito(e.target.parentElement.parentElement.parentElement.parentElement)  
-      
-        
-    }
- 
-}
-
-
-
-
-let setCarrito= objecto =>{
-  console.log(objecto)  
-  let contadorProductos=parseInt(document.getElementById("contadorProductos").value)
+mas.addEventListener('click', e => {
+  let contadorProductos = parseInt(document.getElementById("contadorProductos").value)
   console.log(contadorProductos)
+  contadorProductos = contadorProductos + 1
+  document.getElementById("contadorProductos").value = contadorProductos
+  console.log(contadorProductos)
+})
 
-  const productoCarrito={
+
+const padreContadorProductos = document.querySelector('#padreContadorProductos #contadorProductos');
+console.log(padreContadorProductos)
+padreContadorProductos.addEventListener('keyup', (e) => {
+  console.log( padreContadorProductos.value);
+  padreContadorProductos.value = padreContadorProductos.value
+      .replace("[^\w\.@-]", '');
+      
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const listaProducto = document.getElementById('lista-productos')
+let carrito = {}
+if (localStorage.getItem('carrito')) {
+  carrito = JSON.parse(localStorage.getItem('carrito'))
+}
+
+
+
+
+
+listaProducto.addEventListener('click', e => {
+  addCarrito(e);
+})
+
+const addCarrito = e => {
+  // console.log(e.target);
+  // console.log(e.target.parentElement);
+  // console.log(e.target.classList.contains('agregar-carrito-producto'))
+  if (e.target.classList.contains('agregar-carrito-producto')) {
+    // if () {
+    console.log("hola")
+    setCarrito(e.target.parentElement.parentElement.parentElement.parentElement.parentElement)
+
+    // }
+  }
+
+}
+
+
+
+
+let setCarrito = objecto => {
+  console.log(objecto)
+  if (document.getElementById("contadorProductos").value > 0) {
+    let contadorProductos = parseInt(document.getElementById("contadorProductos").value)
+    console.log(contadorProductos)
+
+    const productoCarrito = {
       id: objecto.querySelector('.click').getAttribute("id"),
       nombre_producto: objecto.querySelector('.producto-nombre').textContent,
       precio: objecto.querySelector('.producto-precio').textContent,
-      url: objecto.querySelector('.click').getAttribute("src"),   
-      cantidad:contadorProductos
-  }
-  // console.log(productoCarrito);
-  
+      url: objecto.querySelector('.click').getAttribute("src"),
+      cantidad: contadorProductos
+    }
+    // console.log(productoCarrito);
 
-  if(carrito.hasOwnProperty(productoCarrito.id)){      
-    console.log(productoCarrito.cantidad)
-      productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+contadorProductos
+
+    if (carrito.hasOwnProperty(productoCarrito.id)) {
       console.log(productoCarrito.cantidad)
+      productoCarrito.cantidad = carrito[productoCarrito.id].cantidad + contadorProductos
+      console.log(productoCarrito.cantidad)
+    }
+    //Coleccion de datos, ... es una copia de productos spre operatio 
+    document.getElementById("contadorProductos").value = 1
+    carrito[productoCarrito.id] = { ...productoCarrito }
+    // console.log(carrito)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
   }
-  //Coleccion de datos, ... es una copia de productos spre operatio 
-  document.getElementById("contadorProductos").value=1
-  carrito[productoCarrito.id]={...productoCarrito}
-  // console.log(carrito)
-  localStorage.setItem('carrito',JSON.stringify(carrito))
+  else{
+    alert("El valor debe de ser superior a 1");
+    document.getElementById("contadorProductos").value = 1
+  }
 }
 
 

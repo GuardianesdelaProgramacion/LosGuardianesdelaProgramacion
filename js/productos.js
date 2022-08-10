@@ -67,7 +67,7 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
        
 
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
+                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"   id="${lista.id} > <span class="inf"> Ver rapido
               </span> </button>
           </div>
       </div>
@@ -131,7 +131,7 @@ function filtro2(id_Html_filtro, categoria, llave) {
          
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
       
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
+                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"  id="${lista.id}  > <span class="inf"> Ver rapido
                   </span> </button>
           </div>
       </div>
@@ -224,4 +224,45 @@ let setCarrito= objecto =>{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+ let verRapido={}
+
+listaProducto.addEventListener('click',e=>{
+    verRapido1(e);
+})
+
+const verRapido1= e =>{
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if(e.target.classList.contains('verRapido')){    
+        console.log( e.target.parentElement)
+        setVerRapido(e.target.parentElement)
+    }
+ 
+}
+
+let setVerRapido= objecto =>{
+    console.log(objecto)    
+    const productoDescripcion={
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
+        precio: objecto.querySelector('.producto-precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),   
+        cantidad:1     
+    }
+    console.log(productoDescripcion);
+    verRapido[productoDescripcion.id]={...productoDescripcion}
+    localStorage.setItem('verRapido',JSON.stringify(verRapido))
+}
 
