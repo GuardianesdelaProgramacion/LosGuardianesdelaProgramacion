@@ -41,7 +41,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
         //Eliminar las letras
         .replace(/\D/g, '')
         //Ponemos espacio cada cuatro números
-        .replace(/([0-9]{4})/g, '$1 ')
+        .replace(/([0]{4})/g, '$1 ')
         //Quitamos el último espaciado
         .trim();
 });
@@ -121,3 +121,7 @@ function closePago() {
     document.getElementById("gridRadios2").style.visibility="visible";
     document.getElementById("gridRadios3").style.visibility="visible";
 }
+const myCollapsible = document.getElementById('gridRadios1')
+myCollapsible.addEventListener('hidden.bs.collapse', event => {
+  // do something...
+})
