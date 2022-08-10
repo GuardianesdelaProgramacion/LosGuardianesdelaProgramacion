@@ -41,14 +41,27 @@ function descripcion2(id, id_producto) {
                     <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     <input type="radio" name="rating" id="1${lista.nombre_producto}">
                     <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-                    </div>  
+                    </div>
+                    <select name="presentacion" id="presentacion"
+                    style="border-radius: 8px; border: 1px solid var(--salmon); width: 25%; height: 30px; background-color: none; "
+                    class="my-3 ">
+                    <option disabled selected>Tamaño </option>
+                    <option value="1">Chico</option>
+                    <option value="2">Grande</option>
+                    </select> 
+                    
                     <div class="row" id="padreContadorProductos">
-                    <button type="button" class="form-btn mx-auto col-1 " id="menosProductos">-</button>                                   
-                    <input  class="form-btn text-center mx-auto col-2" id="contadorProductos" type="number" value="1" min="1" style="width:15% ;">                
-                    <button type="button" class="form-btn mx-auto  " id="masProductos">+</button>                  
-                    <br>
-                    <button type="button" class="form-btn mx-auto  productos-botones  agregar-carrito-producto  ">Añadir al carrito</button> 
-                    </div>                                         
+                  
+
+
+
+                    <button type="button" class="form-btn " id="menosProductos" style="width:10%; margin-left:25%; height:30px; display: flex; align-items: center; justify-content: center; ">-</button>                                   
+                    <input  class="form-btn  posicion" id="contadorProductos" type="number" value="1" min="1" style="width:15% ; height:30px; display: flex; align-items: center; justify-content: center;">                
+                    <button type="button" class="form-btn " id="masProductos" style="width:10%; margin-right:25%;height:30px;display: flex; align-items: center; justify-content:center;">+</button>                  
+                                   
+                    <br>                   
+                    </div>                       
+                    <button type="button" class="form-btn my-3  productos-botones  agregar-carrito-producto" style="height:30px;display: flex; align-items: center; justify-content: center;">Añadir al carrito</button>                                      
                 </div>
             </div>
         </div> 
