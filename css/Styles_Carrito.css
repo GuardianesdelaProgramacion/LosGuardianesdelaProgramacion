@@ -190,6 +190,18 @@ background-position: center;
 background-size: 35%;
 text-align: center;
 }
+.tablemini > tbody:empty {
+position: relative;
+display: table-caption;
+caption-side: bottom;
+min-height: 200px;
+margin-bottom: 100px;
+background-image: url(./bag-x.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 35%;
+text-align: center;
+}
 .tablemini > tbody:empty:before {
 content: 'Agrega algo a tu carrito';
 font-family: 'Montserrat', sans-serif;
@@ -199,7 +211,7 @@ position: absolute;
 font-size: 40px;
 left: 0;
 right: 0;
-top: 100%;
+top: 50%;
 transform: translateY(-50%);
 }
 .submenu {
@@ -232,4 +244,3 @@ min-height: 200px;
 min-width: 400px;
 z-index: 4000;
 }
-

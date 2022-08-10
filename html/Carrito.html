@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito</title>
+    <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/Styles.css">
@@ -15,12 +16,11 @@
 </head>
 
 <body>
-  <encabezado-js>
-  </encabezado-js>
+  <encabezado-js> </encabezado-js>
   <main class="main">
 
     <div class="div_carrito">
-      <table class="table_carrito">
+      <table id="lista-carrito" class="table_carrito">
         <thead>
           <tr>
             <th style="width:5%"></th>
@@ -31,12 +31,21 @@
             <th style="width:15%">Total</th>
           </tr>
         </thead>
-        <tbody id="data"></tbody>
-
-
+         <tbody id="dat"></tbody>
+          <tfoot id="datoo">          <tr>
+             <td colspan="5" style="text-align:right">Total</td>
+             <td id="total"></td>
+           </tr>
+          </tfoot>
       </table>
     </div>
     
+
+
+
+
+
+
     <div class="botonpagar">
       <form action="./Pago.html">
         <button id="pago" class="form-btn">Proceder al pago</button>
@@ -46,12 +55,11 @@
 
 
 
-
-
+</main>
+<input name="nomPag" id="nomPag" type="hidden" value="carrito" />
     <piedepagina-js>
     </piedepagina-js>
-    <script src="../js/Carrito.js"></script>
-
+      <!--script src="../js/Carrito.js"></script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/Carrito.js"></script>
     <script src="../js/Encabezado-Pie.js"></script>
