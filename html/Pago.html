@@ -76,10 +76,10 @@
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                     aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
 
-                                        <form id="envio">
+                                        <form for= "" id="envio">
                                             <label>Nombre(s)</label><br>
                                             <input type="text" id="nombreEnvio" class="posicion form"
                                                 placeholder="Ejemplo: Ana" style="width: 50%;"><br>
@@ -130,7 +130,7 @@
                                                 <label>Colonia</label><br>
                                                 <input type="text" style="width: 50%;" class="posicion form"
                                                     id="pay5"><br>
-                                                <label>Municipio</label><br>
+                                                <label>Municipio/Alcadía</label><br>
                                                 <input type="text" style="width: 50%;" class="posicion form"
                                                     id="pay6"><br>
                                                 <label>Código Postal</label><br>
@@ -139,6 +139,7 @@
                                                 <label>Teléfono</label><br>
                                                 <input type="text" maxlength="14" style="width: 50%;"
                                                     class="posicion form" id="telefono"><br>
+                                                    <button type="submit" class="form-btn" id="guardDir" onclick="guardarDireccion()">Guardar Dirección</button>
                                             </div>
                                         </form>
                                     </div>
@@ -184,6 +185,7 @@
                                                         style="border-radius: 8px; border: 1px solid var(--verdeClaro); width: 20%; height: 53px; background-color: #f8f8f8;"
                                                         placeholder="CVV">
                                                 </div>
+                                                <button type="submit" class="form-btn" id="gTarjeta" onclick="guardarTarjeta()">Guardar Tarjeta</button>
                                             </div>
                                         </form>
                                     </div>
@@ -274,10 +276,10 @@
                                     style="width:100%;">
                             </div>
                             <div class="col-auto">
-                                <button type="submit" class="fr-btn mt-3" style="width:100%;">Usar</button>
+                                <button type="submit" class="fr-btn mt-3" style="width:100%;" onclick="usarCupon()">Usar</button>
                             </div>
                         </div>
-                        <button type="button" style="width:80%;" class="form-btn mt-3" onclick="terminarPedido()"><span
+                        <button type="submit" style="width:80%;" class="form-btn mt-3" onclick="terminarPedido()"><span
                                 class="termina-compra">Realizar
                                 pedido
                             </span> </button>

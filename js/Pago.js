@@ -41,7 +41,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
         //Eliminar las letras
         .replace(/\D/g, '')
         //Ponemos espacio cada cuatro números
-        .replace(/([0]{4})/g, '$1 ')
+        .replace(/([0-9]{4})/g, '$1 ')
         //Quitamos el último espaciado
         .trim();
 });
@@ -81,6 +81,37 @@ envio.telefono.addEventListener('keyup', () => {
         //Quitamos el último espaciado
         .trim();
 });
+let datosDireccion=[];
+
+function guardarDireccion(){
+    let nomPersona = document.getElementById("nombreEnvio").value;
+    let apellidoPersona= document.getElementById("apellidoEnvio").value;
+    let estado = document.getElementById("estado").value;
+    let calle =document.getElementById("pay4").value;
+    let colonia=document.getElementById("pay5").value;
+    let municipio=document.getElementById("pay6").value;
+    let codigoPostal=document.getElementById("codigoPostal").value;
+    let telefono=document.getElementById("telefono").value;
+    let objEnvio ={personaRecibe:nomPersona, apellidoRecibe:apellidoPersona,
+                    edo:estado, calle:calle, col:colonia, mun:municipio,
+                    codigoPostal:codigoPostal,telefono:telefono};
+    console.log(objEnvio);
+    datosDireccion.push(objEnvio);
+    console.log(datosDireccion);
+};
+let datosTarjeta=[];
+function guardarTarjeta(){
+    let numTarjeta= document.getElementById("inpuNumero").value;
+    let nombreCompleto= document.getElementsById("inputNombre").value;
+    let mesExp= document.getElementById("selectMes").value;
+    let yearExp = documento.getElementById("selectYear").value;
+    let numSeguridad= document.getElementById("inputCCV").value;
+    let objTarjeta ={numeroTarjeta: numTarjeta, nombreCompleto:nombreCompleto, mesExp:mesExp, yearExp:yearExp, numSeguridad:numSeguridad};
+console.log(objTarjeta);
+datosTarjeta.push(objTarjeta);
+console.log(datosTarjeta);
+};
+
 function terminarPedido() {
     /*popup onclick*/
     document.getElementById("popup2").style.visibility = "visible";
@@ -93,13 +124,13 @@ function terminarPedido() {
     document.getElementById("pay6").style.visibility = "hidden";
     document.getElementById("codigoPostal").style.visibility = "hidden";
     document.getElementById("telefono").style.visibility = "hidden";
-    document.getElementById("gridRadios1").style.visibility="hidden";
+    //document.getElementById("gridRadios1").style.visibility="hidden";
     document.getElementById("inputNumero").style.visibility = "hidden";
     document.getElementById("inputNombre").style.visibility = "hidden";
     document.getElementById("inputCCV").style.visibility = "hidden";
     document.getElementById("pay7").style.visibility = "hidden";
-    document.getElementById("gridRadios2").style.visibility="hidden";
-    document.getElementById("gridRadios3").style.visibility="hidden";
+    //document.getElementById("gridRadios2").style.visibility="hidden";
+    //document.getElementById("gridRadios3").style.visibility="hidden";
 }
 /*Close del popup*/
 function closePago() {
@@ -113,15 +144,11 @@ function closePago() {
     document.getElementById("pay6").style.visibility = "visible";
     document.getElementById("codigoPostal").style.visibility = "visible";
     document.getElementById("telefono").style.visibility = "visible";
-    document.getElementById("gridRadios1").style.visibility="visible";
+    //document.getElementById("gridRadios1").style.visibility="visible";
     document.getElementById("inputNumero").style.visibility = "visible";
     document.getElementById("inputNombre").style.visibility = "visible";
     document.getElementById("inputCCV").style.visibility = "visible";
     document.getElementById("pay7").style.visibility = "visible";
-    document.getElementById("gridRadios2").style.visibility="visible";
-    document.getElementById("gridRadios3").style.visibility="visible";
+    //document.getElementById("gridRadios2").style.visibility="visible";
+    //document.getElementById("gridRadios3").style.visibility="visible";
 }
-const myCollapsible = document.getElementById('gridRadios1')
-myCollapsible.addEventListener('hidden.bs.collapse', event => {
-  // do something...
-})
