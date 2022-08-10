@@ -48,6 +48,7 @@ class encabezadoJs extends HTMLElement{
           <div class="buscar-icon">
             <i class="bi bi-search icon" id="icon-search"></i>
           </div>
+<<<<<<< HEAD
         </div>
       </form>
     </div>
@@ -73,6 +74,33 @@ class encabezadoJs extends HTMLElement{
               </tbody>
             </table>
             <a href="#" onclick="limpiarTabla2()" id="vaciar" style="color: black;">vaciar carrito</a>
+=======
+        </form>
+      </div>
+      <!-- Se coloca imagen del login y carrito -->
+      <div class="hijo_4">
+        <a class="icono fa-solid fa-user-large" width="5px" href="./Login.html"></a>
+      </div>
+         <div class="Carrito-mini">
+            <ul style="list-style: none;">
+              <li class="submenu">
+                <a class="icono2 bi bi-cart4" href="./Carrito.html" width="5px"></a>
+                <div id="carrito">
+                  <table class="tablemini">
+                    <thead>
+                      <tr>
+                      <th style="width:40px"></th>
+                      <th style="width:40px">Producto</th>
+                      <th style="width:200px"></th>
+                      <th style="width:100px">Cantidad</th>
+                      </tr>
+                    </thead>
+                    <tbody style="width:400px" id="data2"></tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+>>>>>>> d3d078f (Mod: mincarrito)
           </div>
         </li>
       </ul>

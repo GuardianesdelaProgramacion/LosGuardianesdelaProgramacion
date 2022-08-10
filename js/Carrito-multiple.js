@@ -54,6 +54,7 @@ function addItemCarrito(newItem){
 } 
 
 
+  renderCarrito();
 function renderCarrito(){
   tbody.innerHTML = ''
   carrito.map(item => {
