@@ -69,8 +69,7 @@ class encabezadoJs extends HTMLElement{
                   <th style="width:100px">Cantidad</th>
                 </tr>
               </thead>
-              <tbody style="width:400px" id="data2">
-              </tbody>
+              <tbody style="width:400px" id="data2"></tbody>
             </table>
             <a href="#" onclick="limpiarTabla2()" id="vaciar" style="color: black;">vaciar carrito</a>
           </div>
