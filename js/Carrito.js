@@ -59,9 +59,14 @@ function leerenderCarrito(){
   carritoD.forEach(element => {
   console.log(carritoD);
   });
-}  
-extraerDatos();
+}
+
+
+
 function extraerDatos(){
+  let carrito =localStorage.getItem('carrito');
+  let carrito2 =localStorage.setItem('carrito', JSON.stringify(carrito));
+
     let productoLocal = JSON.parse(localStorage.getItem('productos'));
     // for (let user of productoLocal) {
     //     console.log(user)
