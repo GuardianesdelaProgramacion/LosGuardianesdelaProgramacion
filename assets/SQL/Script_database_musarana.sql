@@ -106,12 +106,13 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `musarana_db`.`usuario` (
   `idusuario` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(150) NULL,
-  `e-mail` VARCHAR(60) NULL,
+  `email` VARCHAR(60) NULL,
   `contrasenia` VARCHAR(45) NULL,
   `fecha_nacimiento` DATE NULL,
   `telefono` INT UNSIGNED NULL,
   `metodo_de_pago` VARCHAR(45) NULL,
   `id_orden` INT UNSIGNED NOT NULL,
+  `rol_usuario` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idusuario`))
 ENGINE = InnoDB;
 
