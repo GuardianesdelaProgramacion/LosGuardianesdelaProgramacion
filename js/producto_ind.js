@@ -30,7 +30,7 @@ function descripcion2(id, id_producto) {
                     <h2 class="producto-nombre">${lista.nombre_producto}</h2>
                     <span class="producto-precio">${lista.precio}</span>
                     <p class="descripcion1 mt-2 mb-2">${lista.descripcion}</p>
-                    <div class="rating-container">
+                  <!--  <div class="rating-container">
                     <input type="radio" name="rating" id="5${lista.nombre_producto}">
                     <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     <input type="radio" name="rating" id="4${lista.nombre_producto}">
@@ -41,7 +41,7 @@ function descripcion2(id, id_producto) {
                     <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     <input type="radio" name="rating" id="1${lista.nombre_producto}">
                     <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-                    </div>
+                    </div> -->
                    <!-- <select name="presentacion" id="presentacion"
                     style="border-radius: 8px; border: 1px solid var(--salmon); width: 25%; height: 30px; background-color: none; "
                     class="my-3 ">
@@ -50,7 +50,7 @@ function descripcion2(id, id_producto) {
                     <option value="2">Grande</option>
                     </select> -->
                     
-                    <div class="row" id="padreContadorProductos">
+                    <div class="row mt-4" id="padreContadorProductos">
                   
 
 

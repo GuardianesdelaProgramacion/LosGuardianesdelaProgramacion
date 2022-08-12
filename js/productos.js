@@ -1,23 +1,23 @@
 console.log("Archivo js de productos");
-api("../assets/json/productos.json");
+api("../assets/json/productos2.json");
 //Funcion para obtner los datos de json
 function api(url) {
     fetch(url)
         .then((responseJSON) => {
             return responseJSON.json();
         })
-        .then(usuario => {
-            guardar(usuario.data.data)
+        .then(productos => {
+            guardar(productos)
         }
         )
 }
 
 //Funcion para guardar los datos en la localStorage
-function guardar(usuario) {
+function guardar(productos) {
     let llave;
-    for (let user of usuario) {
-        llave = JSON.stringify(user.id)
-        localStorage.setItem(llave, JSON.stringify(user));
+    for (let productos2 of productos) {
+        llave = JSON.stringify(productos2.id)
+        localStorage.setItem(llave, JSON.stringify(productos2));
     }
     console.log("valor de la llave " + llave)
     Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
