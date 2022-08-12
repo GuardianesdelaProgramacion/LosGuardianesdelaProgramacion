@@ -1,5 +1,5 @@
 console.log("Archivo js de productos");
-api("../assets/json/productos.json");
+api("../assets/json/productos2.json");
 //Funcion para obtner los datos de json
 function api(url) {
     fetch(url)
@@ -111,7 +111,7 @@ function filtro2(id_Html_filtro, categoria, llave) {
         lista = JSON.parse(localStorage.getItem(i));
         if (lista.categoria == categoria) {
             datos +=
-                `<div class="col-lg-3 col-md-4 col-sm-6 col-6 productos mt-3 mb-3">
+                `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
       <div class="card tarjeta-producto border-0">
           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
           <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
