@@ -1,12 +1,12 @@
-.bp-container{
+/*.bp-container{
     margin:30px;
     width: 100%;
     padding: 5px;
 
-    /*display: flex;
+    display: flex;
     flex-wrap: wrap;
     width: 50%;
-    left: 50%;*/
+    left: 50%;
 
     display: block;
     margin-left: auto;
@@ -16,7 +16,7 @@
     
     
     
-}
+}*/
 
 .bp-img{
    
@@ -92,5 +92,10 @@ height: 900px;
 .bp-links{
     position: absolute;
     left: 43%;
-    top: 130%;
+    top: 125%;
+}
+
+.bp-ft{
+    position: absolute;
+    top: 200%;
 }
