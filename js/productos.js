@@ -50,7 +50,7 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
           <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-          <div class="rating-container">
+         <!-- <div class="rating-container">
           <input type="radio" name="rating" id="5${lista.nombre_producto}">
           <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           <input type="radio" name="rating" id="4${lista.nombre_producto}">
@@ -61,7 +61,7 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           <input type="radio" name="rating" id="1${lista.nombre_producto}">
           <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          </div>
+          </div> -->
           <span class="producto-precio text-center">${lista.precio}</span>
            
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
@@ -115,7 +115,7 @@ function filtro2(id_Html_filtro, categoria, llave) {
       <div class="card tarjeta-producto border-0">
           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
           <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
-          <div class="rating-container">
+       <!--   <div class="rating-container">
           <input type="radio" name="rating" id="5${lista.nombre_producto}">
           <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           <input type="radio" name="rating" id="4${lista.nombre_producto}">
@@ -126,7 +126,7 @@ function filtro2(id_Html_filtro, categoria, llave) {
           <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
           <input type="radio" name="rating" id="1${lista.nombre_producto}">
           <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          </div>
+          </div> -->
           <span class="producto-precio text-center">${lista.categoria}</span>
          
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
