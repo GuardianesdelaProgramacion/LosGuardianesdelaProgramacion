@@ -1,110 +1,65 @@
-{
-    "data": {
-        "page": 1,
-        "per_page": 6,
-        "total": 12,
-        "total_pages": 2,
-        "data": [
-            {
-                "id": 1,
-                "nombre_producto": "SHAMPOO DE CALÉNDULA",
-                "precio": "$50.00",
-                "descripcion": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello, removiendo las impurezas y prepara el cuero cabelludo y el cabello para recibir el tratamiento cosmético",
-                "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
-                "seccion":"catálogo",
-                "categoria": "cuerpo"
-            },
-            {
-                "id":2,
-                "nombre_producto": "SHAMPOO DE JAMAICA",
-                "precio": "$70.00",
-                "descripcion": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
-                "url": "https://i.ibb.co/Trymmtc/cinthia.png",
-                "seccion":"catálogo",
-                "categoria": "cuerpo"
-            },
-            {
-                "id": 3,
-                "nombre_producto": "SHAMPOO DE ROMERO",
-                "precio": "70.00",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
-                "seccion":"catálogo",
-                "categoria": "cabello"
-            },
-            {
-                "id": 4,
-                "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
-                "precio": "70.00",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
-                "seccion":"catálogo",
-                "categoria": "proteccion"
-            },
-            {
-                "id": 5,
-                "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
-                "precio": "70.00",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
-                "seccion":"catálogo",
-                "categoria": "crema"
-            },
-            {
-                "id": 6,
-                "nombre_producto": "SHAMPOO DE LAVANDA",
-                "precio": "70.00",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
-                "seccion":"catálogo",
-                "categoria": "cuerpo"
-            },
-            {
-                "id": 7,
-                "nombre_producto": "SHAMPOO DE ROSAS",
-                "precio": "70.00",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
-                "seccion":"catálogo",
-                "categoria": "cuerpo"
-            }
-        ],
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-        }
+[
+    {
+        "id": 1,
+        "nombre_producto": "SHAMPOO DE CALÉNDULA",
+        "precio": "$50.00",
+        "descripcion": "La caléndula contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello, removiendo las impurezas y prepara el cuero cabelludo y el cabello para recibir el tratamiento cosmético",
+        "url": "https://i.ibb.co/BspJNHQ/cinthia-10.png",
+        "seccion": "catálogo",
+        "categoria": "cuerpo"
     },
-    "status": 200,
-    "statusText": "",
-    "headers": {
-        "content-type": "application/json; charset=utf-8"
+    {
+        "id": 2,
+        "nombre_producto": "SHAMPOO DE JAMAICA",
+        "precio": "$70.00",
+        "descripcion": "La jamaica es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
+        "url": "https://i.ibb.co/Trymmtc/cinthia.png",
+        "seccion": "catálogo",
+        "categoria": "cuerpo"
     },
-    "config": {
-        "transitional": {
-            "silentJSONParsing": true,
-            "forcedJSONParsing": true,
-            "clarifyTimeoutError": false
-        },
-        "transformRequest": [
-            null
-        ],
-        "transformResponse": [
-            null
-        ],
-        "timeout": 0,
-        "xsrfCookieName": "XSRF-TOKEN",
-        "xsrfHeaderName": "X-XSRF-TOKEN",
-        "maxContentLength": -1,
-        "maxBodyLength": -1,
-        "env": {
-            "FormData": null
-        },
-        "headers": {
-            "Accept": "application/json, text/plain, */*"
-        },
-        "method": "get",
-        "url": "https://reqres.in/api/users?delay=3",
-        "responseType": "stream"
+    {
+        "id": 3,
+        "nombre_producto": "SHAMPOO DE ROMERO",
+        "precio": "$70.00",
+        "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+        "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
+        "seccion": "catálogo",
+        "categoria": "cabello"
     },
-    "request": {}
-}
+    {
+        "id": 4,
+        "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
+        "precio": "$70.00",
+        "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+        "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
+        "seccion": "catálogo",
+        "categoria": "proteccion"
+    },
+    {
+        "id": 5,
+        "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
+        "precio": "$70.00",
+        "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+        "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
+        "seccion": "catálogo",
+        "categoria": "crema"
+    },
+    {
+        "id": 6,
+        "nombre_producto": "SHAMPOO DE LAVANDA",
+        "precio": "$70.00",
+        "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+        "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
+        "seccion": "catálogo",
+        "categoria": "cuerpo"
+    },
+    {
+        "id": 7,
+        "nombre_producto": "SHAMPOO DE ROSAS",
+        "precio": "$70.00",
+        "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+        "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
+        "seccion": "catálogo",
+        "categoria": "cuerpo"
+    }
+]

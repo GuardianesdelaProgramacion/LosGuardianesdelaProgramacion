@@ -97,6 +97,7 @@ border:1px solid #8BC3A3;
   padding: 15px;
 }
 .overlay-pago {
+  
   position: fixed;
   top: 0;
   bottom: 0;

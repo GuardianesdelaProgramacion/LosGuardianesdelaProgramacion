@@ -27,8 +27,8 @@ function descripcion2(id, id_producto) {
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="producto-mes mx-auto">
                 <div>
-                    <h2 class="producto-nombre1">${lista.nombre_producto}</h2>
-                    <span class="producto-precio1">${lista.precio}</span>
+                    <h2 class="producto-nombre">${lista.nombre_producto}</h2>
+                    <span class="producto-precio">${lista.precio}</span>
                     <p class="descripcion1 mt-2 mb-2">${lista.descripcion}</p>
                     <div class="rating-container">
                     <input type="radio" name="rating" id="5${lista.nombre_producto}">
@@ -50,12 +50,12 @@ function descripcion2(id, id_producto) {
                     <option value="2">Grande</option>
                     </select> -->
                     
-                    <div class="row mt-3" id="padreContadorProductos">
+                    <div class="row" id="padreContadorProductos">
                   
 
 
 
-                    <button type="button" class="form-btn  " id="menosProductos" style="width:10%; margin-left:25%; height:30px; display: flex; align-items: center; justify-content: center; ">-</button>                                   
+                    <button type="button" class="form-btn " id="menosProductos" style="width:10%; margin-left:25%; height:30px; display: flex; align-items: center; justify-content: center; ">-</button>                                   
                     <input  class="form-btn  posicion" id="contadorProductos" type="number" value="1" min="1" style="width:15% ; height:30px; display: flex; align-items: center; justify-content: center;">                
                     <button type="button" class="form-btn " id="masProductos" style="width:10%; margin-right:25%;height:30px;display: flex; align-items: center; justify-content:center;">+</button>                  
                                    
@@ -197,4 +197,71 @@ function closePopProducto() {
 }
 
 
+document.addEventListener('DOMContentLoaded',()=>{
+  leer();
+})
 
+
+function leer(){
+
+let productoLocal={}
+productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+// console.log(productoLocal)
+    tarjetaDinamicas(productoLocal);
+
+}
+
+
+const tarjetaDinamicas = data=>{
+  // console.log(data[1])
+ let datos="";
+  for (const carrito in data) {        
+          // console.log(data[carrito])
+      productoscarrito=data[carrito]
+      console.log(productoscarrito.nombre_producto)
+      // console.log(productoscarrito.descripcion)
+
+          datos+= 
+          `<tr class="mytr" id="fila${productoscarrito.id}">
+          <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+  <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
+  <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+          <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
+      </tr>
+        `;
+   }
+   document.getElementById('data2').innerHTML = datos;
+
+}
+
+function eliminarFila(index) {
+  $("#fila" + index).remove();
+  console.log(index)
+  
+  eliminar(index);
+  contador(); 
+}
+
+
+
+function eliminar (index){
+  let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
+  for (let i =0; i< carritoPreEliminado; i++) {
+   
+      if (carritoPreEliminado.id == index) {
+          carritoPreEliminado.splice(i, 1);
+          console.log(carritoPreEliminado.splice(i, 1))
+      }
+  }
+
+  carritoPreEliminado = JSON.stringify(carritoPreEliminado);
+  localStorage.setItem("carrito", carritoPreEliminado);
+}
+
+function contador(){
+  productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+  console.log(productoLocal)
+  document.getElementById('data3').innerHTML = 7;
+
+
+}
