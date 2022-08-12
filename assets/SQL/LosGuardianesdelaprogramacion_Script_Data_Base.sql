@@ -323,6 +323,7 @@ INSERT INTO estado (estado) VALUES
 ('Yucatán'),
 ('Zacatecas');
 
+SELECT * FROM estado;
 
 INSERT INTO categoria (`categoria`) VALUES 
 ('Cabello'),
