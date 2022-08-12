@@ -15,7 +15,8 @@
 }
 
 .contenedor {
-    background-color: var(--crema);
+    /*background-color: var(--crema);*/
+    background-color: white;
     margin: 30px;
     width: 100%;
     padding: 50px;
@@ -144,6 +145,11 @@
     margin: auto;
 
     font-family: 'Montserrat', sans-serif;
+}
+
+.cnmaptcl{
+    font-size: 30px;
+    color: white;
 }
 
 /*Popup*/
