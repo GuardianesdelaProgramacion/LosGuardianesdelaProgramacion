@@ -1,5 +1,5 @@
 console.log("Archivo js de productos");
-api("../assets/json/productos2.json");
+api("../assets/json/productos.json");
 //Funcion para obtner los datos de json
 function api(url) {
     fetch(url)
