@@ -27,10 +27,10 @@ function descripcion2(id, id_producto) {
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="producto-mes mx-auto">
                 <div>
-                    <h2 class="producto-nombre1">${lista.nombre_producto}</h2>
-                    <span class="producto-precio1">${lista.precio}</span>
+                    <h2 class="producto-nombre">${lista.nombre_producto}</h2>
+                    <span class="producto-precio">${lista.precio}</span>
                     <p class="descripcion1 mt-2 mb-2">${lista.descripcion}</p>
-                    <div class="rating-container">
+                  <!--  <div class="rating-container">
                     <input type="radio" name="rating" id="5${lista.nombre_producto}">
                     <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     <input type="radio" name="rating" id="4${lista.nombre_producto}">
@@ -41,7 +41,7 @@ function descripcion2(id, id_producto) {
                     <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     <input type="radio" name="rating" id="1${lista.nombre_producto}">
                     <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-                    </div>
+                    </div> -->
                    <!-- <select name="presentacion" id="presentacion"
                     style="border-radius: 8px; border: 1px solid var(--salmon); width: 25%; height: 30px; background-color: none; "
                     class="my-3 ">
@@ -50,12 +50,12 @@ function descripcion2(id, id_producto) {
                     <option value="2">Grande</option>
                     </select> -->
                     
-                    <div class="row mt-3" id="padreContadorProductos">
+                    <div class="row mt-4" id="padreContadorProductos">
                   
 
 
 
-                    <button type="button" class="form-btn  " id="menosProductos" style="width:10%; margin-left:25%; height:30px; display: flex; align-items: center; justify-content: center; ">-</button>                                   
+                    <button type="button" class="form-btn " id="menosProductos" style="width:10%; margin-left:25%; height:30px; display: flex; align-items: center; justify-content: center; ">-</button>                                   
                     <input  class="form-btn  posicion" id="contadorProductos" type="number" value="1" min="1" style="width:15% ; height:30px; display: flex; align-items: center; justify-content: center;">                
                     <button type="button" class="form-btn " id="masProductos" style="width:10%; margin-right:25%;height:30px;display: flex; align-items: center; justify-content:center;">+</button>                  
                                    
@@ -195,7 +195,6 @@ function closePopProducto() {
   document.getElementById("popProducto").style.opacity = 0;
   document.getElementById("contadorProductos").style.visibility = "visible";
 }
-
 
 
 document.addEventListener('DOMContentLoaded',()=>{
