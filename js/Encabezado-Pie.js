@@ -1,4 +1,3 @@
-
 /*Encabezado*/
 // Es el elemento superiror el HTMLElement
 class encabezadoJs extends HTMLElement{
@@ -38,50 +37,48 @@ class encabezadoJs extends HTMLElement{
     <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
 
     <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
-    <!-- <div class=" hijo_2 col-xl-4 col-sm-2">  -->
      <div class=" hijo_2  col-sm-4 col-5">
-     </div>
-     <!-- contiene la barra de búsqueda -->
-   
-      <div class="hijo_3 col-xl-2 col-sm-2">
-        <form class="d-flex" role="search">
-          <div class="buscar">
-            <input type="text" placeholder="Buscar" required />
-            <div class="buscar-icon">
-              <i class="bi bi-search icon"></i>
-            </div>
+    </div>
+    <!-- contiene la barra de búsqueda -->
+
+    <div class="hijo_3 col-xl-2 col-sm-2">
+      <form class="d-flex" role="search">
+        <div class="buscar">
+          <input type="text" id="inputSearch" placeholder="Buscar">
+          <div class="buscar-icon">
+            <i class="bi bi-search icon" id="icon-search"></i>
           </div>
-        </form>
-      </div>
-      <!-- Se coloca imagen del login y carrito -->
-      <div class="hijo_4">
-        <a class="icono fa-solid fa-user-large" width="5px" href="./Login.html"></a>
-      </div>
-         <div class="Carrito-mini">
-            <ul style="list-style: none;">
-              <li class="submenu">
-                <a class="icono2 bi bi-cart4" href="./Carrito.html" width="5px"></a>
-                <div id="carrito">
-                  <table class="tablemini">
-                    <thead>
-                      <tr>
-                      <th style="width:40px"></th>
-                      <th style="width:40px">Producto</th>
-                      <th style="width:200px"></th>
-                      <th style="width:100px">Cantidad</th>
-                      </tr>
-                    </thead>
-                    <tbody style="width:400px" id="data2">
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-            </ul>
+        </div>
+      </form>
+    </div>
+    <!-- Se coloca imagen del login y carrito -->
+    <div class="hijo_4">
+      <a class="icono fa-solid fa-user-large" width="5px" href="./Login.html"></a>
+    </div>
+    <div class="Carrito-mini">
+      <ul style="list-style: none;">
+        <li class="submenu">
+          <a class="icono2 bi bi-cart4" href="./Carrito.html" width="5px"></a>
+          <div id="carrito">
+            <table class="tablemini">
+              <thead>
+                <tr>
+                  <th style="width:40px"></th>
+                  <th style="width:40px">Producto</th>
+                  <th style="width:200px"></th>
+                  <th style="width:100px">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody style="width:400px" id="data2"></tbody>
+            </table>
           </div>
-            <div class="contadormini">
-              <span id="data3">0</span>
-            </div>
-    
+        </li>
+      </ul>
+    </div>
+    <div class="contadormini">
+      <span id="data3">0</span>
+    </div>
+
   </div>
 </nav>
 <div class="p_logo">
@@ -93,7 +90,74 @@ class encabezadoJs extends HTMLElement{
   </div>
 </div>
 </header>
-`;
+
+<ul id="box-search">
+  <li>
+    <a href="./Productos.html">
+      <div class="T-img-p">
+        <i class="bi bi-search icon"></i>
+        <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" alt="" class="card-img"/> 
+        TABLETAS DENTALES 
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" alt="" class="card-img"/>
+         SÉRUM-UNISEX
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" alt="" class="card-img"/>
+        SHAMPOO DE MAR          
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" alt="" class="card-img"/>
+        CARBÓN ACTIVADO
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+      <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" alt="" class="card-img"/>
+      JABÓN FRUTOS ROJO  
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" alt="" class="card-img"/>
+        JABÓN DE HIERBA
+      </div>
+    </a>
+  </li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>SHAMPOO</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>JABÓN</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>CREMA</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PROTECTOR SOLAR</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PIEL</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>DIENTES</a></li>
+  <li><a href="./Register.html"><i class="bi bi-search icon"></i>RREGISTRO</a></li>
+  <li><a href="./ContactoP.html"><i class="bi bi-search icon"></i>CONTACTO</a></li>
+  <li><a href="./Blog.html"><i class="bi bi-search icon"></i>BLOG</a></li>
+  <li><a href="./Nosotros.html"><i class="bi bi-search icon"></i>NOSOTROS</a></li>
+</ul>
+<div id="cover-ctn-search"></div>`;
 }
 }
 // Imprime en el HTML definimos el elemento con window.customElements
@@ -194,3 +258,61 @@ class piedepaginaJs extends HTMLElement{
 
 window.customElements.define("piedepagina-js", piedepaginaJs);
 
+//Ejecutando funcion
+document.getElementById("icon-search").addEventListener("click",mostrar_busquedor);
+document.getElementById("cover-ctn-search").addEventListener("click",ocultar_buscador);
+
+//Buscador de contenido
+//Declarando variables
+// Esta es la linea para controlar el div que contiene al input de la barra de busqueda
+// bars_search=document.getElementById("ctn-bars-search");
+cover_ctn_buscar=document.getElementById("cover-ctn-search");
+inputSearch=document.getElementById("inputSearch");
+box_search=document.getElementById("box-search");
+
+//Funcion para mostrar lo buscado
+function mostrar_busquedor(){
+    cover_ctn_buscar.style.display="block";
+    inputSearch.focus();
+
+    if (inputSearch.value === ""){
+        box_search.style.display = "none";
+    }
+}
+
+//funcion para ocultar el buscador
+function ocultar_buscador(){
+    cover_ctn_buscar.style.display="none";
+    inputSearch.value="";
+    box_search.style.display = "none";
+    
+}
+
+// Creando filtrado de busqueda
+document.getElementById("inputSearch").addEventListener("keyup",buscador_interno);
+
+function buscador_interno(){
+
+    filter=inputSearch.value.toUpperCase();
+    li=box_search.getElementsByTagName("li");
+
+    //recorriendo elementos a filtrar mediante los "li"
+    for(let i=0;i<li.length;i++){
+        a = li[i].getElementsByTagName("a")[0];
+        textValue = a.textContent || a.innerText;
+        
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+
+            li[i].style.display = "";
+            box_search.style.display = "block";
+
+            if (inputSearch.value === ""){
+                box_search.style.display = "none";
+            }
+
+            
+        }else{
+            li[i].style.display = "none";
+        }
+    }
+}

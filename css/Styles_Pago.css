@@ -26,10 +26,10 @@ border:1px solid #8BC3A3;
 
 /* Send Button Styles */
 .form-btn {
-  width: 180px;
+  width: 80%;
   display: block;
   height: auto;
-  padding: 15px;
+  
   color: var(--salmon);
   border: 1px solid var(--salmon);
   background: white;

@@ -20,7 +20,7 @@ function guardar(usuario) {
         localStorage.setItem(llave, JSON.stringify(user));
     }
     console.log("valor de la llave " + llave)
-    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
+    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
     filtro(".categoria", llave)
 
     let filtroTodo = document.getElementById("filtroTodo");
@@ -67,8 +67,8 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
        
 
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"   id="${lista.id} > <span class="inf"> Ver rapido
-              </span> </button>
+                 <!-- <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"   id="${lista.id} > <span class="inf"> Ver rapido
+              </span> </button> -->
           </div>
       </div>
       </div>`;
@@ -131,8 +131,8 @@ function filtro2(id_Html_filtro, categoria, llave) {
          
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
       
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1"  id="${lista.id}  > <span class="inf"> Ver rapido
-                  </span> </button>
+             <!--     <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"  id="${lista.id}  > <span class="inf"> Ver rapido
+                  </span> </button> -->
           </div>
       </div>
       </div>`;
@@ -196,6 +196,9 @@ const addCarrito= e =>{
     if(e.target.classList.contains('agregar-carrito-producto')){    
         // console.log( e.target.parentElement)
         setCarrito(e.target.parentElement)
+        document.getElementById("popProducto").style.visibility = "visible";
+    document.getElementById("popProducto").style.opacity = 1;
+   
     }
  
 }
@@ -214,10 +217,10 @@ let setCarrito= objecto =>{
     if(carrito.hasOwnProperty(productoCarrito.id)){
         console.log("hola")
         productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+1
-
     }
     //Coleccion de datos, ... es una copia de productos spre operatio 
    
+     console.log(productoCarrito.cantidad)
     carrito[productoCarrito.id]={...productoCarrito}
     console.log(carrito)
     localStorage.setItem('carrito',JSON.stringify(carrito))
@@ -225,3 +228,116 @@ let setCarrito= objecto =>{
 
 
 
+
+function closePopProducto() {
+    document.getElementById("popProducto").style.visibility = "hidden";
+    document.getElementById("popProducto").style.opacity = 0;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+ let verRapido={}
+
+listaProducto.addEventListener('click',e=>{
+    verRapido1(e);
+})
+
+const verRapido1= e =>{
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if(e.target.classList.contains('verRapido')){    
+        console.log( e.target.parentElement)
+        setVerRapido(e.target.parentElement)
+    }
+ 
+}
+
+let setVerRapido= objecto =>{
+    console.log(objecto)    
+    const productoDescripcion={
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
+        precio: objecto.querySelector('.producto-precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),   
+        cantidad:1     
+    }
+    console.log(productoDescripcion);
+    verRapido[productoDescripcion.id]={...productoDescripcion}
+    localStorage.setItem('verRapido',JSON.stringify(verRapido))
+}
+document.addEventListener('DOMContentLoaded',()=>{
+    leer();
+ })
+
+
+function leer(){
+
+let productoLocal={}
+productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+// console.log(productoLocal)
+      tarjetaDinamicas(productoLocal);
+
+}
+
+
+const tarjetaDinamicas = data=>{
+    // console.log(data[1])
+   let datos="";
+    for (const carrito in data) {        
+            // console.log(data[carrito])
+        productoscarrito=data[carrito]
+        console.log(productoscarrito.nombre_producto)
+        // console.log(productoscarrito.descripcion)
+
+            datos+= 
+            `<tr class="mytr" id="fila${productoscarrito.id}">
+            <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+    <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
+    <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+            <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
+        </tr>
+          `;
+     }
+     document.getElementById('data2').innerHTML = datos;
+  
+}
+
+function eliminarFila(index) {
+    $("#fila" + index).remove();
+    console.log(index)
+    
+    eliminar(index);
+    contador(); 
+  }
+
+
+  
+function eliminar (index){
+    let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
+    for (let i =0; i< carritoPreEliminado; i++) {
+     
+        if (carritoPreEliminado.id == index) {
+            carritoPreEliminado.splice(i, 1);
+            console.log(carritoPreEliminado.splice(i, 1))
+        }
+    }
+
+    carritoPreEliminado = JSON.stringify(carritoPreEliminado);
+    localStorage.setItem("carrito", carritoPreEliminado);
+}
+
+function contador(){
+    productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+    console.log(productoLocal)
+    document.getElementById('data3').innerHTML = 7;
+
+ 
+}

@@ -63,7 +63,7 @@ function Productos(id_Html, parametro, columna, nproductos) {
       </div>`;
     }
     document.getElementById(id_Html).innerHTML = datos;
-    console.log(document.getElementById(id_Html).innerHTML = datos);
+    // console.log(document.getElementById(id_Html).innerHTML = datos);
 }
 
 // <button type="button" class="ver-button col-11 mx-auto p-1">Añadir al carrito</button>
