@@ -1,11 +1,10 @@
 console.log("Carrito.js");
-//const Clickbutton = document.querySelectorAll('.button')
-//const tbody = document.querySelector('.tbody')
+
 const listaProductos = document.querySelector('#list-carrito tbody');
-//let carrito = [];
+
 function limpiarTabla(){
 	document.getElementById('data').innerHTML = '';
-//	document.getElementById('data2').innerHTML = '';
+
 }
 function limpiarproducto(){
 }
@@ -16,127 +15,135 @@ function eliminarFila(index) {
   $("#fila" + index).remove();
 }
 
-function Obtenerdatoss() {
-    if ( localStorage.getItem("carrito") !== null   ) {
-  //    alert("si existe en localStorage!!");
-  //  let compra=localStorage.getItem("carrito");
-   // console.log(compra);
-    //compra=JSON.parse(compra);
-    console.log("Si existe");
-    
 
-  } 
-else if ( localStorage.getItem("carrito") === null   ) {
-    console.log("No existe");
-    limpiarTabla2();
-    }
 
-  else {
-    limpiarTabla();
-    console.log("No hay localStorage!!");
- //alert("No hay localStorage!!");
-}
 
-}
-function renderCarritolocalstorage(){
-  let carritoD;
 
-  if ( localStorage.getItem("carrito") === null   ) {
-    carritoD=[];
-   console.log("No existe");
-  }
-  else{
-    console.log("Si existe");
-  carritoD=JSON.parse(localStorage.getItem("carrito"));
-    leerenderCarrito(carritoD);
-  }
-  return carritoD;
-}
-function leerenderCarrito(){
-  let carritoD;
-  carritoD=JSON.parse(localStorage.getItem("carrito"));
-  console.log(carritoD);
-  carritoD.forEach(element => {
-  console.log(carritoD);
-  });
-}  
-extraerDatos();
-function extraerDatos(){
-    let productoLocal = JSON.parse(localStorage.getItem('productos'));
-    // for (let user of productoLocal) {
-    //     console.log(user)
-    // }
-    console.log(productoLocal.length)
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+  leer();
+})
+
+
+function leer(){
+
+let productoLocal={}
+productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+// console.log(productoLocal)
     tarjetaDinamicas(productoLocal);
-   
+    tarjetaDinamicas2(productoLocal);
+    tarjetaDinamicas3(productoLocal);
 }
 
 
+const tarjetaDinamicas2= data=>{
+  // console.log(data[1])
+ let datos="";
+  for (const carrito in data) {        
+          // console.log(data[carrito])
+      productoscarrito=data[carrito]
+      console.log(productoscarrito.nombre_producto)
+      // console.log(productoscarrito.descripcion)
+
+          datos+= 
+          `<tr class="mytr" id="fila${productoscarrito.id}">
+          <td><button value="Eliminar" style="font-size:30px;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+  <td><img class="img_carrito" src="${productoscarrito.url}"alt="Producto 1" /></td>
+  <td><p style="font-size:15px">${productoscarrito.nombre_producto}</p></td>
+  <td><span>${productoscarrito.precio}</span></td>
+          <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
+          <td><span>${productoscarrito.precio}</span></td>
+          </tr>
+
+</tfoot>
+        `;
+   }
+   document.getElementById('data').innerHTML = datos;
+   
+
+}
 
 
 
 
 const tarjetaDinamicas = data=>{
-    console.log(data)
-    data.forEach(productos => {
-        console.log(productos)
-        templateTarjeta.querySelector('.producto-precio').textContent = productos.nombre_producto
-        templateTarjeta.querySelector('.img-producto').setAttribute("src",productos.url)
-        templateTarjeta.querySelector('.img-producto').setAttribute("id",productos.id)
-        const clone = templateTarjeta.cloneNode(true)
-        fragmento.appendChild(clone)
-    });
-    items.appendChild(fragmento)   
+  // console.log(data[1])
+ let datos="";
+  for (const carrito in data) {        
+          // console.log(data[carrito])
+      productoscarrito=data[carrito]
+      console.log(productoscarrito.nombre_producto)
+      // console.log(productoscarrito.descripcion)
+
+          datos+= 
+          `<tr class="mytr" id="fila${productoscarrito.id}">
+          <td><button value="Eliminar" style="font-size:20px" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+  <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
+  <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+          <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
+      </tr>
+
+        `;
+   }
+   document.getElementById('data2').innerHTML = datos;
+
+
 }
 
-
-
-
-
-
-
-
-function apiUrl() {    
-
-  carrito=JSON.parse(localStorage.getItem('carrito'));
-//console.log(data.length);
-  }
+function eliminarFila(index) {
+  $("#fila" + index).remove();
+  console.log(index)
   
+  eliminar(index);
+  contador(); 
+}
 
-window.onload = function(){
-  const storage = JSON.parse(localStorage.getItem('carrito'));
-  if(storage){
-    carrito = storage;
+
+
+function eliminar (index){
+  let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
+  for (let i =0; i< carritoPreEliminado; i++) {
+   
+      if (carritoPreEliminado.id == index) {
+          carritoPreEliminado.splice(i, 1);
+          console.log(carritoPreEliminado.splice(i, 1))
+      }
   }
+
+  carritoPreEliminado = JSON.stringify(carritoPreEliminado);
+  localStorage.setItem("carrito", carritoPreEliminado);
 }
 
-function renderCarrito2(){
-  //
-  //let data=JSON.stringify(data3);
-  let carrito = JSON.parse(localStorage.getItem('carrito'));
-  console.log(carrito);
-let body = ''
-for (let i = 0; i < carrito.length; i++) {
-  body += 
-  `<tr class="mytr" id="fila${carrito.id}">
-        <td><button value="Eliminar" style="font-size:30px" class="bi bi-x buttonx" onclick="eliminarFila(${carrito.id})"></button></td>
-<td><img class="img_carrito" src="${carrito.url}"alt="Producto 1" /></td>
-<td>${carrito.nombre_producto}</td>
-        <td><span>${carrito.precio}<span></td>
-        <td><input class="input_carrito" type="number" min="1" max="${carrito.id}" value=${carrito.id}></td>
-        <td>$<span>60.00<span></td>
-    </tr>
-`
- // localStorage.setItem('data2', JSON.stringify(data));
+function contador(){
+  productoLocal = JSON.parse(localStorage.getItem('carrito'))  
+  console.log(productoLocal)
+  document.getElementById('data3').innerHTML = productoLocal.cantidad;
+
+
 }
-document.getElementById('data').innerHTML = body;
- }
 
 
 
+const tarjetaDinamicas3= data=>{
+  // console.log(data[1])
+ let datos="";
+  if (data !== null) {        
+          // console.log(data[carrito])
+      productoscarrito=data[carrito]
+      console.log(productoscarrito.nombre_producto)
+      // console.log(productoscarrito.descripcion)
 
+          datos+= 
+          `         <tr>
+          <td colspan="5" style="text-align:right">Total</td>
+          <td id="total">${productoscarrito.precio}</td>
+          </tr>
+          
+        `;
+        document.getElementById('datooo').innerHTML = datos;
+   }
+   
+   
 
-
-
-
-
+}

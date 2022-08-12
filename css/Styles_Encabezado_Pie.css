@@ -220,7 +220,10 @@ width: 240px;
     transform: translateX(-35px);
     padding: 12px;
 }
-
+/* .des-t{
+    border:2px solid red;
+    transform: translate(10px,15px);
+} */
 #box-search li a:hover{
     background: #f3f3f3;
 }
@@ -229,7 +232,8 @@ width: 240px;
     margin-right: 10px;
     color: #777777;
 }
-/*Pantalla negra*/
+
+/*Pantalla negra para busqueda*/
 #cover-ctn-search{
     width: 100%;
     height: 100%;
@@ -239,6 +243,19 @@ width: 240px;
     background: rgba(0,0,0,0.5);
     z-index: 20;
     display: none;
+}
+
+/*Imagen busqueda*/
+.T-img-p{
+    border:2px border red;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.T-img-p img{
+    width: 80px;
 }
 
 @media screen and (max-width: 1200px){

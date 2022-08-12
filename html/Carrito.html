@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito</title>
-    <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico">
+  <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/Styles.css">
@@ -16,7 +16,155 @@
 </head>
 
 <body>
-  <encabezado-js> </encabezado-js>
+  <header class="heder-statica">
+    <div class="background-container">
+      <div class="card-container glass-effect"></div>
+    </div>
+    <nav class="navbar navbar-expand-xl">
+      <!-- muestra el botón con tres rayitas del lado izquierdo -->
+      <div class="container-fluid padre" style="background-color: #cee5d0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Son los botones que te llevan a sus respectivas páginas como Producto, Nosotros y Blog-->
+        <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <ul class="navbar-nav me-auto col-xl-1 mb-lg-0"> -->
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./Nosotros.html">Nosotros</a>
+            </li>
+        </div>
+        <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
+
+        <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
+        <div class=" hijo_2  col-sm-4 col-5">
+        </div>
+        <!-- contiene la barra de búsqueda -->
+
+        <div class="hijo_3 col-xl-2 col-sm-2">
+          <form class="d-flex" role="search">
+            <div class="buscar">
+              <input type="text" id="inputSearch" placeholder="Buscar">
+              <div class="buscar-icon">
+                <i class="bi bi-search icon" id="icon-search"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Se coloca imagen del login y carrito -->
+        <div class="hijo_4">
+          <a class="icono fa-solid fa-user-large" width="5px" href="./Login.html"></a>
+        </div>
+        <div class="Carrito-mini">
+          <ul style="list-style: none;">
+            <li class="submenu">
+              <a class="icono2 bi bi-cart4" href="./Carrito.html" width="5px"></a>
+              <div id="carrito">
+                <table class="tablemini">
+                  <thead>
+                    <tr>
+                      <th style="width:40px"></th>
+                      <th style="width:40px">Producto</th>
+                      <th style="width:200px"></th>
+                      <th style="width:100px">Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody style="width:400px" id="data2"></tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="contadormini">
+          <span id="data3">0</span>
+        </div>
+
+      </div>
+    </nav>
+    <div class="p_logo">
+      <div class="h_logo">
+        <a href="../Index.html">
+          <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
+            title="Logo_Musaraña" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <ul id="box-search">
+    <li>
+      <a href="./Productos.html">
+        <div class="T-img-p">
+          <i class="bi bi-search icon"></i>
+          <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" alt="" class="card-img" />
+          TABLETAS DENTALES
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="./Productos.html">
+        <i class="bi bi-search icon"></i>
+        <div class="T-img-p">
+          <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" alt="" class="card-img" />
+          SÉRUM-UNISEX
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="./Productos.html">
+        <i class="bi bi-search icon"></i>
+        <div class="T-img-p">
+          <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" alt="" class="card-img" />
+          SHAMPOO DE MAR
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="./Productos.html">
+        <i class="bi bi-search icon"></i>
+        <div class="T-img-p">
+          <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" alt="" class="card-img" />
+          CARBÓN ACTIVADO
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="./Productos.html">
+        <i class="bi bi-search icon"></i>
+        <div class="T-img-p">
+          <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" alt="" class="card-img" />
+          JABÓN FRUTOS ROJO
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="./Productos.html">
+        <i class="bi bi-search icon"></i>
+        <div class="T-img-p">
+          <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" alt="" class="card-img" />
+          JABÓN DE HIERBA
+        </div>
+      </a>
+    </li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>SHAMPOO</a></li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>JABÓN</a></li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>CREMA</a></li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PROTECTOR SOLAR</a></li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PIEL</a></li>
+    <li><a href="./Productos.html"><i class="bi bi-search icon"></i>DIENTES</a></li>
+    <li><a href="./Register.html"><i class="bi bi-search icon"></i>RREGISTRO</a></li>
+    <li><a href="./ContactoP.html"><i class="bi bi-search icon"></i>CONTACTO</a></li>
+    <li><a href="./Blog.html"><i class="bi bi-search icon"></i>BLOG</a></li>
+    <li><a href="./Nosotros.html"><i class="bi bi-search icon"></i>NOSOTROS</a></li>
+  </ul>
+  <div id="cover-ctn-search"></div>
   <main class="main">
 
     <div class="div_carrito">
@@ -31,15 +179,12 @@
             <th style="width:15%">Total</th>
           </tr>
         </thead>
-         <tbody id="dat"></tbody>
-          <tfoot id="datoo">          <tr>
-             <td colspan="5" style="text-align:right">Total</td>
-             <td id="total"></td>
-           </tr>
-          </tfoot>
+        <tbody id="data"></tbody>
+        <tfoot id="datoo">
+        </tfoot>
       </table>
     </div>
-    
+
 
 
 
@@ -55,15 +200,15 @@
 
 
 
-</main>
-<input name="nomPag" id="nomPag" type="hidden" value="carrito" />
-    <piedepagina-js>
-    </piedepagina-js>
-      <!--script src="../js/Carrito.js"></script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/Carrito.js"></script>
-    <script src="../js/Encabezado-Pie.js"></script>
-    <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
+  </main>
+  <input name="nomPag" id="nomPag" type="hidden" value="carrito" />
+  <piedepagina-js>
+  </piedepagina-js>
+  <!--script src="../js/Carrito.js"></script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/Carrito.js"></script>
+  <script src="../js/Encabezado-Pie.js"></script>
+  <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

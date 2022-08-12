@@ -1,12 +1,12 @@
 .img_carrito{
 width: 250px;
-height: 152px;
+height: 182px;
 border-radius: 25px;
 position: left;
 }
 .img_carrito2{
 width: 50px;
-height: 50px;
+height: 50px !important;
 border-radius: 10px;
 position: left;
 }

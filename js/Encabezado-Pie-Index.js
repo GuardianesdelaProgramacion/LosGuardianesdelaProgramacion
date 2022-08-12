@@ -9,7 +9,7 @@ class encabezadoJs extends HTMLElement{
 
     connectedCallback(){
         this.innerHTML =
-`    <header class="heder-statica">
+` <header class="heder-statica">
 <div class="background-container">
   <div class="card-container glass-effect"></div>
 </div>
@@ -71,7 +71,6 @@ class encabezadoJs extends HTMLElement{
               </thead>
               <tbody style="width:400px" id="data2"></tbody>
             </table>
-            <a href="#" onclick="limpiarTabla2()" id="vaciar" style="color: black;">vaciar carrito</a>
           </div>
         </li>
       </ul>
@@ -93,18 +92,71 @@ class encabezadoJs extends HTMLElement{
 </header>
 
 <ul id="box-search">
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Shampoo</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Jabón</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Serum</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Crema</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Protector Solar</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Piel</a></li>
-  <li><a href="./html/Productos.html"><i class="bi bi-search icon"></i>Dientes</a></li>
-  <li><a href="./html/Register.html"><i class="bi bi-search icon"></i>Registro</a></li>
-  <li><a href="./html/ContactoP.html"><i class="bi bi-search icon"></i>Contacto</a></li>
-  <li><a href="./html/Blog.html"><i class="bi bi-search icon"></i>Blog</a></li>
+  <li>
+    <a href="./html/Productos.html">
+      <div class="T-img-p">
+        <i class="bi bi-search icon"></i>
+        <img src="https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png" alt="" class="card-img"/> 
+        TABLETAS DENTALES 
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./html/Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png" alt="" class="card-img"/>
+         SÉRUM-UNISEX
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./html/Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png" alt="" class="card-img"/>
+        SHAMPOO DE MAR          
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./html/Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png" alt="" class="card-img"/>
+        CARBÓN ACTIVADO
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./html/Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+      <img src="https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png" alt="" class="card-img"/>
+      JABÓN FRUTOS ROJO  
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="./html/Productos.html">
+      <i class="bi bi-search icon"></i>
+      <div class="T-img-p">
+        <img src="https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png" alt="" class="card-img"/>
+        JABÓN DE HIERBA
+      </div>
+    </a>
+  </li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>SHAMPOO</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>JABÓN</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>CREMA</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PROTECTOR SOLAR</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>PIEL</a></li>
+  <li><a href="./Productos.html"><i class="bi bi-search icon"></i>DIENTES</a></li>
+  <li><a href="./html/Register.html"><i class="bi bi-search icon"></i>RREGISTRO</a></li>
+  <li><a href="./html/ContactoP.html"><i class="bi bi-search icon"></i>CONTACTO</a></li>
+  <li><a href="./html/Blog.html"><i class="bi bi-search icon"></i>BLOG</a></li>
+  <li><a href="./html/Nosotros.html"><i class="bi bi-search icon"></i>NOSOTROS</a></li>
 </ul>
-
 <div id="cover-ctn-search"></div>`;
 }
 }
@@ -200,8 +252,7 @@ class piedepaginaJs extends HTMLElement{
   </div>
 </footer>`;
 }
-}
-
+} 
 window.customElements.define("piedepagina-js", piedepaginaJs);
 
 //Ejecutando funcion
