@@ -26,7 +26,7 @@
             {
                 "id": 3,
                 "nombre_producto": "SHAMPOO DE ROMERO",
-                "precio": "70.00",
+                "precio": "$70.00",
                 "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/mqHGPTy/cinthia-14.png",
                 "seccion":"catálogo",
@@ -35,7 +35,7 @@
             {
                 "id": 4,
                 "nombre_producto": "SHAMPOO DE ESENCIA CAFÉ",
-                "precio": "70.00",
+                "precio": "$70.00",
                 "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/qF1D64p/cinthia-11.png",
                 "seccion":"catálogo",
@@ -44,7 +44,7 @@
             {
                 "id": 5,
                 "nombre_producto": "SHAMPOO DE FRUTOS ROJOS",
-                "precio": "70.00",
+                "precio": "$70.00",
                 "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/w7KrDtS/cinthia-7.png",
                 "seccion":"catálogo",
@@ -53,7 +53,7 @@
             {
                 "id": 6,
                 "nombre_producto": "SHAMPOO DE LAVANDA",
-                "precio": "70.00",
+                "precio": "$70.00",
                 "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/Drbnk9n/cinthia-4.png",
                 "seccion":"catálogo",
@@ -62,7 +62,7 @@
             {
                 "id": 7,
                 "nombre_producto": "SHAMPOO DE ROSAS",
-                "precio": "70.00",
+                "precio": "$70.00",
                 "descripcion": "La sonrisa es la mejor respuesta para una mirada",
                 "url": "https://i.ibb.co/TK7241j/cinthia-12.png",
                 "seccion":"catálogo",
