@@ -198,7 +198,7 @@ const addCarrito= e =>{
         setCarrito(e.target.parentElement)
         document.getElementById("popProducto").style.visibility = "visible";
     document.getElementById("popProducto").style.opacity = 1;
-    document.getElementById("contadorProductos").style.visibility = "hidden";
+   
     }
  
 }
@@ -232,7 +232,7 @@ let setCarrito= objecto =>{
 function closePopProducto() {
     document.getElementById("popProducto").style.visibility = "hidden";
     document.getElementById("popProducto").style.opacity = 0;
-    document.getElementById("contadorProductos").style.visibility = "visible";
+   
   }
 
 
