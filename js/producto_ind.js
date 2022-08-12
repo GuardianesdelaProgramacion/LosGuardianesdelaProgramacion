@@ -42,13 +42,13 @@ function descripcion2(id, id_producto) {
                     <input type="radio" name="rating" id="1${lista.nombre_producto}">
                     <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
                     </div>
-                    <select name="presentacion" id="presentacion"
+                   <!-- <select name="presentacion" id="presentacion"
                     style="border-radius: 8px; border: 1px solid var(--salmon); width: 25%; height: 30px; background-color: none; "
                     class="my-3 ">
                     <option disabled selected>Tamaño </option>
                     <option value="1">Chico</option>
                     <option value="2">Grande</option>
-                    </select> 
+                    </select> -->
                     
                     <div class="row" id="padreContadorProductos">
                   
@@ -71,7 +71,6 @@ function descripcion2(id, id_producto) {
   // console.log(datos)
   document.getElementById(id).innerHTML = datos;
 }
-
 
 
 
@@ -143,7 +142,9 @@ const addCarrito = e => {
     // if () {
     console.log("hola")
     setCarrito(e.target.parentElement.parentElement.parentElement.parentElement.parentElement)
-
+    document.getElementById("popProducto").style.visibility = "visible";
+    document.getElementById("popProducto").style.opacity = 1;
+    document.getElementById("contadorProductos").style.visibility = "hidden";
     // }
   }
 
@@ -154,16 +155,18 @@ const addCarrito = e => {
 
 let setCarrito = objecto => {
   console.log(objecto)
-  if (document.getElementById("contadorProductos").value > 0) {
+  if (document.getElementById("contadorProductos").value > 0 ) {
     let contadorProductos = parseInt(document.getElementById("contadorProductos").value)
     console.log(contadorProductos)
+   
 
+  
     const productoCarrito = {
       id: objecto.querySelector('.click').getAttribute("id"),
       nombre_producto: objecto.querySelector('.producto-nombre').textContent,
       precio: objecto.querySelector('.producto-precio').textContent,
       url: objecto.querySelector('.click').getAttribute("src"),
-      cantidad: contadorProductos
+      cantidad: contadorProductos    
     }
     // console.log(productoCarrito);
 
@@ -183,6 +186,14 @@ let setCarrito = objecto => {
     alert("El valor debe de ser superior a 1");
     document.getElementById("contadorProductos").value = 1
   }
+}
+
+
+
+function closePopProducto() {
+  document.getElementById("popProducto").style.visibility = "hidden";
+  document.getElementById("popProducto").style.opacity = 0;
+  document.getElementById("contadorProductos").style.visibility = "visible";
 }
 
 

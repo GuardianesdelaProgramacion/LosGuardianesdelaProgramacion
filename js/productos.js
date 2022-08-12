@@ -67,8 +67,8 @@ function Productos(id_Html, parametro, columna, nproductos) {
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
        
 
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"   id="${lista.id} > <span class="inf"> Ver rapido
-              </span> </button>
+                 <!-- <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"   id="${lista.id} > <span class="inf"> Ver rapido
+              </span> </button> -->
           </div>
       </div>
       </div>`;
@@ -131,8 +131,8 @@ function filtro2(id_Html_filtro, categoria, llave) {
          
           <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
       
-                  <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"  id="${lista.id}  > <span class="inf"> Ver rapido
-                  </span> </button>
+             <!--     <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"  id="${lista.id}  > <span class="inf"> Ver rapido
+                  </span> </button> -->
           </div>
       </div>
       </div>`;
@@ -196,6 +196,9 @@ const addCarrito= e =>{
     if(e.target.classList.contains('agregar-carrito-producto')){    
         // console.log( e.target.parentElement)
         setCarrito(e.target.parentElement)
+        document.getElementById("popProducto").style.visibility = "visible";
+    document.getElementById("popProducto").style.opacity = 1;
+    document.getElementById("contadorProductos").style.visibility = "hidden";
     }
  
 }
@@ -226,6 +229,11 @@ let setCarrito= objecto =>{
 
 
 
+function closePopProducto() {
+    document.getElementById("popProducto").style.visibility = "hidden";
+    document.getElementById("popProducto").style.opacity = 0;
+    document.getElementById("contadorProductos").style.visibility = "visible";
+  }
 
 
 
