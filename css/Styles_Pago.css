@@ -13,7 +13,9 @@
     transition: all 0.4s;
     border-radius: 8px; */
 }
-
+.mytr1{
+  border-bottom: 1px solid #ccc;
+}
 /* .posicion:hover{
 border:1px solid #8BC3A3;
 }
@@ -146,7 +148,20 @@ border:1px solid #8BC3A3;
     width: 70%;
   }
 }
+/*Responsivo*/
+@media screen and (max-width: 770px) {
+  .hi-1{
+    order: 2;
+  }
+  .hi-2{
+    order: 1;
+  }
 
+  .hi-3{
+    order: 3;
+  }
+  
+}
 .accordion-button:not(.collapsed) {
   color: black;
   background-color: var(--verdeClaro);
