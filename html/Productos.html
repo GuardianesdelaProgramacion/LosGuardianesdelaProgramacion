@@ -11,51 +11,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-        <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico" />   
+    <link rel="icon" type="image/jpg" href="../assets/icons/favicon.ico" />
     <title>Productos | Musaraña</title>
 </head>
 
 <body>
     <encabezado-js>
     </encabezado-js>
-   
+    <!-- Modal -->
+    <div class="modal fade" id="ModalProducto" tabindex="-1" aria-labelledby="ModalProductoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-descripcion" id="ModalProducto1">
+            </div>
+        </div>
+    </div>
 
-    <main class="main" id="rescribir" >
+    <main class="main" id="rescribir">
 
-       
-        <!-- <h1 Class="text-center" id="tituloProducto">PRODUCTOS</h1> -->
-        <!-- menu de categorias de productos -->
-        <section >
-            <div class="container" >
-                <div class="row">
-                    <div class="col-12  mb-2">
-                        <!-- <div class="text-center"> -->
-                            <h2 id="tituloProducto">PRODUCTOS</h2>
-                        <!-- </div> -->
-                    </div>
+        <!-- Menu de las categorías de los productos-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12  mb-2">
+                    <h2 id="tituloProducto">PRODUCTOS</h2>
                 </div>
             </div>
+        </div>
 
-            <div>
-                <div class="text-center menu-categoria">
-                    <button class="btn " id=filtroTodo >TODOS</button>
-                    <button class="btn  categoria" id="cuerpo"  class="clickP" >CUERPO</button>
-                    <button class="btn  categoria" id="cabello" class="clickP">CABELLO</button>                   
-                    <button class="btn  categoria" id="crema" class="clickP">CREMAS</button>
-                    <button class="btn  categoria" id="proteccion" class="clickP">PROTECCIÓN</button>
-                    <!-- <button class="btn  categoria" id="tableta" class="clickP" >TABLETA</button>
-                    <button class="btn  categoria" id="suero" class="clickP">SUERO</button> -->
-                </div>
-            </div>         
-        </section>     
+        <div>
+            <div class="text-center menu-categoria">
+                <button class="btn " id=filtroTodo>TODOS</button>
+                <button class="btn  categoria" id="cuerpo" class="clickP">CUERPO</button>
+                <button class="btn  categoria" id="cabello" class="clickP">CABELLO</button>
+                <button class="btn  categoria" id="crema" class="clickP">CREMAS</button>
+                <button class="btn  categoria" id="proteccion" class="clickP">PROTECCIÓN</button>
+            </div>
+        </div>
+        </section>
 
-     
+
         <!-- Catalogo de productos se hace de manera dinamica con javacrip-->
         <div class="container  " id="lista-productos">
             <div class="row justify-content-center" id="Tarjetas-js">
             </div>
         </div>
 
+
+
+        <!-- Pop que señala agregar a carrito -->
         <div id="popProducto" class="overlay-pago">
             <div class="popup-pago">
                 <a class="close" href="#" onclick="closePopProducto()">&times;</a>
@@ -65,15 +67,31 @@
             </div>
         </div>
 
-         
+
+        <!-- Estructura de las cartas de los productos-->
+        <template id="template-tarjeta">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
+                <div class="card tarjeta-producto border-0">
+                    <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
+                    <img src=${lista.url} class="producto-card-imagen click" id="${lista.id}" alt="...">
+                    <span class="producto_nombre text-center">${lista.precio}</span>
+                    <span class="producto_precio text-center">${lista.precio}</span>
+                    <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
+                        al carrito</button>
+                    <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido" id="${lista.id} "> Ver
+                        rapido </button>
+                </div>
+            </div>
+        </template>
+
     </main>
 
 
     <piedepagina-js>
     </piedepagina-js>
 
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/Encabezado-Pie.js"></script>
     <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -83,6 +101,6 @@
     <script src="https://kit.fontawesome.com/a6209afd78.js" crossorigin="anonymous"></script>
     <script src="../js/productos.js"></script>
 </body>
-</html>
 
+</html>
 
