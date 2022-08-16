@@ -1,161 +1,114 @@
-console.log("Archivo js de productos");
-api("../assets/json/productos.json");
-//Funcion para obtner los datos de json
+console.log("LOS GUARDINES DE LA PROGRAMCIÓN");
+/**Obtener los datos realizando una petición de fetch******************************************************************************************************************************************************** */
+
+api("../assets/json/productos2.json");
+let producto;
 function api(url) {
     fetch(url)
         .then((responseJSON) => {
             return responseJSON.json();
         })
-        .then(usuario => {
-            guardar(usuario.data.data)
+        .then(productos => {
+            if (localStorage.getItem('producto')) {
+                producto = JSON.parse(localStorage.getItem('producto'));
+                console.log("Linea 13 productos de local");
+                tarjetaD(producto)
+                let filtroTodo = document.getElementById("filtroTodo");
+                filtroTodo.addEventListener('click', filtrotodo, true);
+                function filtrotodo() {
+                    return tarjetaD(producto)
+                }
+            }
+
+            else {
+                console.log("Linea19");
+                guardar(productos.data);
+            }
         }
         )
 }
 
-//Funcion para guardar los datos en la localStorage
-function guardar(usuario) {
-    let llave;
-    for (let user of usuario) {
-        llave = JSON.stringify(user.id)
-        localStorage.setItem(llave, JSON.stringify(user));
-    }
-    console.log("valor de la llave " + llave)
-    Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">',llave);
-    filtro(".categoria", llave)
-
+/**Guardar los datos********************************************************************************************************************************************************* */
+/**
+ * Funcion para guardar los datos en la localStorage
+ * @param {*} datos Datos del json que fueron traidos de Fetch
+ */
+const guardar = datos => {
+    localStorage.setItem('producto', JSON.stringify(datos))
+    console.log("Datos de json ")
+    tarjetaD(datos)
     let filtroTodo = document.getElementById("filtroTodo");
     filtroTodo.addEventListener('click', filtrotodo, true);
-
     function filtrotodo() {
-        return Productos("Tarjetas-js", "catálogo", '<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">', llave);
+        return tarjetaD(producto)
     }
 }
 
-/**
- * Funcion para imprimir en el html de forma dinamica los productos
- * @param {*} id_Html El id de la etiqueta del HTML en donde se va a inserta las nuevas etiquetas
- * @param {*} parametro EL clave que queremos obtener en este caso queremos queremos que se muestren todas las categorias
- * @param {*} columna El primer div en donde aparece la clases bootstrap para hacerlo responsivo
- * @param {int} nproductos
- */
-function Productos(id_Html, parametro, columna, nproductos) {
+/**Tarjetas dinamicas********************************************************************************************************************************************************* */
+const tarjetaD = (data) => {
     let datos = "";
-    for (let i = 1; i <= nproductos; i++) {
-        let lista = JSON.parse(localStorage.getItem(i));
-        // if (lista != undefined || null); {    
-        if (lista.seccion == parametro) {
-            datos +=
-                `${columna}
-      <div class="card tarjeta-producto border-0">
-          <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-          <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
-          <span class="producto-nombre text-center">${lista.nombre_producto}</span>
-         <!-- <div class="rating-container">
-          <input type="radio" name="rating" id="5${lista.nombre_producto}">
-          <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="4${lista.nombre_producto}">
-          <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="3${lista.nombre_producto}">
-          <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="2${lista.nombre_producto}">
-          <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="1${lista.nombre_producto}">
-          <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          </div> -->
-          <span class="producto-precio text-center">${lista.precio}</span>
-           
-          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
-       
-
-                 <!-- <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"   id="${lista.id} > <span class="inf"> Ver rapido
-              </span> </button> -->
-          </div>
-      </div>
-      </div>`;
-        }
-        // }
-    }
-    document.getElementById(id_Html).innerHTML = datos;
+    data.forEach(productos => {
+        datos +=
+            `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
+                <div class="card tarjeta-producto border-0">
+                    <img src=${productos.url} class="producto-card-imagen click" id="${productos.id}" alt="...">
+                    <span class="producto_nombre text-center">${productos.nombre_producto}</span>
+                    <span class="producto_precio text-center">${productos.precio}</span>
+                    <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
+                            al carrito</button>
+                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productos.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                            rapido </button>
+                </div>
+                </div>`
+    });
+    document.getElementById("Tarjetas-js").innerHTML = datos;
     document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
+
     descripcion(".click")
 }
 
 
+/**Filtro de productos********************************************************************************************************************************************************* */
+const main = document.getElementById('rescribir')
 
-/**
- * Funcion para busacar los id de los html de cada categoria y manda a una funcion para filtrar los productos
- * @param {*} clase_categoria La clase de los botones de las categorias de los productos para buscar su id en el html
- * @param {*} llave 
- */
+main.addEventListener('click', e => {
+    prefiltro(e);
+})
 
-function filtro(clase_categoria, llave) {
-    let id;
-    document.querySelectorAll(clase_categoria).forEach(el => {
-        el.addEventListener("click", e => {
-            id_categoria = e.target.getAttribute("id");
-            filtro2("Tarjetas-js", id_categoria, llave)
-            return id;
-        });
+const prefiltro = e => {
+    if (e.target.classList.contains('categoria')) {
+        id_categoria = e.target.getAttribute("id")
+        // console.log(id_categoria)
+        producto = JSON.parse(localStorage.getItem('producto'));
+        filtro(producto, id_categoria)
+    }
+}
+
+const filtro = (data, id_categoria) => {
+    let datos = "";
+    data.forEach(productos => {
+        if (productos.categoria == id_categoria) {
+            datos +=
+                `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
+                <div class="card tarjeta-producto border-0">
+                    <img src=${productos.url} class="producto-card-imagen click" id="${productos.id}" alt="...">
+                    <span class="producto_nombre text-center">${productos.nombre_producto}</span>
+                    <span class="producto_precio text-center">${productos.precio}</span>
+                    <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
+                            al carrito</button>
+                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productos.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                            rapido </button>
+                </div>
+                </div>`
+        }
+        document.getElementById("Tarjetas-js").innerHTML = datos;
+        document.getElementById("tituloProducto").innerHTML = id_categoria.toUpperCase();
+
+        descripcion(".click")
     });
 }
 
-/**
- * 
- * @param {*} id_Html_filtro El id de la etiqueta del HTML en donde se va a inserta las nuevas etiquetas de los nuevos productos segun la categoria
- * @param {*} categoria La categoria que se va filtrar
- * @param {*} llave 
- */
-function filtro2(id_Html_filtro, categoria, llave) {
-    let datos = "";
-    for (let i = 1; i <= llave; i++) {
-        lista = JSON.parse(localStorage.getItem(i));
-        if (lista.categoria == categoria) {
-            datos +=
-                `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
-      <div class="card tarjeta-producto border-0">
-          <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="...">
-          <span class="producto-nombre text-center " >${lista.nombre_producto}</span>
-       <!--   <div class="rating-container">
-          <input type="radio" name="rating" id="5${lista.nombre_producto}">
-          <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="4${lista.nombre_producto}">
-          <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="3${lista.nombre_producto}">
-          <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="2${lista.nombre_producto}">
-          <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          <input type="radio" name="rating" id="1${lista.nombre_producto}">
-          <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-          </div> -->
-          <span class="producto-precio text-center">${lista.categoria}</span>
-         
-          <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir al carrito</button>
-      
-             <!--     <button type="button" class="ver-button col-10 mx-auto m-2 p-1 verRapido"  id="${lista.id}  > <span class="inf"> Ver rapido
-                  </span> </button> -->
-          </div>
-      </div>
-      </div>`;
-        }
-    }
-    document.getElementById(id_Html_filtro).innerHTML = datos;
-    document.getElementById("tituloProducto").innerHTML = categoria.toUpperCase();
-    descripcion(".click")
-
-
-    
-    
-
-
-
-
-
-}
-
-/**
- * Funcion para buscar el id del la imagene seleccionada y mandarlo a la pagina de producto de los detalles
- * @param {*} clase La clase de las imagnes de los productos para buscar su id en el html
- */
+/**Descripcion de productos********************************************************************************************************************************************************* */
 
 function descripcion(clase) {
     document.querySelectorAll(clase).forEach(el => {
@@ -164,180 +117,221 @@ function descripcion(clase) {
             console.log("El id del producto " + id)
             let id_descripcion = { "id_descrip": id };
             localStorage.setItem("id_descrip", JSON.stringify(id_descripcion));
-            // envio();
-            // function envio() {
-            location.href = "Producto_detalles.html?" + id;
-            // }
+            envio();
+            function envio() {
+                location.href = "Producto_detalles.html?" + id;
+            }
             return id;
         });
     });
 }
 
 
+const listaProducto = document.getElementById('lista-productos')
 
+//**Descripcion de productos ventana modal********************************************************************************************************************************************************* */
 
-const listaProducto=document.getElementById('lista-productos')
-let carrito={}
-if(localStorage.getItem('carrito')){
-    carrito=JSON.parse(localStorage.getItem('carrito'))
+listaProducto.addEventListener('click', e => {
+    verRapido1(e);
+})
+
+const verRapido1 = e => {
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if (e.target.classList.contains('verRapido')) {
+        // console.log(e.target.parentElement)
+        url = document.querySelector("img").getAttribute("src")
+        nombre = e.target.parentElement.querySelector('.producto_nombre').textContent
+        precio = e.target.parentElement.querySelector('.producto_precio').textContent
+        id = e.target.getAttribute("id")
+        let modalP = JSON.parse(localStorage.getItem('producto'))
+        modalProductos(modalP, id);
+    }
+
 }
 
+function modalProductos(data, id) {
+    let datos = "";
+    for (const producto in data) {
+        let productos = data[producto]
+        if (productos.id == id) {
 
+            datos += `  
+     <div>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+     </div>
+     <div class="modal-body">
+         <div class="quickview_body">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-12 col-lg-6 imagen-ind">
+                         <img src=${productos.url} class="img-ind modal-img" alt="">
+                     </div>
+                     <div class="col-12 col-lg-6  descripcion2">
+                         <div>
+                             <h1 class="producto-nombre-ind">${productos.nombre_producto}</h2>
+                             <span class="producto-precio-ind">${productos.precio}</span>
+                             <p class="descripcion1 mt-2 mb-2">${productos.descripcion}</p>                                                         
+                           </div>                
+                         <div class="share_wf mt-30">
+                             <p>Musaraña</p>
+                             <div class="_icon">
+                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                 <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>`;
+        }
+    }
+    document.getElementById('ModalProducto1').innerHTML = datos;
+}
 
+/**AgregarProducto a la local********************************************************************************************************************************************************* */
+let carrito = {}
 
-
-listaProducto.addEventListener('click',e=>{
+listaProducto.addEventListener('click', e => {
     addCarrito(e);
 })
 
-const addCarrito= e =>{
+const addCarrito = e => {
     // console.log(e.target);
     // console.log(e.target.classList.contains('agregar-carrito-producto'))
-    if(e.target.classList.contains('agregar-carrito-producto')){    
+    if (e.target.classList.contains('agregar-carrito-producto')) {
         // console.log( e.target.parentElement)
+
         setCarrito(e.target.parentElement)
         document.getElementById("popProducto").style.visibility = "visible";
-    document.getElementById("popProducto").style.opacity = 1;
-   
+        document.getElementById("popProducto").style.opacity = 1;
+        leer();
+        // contador();
+
     }
- 
+
 }
 
-let setCarrito= objecto =>{
+let setCarrito = objecto => {
     // console.log(objecto)    
-    const productoCarrito={
+    const productoCarrito = {
         id: objecto.querySelector('.click').getAttribute("id"),
-        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
-        precio: objecto.querySelector('.producto-precio').textContent,
-        url: objecto.querySelector('.click').getAttribute("src"),   
-        cantidad:1     
+        nombre_producto: objecto.querySelector('.producto_nombre').textContent,
+        precio: objecto.querySelector('.producto_precio').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),
+        cantidad: 1
     }
     // console.log(productoCarrito);
-    
-    if(carrito.hasOwnProperty(productoCarrito.id)){
-        console.log("hola")
-        productoCarrito.cantidad= carrito[productoCarrito.id].cantidad+1
+  
+
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        console.log("hay información")
+        console.log(carrito)
     }
+    else {
+        console.log("no hay")
+        console.log(carrito)
+        carrito = {}
+    }
+
+  if (carrito.hasOwnProperty(productoCarrito.id)) {
+        // console.log("hola")
+        productoCarrito.cantidad = carrito[productoCarrito.id].cantidad + 1
+    }
+
     //Coleccion de datos, ... es una copia de productos spre operatio 
-   
-     console.log(productoCarrito.cantidad)
-    carrito[productoCarrito.id]={...productoCarrito}
-    console.log(carrito)
-    localStorage.setItem('carrito',JSON.stringify(carrito))
+    // console.log(productoCarrito.cantidad)
+    carrito[productoCarrito.id] = { ...productoCarrito }
+    // console.log(carrito)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
-
-
 
 
 function closePopProducto() {
     document.getElementById("popProducto").style.visibility = "hidden";
     document.getElementById("popProducto").style.opacity = 0;
-   
-  }
 
+}
 
-
-
-
-
-
-
-
-
- let verRapido={}
-
-listaProducto.addEventListener('click',e=>{
-    verRapido1(e);
+/**Carrito********************************************************************************************************************************************************* */
+document.addEventListener('DOMContentLoaded', () => {
+    leer();
 })
 
-const verRapido1= e =>{
-    // console.log(e.target);
-    // console.log(e.target.classList.contains('agregar-carrito-producto'))
-    if(e.target.classList.contains('verRapido')){    
-        console.log( e.target.parentElement)
-        setVerRapido(e.target.parentElement)
-    }
- 
-}
 
-let setVerRapido= objecto =>{
-    console.log(objecto)    
-    const productoDescripcion={
-        id: objecto.querySelector('.click').getAttribute("id"),
-        nombre_producto: objecto.querySelector('.producto-nombre').textContent,
-        precio: objecto.querySelector('.producto-precio').textContent,
-        url: objecto.querySelector('.click').getAttribute("src"),   
-        cantidad:1     
-    }
-    console.log(productoDescripcion);
-    verRapido[productoDescripcion.id]={...productoDescripcion}
-    localStorage.setItem('verRapido',JSON.stringify(verRapido))
-}
-document.addEventListener('DOMContentLoaded',()=>{
-    leer();
- })
+function leer() {
 
-
-function leer(){
-
-let productoLocal={}
-productoLocal = JSON.parse(localStorage.getItem('carrito'))  
-// console.log(productoLocal)
-      tarjetaDinamicas(productoLocal);
-
+    let productoLocal = {}
+    productoLocal = JSON.parse(localStorage.getItem('carrito'))
+    // console.log(productoLocal)
+    tarjetaDinamicas(productoLocal);
+    contador(productoLocal);
 }
 
 
-const tarjetaDinamicas = data=>{
+const tarjetaDinamicas = data => {
     // console.log(data[1])
-   let datos="";
-    for (const carrito in data) {        
-            // console.log(data[carrito])
-        productoscarrito=data[carrito]
-        console.log(productoscarrito.nombre_producto)
-        // console.log(productoscarrito.descripcion)
+    let datos = "";
+    for (const carrito in data) {
+        productoscarrito = data[carrito]
 
-            datos+= 
+        datos +=
             `<tr class="mytr" id="fila${productoscarrito.id}">
-            <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
-    <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
-    <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
-            <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
-        </tr>
-          `;
-     }
-     document.getElementById('data2').innerHTML = datos;
-  
+        <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+        <td><img style="width: 120px;" src="${productoscarrito.url}" alt="Producto 1" /></td>
+        <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+        <td><p style="font-size:12px">${productoscarrito.cantidad}</p></td>
+        <!-- <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td> -->
+    </tr>
+    `;
+    }
+    document.getElementById('data2').innerHTML = datos;
 }
+
+
+///eliminarProducto 
 
 function eliminarFila(index) {
     $("#fila" + index).remove();
-    console.log(index)
-    
-    eliminar(index);
-    contador(); 
-  }
-
-
-  
-function eliminar (index){
+    // console.log(index)
     let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
-    for (let i =0; i< carritoPreEliminado; i++) {
-     
-        if (carritoPreEliminado.id == index) {
-            carritoPreEliminado.splice(i, 1);
-            console.log(carritoPreEliminado.splice(i, 1))
+    eliminar(carritoPreEliminado, index,);
+    contador(carritoPreEliminado)
+
+
+}
+
+const eliminar = (carritoPreEliminado, index) => {
+    for (const carrito in carritoPreEliminado) {
+        console.log(carritoPreEliminado[carrito].id)
+        //   console.log(productoscarrito[1])
+        if (carritoPreEliminado[carrito].id == index) {
+            console.log(carritoPreEliminado[carrito].id)
+            delete (carritoPreEliminado[carrito])
+            console.log(carritoPreEliminado)
+            localStorage.setItem("carrito", JSON.stringify(carritoPreEliminado));
         }
     }
-
-    carritoPreEliminado = JSON.stringify(carritoPreEliminado);
-    localStorage.setItem("carrito", carritoPreEliminado);
 }
 
-function contador(){
-    productoLocal = JSON.parse(localStorage.getItem('carrito'))  
-    console.log(productoLocal)
-    document.getElementById('data3').innerHTML = 7;
 
- 
+//Obtner el total de cantidad de productosy
+const contador = data => {
+    let cantidadPre = 0
+    for (const carrito in data) {
+        // console.log(data[carrito])
+        productoscarrito = data[carrito]//No se borra       
+        cantidadPre = cantidadPre + parseInt(productoscarrito.cantidad)
+        console.log(cantidadPre)
+    }
+    document.getElementById('data3').innerHTML = cantidadPre;
 }
+
+
+
+
+
