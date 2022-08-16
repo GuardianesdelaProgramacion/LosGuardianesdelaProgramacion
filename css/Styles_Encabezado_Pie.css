@@ -19,19 +19,20 @@
 }
 
 /* tiempo para cambiar imagenes */
+
 @keyframes banner {
     0%, 21%{
-        background-image: url(https://i.ibb.co/d6dZq3J/baner-mundial-naturaleza.jpg);
+        background-image: url(https://i.ibb.co/NnqV057/FONDO-1.jpg);
         
     }
     26%, 47%{
         background-image: url(https://i.ibb.co/kqR8qvm/IMG-0405.jpg);
     }
     52%, 73%{
-        background-image: url(https://i.ibb.co/ww8FwLn/IMG-1197.jpg);
+        background-image: url(https://i.ibb.co/Fq6fhnF/Banner1.jpg);
     }
     78%, 100%{
-        background-image: url(https://i.ibb.co/yRsFgH5/IMG-1444.jpg);
+        background-image: url(https://i.ibb.co/5kGqYMG/Banner.jpg);
     }
 }
 
