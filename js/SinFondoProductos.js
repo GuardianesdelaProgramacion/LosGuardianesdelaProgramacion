@@ -81,9 +81,7 @@ const addCarrito = e => {
         // console.log( e.target.parentElement)
 
         setCarrito(e.target.parentElement.parentElement)
-        console.log("/////////Hola1///////////////")
         console.log(e.target.parentElement.parentElement)
-        console.log("/////////Hola2////////////")
         document.getElementById("popProducto").style.visibility = "visible";
         document.getElementById("popProducto").style.opacity = 1;
      
