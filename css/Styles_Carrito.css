@@ -95,7 +95,16 @@ margin-bottom: 50px;
 }
 
 
+@media screen and (max-width: 10000px) {
 
+.tablemini2 {
+    visibility: hidden;
+  }
+#carrito2{
+    visibility: hidden;
+  }
+  
+}
 @media screen and (max-width: 1100px) {
 h1{
 font-size: 20px;

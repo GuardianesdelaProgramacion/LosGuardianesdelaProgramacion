@@ -16,8 +16,89 @@
 </head>
 
 <body>
-    <encabezado-js>
-    </encabezado-js>
+  <header class="heder-statica">
+    <div class="background-container">
+      <div class="card-container glass-effect"></div>
+    </div>
+    <nav class="navbar navbar-expand-xl">
+      <!-- muestra el botón con tres rayitas del lado izquierdo -->
+      <div class="container-fluid padre" style="background-color: #cee5d0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Son los botones que te llevan a sus respectivas páginas como Producto, Nosotros y Blog-->
+        <div class="collapse navbar-collapse hijo_1" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <ul class="navbar-nav me-auto col-xl-1 mb-lg-0"> -->
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-ghost nav-link" href="./Nosotros.html">Nosotros</a>
+            </li>
+        </div>
+        <!-- Contiene el enlace de la imagen y con la etiqueta a la linkeamos para que siempre te lleve a la página de inicio -->
+
+        <!-- col-12 es modo responviso y col-sm-12 es para pantallas más grandes -->
+        <div class=" hijo_2  col-sm-4 col-5">
+        </div>
+        <!-- contiene la barra de búsqueda -->
+
+        <div class="hijo_3 col-xl-2 col-sm-2">
+          <form class="d-flex" role="search">
+            <div class="buscar">
+              <input type="text" id="inputSearch" placeholder="Buscar">
+              <div class="buscar-icon">
+                <i class="bi bi-search icon" id="icon-search"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Se coloca imagen del login y carrito -->
+        <div class="hijo_4">
+          <a class="icono fa-solid fa-user-large" width="5px" href="./Login.html"></a>
+        </div>
+        <div class="Carrito-mini">
+          <ul style="list-style: none;">
+            <li class="submenu">
+              <a class="icono2 bi bi-cart4" href="./Carrito.html" width="5px"></a>
+              <div id="carrito2">
+                <table class="tablemini2">
+                  <thead>
+                    <tr>
+                      <th style="width:40px"></th>
+                      <th style="width:40px">Producto</th>
+                      <th style="width:200px"></th>
+                      <th style="width:100px">Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody style="width:400px" id="data2"></tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="contadormini">
+          <span id="data3">0</span>
+        </div>
+
+      </div>
+    </nav>
+    <div class="p_logo">
+      <div class="h_logo">
+        <a href="../Index.html">
+          <img src="https://i.ibb.co/XV3sMNN/Logo-Musara-a.png" class="img-encabezado" alt="Logo_Musaraña"
+            title="Logo_Musaraña" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+
     <main class="main">
         <h1>PROCESO DE PAGO</h1>
         <!-- formulario de proceso de envío -->
