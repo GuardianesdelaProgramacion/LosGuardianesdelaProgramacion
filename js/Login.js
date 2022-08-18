@@ -7,8 +7,6 @@ let objec = JSON.parse(text);
 const pass2 = objec.password1;
 const mail2=  objec.correo;
 
-const passadmin = "admin";
-const mailadmin=  "admmin@admin.com";
 
 console.log(mail2 );
 console.log(pass2 );
@@ -20,17 +18,7 @@ function verificarPasswords() {
    // const name = document.getElementById("namee").value;
     const mail = document.getElementById("maill").value;
    
-   // console.log(name);
-    //console.log(mail);
-    // console.log(pass1);
-    // if (pass1 == passadmin && mail==mailadmin ) {
 
-    //     setTimeout(function() {
-    //         window.location.replace("Admin_Page.html");
-    //     }, 1000);
- 
-    //     return false;
-    // }
     // Verificamos si las constraseñas no coinciden 
      if (pass1 != pass2 || mail != mail2) {
  
@@ -44,11 +32,6 @@ function verificarPasswords() {
    
     else if (pass1 == pass2 && mail==mail2 ) {
 
-        // popup1.style.visibility = "visible";
-        // popup1.style.opacity= 1;
-        // passs.style.visibility = "hidden";
-        // namee.style.visibility = "hidden";
-        // maill.style.visibility = "hidden";
         setTimeout(function() {
             window.location.replace("Admin_Page.html");
         }, 1500);

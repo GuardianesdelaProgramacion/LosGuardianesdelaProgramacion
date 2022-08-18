@@ -17,14 +17,47 @@ function verificarPasswords() {
  
         return false;
     } else {
-        //obj para guardar usuarios
-      let obj= {nombre:name,correo:mail,fechanac:fechanac,password1:pass1,confirmPass1:pass2};
+        let tel = "546544";
+        let pago = "efectivo";
+        let usuario = "usuario";
+      let obj= {nombre:name,email:mail,fechaNacimiento:fechanac,contrasenia:pass1,telefono:tel,metodoPago:pago, rol:usuario};
 
       newUserData.push(obj);
-      localStorage.setItem("usuarionuevo", JSON.stringify(obj));
+     // localStorage.setItem("usuarionuevo", JSON.stringify(obj));
 
       console.log(newUserData);
       
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+    
+        var raw = JSON.stringify(obj);
+    
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+    
+        fetch("http://localhost:8080/api/usuario", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Si las contraseñas coinciden ocultamos el mensaje de error
         document.getElementById("error").classList.remove("mostrar");
  

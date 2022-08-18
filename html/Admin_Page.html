@@ -47,20 +47,38 @@
                                 <h2>Agrega o elimina productos</h2>
                                 <!-- <form id="login" onsubmit="verificarOlvidar(); return false"></form> -->
                                 <div class="mb-3">
-                                    <input type="text" name="mail" id="texto1"  class="form"
-                                        placeholder="Nombre del producto" required/>
-                                 
-                                    <input type="number" name="mail" id="texto3"  class="form"
-                                        placeholder="Precio del producto" required/>
-
+                                    <input type="number" name="id_productos" id="id_productos"  class="form"
+                                        placeholder="id del producto" required/>
+                                        <input type="text" name="nombreProducto" id="nombreProducto"  class="form"
+                                        placeholder="nombreProducto" required/>
+                                        <input type="text" name="descripcion" id="descripcion"  class="form"
+                                        placeholder="descripcion" required/>
+                                    <input type="number" name="inventario" id="inventario"  class="form"
+                                        placeholder="inventario" required/>
+                                        <input type="number" name="precio" id="precio"  class="form"
+                                        placeholder="precio" required/>
+                                        <input type="text" name="sku" id="sku"  class="form"
+                                        placeholder="sku" required/>
+                                        <input type="text" name="ingredientes" id="ingredientes"  class="form"
+                                        placeholder="ingredientes" required/>
+                                        <input type="number" name="id_categoria" id="id_categoria"  class="form"
+                                        placeholder="id_categoria" required/>
+                                        <input type="number" name="id_mododeuso" id="id_mododeuso"  class="form"
+                                        placeholder="id_mododeuso" required/>
+                                        <input type="number" name="id_mododeuso" id="id_presentacion"  class="form"
+                                        placeholder="id_presentacion" required/>
+                                        <input type="text" name="imagenproducto" id="imagenproducto"  class="form"
+                                        placeholder="imagenproducto" required/>
                                 </div>
                                 
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                    <button id="boton2" type="submit" class="btn btn-danger" >ELIMINAR PRODUCTO </button>
-                                    <button  id="boton1" type="submit" class="btn btn-success" >AGREGAR PRODUCTO </button>
+                                    <button id="boton8"  class="btn btn-danger" onclick="postear()" >Post </button>
+                                    <button  id="boton9"  class="btn btn-success" onclick="poner()">Put </button>
+                                    <button id="boton10" class="btn btn-danger" onclick="borrar()">Delete </button>
+                                    <button id="boton11"  class="btn btn-danger" onclick="traer()">traer </button>
                                   </div>
                               
-                        
+                
                                 <!-- </form> -->
                             </form>
                         </div>
