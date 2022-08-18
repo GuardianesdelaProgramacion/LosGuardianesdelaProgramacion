@@ -1,4 +1,5 @@
 SELECT * FROM musarana_db.estado;
+USE musarana_db;
 
 INSERT INTO estado (estado) VALUES
 ('Aguascalientes'),
@@ -71,7 +72,7 @@ INSERT INTO modo_de_uso (`modo_de_uso`) VALUES
 
 SELECT * FROM modo_de_uso;
 
-SELECT * FROM productos;
+
 
 INSERT INTO productos (sku,nombre_producto,precio,id_modo_de_uso,id_categoria,inventario,ingredientes,id_presentacion,descripcion) VALUES
 ('S000', 'JABÓN DE CALÉNDULA', 90, 1,2,20,'Sodium Cocoyl Isethionate, Agua destilada, Pétalos de Calendula, Oleato de Caléndula, Caolín, Manteca de coco, Glicerina Vegetal y Pantenol.
@@ -82,45 +83,54 @@ INSERT INTO productos (sku,nombre_producto,precio,id_modo_de_uso,id_categoria,in
 ('S001', 'JABÓN DE JAMAICA', 90, 1,2,15,'Sodium Cocoyl Isethionate, Agua destilada, Sépalos de Jamaica, Oleato de Jamaica, Caolín, Manteca de coco, Glicerina Vegetal y Pantenol.
 ',1,'La jamaica (Hibiscus sabdarifa) es una planta que nos brinda una variedad de beneficios dependiendo de su presentación, tiene un alto contenido de vitamina A, C, E Y B1 , aporta nutrición y previene el envejecimiento prematuro.');
 
-ALTER TABLE `musarana_db`.`usuario` 
-ADD COLUMN `rol_usuario` VARCHAR(45) NOT NULL AFTER `id_orden`;
+SELECT * FROM productos;
 
+INSERT INTO usuario (nombre, email, contrasenia, fecha_nacimiento, telefono, metodo_de_pago, rol) VALUES
+('Cinthia', 'cinthia123@gmail.com','12345678','2000-08-22',3318252865,'Efectivo','usuario');
 SELECT * FROM usuario;
-INSERT INTO usuario (nombre, email, contrasenia, fecha_nacimiento, telefono, metodo_de_pago, id_orden, rol_usuario) VALUES
-('Cinthia', 'cinthia123@gmail.com','12345678','2000-08-22',3318252865,'Efectivo',2020,'usuario');
 
-INSERT INTO orden (id_usuario, cantidad, total_orden) VALUES (1,5,300);
+INSERT INTO orden (cantidad, total_orden, id_usuario) VALUES (5,329.99,1);
 SELECT * FROM orden;
+
+INSERT INTO direccion (colonia, municipio, codigo_postal, id_usuario, id_estado)  VALUES
+('San Lorenzo','Chimalhuacán',56340,1,14);
+SELECT * FROM direccion;
 
 SELECT * FROM productos_has_orden;
 INSERT INTO productos_has_orden (productos_idproductos, orden_id_orden) VALUES (1,1);
 INSERT INTO productos_has_orden (productos_idproductos, orden_id_orden) VALUES (2,1);
-INSERT INTO productos_has_orden (productos_idproductos, orden_id_orden) VALUES (1,2020);
+
+SELECT * FROM seccion_has_productos;
+INSERT INTO seccion_has_productos (seccion_id_seccion, productos_idproductos) VALUES (1,1);
+INSERT INTO seccion_has_productos (seccion_id_seccion, productos_idproductos) VALUES (1,2);
+SELECT * FROM seccion;
 
 SELECT * FROM modo_de_uso;
 SELECT * FROM categoria;
-SELECT * FROM id_presentacion;
-SELECT * FROM categoria;
+
+INSERT INTO imagen (imagen) VALUES 
+('https://i.ibb.co/0mYYDGn/S001-2.jpg'),
+('https://i.ibb.co/GtVyW49/S001-3.jpg');
+SELECT * FROM imagen;
+
+INSERT INTO productos_has_imagen (productos_idproductos, imagen_id_imagen) VALUES (1,1);
+INSERT INTO productos_has_imagen (productos_idproductos, imagen_id_imagen) VALUES (1,2);
+SELECT * FROM productos_has_imagen;
+
+
+INSERT INTO contacto (nombre_cn, correo_cn, asunto_cn,telefono_cn,comentario) VALUES
+('Pablo', 'pablomichoacan@gmail.com', 'Business', 4431304883, 'Me interesaria vender productos a mayoreo'); 
+SELECT * FROM contacto;
+
+
+INSERT INTO blog (fecha, contenido, categoria_blog, titulo, resumen) VALUES
+('2022-08-22','Lorem, ipsum  velit actaque!',
+'tips','BAÑATE COMO HOMBRE', 'Lorem, ipsum dolor sit amet doloribus, obcaecati velit');
+SELECT * FROM blog;
+
+
+INSERT INTO img_blog (imagen, blog_idblog) VALUES ('https://i.ibb.co/WtYz0zv/S001-1.jpg',1);
+SELECT * FROM img_blog;
 
 
 
--- select * from blog;   -- no hay
--- select * from categoria;  -- ya tenemos info
--- update productos set id_categoria = 2 where idproductos = 1;
--- update categoria set categoria = 'Protector solar' where idcategoria = 4;
--- select * from contacto; -- no hay info
-select * from descripcion; -- no hay
-
-select * from direccion; -- no hay
--- select * from estado; -- ya estan
-select * from imagen; -- no hay nada
-select * from img_blog; -- no hay 
--- select * from modo_de_uso; -- ya estan
-select * from orden; -- no hay 
--- select * from presentacion; -- ya tenemos info de los tamaños
-select * from productos; -- no hay nada
-select * from productos_has_imagen; -- no hay nada
-select * from productos_has_orden; -- no hay nada
--- select * from seccion; -- ya hay cosas
-select * from seccion_has_productos; -- no hay nada
-select * from usuario; -- no hay nada

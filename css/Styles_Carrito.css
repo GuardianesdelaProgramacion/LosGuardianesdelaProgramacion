@@ -1,6 +1,6 @@
 .img_carrito{
 width: 250px;
-height: 152px;
+height: 182px;
 border-radius: 25px;
 position: left;
 }
@@ -95,7 +95,16 @@ margin-bottom: 50px;
 }
 
 
+@media screen and (max-width: 10000px) {
 
+.tablemini2 {
+    visibility: hidden;
+  }
+#carrito2{
+    visibility: hidden;
+  }
+  
+}
 @media screen and (max-width: 1100px) {
 h1{
 font-size: 20px;

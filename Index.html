@@ -25,7 +25,13 @@
 
     <!-- Encabezado -->
     <encabezado-js> </encabezado-js>
-   
+    <!-- Modal -->
+    <div class="modal fade" id="ModalProducto" tabindex="-1" aria-labelledby="ModalProductoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-descripcion" id="ModalProducto1">
+          </div>
+      </div>
+  </div>
 
     <!--Imagen de banner-->
     <div class="Categorias">
@@ -35,9 +41,7 @@
       <div><p>Artesanal</p></div>
     </div>
 
-   
-
-    <!-- Catalogo de productos se hace de manera dinamica con javacrip-->
+     <!-- Catalogo de productos se hace de manera dinamica con javacrip-->
 
     <div class="p-canasta">
       <div class="h-img">
@@ -52,22 +56,41 @@
           </p>
         </div>
       </div>
-      <div class="container_1">
+
+      <div class="container_1" id="lista-productos">
           <div class="row justify-content-center" id="Tarjetas-js">
           </div>
       </div>
     </div>
  
+   
+      <!-- Slider -->
+      <iframe class="ifPrueba_2" src="html/Slider_Promo_2.html" frameborder="0"></iframe>
+
+    <!-- Carrusel -->
+    <iframe class="ifCarusel" src="html/carrusel.html" frameborder="0"></iframe>
+    <div class="card-content" style="transform: translateY(-170px);">
+         <a href="./html/Productos.html"><button class="ver-button">Ver mas Productos</button></a>
+    </div>
+
     <!-- Slider -->
     <iframe class="ifPrueba" src="html/Slider_Promo.html" frameborder="0"></iframe>
     <!-- Carrusel -->
-    <iframe class="ifCarusel" src="html/carrusel.html" frameborder="0"></iframe>
-    <!-- Slider -->
-    <iframe class="ifPrueba_2" src="html/Slider_Promo_2.html" frameborder="0"></iframe>
-    <!-- Carrusel -->
     <iframe class="ifCarusel_2"  src="html/carrusel_2.html" frameborder="0"></iframe>
+    <div class="card-content" style="transform: translateY(-170px);">
+      <a href="./html/Productos.html"><button class="ver-button">Ver mas Productos</button></a>
+    </div>
 
- 
+      <!-- Pop que señala agregar a carrito -->
+      <div id="popProducto" class="overlay-pago">
+        <div class="popup-pago">
+            <a class="close" href="#" onclick="closePopProducto()">&times;</a>
+            <div class="content text-center justify-content-center">
+                Se ha añadido al carrito
+            </div>
+        </div>
+    </div>
+
 
     <!--Pie de pagina  -->
     <piedepagina-js> </piedepagina-js>
@@ -98,5 +121,6 @@
     <script src="./js/Pop-up.js"></script>
     <script src="./js/mas_Vendidos.js"></script>
     <script src="./js/Encabezado-Pie-Index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>

@@ -71,7 +71,6 @@ class encabezadoJs extends HTMLElement{
               </thead>
               <tbody style="width:400px" id="data2"></tbody>
             </table>
-            <a href="#" onclick="limpiarTabla2()" id="vaciar" style="color: black;">vaciar carrito</a>
           </div>
         </li>
       </ul>

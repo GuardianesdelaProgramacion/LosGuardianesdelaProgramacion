@@ -1,157 +1,61 @@
 {
-    "data": {
-        "page": 1,
-        "per_page": 6,
-        "total": 12,
-        "total_pages": 2,
-        "data": [
-            {
-                "id": 1,
-                "nombre_producto": "SERUM",
-                "precio": "$50.00",
-                "presentacion": "100 ML",
-                "descripcion": "El serum contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
-                "url": "https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png",
-                "subcategoria":"UNISEX",
-                "seccion":"catálogo",
-                "categoria": "facial"
-            },
-            {
-                "id":2,
-                "nombre_producto": "AVENA",
-                "precio": "$50.00",
-                "presentacion":"100 GR",
-                "descripcion": "La avena es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
-                "url": "https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png",
-                "subcategoria":"SHAMPOO",
-                "seccion":"catálogo",
-                "categoria": "capilar"
-            },
-            {
-                "id": 3,
-                "nombre_producto": "HIERBAS",
-                "precio": "$70.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png",
-                "subcategoria":"SHAMPOO",
-                "seccion":"catálogo",
-                "categoria": "capilar"
-            },
-            {
-                "id": 4,
-                "nombre_producto": "ROJOS",
-                "precio": "$70.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
-                "subcategoria":"JABON FRUTOS",
-                "seccion":"catálogo",
-                "categoria": "piel"
-            },
-            {
-                "id": 5,
-                "nombre_producto": "SÓLIDA",
-                "precio": "$100.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png",
-                "subcategoria":"PASTA DENTAL",
-                "seccion":"catálogo",
-                "categoria": "dientes"
-            },
-            {
-                "id": 6,
-                "nombre_producto": "DENTALES",
-                "precio": "$100.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
-                "subcategoria":"TABLETAS",
-                "seccion":"catálogo",
-                "categoria": "dientes"
-            },
-            {
-                "id": 7,
-                "nombre_producto": "MAR",
-                "precio": "$70.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
-                "subcategoria":"SHAMPOO",
-                "seccion":"catálogo",
-                "categoria": "CAPILAR"
-            },
-            {
-                "id": 8,
-                "nombre_producto": "ACTIVADO",
-                "precio": "$70.00",
-                "presentacion": "100 GR",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png",
-                "subcategoria":"CARBÓN",
-                "seccion":"catálogo",
-                "categoria": "DENTAL"
-            },
-            {
-                "id": 9,
-                "nombre_producto": "ORO",
-                "precio": "$70.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
-                "subcategoria":"SHAMPOO",
-                "seccion":"catálogo",
-                "categoria": "CAPILAR"
-            },
-            {
-                "id": 10,
-                "nombre_producto": "SERUM",
-                "precio": "$70.00",
-                "presentacion": "100 ML",
-                "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-                "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
-                "subcategoria":"SHAMPOO",
-                "seccion":"catálogo",
-                "categoria": "CAPILAR"
-            }
-        ],
-        "support": {
-            "url": "https://reqres.in/#support-heading",
-            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+  "data": [
+        {
+            "id": 1,
+            "nombre_producto": "SUERO FORTALECEDOR DE BELLO",
+            "precio": "90.00",
+            "descripcion": "USAR UNA GOTA DE PRODUCTO Y DAR UN LIGERO MASAJE SOBRE LA ZONA DESEADA.",
+            "url": "https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png",
+            "seccion":"catálogo",
+            "categoria": "capilar"
+        },
+        {
+            "id":2,
+            "nombre_producto": "SHAMPOO DE CALENDULA GRANDE",
+            "precio": " 150.00 ",
+            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CABELLO.",
+            "url": "https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png",
+            "seccion":"catálogo",
+            "categoria": "capilar"
+        },
+        {
+            "id": 3,
+            "nombre_producto": "CREMA CORPORAL CACAO",
+            "precio": "100.00",
+            "descripcion": "FROTAR LA BARRA SOBRE LA ZONA DESEADA Y ESPARCIR EL PRODUCTO CON LAS MANOS.",
+            "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
+            "seccion":"catálogo",
+            "categoria": "capilar"
+        },
+        {
+            "id": 4,
+            "nombre_producto": "TABLETA DENTAL CANELA",
+            "precio": "80.00",
+            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
+            "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
+            "seccion":"catálogo",
+            "categoria": "piel"
+        },
+        {
+            "id": 5,
+            "nombre_producto": "TABLETAS DENTALES MENTA",
+            "precio": "50.00",
+            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
+            "url": "https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png",
+            "seccion":"catálogo",
+            "categoria": "dientes"
+        },
+        {
+            "id": 6,
+            "nombre_producto": "JABÓN DE FRESA",
+            "precio": "90.00",
+            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CUERPO.",
+            "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
+            "seccion":"catálogo",
+            "categoria": "dientes"
         }
-    },
-    "status": 200,
-    "statusText": "",
-    "headers": {
-        "content-type": "application/json; charset=utf-8"
-    },
-    "config": {
-        "transitional": {
-            "silentJSONParsing": true,
-            "forcedJSONParsing": true,
-            "clarifyTimeoutError": false
-        },
-        "transformRequest": [
-            null
-        ],
-        "transformResponse": [
-            null
-        ],
-        "timeout": 0,
-        "xsrfCookieName": "XSRF-TOKEN",
-        "xsrfHeaderName": "X-XSRF-TOKEN",
-        "maxContentLength": -1,
-        "maxBodyLength": -1,
-        "env": {
-            "FormData": null
-        },
-        "headers": {
-            "Accept": "application/json, text/plain, */*"
-        },
-        "method": "get",
-        "url": "https://reqres.in/api/users?delay=3",
-        "responseType": "stream"
-    },
-    "request": {}
+        ]
+    
+
 }
+

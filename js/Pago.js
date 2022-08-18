@@ -115,10 +115,12 @@ console.log(datosTarjeta);
 };
 
 function terminarPedido() {
+    let borrarCarrito={}
+    localStorage.setItem('carrito', JSON.stringify(borrarCarrito));
     /*popup onclick*/
     document.getElementById("popup2").style.visibility = "visible";
     document.getElementById("popup2").style.opacity = 1;
-    document.getElementById("pay1").style.visibility = "hidden";
+    // document.getElementById("pay1").style.visibility = "hidden";
     document.getElementById("nombreEnvio").style.visibility = "hidden";
     document.getElementById("apellidoEnvio").style.visibility = "hidden";
     document.getElementById("pay4").style.visibility = "hidden";
@@ -132,13 +134,14 @@ function terminarPedido() {
     document.getElementById("inputCCV").style.visibility = "hidden";
     document.getElementById("pay7").style.visibility = "hidden";
     //document.getElementById("gridRadios2").style.visibility="hidden";
-    //document.getElementById("gridRadios3").style.visibility="hidden";
+    
 }
 /*Close del popup*/
 function closePago() {
+    leer();
     document.getElementById("popup2").style.visibility = "hidden";
     document.getElementById("popup2").style.opacity = 0;
-    document.getElementById("pay1").style.visibility = "visible";
+    // document.getElementById("pay1").style.visibility = "visible";
     document.getElementById("nombreEnvio").style.visibility = "visible";
     document.getElementById("apellidoEnvio").style.visibility = "visible";
     document.getElementById("pay4").style.visibility = "visible";
@@ -154,3 +157,76 @@ function closePago() {
     //document.getElementById("gridRadios2").style.visibility="visible";
     //document.getElementById("gridRadios3").style.visibility="visible";
 }
+document.addEventListener('DOMContentLoaded', () => {
+    leer();
+  })
+  
+  
+  function leer() {
+    let productoLocal = {}
+    productoLocal = JSON.parse(localStorage.getItem('carrito')) 
+    tarjetaDinamicas(productoLocal);
+    contador(productoLocal);
+  }
+  
+  
+  function eliminarFila(index) {
+    $("#fila" + index).remove();
+     console.log("ELIMINADO")
+    let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
+    eliminar(carritoPreEliminado, index,);
+    contador(carritoPreEliminado)
+  }
+  
+  const eliminar = (carritoPreEliminado, index) => {
+    for (const carrito in carritoPreEliminado) {
+        console.log(carritoPreEliminado[carrito].id)
+        //   console.log(productoscarrito[1])
+        if (carritoPreEliminado[carrito].id == index) {
+            console.log(carritoPreEliminado[carrito].id)
+            delete (carritoPreEliminado[carrito])
+            console.log(carritoPreEliminado)
+            localStorage.setItem("carrito", JSON.stringify(carritoPreEliminado));
+        }
+    }
+  }
+  
+  
+  //Obtner el total de cantidad de productosy
+  const contador = data => {
+    let cantidadPre = 0
+    for (const carrito in data) {
+        // console.log(data[carrito])
+        productoscarrito = data[carrito]//No se borra       
+        cantidadPre = cantidadPre + parseInt(productoscarrito.cantidad)
+        console.log(cantidadPre)
+    }
+    document.getElementById('data3').innerHTML = cantidadPre;
+  }
+  
+  
+  const tarjetaDinamicas = data => {
+    // console.log(data[1])
+    let preTotal = 0
+    let datos = "";
+    let total=0;
+    for (const carrito in data) {
+        productoscarrito = data[carrito]
+      cantidad=parseInt(productoscarrito.cantidad)
+      precio=parseInt(productoscarrito.precio)
+      preTotal=cantidad*precio
+      console.log(preTotal)
+      total=preTotal+total  
+        console.log(total);
+        datos +=
+        `<tr class="mytr" id="fila${productoscarrito.id}">
+    <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
+    <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+            <td><p style="font-size:14px">${productoscarrito.cantidad}</p></td>
+            <td><span>${productoscarrito.precio}</span></td>
+        </tr>
+          `;
+    }
+    document.getElementById('data5').innerHTML = datos;
+    document.getElementById('total').innerHTML = ("$"+total); 
+  }
