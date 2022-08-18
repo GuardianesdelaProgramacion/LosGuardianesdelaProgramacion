@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  leer();
+ leer();
+ocultar();
 })
 
+function ocultar() {
+ if (localStorage.getItem('carrito') == '{}') {
+    cnHiddenpagoytotal(); 
+  }
+  }
 
 function leer() {
   let productoLocal = {}
@@ -18,6 +24,7 @@ function eliminarFila(index) {
   eliminar(carritoPreEliminado, index,);
   contador(carritoPreEliminado);
   totalCarrito (carritoPreEliminado);  
+ocultar();
 }
 
 const eliminar = (carritoPreEliminado, index) => {
@@ -96,5 +103,11 @@ const totalCarrito = (carritoPreEliminado) => {
 
 
 
-
+function cnHiddenpagoytotal(){
+    btpago.style.visibility = "hidden";
+    btpago.style.opacity= 0;
+    total2.style.visibility = "hidden";
+    total2.style.opacity= 0;
+    document.getElementById('data').innerHTML = '';
+}
 
