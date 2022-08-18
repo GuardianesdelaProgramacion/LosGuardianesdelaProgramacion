@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nombre_producto": "SERUM-UNISEX",
-            "precio": "$50.00",
+            "precio": "50.00",
             "descripcion": "El serum contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
             "url": "https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png",
             "seccion":"catálogo",
@@ -12,7 +12,7 @@
         {
             "id":2,
             "nombre_producto": "SHAMPOO DE AVENA",
-            "precio": "$50.00",
+            "precio": "50.00",
             "descripcion": "La avena es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
             "url": "https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png",
             "seccion":"catálogo",
@@ -21,7 +21,7 @@
         {
             "id": 3,
             "nombre_producto": "SHAMPOO HIERBAS",
-            "precio": "$70.00",
+            "precio": "70.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png",
             "seccion":"catálogo",
@@ -30,7 +30,7 @@
         {
             "id": 4,
             "nombre_producto": "JABON DE FRUTOS ROJOS",
-            "precio": "$70.00",
+            "precio": "70.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
             "seccion":"catálogo",
@@ -39,7 +39,7 @@
         {
             "id": 5,
             "nombre_producto": "PASTA DENTAL SÓLIDA",
-            "precio": "$100.00",
+            "precio": "100.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png",
             "seccion":"catálogo",
@@ -48,7 +48,7 @@
         {
             "id": 6,
             "nombre_producto": "TABLETAS DENTALES",
-            "precio": "$100.00",
+            "precio": "100.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
             "seccion":"catálogo",
@@ -57,7 +57,7 @@
         {
             "id": 7,
             "nombre_producto": "SHAMPOO OLAS DE MAR",
-            "precio": "$70.00",
+            "precio": "70.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
             "seccion":"catálogo",
@@ -66,7 +66,7 @@
         {
             "id": 8,
             "nombre_producto": "CARBÓN ACTIVADO",
-            "precio": "$70.00",
+            "precio": "70.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png",
             "seccion":"catálogo",
@@ -75,7 +75,7 @@
         {
             "id": 9,
             "nombre_producto": "ORO",
-            "precio": "$70.00",
+            "precio": "70.00",
             "descripcion": "La sonrisa es la mejor respuesta para una mirada",
             "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
             "seccion":"catálogo",
