@@ -2,86 +2,60 @@
   "data": [
         {
             "id": 1,
-            "nombre_producto": "SERUM-UNISEX",
-            "precio": "50.00",
-            "descripcion": "El serum contiene propiedades hidratantes ideales para cueros cabelludos sensibles. Además, favorece el crecimiento del cabello",
+            "nombre_producto": "SUERO FORTALECEDOR DE BELLO",
+            "precio": "90.00",
+            "descripcion": "USAR UNA GOTA DE PRODUCTO Y DAR UN LIGERO MASAJE SOBRE LA ZONA DESEADA.",
             "url": "https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png",
             "seccion":"catálogo",
-            "categoria": "facial"
+            "categoria": "capilar"
         },
         {
             "id":2,
-            "nombre_producto": "SHAMPOO DE AVENA",
-            "precio": "50.00",
-            "descripcion": "La avena es ideal para evitar la caída del cabello quebradizo. Además, repara puntas abiertas.",
+            "nombre_producto": "SHAMPOO DE CALENDULA GRANDE",
+            "precio": " 150.00 ",
+            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CABELLO.",
             "url": "https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png",
             "seccion":"catálogo",
             "categoria": "capilar"
         },
         {
             "id": 3,
-            "nombre_producto": "SHAMPOO HIERBAS",
-            "precio": "70.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/cYpXfWy/Dise-o-sin-t-tulo-13.png",
+            "nombre_producto": "CREMA CORPORAL CACAO",
+            "precio": "100.00",
+            "descripcion": "FROTAR LA BARRA SOBRE LA ZONA DESEADA Y ESPARCIR EL PRODUCTO CON LAS MANOS.",
+            "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
             "seccion":"catálogo",
             "categoria": "capilar"
         },
         {
             "id": 4,
-            "nombre_producto": "JABON DE FRUTOS ROJOS",
-            "precio": "70.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
+            "nombre_producto": "TABLETA DENTAL CANELA",
+            "precio": "80.00",
+            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
+            "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
             "seccion":"catálogo",
             "categoria": "piel"
         },
         {
             "id": 5,
-            "nombre_producto": "PASTA DENTAL SÓLIDA",
-            "precio": "100.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
+            "nombre_producto": "TABLETAS DENTALES MENTA",
+            "precio": "50.00",
+            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
             "url": "https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png",
             "seccion":"catálogo",
             "categoria": "dientes"
         },
         {
             "id": 6,
-            "nombre_producto": "TABLETAS DENTALES",
-            "precio": "100.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
+            "nombre_producto": "JABÓN DE FRESA",
+            "precio": "90.00",
+            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CUERPO.",
+            "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
             "seccion":"catálogo",
             "categoria": "dientes"
-        },
-        {
-            "id": 7,
-            "nombre_producto": "SHAMPOO OLAS DE MAR",
-            "precio": "70.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
-            "seccion":"catálogo",
-            "categoria": "CAPILAR"
-        },
-        {
-            "id": 8,
-            "nombre_producto": "CARBÓN ACTIVADO",
-            "precio": "70.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/2gDHTgc/Copia-de-Dise-o-sin-t-tulo-4.png",
-            "seccion":"catálogo",
-            "categoria": "DENTAL"
-        },
-        {
-            "id": 9,
-            "nombre_producto": "ORO",
-            "precio": "70.00",
-            "descripcion": "La sonrisa es la mejor respuesta para una mirada",
-            "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
-            "seccion":"catálogo",
-            "categoria": "CAPILAR"
         }
         ]
     
 
 }
+
