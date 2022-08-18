@@ -116,38 +116,7 @@ height: 100%;
     top: 250%;
     left: 0%;
     right: 0%;
-    /*transform: translateY(1000px);*/
-   
     /*right: 100%;
     width: 210%;*/
 }
-
-@media screen and (max-width:750px) {
-    .bp-ft{
-        top:270%;
-    }
-    
-}
-
-@media screen and (max-width:630px) {
-    .bp-ft{
-        top:300%;
-    }
-    
-}
-
-@media screen and (max-width:515px) {
-    .bp-ft{
-        top:320%;
-    }
-    
-}
-
-@media screen and (max-width:400px) {
-    .bp-ft{
-        top:470%;
-    }
-    
-}
-
 

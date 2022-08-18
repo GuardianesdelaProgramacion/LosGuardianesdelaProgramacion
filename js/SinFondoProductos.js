@@ -56,70 +56,82 @@ const tarjetaD = (data) => {
         <div class="card-content">
             <h2 class="name">${productosSin.nombre_producto}</h2>
             <p class="costo">${productosSin.precio}</p>
-            <button class="ver-button" id="${productosSin.id}">Añadir al carrito</button>
+            
         </div>
       </div>`
     });
     document.getElementById("SinFondo-js").innerHTML = datos;
-    console.log(document.getElementById("SinFondo-js").innerHTML = datos);
-    // document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
-    descripcion(".click");
-}
-
-/**Descripcion de productos********************************************************************************************************************************************************* */
-
-function descripcion(clase) {
-    document.querySelectorAll(clase).forEach(el => {
-        el.addEventListener("click", e => {
-            const id = e.target.getAttribute("id");
-            console.log("El id del producto " + id)
-            let id_descripcion = { "id_descrip": id };
-            localStorage.setItem("id_descrip", JSON.stringify(id_descripcion));
-            envio();
-            function envio() {
-                location.href = "./Producto_detalles.html?" + id;
-            }
-            return id;
-        });
-    });
 }
 
 
 
-// <button type="button" class="ver-button col-11 mx-auto p-1">Añadir al carrito</button>
+/**AgregarProducto a la local********************************************************************************************************************************************************* */
+const listaProducto = document.getElementById('lista-productos')
 
-// function Productos(id_Html, parametro, columna, nproductos) {
-//     let datos = "";
-//      for (let i = 1; i <= nproductos; i++) {
-//         let lista = JSON.parse(localStorage.getItem(i));
-//             datos +=
-//                 `${columna}
-//       <div class="card tarjeta-producto border-0">
-//           <!-- SE COLOCA LA TARJETA CON LA CLASSE DE bootstrap card -->
-//           <img src=${lista.url} class="img-producto click" id="${lista.id}" alt="..." >
-//           <span class="name text-center">${lista.categoria} DE ${lista.nombre_producto}</span>
-//           <div class="rating-container">
-//           <input type="radio" name="rating" id="5${lista.nombre_producto}">
-//           <label for="5${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-//           <input type="radio" name="rating" id="4${lista.nombre_producto}">
-//           <label for="4${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-//           <input type="radio" name="rating" id="3${lista.nombre_producto}">
-//           <label for="3${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-//           <input type="radio" name="rating" id="2${lista.nombre_producto}">
-//           <label for="2${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-//           <input type="radio" name="rating" id="1${lista.nombre_producto}">
-//           <label for="1${lista.nombre_producto}"><i class="bi bi-star-fill"></i></label>
-//           </div>
-//           <span class="costo text-center">${lista.precio}</span>
-//           <div class="row botones-inf w-100 mx-auto text-center">
-//               <button type="button" class="ver-button col-11 mx-auto p-1 m-2">Añadir al carrito</button>
-//           </div>
-//       </div>
-//       </div>`;
-//     }
-//     document.getElementById(id_Html).innerHTML = datos;
-//     console.log(document.getElementById(id_Html).innerHTML = datos);
-// }
+let carrito = {}
+
+listaProducto.addEventListener('click', e => {
+    addCarrito(e);
+})
+
+const addCarrito = e => {
+    // console.log(e.target);
+    // console.log(e.target.classList.contains('agregar-carrito-producto'))
+    if (e.target.classList.contains('agregar-carrito-producto')) {
+        // console.log( e.target.parentElement)
+
+        setCarrito(e.target.parentElement.parentElement)
+        console.log("/////////Hola1///////////////")
+        console.log(e.target.parentElement.parentElement)
+        console.log("/////////Hola2////////////")
+        document.getElementById("popProducto").style.visibility = "visible";
+        document.getElementById("popProducto").style.opacity = 1;
+     
+        // contador();
+
+    }
+
+}
+
+let setCarrito = objecto => {
+    // console.log(objecto)    
+    const productoCarrito = {
+        id: objecto.querySelector('.click').getAttribute("id"),
+        nombre_producto: objecto.querySelector('.name').textContent,
+        precio: objecto.querySelector('.costo').textContent,
+        url: objecto.querySelector('.click').getAttribute("src"),
+        cantidad: 1
+    }
+    // console.log(productoCarrito);
+  
+
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        console.log("hay información")
+        console.log(carrito)
+    }
+    else {
+        console.log("no hay")
+        console.log(carrito)
+        carrito = {}
+    }
+
+  if (carrito.hasOwnProperty(productoCarrito.id)) {
+        // console.log("hola")
+        productoCarrito.cantidad = carrito[productoCarrito.id].cantidad + 1
+    }
+
+    //Coleccion de datos, ... es una copia de productos spre operatio 
+    // console.log(productoCarrito.cantidad)
+    carrito[productoCarrito.id] = { ...productoCarrito }
+    // console.log(carrito)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}
 
 
+function closePopProducto() {
+    document.getElementById("popProducto").style.visibility = "hidden";
+    document.getElementById("popProducto").style.opacity = 0;
+
+}
 
