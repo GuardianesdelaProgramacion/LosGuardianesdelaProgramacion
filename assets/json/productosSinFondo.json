@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nombre_producto": "SUERO FORTALECEDOR DE BELLO",
-            "precio": "90.00",
+            "precio": "$ 90.00",
             "descripcion": "USAR UNA GOTA DE PRODUCTO Y DAR UN LIGERO MASAJE SOBRE LA ZONA DESEADA.",
             "url": "https://i.ibb.co/Pw9TJBf/Dise-o-sin-t-tulo-11.png",
             "seccion":"catálogo",
@@ -11,9 +11,9 @@
         },
         {
             "id":2,
-            "nombre_producto": "SHAMPOO DE CALENDULA GRANDE",
-            "precio": " 150.00 ",
-            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CABELLO.",
+            "nombre_producto": "SHAMPOO DE CALÉNDULA GRANDE",
+            "precio": "$ 150.00 ",
+            "descripcion": "FROTAR LA BARRA HÚMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CABELLO.",
             "url": "https://i.ibb.co/q9DMgCp/Dise-o-sin-t-tulo-12.png",
             "seccion":"catálogo",
             "categoria": "capilar"
@@ -21,7 +21,7 @@
         {
             "id": 3,
             "nombre_producto": "CREMA CORPORAL CACAO",
-            "precio": "100.00",
+            "precio": "$ 100.00",
             "descripcion": "FROTAR LA BARRA SOBRE LA ZONA DESEADA Y ESPARCIR EL PRODUCTO CON LAS MANOS.",
             "url": "https://i.ibb.co/zxpTzBk/Copia-de-Dise-o-sin-t-tulo-3.png",
             "seccion":"catálogo",
@@ -30,8 +30,8 @@
         {
             "id": 4,
             "nombre_producto": "TABLETA DENTAL CANELA",
-            "precio": "80.00",
-            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
+            "precio": "$ 80.00",
+            "descripcion": "HUMEDECE TU CEPILLO Y FRÓTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
             "url": "https://i.ibb.co/tXgGSkD/Copia-de-Dise-o-sin-t-tulo-2.png",
             "seccion":"catálogo",
             "categoria": "piel"
@@ -39,8 +39,8 @@
         {
             "id": 5,
             "nombre_producto": "TABLETAS DENTALES MENTA",
-            "precio": "50.00",
-            "descripcion": "HUMECE TU CEPILLO Y FROTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
+            "precio": "$ 50.00",
+            "descripcion": "HUMEDECE TU CEPILLO Y FRÓTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.",
             "url": "https://i.ibb.co/QCqThDW/Copia-de-Dise-o-sin-t-tulo-1.png",
             "seccion":"catálogo",
             "categoria": "dientes"
@@ -48,8 +48,8 @@
         {
             "id": 6,
             "nombre_producto": "JABÓN DE FRESA",
-            "precio": "90.00",
-            "descripcion": "FROTAR LA BARRA HUMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CUERPO.",
+            "precio": "$ 90.00",
+            "descripcion": "FROTAR LA BARRA HÚMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CUERPO.",
             "url": "https://i.ibb.co/cJKvkf8/Copia-de-Dise-o-sin-t-tulo.png",
             "seccion":"catálogo",
             "categoria": "dientes"
