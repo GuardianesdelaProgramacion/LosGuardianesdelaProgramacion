@@ -25,10 +25,6 @@
     visibility: hidden;
     opacity: 0;
 }
-  /*  visibility: hidden;
-    opacity: 0;*/
-    /*transition:all 600ms;
-}*/
 .modal_back_popup:target{
     visibility: visible;
     opacity: 1;
@@ -44,49 +40,32 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     /*transform: rotate(90deg) translate(-150%, 230%);*/
-     /* z-index: 2000; */
  }  
-    /* visibility: hidden;
-     transform: rotate(90deg) translate(-150%,230%);
-     transition: all 600ms;
-}*/
 .registro_popup:target{
 	visibility: visible;
-	/*transform: translate(-50%,-50%);*/
-        /* z-index: 2000; */
-}/*
-.registro_popup:target .contenido_popup{
-     top: 50%;
-     left: 50%;
-     transform: rotate(0deg) translate(-50%,-50%);
-     visibility: visible;
-}*/
+}
+
 .contenido_popup a{
 	text-decoration: none;
 	color: #E8A191;
         font-size: 25px;
-        /* z-index: 2000; */
 }
 .contenido_popup a:hover{
 	text-decoration: none;
 	color: #E8A191;
 	border-bottom: 1px solid #E8A191;
-        /* z-index: 2000; */
 }
 
 .fondo_popup{
           width: 418px;
-	        background-image: url("https://images.unsplash.com/photo-1603533627277-11d5a361ac8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+	        background-image: url("https://i.ibb.co/0mYYDGn/S001-2.jpg");
           background-size: cover;
           background-position: center;
-          /* z-index: 2000; */
       }
 .fondo_blog{
-          background-image: url("https://images.unsplash.com/photo-1603533627277-11d5a361ac8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+	        background-image: url("https://i.ibb.co/0mYYDGn/S001-2.jpg");
           background-size: cover;
           background-position: center;
-          /* z-index: 2000; */
       }
 
 .contenido_popup{
@@ -96,7 +75,6 @@
 	padding-left: 20px;
 	padding-top: 110px;
 	background-color: white;
-        /* z-index: 2000; */
 }
 .contenido_popup button{
 	margin-top: 10px;
@@ -107,13 +85,11 @@
 	border:none;
         font-size: 25px;
 	color:#FCF8E8;
-        /* z-index: 2000; */
 }
 
 .contenido_popup h2{
         font-size: 36px;
         font-weight: 400;
-        /* z-index: 2000; */
 }
 .contenido_popup input{
         font-family: 'Montserrat', sans-serif;
@@ -126,7 +102,6 @@
 	border-top: none;
 	border-left: none;
 	border-right: none;
-        /* z-index: 2000; */
 }
 
 .inbisible{

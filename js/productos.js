@@ -1,7 +1,7 @@
 console.log("LOS GUARDINES DE LA PROGRAMCIÓN");
 /**Obtener los datos realizando una petición de fetch******************************************************************************************************************************************************** */
 
-api("../assets/json/productos2.json");
+api("http://musarana.herokuapp.com/api/productos");
 let producto;
 function api(url) {
     fetch(url)
@@ -12,17 +12,18 @@ function api(url) {
             if (localStorage.getItem('producto')) {
                 producto = JSON.parse(localStorage.getItem('producto'));
                 console.log("Linea 13 productos de local");
-                tarjetaD(producto)
+                tarjetaDinamicas2(producto)
                 let filtroTodo = document.getElementById("filtroTodo");
                 filtroTodo.addEventListener('click', filtrotodo, true);
                 function filtrotodo() {
-                    return tarjetaD(producto)
+                    return tarjetaDinamicas2(producto)
                 }
             }
 
             else {
-                console.log("Linea19");
-                guardar(productos.data);
+                console.log("Lineaff1kkk9");
+
+                guardar(productos);
             }
         }
         )
@@ -34,36 +35,51 @@ function api(url) {
  * @param {*} datos Datos del json que fueron traidos de Fetch
  */
 const guardar = datos => {
-    localStorage.setItem('producto', JSON.stringify(datos))
-    console.log("Datos de json ")
-    tarjetaD(datos)
-    let filtroTodo = document.getElementById("filtroTodo");
-    filtroTodo.addEventListener('click', filtrotodo, true);
-    function filtrotodo() {
-        return tarjetaD(producto)
+    let productoR = {}
+     for(const producto in datos){      
+        
+        const productoP = {  
+            id : datos[producto].idProductos,    
+            nombre_producto: datos[producto].nombreProducto,   
+            precio: datos[producto].precio,
+            descripcion: datos[producto].descripcion,
+            url : datos[producto].imagenproducto[0].imagen,
+            seccion: datos[producto].seccion,
+            categoria: datos[producto].categoria.categoria
+        }   
+        window.location.reload(); 
+        // console.log(datos[producto].imagenproducto[producto].imagen) 
+        console.log(datos[producto].imagenproducto[0].imagen)
+        productoR[productoP.id] = { ...productoP }
+        console.log(productoR)
+        localStorage.setItem('producto', JSON.stringify(productoR))
     }
+
 }
 
 /**Tarjetas dinamicas********************************************************************************************************************************************************* */
-const tarjetaD = (data) => {
+
+
+const tarjetaDinamicas2 = data => {    
     let datos = "";
-    data.forEach(productos => {
+    for (const producto in data) {
+        productoscarrito = data[producto]
+
         datos +=
-            `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
-                <div class="card tarjeta-producto border-0">
-                    <img src=${productos.url} class="producto-card-imagen click" id="${productos.id}" alt="...">
-                    <span class="producto_nombre text-center">${productos.nombre_producto}</span>
-                    <span class="producto_precio text-center">${productos.precio}</span>
-                    <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
-                            al carrito</button>
-                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productos.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
-                            rapido </button>
-                </div>
-                </div>`
-    });
+        `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
+            <div class="card tarjeta-producto border-0">
+                <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
+                <span class="producto_nombre text-center">${productoscarrito.nombre_producto}</span>
+                <span class="producto_precio text-center">${productoscarrito.precio}</span>
+                <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
+                        al carrito</button>
+                <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                        rapido </button>
+            </div>
+            </div>`;
+    }
     document.getElementById("Tarjetas-js").innerHTML = datos;
     document.getElementById("tituloProducto").innerHTML = "PRODUCTOS";
-
     descripcion(".click")
 }
 
@@ -84,29 +100,35 @@ const prefiltro = e => {
     }
 }
 
-const filtro = (data, id_categoria) => {
+
+const filtro = data => {    
     let datos = "";
-    data.forEach(productos => {
-        if (productos.categoria == id_categoria) {
-            datos +=
+    for (const carrito in data) {
+        productoscarrito = data[carrito]
+        if (productoscarrito.categoria == id_categoria) {
+        datos +=
                 `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
                 <div class="card tarjeta-producto border-0">
-                    <img src=${productos.url} class="producto-card-imagen click" id="${productos.id}" alt="...">
-                    <span class="producto_nombre text-center">${productos.nombre_producto}</span>
-                    <span class="producto_precio text-center">${productos.precio}</span>
+                    <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
+                    <span class="producto_nombre text-center">${productoscarrito.nombre_producto}</span>
+                    <span class="producto_precio text-center">${productoscarrito.precio}</span>
                     <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
                             al carrito</button>
-                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productos.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
                             rapido </button>
                 </div>
-                </div>`
-        }
-        document.getElementById("Tarjetas-js").innerHTML = datos;
-        document.getElementById("tituloProducto").innerHTML = id_categoria.toUpperCase();
+                </div>`;
 
-        descripcion(".click")
-    });
+        }
+    
+    }
+    document.getElementById("Tarjetas-js").innerHTML = datos;
+            document.getElementById("tituloProducto").innerHTML = id_categoria.toUpperCase();
+    
+            descripcion(".click")
 }
+
+
 
 /**Descripcion de productos********************************************************************************************************************************************************* */
 
@@ -260,7 +282,19 @@ function closePopProducto() {
 /**Carrito********************************************************************************************************************************************************* */
 document.addEventListener('DOMContentLoaded', () => {
     leer();
+ocultar();
 })
+
+function ocultar() {
+ if (localStorage.getItem('carrito') == '{}') {
+    cnHiddenpagoytotal(); 
+  }
+  }
+
+function cnHiddenpagoytotal(){
+    document.getElementById('data2').innerHTML = '';
+}
+
 
 
 function leer() {
@@ -302,6 +336,7 @@ function eliminarFila(index) {
     eliminar(carritoPreEliminado, index,);
     contador(carritoPreEliminado)
 
+ocultar();
 
 }
 
@@ -330,6 +365,8 @@ const contador = data => {
     }
     document.getElementById('data3').innerHTML = cantidadPre;
 }
+
+
 
 
 

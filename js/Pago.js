@@ -134,7 +134,7 @@ function terminarPedido() {
     document.getElementById("inputCCV").style.visibility = "hidden";
     document.getElementById("pay7").style.visibility = "hidden";
     //document.getElementById("gridRadios2").style.visibility="hidden";
-    
+    ocultar2();
 }
 /*Close del popup*/
 function closePago() {
@@ -159,8 +159,24 @@ function closePago() {
 }
 document.addEventListener('DOMContentLoaded', () => {
     leer();
+ocultar2();
   })
-  
+ 
+function ocultar2() {
+ if (localStorage.getItem('carrito') == '{}') {
+    cnHiddenpagoytotal(); 
+  }
+  }
+
+
+function cnHiddenpagoytotal(){
+  total2.style.visibility = "hidden";
+  total2.style.opacity= 0;
+  btnpago4.style.visibility = "visible";
+  btnpago4.style.opacity= 1;
+}
+
+ 
   
   function leer() {
     let productoLocal = {}
@@ -223,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
     <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
             <td><p style="font-size:14px">${productoscarrito.cantidad}</p></td>
-            <td><span>${productoscarrito.precio}</span></td>
+            <td><span>$${productoscarrito.precio}</span></td>
         </tr>
           `;
     }

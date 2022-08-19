@@ -1,7 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     leer();
+ocultar();
   })
-  
+ 
+function ocultar() {
+ if (localStorage.getItem('carrito') == '{}') {
+    cnHiddenpagoytotal(); 
+  }
+  }
+
+
+function cnHiddenpagoytotal(){
+    document.getElementById('data2').innerHTML = '';
+}
+ 
   
   function leer() {
   
@@ -41,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     eliminar(carritoPreEliminado, index,);
     contador(carritoPreEliminado)
   
+ocultar();
   
   }
   
