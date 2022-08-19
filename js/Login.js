@@ -1,3 +1,12 @@
+var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("localhost:8080/api/usuario", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 //Objeto para usuario nuevo en local storage
 let text = localStorage.getItem("usuarionuevo");
  
@@ -6,7 +15,6 @@ let objec = JSON.parse(text);
 
 const pass2 = objec.password1;
 const mail2=  objec.correo;
-
 
 console.log(mail2 );
 console.log(pass2 );
