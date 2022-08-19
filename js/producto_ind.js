@@ -19,7 +19,7 @@ function tarjetaD(data) {
               <div class="producto-central mx-auto">
                   <div>
                       <h2 class="producto-nombre-ind">${productos.nombre_producto}</h2>
-                      <span class="producto-precio-ind">${productos.precio}</span>
+                      <span class="producto-precio-ind"  style="font-size: 16px">$ ${productos.precio}</span>
                       <p class="descripcion1 mt-2 mb-2">${productos.descripcion}</p>               
                      <!-- <select name="presentacion" id="presentacion-ind"
                       style="border-radius: 8px; border: 1px solid var(--salmon); width: 25%; height: 30px; background-color: none; "
