@@ -40,7 +40,7 @@ function verificarPasswords() {
             redirect: 'follow'
         };
     
-        fetch("http://localhost:8080/api/usuario", requestOptions)
+        fetch("https://musarana.herokuapp.com/api/usuario", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
