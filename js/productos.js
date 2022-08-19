@@ -260,7 +260,7 @@ let setCarrito = objecto => {
         // console.log(carrito)
     }
     else {
-        console.log("no hay")
+        console.log("no hay ")
         console.log(carrito)
         carrito = {}
     }
