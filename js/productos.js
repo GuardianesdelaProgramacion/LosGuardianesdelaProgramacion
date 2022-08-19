@@ -69,12 +69,12 @@ const tarjetaDinamicas2 = data => {
         `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
             <div class="card tarjeta-producto border-0">
                 <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
-                <span class="producto_nombre text-center">${productoscarrito.nombre_producto}</span>
-                <span class="producto_precio text-center">${productoscarrito.precio}</span>
+                <span class="producto_nombre text-center mt-3 mb-1">${productoscarrito.nombre_producto}</span>
+                <span class="producto_precio text-center">$ ${productoscarrito.precio}</span>
                 <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
                         al carrito</button>
-                <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
-                        rapido </button>
+                <button type="button" class="ver-button col-11 mx-auto mt-2 mb-3 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                        rápido </button>
             </div>
             </div>`;
     }
@@ -110,11 +110,11 @@ const filtro = data => {
                 `<div class="col-lg-3 col-md-4 col-sm-6 col-12 productos mt-3 mb-3">
                 <div class="card tarjeta-producto border-0">
                     <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
-                    <span class="producto_nombre text-center">${productoscarrito.nombre_producto}</span>
-                    <span class="producto_precio text-center">${productoscarrito.precio}</span>
+                    <span class="producto_nombre text-center mt-3 mb-1">${productoscarrito.nombre_producto}</span>
+                    <span class="producto_precio text-center">$ ${productoscarrito.precio}</span>
                     <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
                             al carrito</button>
-                    <button type="button" class="ver-button col-11 mx-auto m-2 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
+                    <button type="button" class="ver-button col-11 mx-auto mt-2 mb-3 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
                             rapido </button>
                 </div>
                 </div>`;
@@ -192,7 +192,7 @@ function modalProductos(data, id) {
                      <div class="col-12 col-lg-6  descripcion2">
                          <div>
                              <h1 class="producto-nombre-ind">${productos.nombre_producto}</h2>
-                             <span class="producto-precio-ind">${productos.precio}</span>
+                             <span class="producto-precio-ind" style="font-size: 18px">$ ${productos.precio}</span>
                              <p class="descripcion1 mt-2 mb-2">${productos.descripcion}</p>                                                         
                            </div>                
                          <div class="share_wf mt-30">
