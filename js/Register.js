@@ -23,7 +23,7 @@ function verificarPasswords() {
       let obj= {nombre:name,email:mail,fechaNacimiento:fechanac,contrasenia:pass1,telefono:tel,metodoPago:pago, rol:usuario};
 
       newUserData.push(obj);
-     // localStorage.setItem("usuarionuevo", JSON.stringify(obj));
+      localStorage.setItem("usuarionuevo", JSON.stringify(obj));
 
       console.log(newUserData);
       
