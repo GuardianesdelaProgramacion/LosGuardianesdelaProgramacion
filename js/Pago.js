@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
     <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
             <td><p style="font-size:14px">${productoscarrito.cantidad}</p></td>
-            <td><span>${productoscarrito.precio}</span></td>
+            <td><span>$${productoscarrito.precio}</span></td>
         </tr>
           `;
     }
