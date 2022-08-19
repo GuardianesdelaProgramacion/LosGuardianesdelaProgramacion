@@ -49,9 +49,9 @@ const guardar = datos => {
         }   
         window.location.reload(); 
         // console.log(datos[producto].imagenproducto[producto].imagen) 
-        console.log(datos[producto].imagenproducto[0].imagen)
+        // console.log(datos[producto].imagenproducto[0].imagen)
         productoR[productoP.id] = { ...productoP }
-        console.log(productoR)
+        // console.log(productoR)
         localStorage.setItem('producto', JSON.stringify(productoR))
     }
 
@@ -70,7 +70,10 @@ const tarjetaDinamicas2 = data => {
             <div class="card tarjeta-producto border-0">
                 <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
                 <span class="producto_nombre text-center mt-3 mb-1">${productoscarrito.nombre_producto}</span>
-                <span class="producto_precio text-center">$ ${productoscarrito.precio}</span>
+                
+                <span class="producto_precio text-center"> ${productoscarrito.precio}</span>
+                
+                <span> MXN </span>
                 <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
                         al carrito</button>
                 <button type="button" class="ver-button col-11 mx-auto mt-2 mb-3 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
@@ -111,7 +114,8 @@ const filtro = data => {
                 <div class="card tarjeta-producto border-0">
                     <img src=${productoscarrito.url} class="producto-card-imagen click" id="${productoscarrito.id}" alt="...">
                     <span class="producto_nombre text-center mt-3 mb-1">${productoscarrito.nombre_producto}</span>
-                    <span class="producto_precio text-center">$ ${productoscarrito.precio}</span>
+                    <span class="producto_precio text-center"> ${productoscarrito.precio}</span>
+                    <span> MXN </span>
                     <button type="button" class="ver-button col-11 mx-auto p-1 m-2 agregar-carrito-producto">Añadir
                             al carrito</button>
                     <button type="button" class="ver-button col-11 mx-auto mt-2 mb-3 p-1 verRapido" id="${productoscarrito.id} " data-bs-toggle="modal" data-bs-target="#ModalProducto"> Ver
@@ -192,16 +196,17 @@ function modalProductos(data, id) {
                      <div class="col-12 col-lg-6  descripcion2">
                          <div>
                              <h1 class="producto-nombre-ind">${productos.nombre_producto}</h2>
-                             <span class="producto-precio-ind" style="font-size: 18px">$ ${productos.precio}</span>
+                             <span class="producto-precio-ind" style="font-size: 18px"> ${productos.precio}</span>
+                             <span> MXN </span>
                              <p class="descripcion1 mt-2 mb-2">${productos.descripcion}</p>                                                         
                            </div>                
                          <div class="share_wf mt-30">
                              <p>Musaraña</p>
-                             <div class="_icon">
+                           <!--  <div class="_icon">
                                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                 <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                                 <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>-->
                              </div>
                          </div>
                      </div>
@@ -251,8 +256,8 @@ let setCarrito = objecto => {
 
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
-        console.log("hay información")
-        console.log(carrito)
+        // console.log("hay información")
+        // console.log(carrito)
     }
     else {
         console.log("no hay")
