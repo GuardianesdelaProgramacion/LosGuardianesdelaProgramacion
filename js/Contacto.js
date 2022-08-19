@@ -8,7 +8,7 @@ telf.cn4.addEventListener('keyup',()=>{
   .replace(/\s/g,'')
   .replace(/\D/g,'')
   //Ponemos espacio cada cuatro números
-  .replace(/([0-9]{2})/g, '$1 ')
+  .replace(/([0-9]{2})/g, '$1')
   //Quitamos el último espaciado
   .trim();
 })
@@ -24,8 +24,9 @@ function contactoEnviar(){
     let tel = document.getElementById("cn4").value;
     com = document.getElementById("cn5").value;
 
-    
+    let nu;
     let objL= {nombre:nom,correo:corr,asunto:asun,telefono:tel,comentario:com};
+    let objLS= {nombrecn:nom,asuntocn:asun,telefonocn:tel,comentario:com};
     console.log(objL.nombre);
     console.log(objL.correo);
     console.log(objL.asunto);
@@ -34,6 +35,9 @@ function contactoEnviar(){
 
     contactoData.push(objL);
     console.log(contactoData);
+    console.log(objLS);
+
+    
 
     /*popup onclick*/
     popup1.style.visibility = "visible";
@@ -43,6 +47,46 @@ function contactoEnviar(){
     cn3.style.visibility = "hidden";
     cn4.style.visibility = "hidden";
     cn5.style.visibility = "hidden";
+
+    /*var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    //"idContacto": 1,
+    "nombrecn": nom,
+    "asuntocn": asun,
+    "telefonocn": tel,
+    "comentario": com
+  });
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("https://musarana.herokuapp.com/api/contacto", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));*/
+
+    var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+    
+        var raw = JSON.stringify(objLS);
+    
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+    
+        fetch("https://musarana.herokuapp.com/api/contacto", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
 
 
 }
@@ -64,71 +108,75 @@ function cnClose(){
 
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
   leer();
 })
 
 
-function leer(){
+function leer() {
 
-let productoLocal={}
-productoLocal = JSON.parse(localStorage.getItem('carrito'))  
-// console.log(productoLocal)
-    tarjetaDinamicas(productoLocal);
-
+  let productoLocal = {}
+  productoLocal = JSON.parse(localStorage.getItem('carrito'))
+  // console.log(productoLocal)
+  tarjetaDinamicas(productoLocal);
+  contador(productoLocal);
 }
 
 
-const tarjetaDinamicas = data=>{
+const tarjetaDinamicas = data => {
   // console.log(data[1])
- let datos="";
-  for (const carrito in data) {        
-          // console.log(data[carrito])
-      productoscarrito=data[carrito]
-      console.log(productoscarrito.nombre_producto)
-      // console.log(productoscarrito.descripcion)
+  let datos = "";
+  for (const carrito in data) {
+      productoscarrito = data[carrito]
 
-          datos+= 
+      datos +=
           `<tr class="mytr" id="fila${productoscarrito.id}">
-          <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
-  <td><img style="width: 120px;" src="${productoscarrito.url}"alt="Producto 1" /></td>
-  <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
-          <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td>
-      </tr>
-        `;
-   }
-   document.getElementById('data2').innerHTML = datos;
-
+      <td><button value="Eliminar" style="font-size:20px;background-color:whith;" class="bi bi-x buttonx" onclick="eliminarFila(${productoscarrito.id})"></button></td>
+      <td><img style="width: 120px;" src="${productoscarrito.url}" alt="Producto 1" /></td>
+      <td><p style="font-size:10px">${productoscarrito.nombre_producto}</p></td>
+      <td><p style="font-size:12px">${productoscarrito.cantidad}</p></td>
+      <!-- <td><input class="input_carrito" type="number" min="1" max="${productoscarrito.cantidad}" value=${productoscarrito.cantidad}></td> -->
+  </tr>
+  `;
+  }
+  document.getElementById('data2').innerHTML = datos;
 }
+
+
+///eliminarProducto 
 
 function eliminarFila(index) {
   $("#fila" + index).remove();
-  console.log(index)
-  
-  eliminar(index);
-  contador(); 
+  // console.log(index)
+  let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
+  eliminar(carritoPreEliminado, index,);
+  contador(carritoPreEliminado)
+
+
 }
 
-
-
-function eliminar (index){
-  let carritoPreEliminado = JSON.parse(localStorage.getItem("carrito"));
-  for (let i =0; i< carritoPreEliminado; i++) {
-   
-      if (carritoPreEliminado.id == index) {
-          carritoPreEliminado.splice(i, 1);
-          console.log(carritoPreEliminado.splice(i, 1))
+const eliminar = (carritoPreEliminado, index) => {
+  for (const carrito in carritoPreEliminado) {
+      console.log(carritoPreEliminado[carrito].id)
+      //   console.log(productoscarrito[1])
+      if (carritoPreEliminado[carrito].id == index) {
+          console.log(carritoPreEliminado[carrito].id)
+          delete (carritoPreEliminado[carrito])
+          console.log(carritoPreEliminado)
+          localStorage.setItem("carrito", JSON.stringify(carritoPreEliminado));
       }
   }
-
-  carritoPreEliminado = JSON.stringify(carritoPreEliminado);
-  localStorage.setItem("carrito", carritoPreEliminado);
 }
 
-function contador(){
-  productoLocal = JSON.parse(localStorage.getItem('carrito'))  
-  console.log(productoLocal)
-  document.getElementById('data3').innerHTML = 7;
 
-
+//Obtner el total de cantidad de productosy
+const contador = data => {
+  let cantidadPre = 0
+  for (const carrito in data) {
+      // console.log(data[carrito])
+      productoscarrito = data[carrito]//No se borra       
+      cantidadPre = cantidadPre + parseInt(productoscarrito.cantidad)
+      console.log(cantidadPre)
+  }
+  document.getElementById('data3').innerHTML = cantidadPre;
 }
