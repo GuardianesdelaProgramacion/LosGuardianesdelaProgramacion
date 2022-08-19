@@ -1,7 +1,7 @@
 console.log("LOS GUARDINES DE LA PROGRAMCIÓN");
 /**Obtener los datos realizando una petición de fetch******************************************************************************************************************************************************** */
 
-api("http://musarana.herokuapp.com/api/productos");
+api("https://musarana.herokuapp.com/api/productos");
 let producto;
 function api(url) {
     fetch(url)

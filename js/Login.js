@@ -1,5 +1,5 @@
 function verificarPasswords() {      
-    api1("http://musarana.herokuapp.com/api/usuario");
+    api1("https://musarana.herokuapp.com/api/usuario");
     let usaurio;
     function api1(url) {
         fetch(url)
