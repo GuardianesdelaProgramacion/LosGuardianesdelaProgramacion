@@ -100,6 +100,31 @@ function guardarDireccion(){
     console.log(objEnvio);
    datosDireccion.push(objEnvio);
    console.log(datosDireccion);
+   
+   let ObjEnvioS ={nombre: nomPersona,
+   apellidos: apellidoPersona,
+   calleyNumeros: calle,
+   colonia: colonia,
+   municipio: municipio,
+   codigoPostal: codigoPostal,
+   estado: {"idEstado":estado}
+  }
+   var myHeaders = new Headers();
+           myHeaders.append("Content-Type", "application/json");
+       
+           var raw = JSON.stringify(ObjEnvioS);
+       
+           var requestOptions = {
+               method: 'POST',
+               headers: myHeaders,
+               body: raw,
+               redirect: 'follow'
+           };
+       
+           fetch("https://musarana.herokuapp.com/api/direccion", requestOptions)
+               .then(response => response.text())
+               .then(result => console.log(result))
+               .catch(error => console.log('error', error));
 };
 let datosTarjeta=[];
 function guardarTarjeta(){
@@ -113,6 +138,7 @@ console.log(objTarjeta);
 datosTarjeta.push(objTarjeta);
 console.log(datosTarjeta);
 };
+
 
 function terminarPedido() {
     let borrarCarrito={}
